@@ -7,26 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	@FindBy(id = "idTL_USUARIO")
+	@FindBy(id = "TL_USUARIO")
 	private WebElement InputUser;
 
-	@FindBy(id = "idXTL_SENHA")
+	@FindBy(id = "XTL_SENHA")
 	private WebElement inputPass;
 
-	@FindBy(id = "idTL_EMP")
+	@FindBy(id = "TL_EMP")
 	private WebElement inputEmpresa;
 
-	@FindBy(id = "idTL_FILIAL_WM")
+	@FindBy(id = "TL_FILIAL_WM")
 	private WebElement inputFilial;
 
-	@FindBy(id = "idBTN_LOGIN_FX")
+	@FindBy(id = "BTN_LOGIN_FX")
 	private WebElement btnLogin;
 
-	@FindBy(xpath = "//select")
-	private WebElement selectSistema;
-	
-	@FindBy(xpath = "//input[@value=\"OK\"]")
-	private WebElement btnOK;
 	
 	public LoginPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
@@ -51,13 +46,4 @@ public class LoginPage {
 	public WebElement getBtnLogin() {
 		return btnLogin;
 	}
-
-	public WebElement getSelectSistema() {
-		return selectSistema;
-	}
-
-	public WebElement getBtnOK() {
-		return btnOK;
-	}
-
 }

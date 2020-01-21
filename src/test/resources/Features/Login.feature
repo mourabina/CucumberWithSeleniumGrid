@@ -6,7 +6,7 @@ Funcionalidade: Login SAD
 
   @Login @web
   Cenario: Verificar o login no SAD
-    Dado que estou logado no "SADNEW06" com usuario/filial "250492"/"7467"
+    Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id | Número do CT | Nome do CT                     | Nome do executor | Sprint |
       |  1 |            1 | Validar o login no sistema SAD | Matheus MAchado  | T1     |

@@ -18,15 +18,8 @@ public class LoginFuncionalidade extends BaseTest{
 		this.login = new LoginPage(webDriver);
 		this.home = new HomePage(webDriver);
 	}
-	public void loginSAD(String ambiente,String usuario, String filial) {
+	public void loginSAD(String usuario, String filial) {
 		webDriver.get(Urls.SAD_QA);
-		wait.until(ExpectedConditions.visibilityOf(this.login.getSelectSistema()));
-		Select opcao = new Select(this.login.getSelectSistema());
-		opcao.selectByVisibleText(ambiente);
-		this.login.getBtnOK().click();
-		for(String winHandle : webDriver.getWindowHandles()){
-			webDriver.switchTo().window(winHandle);
-		}
 		wait.until(ExpectedConditions.visibilityOf(this.login.getInputUser()));
 		this.login.getInputUser().sendKeys(usuario);
 		this.login.getInputPass().sendKeys(CredentialsUsers.USER_WEB_SAD_QA.password());

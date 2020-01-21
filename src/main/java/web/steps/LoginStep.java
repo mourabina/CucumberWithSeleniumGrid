@@ -11,9 +11,9 @@ public class LoginStep {
 		this.login = new LoginFuncionalidade();
 	}
 
-	@Dado("^que estou logado no \"([^\"]*)\" com usuario/filial \"([^\"]*)\"/\"([^\"]*)\"$")
-	public void loginSAD(String ambiente, String user, String filial) throws Throwable {
-		this.login.loginSAD(ambiente ,user, filial);
+	@Dado("^que estou logado com usuario/filial \"([^\"]*)\"/\"([^\"]*)\"$")
+	public void loginSAD(String user, String filial){
+		this.login.loginSAD(user, filial);
 	}
 
 	@Dado("^acessar a tela \"([^\"]*)\" \\(SAD\\)$")
