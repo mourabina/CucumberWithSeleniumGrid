@@ -8,25 +8,25 @@ import commons.BaseTest;
 
 public class VisaoGeralEDIGRPage extends BaseTest {
 	
-	@FindBy(id = "idLABEL20")
+	@FindBy(id = "LABEL20")
 	private WebElement textTituloPagina;
 	
-	@FindBy(id = "idCODFORN")
+	@FindBy(id = "CODFORN")
 	private WebElement inputCodFornecedor;
 	
-	@FindBy(id = "idNOMEREDUZ")
+	@FindBy(id = "NOMEREDUZ")
 	private WebElement textNomeFornecedorReduzido;
 	
-	@FindBy(id = "idREG")
+	@FindBy(id = "REG")
 	private WebElement inputReginonal;
 	
-	@FindBy(id = "idEDIFIL_WM")
+	@FindBy(id = "EDIFIL_WM")
 	private WebElement inputFilial;
 	
 	@FindBy(id = "TL_FORNCNPJ")
 	private WebElement inputCNPJ;
 	
-	@FindBy(id = "idTL_TEMREP")
+	@FindBy(id = "TL_TEMREP")
 	private WebElement inputNomeFornecedor;
 	
 	@FindBy(id = "TL_INCLUSAO")
@@ -35,13 +35,13 @@ public class VisaoGeralEDIGRPage extends BaseTest {
 	@FindBy(name = "TL_EDITTCB")
 	private WebElement checkBoxVerRegionais;
 	
-	@FindBy(id = "idHORAEDI")
+	@FindBy(id = "HORAEDI")
 	private WebElement inputHorarioLimte;
 	
-	@FindBy(id = "idSITPEDCB")
+	@FindBy(id = "SITPEDCB")
 	private WebElement selectPedido;
 	
-	@FindBy(id = "idSITINVOICCB")
+	@FindBy(id = "SITINVOICCB")
 	private WebElement selectNotaFiscal;
 	
 	@FindBy(name = "PEDPALLETCB")
@@ -50,37 +50,37 @@ public class VisaoGeralEDIGRPage extends BaseTest {
 	@FindBy(name = "TL_PESOKGCB")
 	private WebElement checkBoxRecebimentoEmKilo;
 	
-	@FindBy(id = "idSITINVRPTCB")
+	@FindBy(id = "SITINVRPTCB")
 	private WebElement selectPosicaoEstoque;
 	
-	@FindBy(id = "idSITCOMDISCB")
+	@FindBy(id = "SITCOMDISCB")
 	private WebElement selectRetornoNotaFiscal;
 	
-	@FindBy(id = "idSITRAECB")
+	@FindBy(id = "SITRAECB")
 	private WebElement selectSituacao;
 	
-	@FindBy(id = "idTIPORAECB")
+	@FindBy(id = "TIPORAECB")
 	private WebElement selectTipo;
 	
-	@FindBy(id = "idTL_FORNEAN")
+	@FindBy(id = "TL_FORNEAN")
 	private WebElement inputEANFornecedor;
 	
 	@FindBy(name = "TL_EDICB")
 	private WebElement checkBoxEDIAutomatico;
 	
-	@FindBy(id = "idXTL_SEL1")
+	@FindBy(id = "XTL_SEL1")
 	private WebElement selectADD_CHEG_DEL;
 	
-	@FindBy(id = "idXEDIDOC1")
+	@FindBy(id = "XEDIDOC1")
 	private WebElement selectDocumento;
 	
-	@FindBy(id = "idXOVERLAY1")
+	@FindBy(id = "XOVERLAY1")
 	private WebElement selectVan;
 	
-	@FindBy(id = "idXSITEDI1")
+	@FindBy(id = "XSITEDI1")
 	private WebElement selectSituacaoEDI;
 	
-	@FindBy(id = "idXCAIXAPOSTAL1")
+	@FindBy(id = "XCAIXAPOSTAL1")
 	private WebElement inputEANCaixaPostal;
 
 	VisaoGeralEDIGRPage(){

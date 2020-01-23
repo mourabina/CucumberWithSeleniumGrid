@@ -1,0 +1,166 @@
+package web.bean.enums;
+
+import org.openqa.selenium.WebElement;
+
+import web.bean.interfaces.GeracaoPedidosGERPDInterface;
+import web.pages.GeracaoPedidosGERPDPage;
+
+public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
+
+	COMPR("Compr") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputComp();
+		}
+	},
+	FORN("Forn") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputForn();
+		}
+	},
+	HR_EDI("HR Edi") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputHREDI();
+		}
+	},
+	MOV("Mov") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputMov();
+		}
+	},
+	OPCAO("Opcao") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputOpcao();
+		}
+	},
+	PESQUISA("Pesquisa") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInpuPesqui();
+		}
+	},
+	FIL("Fil") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputFlial();
+		}
+	},
+	DIST("Dist") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputDist();
+		}
+	},
+	REDESP("RedeSP") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputRedesp();
+		}
+	},
+	FRT("Frt") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputFrete();
+		}
+	},
+	COD_TRANSPORTADORA("Cod Transportadora") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputCodTranspo();
+		}
+	},
+	Data_1("Data 1") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputDatas1();
+		}
+	},
+	Data_2("Data 2") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputDatas2();
+		}
+	},
+	Data_3("Data 3") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputDatas3();
+		}
+	},
+	GRATIS("Gratis") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputGratis();
+		}
+	},
+	CLA("Cla") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputClassif();
+		}
+	},
+	COD_PRZ("Cod Prz") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputIDPRZ();
+		}
+	},
+	NOME_PRZ("Nome Prz") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputTextPRZ();
+		}
+	},
+	DF("DF") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputDesconto();
+		}
+	},
+	BON("BON") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputBonus();
+		}
+	},
+	CONT("Cont") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputCont();
+		}
+	},
+	EVE("Eve") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputEVE();
+		}
+	},
+	EMPRE("Empre") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputEmpre();
+		}
+	},
+	ESTOC("Estoc") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputEstoc();
+		}
+	},
+	OBS("Obs") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getInputObs();
+		}
+	};
+	
+
+	GeracaoPedidosGERPDEnum(String s) {
+
+	}
+
+}

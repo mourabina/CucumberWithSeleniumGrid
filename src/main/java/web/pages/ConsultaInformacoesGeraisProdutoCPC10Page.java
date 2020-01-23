@@ -7,115 +7,136 @@ import org.openqa.selenium.support.PageFactory;
 
 import commons.BaseTest;
 
-public class ConsultaInformacoesGeraisProdutoCPC10Page extends BaseTest{
-	
-	@FindBy(id = "idLABEL66")
+public class ConsultaInformacoesGeraisProdutoCPC10Page extends BaseTest {
+
+	@FindBy(id = "LABEL66")
 	private WebElement labelTituloPagina;
-	
-	@FindBy(id = "idPDV")
+
+	@FindBy(id = "PDV")
 	private WebElement inputPDV;
-	
-	@FindBy(id = "idCOD_PROD")
+
+	@FindBy(id = "COD_PROD")
 	private WebElement inputItem;
-	
-	@FindBy(id = "idT_COD_LOJA")
+
+	@FindBy(id = "T_COD_LOJA")
 	private WebElement inputLoja;
-	
-	@FindBy(id = "idTL_FORN")
+
+	@FindBy(id = "TL_FORN")
 	private WebElement inputForn;
-	
-	@FindBy(id = "idNOME_PROD")
+
+	@FindBy(id = "NOME_PROD")
 	private WebElement textDescricaoItem;
-	
-	@FindBy(id = "idTL_EMBCD1")
+
+	@FindBy(id = "TL_EMBCD1")
 	private WebElement textEmbDep;
-	
-	@FindBy(id = "idTL_CONVCD")
+
+	@FindBy(id = "TL_CONVCD")
 	private WebElement textUnidade;
-	
-	@FindBy(id = "idCOD_UPCREAL")
+
+	@FindBy(id = "COD_UPCREAL")
 	private WebElement textUPCReal;
-	
-	@FindBy(id = "idCOD_LINHA")
+
+	@FindBy(id = "COD_LINHA")
 	private WebElement textCodLinha;
-	
-	@FindBy(id = "idNOME_LINHA")
+
+	@FindBy(id = "NOME_LINHA")
 	private WebElement textNomeLinha;
-	
-	@FindBy(id = "idCOD_SUBL")
+
+	@FindBy(id = "COD_SUBL")
 	private WebElement textCodSubl;
-	
-	@FindBy(id = "idNOME_SUBL")
+
+	@FindBy(id = "NOME_SUBL")
 	private WebElement textNomeSubl;
-	
-	@FindBy(id = "idTIPO_EAN")
+
+	@FindBy(id = "TIPO_EAN")
 	private WebElement textTipoEAN;
-	
-	@FindBy(id = "idCOD_EAN")
+
+	@FindBy(id = "COD_EAN")
 	private WebElement textCodEAN;
-	
-	@FindBy(id = "idCOD_COMPR")
+
+	@FindBy(id = "COD_COMPR")
 	private WebElement textIDComprElement;
-	
-	@FindBy(id = "idNOME_COMPR")
+
+	@FindBy(id = "NOME_COMPR")
 	private WebElement textNomeCompr;
-	
-	@FindBy(id = "idTL_EMB01")
+
+	@FindBy(id = "TL_EMB01")
 	private WebElement textTipoEmb;
-	
-	@FindBy(id = "idTL_FATCN")
+
+	@FindBy(id = "TL_FATCN")
 	private WebElement textQuantEmb;
-	
-	@FindBy(id= "idMODALIDADE")
+
+	@FindBy(id = "MODALIDADE")
 	private WebElement textModalidade;
-	
-	@FindBy(id = "idTL_GAR")
+
+	@FindBy(id = "TL_GAR")
 	private WebElement textGarantia;
-	
-	@FindBy(id = "idCOD_FORN")
+
+	@FindBy(id = "COD_FORN")
 	private WebElement textCodForncedor;
-	
-	@FindBy(id = "idNOME_FORN")
+
+	@FindBy(id = "NOME_FORN")
 	private WebElement textNomeForcedor;
-	
-	@FindBy(id = "idCGCFORN")
+
+	@FindBy(id = "CGCFORN")
 	private WebElement textCGCFornecedor;
-	
-	@FindBy(id = "idSITUACAO")
+
+	@FindBy(id = "SITUACAO")
 	private WebElement textSituacao;
-	
-	@FindBy(id = "idDT_ULTRANS")
+
+	@FindBy(id = "DT_ULTRANS")
 	private WebElement textPDV;
-	
-	@FindBy(id = "idDT_IMPLANT")
+
+	@FindBy(id = "DT_IMPLANT")
 	private WebElement textImpl;
-	
-	@FindBy(id = "idDT_SIT")
+
+	@FindBy(id = "DT_SIT")
 	private WebElement textSIT;
-	
-	@FindBy(id = "idITEMA_VDCP")
+
+	@FindBy(id = "ITEMA_VDCP")
 	private WebElement textItemA;
-	
-	@FindBy(id ="idTL_MODA")
+
+	@FindBy(id = "TL_MODA")
 	private WebElement textModa;
-	
-	@FindBy(id = "idSEMAN_PROG")
+
+	@FindBy(id = "SEMAN_PROG")
 	private WebElement textPDL;
-	
-	@FindBy(id = "idESPECIF1")
+
+	@FindBy(id = "ESPECIF1")
 	private WebElement textOBS1;
-	
-	@FindBy(id = "idESPECIF2")
+
+	@FindBy(id = "ESPECIF2")
 	private WebElement textOBS2;
-	
-	@FindBy(id = "idESPECIF3")
+
+	@FindBy(id = "ESPECIF3")
 	private WebElement textOBS3;
-	
-	@FindBy(id = "idESPECIF4")
+
+	@FindBy(id = "ESPECIF4")
 	private WebElement textOBS4;
-	
-	ConsultaInformacoesGeraisProdutoCPC10Page(WebDriver webDriver){
+
+	@FindBy(id = "TIPO_CESTA")
+	private WebElement textCesta;
+
+	@FindBy(id = "MULT_EAN")
+	private WebElement multiEan;
+
+	@FindBy(id = "TIPOINF")
+	private WebElement restVDA;
+
+	ConsultaInformacoesGeraisProdutoCPC10Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getMultiEan() {
+		return multiEan;
+	}
+
+	public WebElement getRestVDA() {
+		return restVDA;
+	}
+
+	public WebElement getTextCesta() {
+		return textCesta;
 	}
 
 	public WebElement getLabelTituloPagina() {

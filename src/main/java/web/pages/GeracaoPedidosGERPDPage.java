@@ -8,150 +8,164 @@ import org.openqa.selenium.support.PageFactory;
 import commons.BaseTest;
 
 public class GeracaoPedidosGERPDPage extends BaseTest {
-  
-	@FindBy(id = "idLABEL55")
+
+	@FindBy(id = "LABEL55")
 	private WebElement labelTituloPagina;
-	
-	@FindBy(id = "idCOD_COMPR")
+
+	@FindBy(id = "COD_COMPR")
 	private WebElement inputComp;
-	
-	@FindBy(id = "idCOD_FORN")
+
+	@FindBy(id = "COD_FORN")
 	private WebElement inputForn;
-	
-	@FindBy(id = "idTL_HREDI")
+
+	@FindBy(id = "TL_HREDI")
 	private WebElement inputHREDI;
-	
-	@FindBy(id = "idMOV")
+
+	@FindBy(id = "MOV")
 	private WebElement inputMov;
-	
-	@FindBy(id = "idACAO")
+
+	@FindBy(id = "ACAO")
 	private WebElement inputOpcao;
-	
-	@FindBy(id = "idITEM_PESQ")
+
+	@FindBy(id = "ITEM_PESQ")
 	private WebElement inpuPesqui;
-	
-	@FindBy(id = "idT_COD_FIL")
+
+	@FindBy(id = "T_COD_FIL")
 	private WebElement inputFlial;
-	
-	@FindBy(id = "idCOD_DISTR")
+
+	@FindBy(id = "COD_DISTR")
 	private WebElement inputDist;
-	
-	@FindBy(id = "idT_FIL_REDESP")
+
+	@FindBy(id = "T_FIL_REDESP")
 	private WebElement inputRedesp;
-	
-	@FindBy(id = "idFRETE")
+
+	@FindBy(id = "FRETE")
 	private WebElement inputFrete;
-	
-	@FindBy(id = "idCOD_TRANSP")
+
+	@FindBy(id = "COD_TRANSP")
 	private WebElement inputCodTranspo;
-	
-	@FindBy(id = "idDATA1")
+
+	@FindBy(id = "DATA1")
 	private WebElement inputDatas1;
-	
-	@FindBy(id = "idDATA2")
+
+	@FindBy(id = "DATA2")
 	private WebElement inputDatas2;
-	
-	@FindBy(id = "idDATA3")
+
+	@FindBy(id = "DATA3")
 	private WebElement inputDatas3;
-	
-	@FindBy(id = "idPED_GRATIS")
+
+	@FindBy(id = "PED_GRATIS")
 	private WebElement inputGratis;
-	
-	@FindBy(id = "idCLASSIF")
+
+	@FindBy(id = "CLASSIF")
 	private WebElement inputClassif;
-	
-	@FindBy(id = "idCOD_HD")
+
+	@FindBy(id = "COD_HD")
 	private WebElement inputIDPRZ;
-	
-	@FindBy(id = "idPRZ_HD")
+
+	@FindBy(id = "PRZ_HD")
 	private WebElement inputTextPRZ;
-	
-	@FindBy(id = "idNUM_CONTR")
+
+	@FindBy(id = "NUM_CONTR")
 	private WebElement inputCont;
-	
-	@FindBy(id = "idNUM_EVE")
+
+	@FindBy(id = "NUM_EVE")
 	private WebElement inputEVE;
-	
-	@FindBy(id = "idEMP_R3")
+
+	@FindBy(id = "EMP_R3")
 	private WebElement inputEmpre;
-	
-	@FindBy(id = "idOPC_EST")
+
+	@FindBy(id = "OPC_EST")
 	private WebElement inputEstoc;
-	
-	@FindBy(id = "idOBSERV")
+
+	@FindBy(id = "OBSERV")
 	private WebElement inputObs;
-	
-	@FindBy(id = "idXCOD_PROD1")
+
+	@FindBy(id = "XCOD_PROD1")
 	private WebElement inputCodProduto;
-	
-	@FindBy(id = "idXNOME_PROD1")
+
+	@FindBy(id = "XNOME_PROD1")
 	private WebElement inputDescProduto;
-	
-	@FindBy(id = "idXPR_COMPRA1")
+
+	@FindBy(id = "XPR_COMPRA1")
 	private WebElement inputValorCompra1;
-	
-	@FindBy(id = "idXDESCX1")
+
+	@FindBy(id = "XDESCX1")
 	private WebElement inputValorDesc;
-	
-	@FindBy(id = "idXIPI1")
+
+	@FindBy(id = "XIPI1")
 	private WebElement inputValorDesc1;
-	
-	@FindBy(id = "idXBONIF1")
+
+	@FindBy(id = "XBONIF1")
 	private WebElement inputBonificacao;
-	
-	@FindBy(id = "idXICM1")
+
+	@FindBy(id = "XICM1")
 	private WebElement inputICMS;
-	
-	@FindBy(id = "idXCOD1")
+
+	@FindBy(id = "XCOD1")
 	private WebElement inputPrazo1;
-	
-	@FindBy(id = "idXPRZ1")
+
+	@FindBy(id = "XPRZ1")
 	private WebElement inputPrazo2;
-	
-	@FindBy(id = "idXDESCTO1")
+
+	@FindBy(id = "XDESCTO1")
 	private WebElement inputDFIN1;
-	
-	@FindBy(id = "idXBONUS1")
+
+	@FindBy(id = "XBONUS1")
 	private WebElement inputBonus;
-	
-	@FindBy(id = "idXIMP1")
+
+	@FindBy(id = "XIMP1")
 	private WebElement inputIMP;
-	
-	@FindBy(id = "idXEMB1")
+
+	@FindBy(id = "XEMB1")
 	private WebElement inputEMB;
-	
-	@FindBy(id = "idXLES1")
+
+	@FindBy(id = "XLES1")
 	private WebElement inputLES;
-	
-	@FindBy(id = "idXPV_ATU1")
+
+	@FindBy(id = "XPV_ATU1")
 	private WebElement inputPVATU;
-	
-	@FindBy(id = "idXMRG_REAL1XSD")
+
+	@FindBy(id = "XMRG_REAL1XSD")
 	private WebElement inputMReal;
-	
-	@FindBy(id = "idXMRG_REAL1")
+
+	@FindBy(id = "XMRG_REAL1")
 	private WebElement inputMReal1;
-	
-	@FindBy(id = "idXPEND_FATM1")
+
+	@FindBy(id = "XPEND_FATM1")
 	private WebElement inputPendFatur;
-	
-	@FindBy(id = "idXDDE1")
+
+	@FindBy(id = "XDDE1")
 	private WebElement inputDDE;
-	
-	@FindBy(id = "idXPEND_FORN1")
+
+	@FindBy(id = "XPEND_FORN1")
 	private WebElement inputPendForne;
-	
-	@FindBy(id = "idEXEC_PED")
+
+	@FindBy(id = "EXEC_PED")
 	private WebElement inputExecutarPedido;
-	
-	@FindBy(id = "idEXEC_REL")
+
+	@FindBy(id = "EXEC_REL")
 	private WebElement inputBaixaRelatorio;
-	
-	@FindBy(id = "idEXEC_IMP")
+
+	@FindBy(id = "EXEC_IMP")
 	private WebElement inputIMpressora;
 
-	GeracaoPedidosGERPDPage(WebDriver webDriver){
+	@FindBy(id = "DESCTO_HD")
+	private WebElement inputDesconto;
+
+	@FindBy(id = "BONUS_HD")
+	private WebElement bonus;
+
+	GeracaoPedidosGERPDPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getBonus() {
+		return bonus;
+	}
+
+	public WebElement getInputDesconto() {
+		return inputDesconto;
 	}
 
 	public WebElement getLabelTituloPagina() {
@@ -341,5 +355,5 @@ public class GeracaoPedidosGERPDPage extends BaseTest {
 	public WebElement getInputIMpressora() {
 		return inputIMpressora;
 	}
-	
+
 }

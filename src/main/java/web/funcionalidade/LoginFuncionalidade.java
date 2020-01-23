@@ -1,13 +1,12 @@
 package web.funcionalidade;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
 import commons.CredentialsUsers;
 import web.model.Urls;
-import web.pages.LoginPage;
 import web.pages.HomePage;
+import web.pages.LoginPage;
 
 public class LoginFuncionalidade extends BaseTest{
 	

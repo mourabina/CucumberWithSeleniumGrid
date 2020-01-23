@@ -7,84 +7,90 @@ import org.openqa.selenium.support.PageFactory;
 
 import commons.BaseTest;
 
-public class PlanejamentoConversaoLojasLJATIPage extends BaseTest{
-	
-	
-	@FindBy(id = "idLABEL13")
+public class PlanejamentoConversaoLojasLJATIPage extends BaseTest {
+
+	@FindBy(id = "LABEL13")
 	private WebElement labelTituloPagina;
-	
-	@FindBy(id = "idTL_CODLJSAD_F_NV4")
+
+	@FindBy(id = "TL_CODLJSAD_F_NV4")
 	private WebElement inputLoja;
-	
-	@FindBy(id = "idTL_CODLJSAD_NV4")
+
+	@FindBy(id = "TL_CODLJSAD_NV4")
 	private WebElement inputLoa1;
-	
-	@FindBy(id = "idTL_CODLJWM")
-	private WebElement inputLojaWM;       
-	
-	@FindBy(id = "idTL_SIT")
+
+	@FindBy(id = "TL_CODLJWM")
+	private WebElement inputLojaWM;
+
+	@FindBy(id = "TL_SIT")
 	private WebElement inputIDSit;
-	
-	@FindBy(id = "idTL_SITUACAO")
+
+	@FindBy(id = "TL_SITUACAO")
 	private WebElement inputDescSituacao;
-	
-	@FindBy(id = "idTL_DTCONV")
+
+	@FindBy(id = "TL_DTCONV")
 	private WebElement inputConversao;
-	
-	@FindBy(id = "idTL_DTLIBETL")
+
+	@FindBy(id = "TL_DTLIBETL")
 	private WebElement inputLibETL;
-	
-	@FindBy(id = "idTL_DTBLOQ")
+
+	@FindBy(id = "TL_DTBLOQ")
 	private WebElement inputBloqueio;
-	
-	@FindBy(id = "idTL_DTLIB")
+
+	@FindBy(id = "TL_DTLIB")
 	private WebElement inputLiebracao;
-	
-	@FindBy(id = "idTL_DTLIBERACAO6")
+
+	@FindBy(id = "TL_DTLIBERACAO6")
 	private WebElement inputGrupo1;
-	
-	@FindBy(id = "idTL_DT_7_25_27")
+
+	@FindBy(id = "TL_DT_7_25_27")
 	private WebElement inputGrupo2;
-	
-	@FindBy(id = "idTL_DTLIBERACAO57")
+
+	@FindBy(id = "TL_DTLIBERACAO57")
 	private WebElement inputGrupo3;
-	
-	@FindBy(id = "idTL_DT_24_26")
+
+	@FindBy(id = "TL_DT_24_26")
 	private WebElement inputGrupo4;
-	
-	@FindBy(id = "idTL_DT_13")
+
+	@FindBy(id = "TL_DT_13")
 	private WebElement inputGrupo5;
-	
-	@FindBy(id = "idTL_DT_CONV_NF_INI")
+
+	@FindBy(id = "TL_DT_CONV_NF_INI")
 	private WebElement inputDataConversaoInicioNotaFiscal;
-	
-	@FindBy(id = "idTL_DT_CONV_CUP_INI")
+
+	@FindBy(id = "TL_DT_CONV_CUP_INI")
 	private WebElement inputDataInicioConversaoCupom;
-	
-	@FindBy(id = "idTL_DT_CONV_TRNS_INI")
+
+	@FindBy(id = "TL_DT_CONV_TRNS_INI")
 	private WebElement inputDataInicioConversaoTRNS;
-	
-	@FindBy(id = "idTL_DT_CONV_NF_FIM")
+
+	@FindBy(id = "TL_DT_CONV_NF_FIM")
 	private WebElement inputDataConversaoFinalNotaFiscal;
-	
-	@FindBy(id = "idTL_DT_CONV_CUP_FIM")
+
+	@FindBy(id = "TL_DT_CONV_CUP_FIM")
 	private WebElement inputDataFinalConversaoCupom;
-	
-	@FindBy(id = "idTL_DT_CONV_TRNS_FIM")
+
+	@FindBy(id = "TL_DT_CONV_TRNS_FIM")
 	private WebElement inputDataFinalConversaoTRNS;
-	
-	@FindBy(id = "idTL_FLAG_EDI")
+
+	@FindBy(id = "TL_FLAG_EDI")
 	private WebElement inputHabilitarEnvioEDI;
-	
-	@FindBy(id = "idTL_SN_CARGA_NOTAS")
+
+	@FindBy(id = "TL_SN_CARGA_NOTAS")
 	private WebElement inputProcessarCargasNotas;
-	
-	@FindBy(id = "idTL_CONF")
+
+	@FindBy(id = "TL_CONF")
 	private WebElement inputConfins;
-	
-	PlanejamentoConversaoLojasLJATIPage(WebDriver webDriver){
+
+	@FindBy(id = "TL_DTCORTE")
+	private WebElement dataCorteHNF;
+
+	PlanejamentoConversaoLojasLJATIPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
-		
+
+	}
+
+	public WebElement getDataCorteHNF() {
+		return dataCorteHNF;
 	}
 
 	public WebElement getLabelTituloPagina() {

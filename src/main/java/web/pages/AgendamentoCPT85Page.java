@@ -9,125 +9,132 @@ import commons.BaseTest;
 
 public class AgendamentoCPT85Page extends BaseTest {
 
-	@FindBy(id = "idLABEL28")
+	@FindBy(id = "LABEL28")
 	private WebElement labelTituloPagina;
 
-	@FindBy(id = "idBTINQUIRY_FX")
+	@FindBy(id = "BTINQUIRY_FX")
 	private WebElement buttonConsultar;
 
-	@FindBy(id = "idBTINCLUDE_FX")
+	@FindBy(id = "BTINCLUDE_FX")
 	private WebElement buttonIncluir;
 
-	@FindBy(id = "idBTMODIFY_FX")
+	@FindBy(id = "BTMODIFY_FX")
 	private WebElement buttonAlterar;
 
-	@FindBy(id = "idBTDELETE_FX")
+	@FindBy(id = "BTDELETE_FX")
 	private WebElement buttonDeletar;
 
-	@FindBy(id = "idBTREFRESH_FX")
+	@FindBy(id = "BTREFRESH_FX")
 	private WebElement buttonFinalizar;
 
-	@FindBy(id = "idTNUMAGEND")
+	@FindBy(id = "TNUMAGEND")
 	private WebElement inputAgenda;
 
-	@FindBy(id = "idTDATAGEND")
+	@FindBy(id = "TDATAGEND")
 	private WebElement inputDataAgenda;
 
-	@FindBy(id = "idTDATAENT")
+	@FindBy(id = "TDATAENT")
 	private WebElement inputDataEntrada;
 
-	@FindBy(id = "idTHORA")
+	@FindBy(id = "THORA")
 	private WebElement inputHoraEntrada;
 
-	@FindBy(id = "idTMIN")
+	@FindBy(id = "TMIN")
 	private WebElement inputMinutoEntrada;
 
-	@FindBy(id = "idTFILIALPO")
+	@FindBy(id = "TFILIALPO")
 	private WebElement inputFilial;
 
-	@FindBy(id = "idTFILORI")
+	@FindBy(id = "TFILORI")
 	private WebElement inputFilialOrigem;
 
-	@FindBy(id = "idTNUMNOTA")
+	@FindBy(id = "TNUMNOTA")
 	private WebElement inputNummeroNota;
 
-	@FindBy(id = "idTSERNOTA")
+	@FindBy(id = "TSERNOTA")
 	private WebElement inputSerieNota;
 
-	@FindBy(id = "idTNOMETRNSP")
+	@FindBy(id = "TNOMETRNSP")
 	private WebElement inputTransportadora;
 
-	@FindBy(id = "idTCHEGVEIC")
+	@FindBy(id = "TCHEGVEIC")
 	private WebElement inputVeicuNoCD;
 
-	@FindBy(id = "idTB_TPVEIC")
+	@FindBy(id = "TB_TPVEIC")
 	private WebElement selectTipoVeiculo;
 
-	@FindBy(id = "idTB_TPCARGA")
+	@FindBy(id = "TB_TPCARGA")
 	private WebElement selectTipoCarga;
 
-	@FindBy(id = "idTB_TPENTREGA")
+	@FindBy(id = "TB_TPENTREGA")
 	private WebElement selectTipoEntrega;
 
-	@FindBy(id = "idTB_TPAGENDA")
+	@FindBy(id = "TB_TPAGENDA")
 	private WebElement selectTipoAgendaElement;
 
-	@FindBy(id = "idTCONTATO")
+	@FindBy(id = "TCONTATO")
 	private WebElement inputContato;
 
-	@FindBy(id = "idTFONE")
+	@FindBy(id = "TFONE")
 	private WebElement inputTelefone;
 
-	@FindBy(id = "idTPEREC")
+	@FindBy(id = "TPEREC")
 	private WebElement inputPerecivel;
 
-	@FindBy(id = "idTCOMENT")
+	@FindBy(id = "TCOMENT")
 	private WebElement inputOBS;
 
-	@FindBy(id = "idTRISCO")
+	@FindBy(id = "TRISCO")
 	private WebElement inputAltoRisco;
 
-	@FindBy(id = "idTPEDIDO")
+	@FindBy(id = "TPEDIDO")
 	private WebElement inputPedido;
 
-	@FindBy(id = "idTSALDO")
+	@FindBy(id = "TSALDO")
 	private WebElement inputSaldo;
 
-	@FindBy(id = "idTSALDOAGEND")
+	@FindBy(id = "TSALDOAGEND")
 	private WebElement inputAAgendar;
 
-	@FindBy(id = "idTVOLS")
+	@FindBy(id = "TVOLS")
 	private WebElement inputVolumes;
 
-	@FindBy(id = "idTDTCANC")
+	@FindBy(id = "TDTCANC")
 	private WebElement inputDataCancelamento;
 
-	@FindBy(id = "idTTPPED")
+	@FindBy(id = "TTPPED")
 	private WebElement inputTipoPedido;
 
-	@FindBy(id = "idXTACAO1")
+	@FindBy(id = "XTACAO1")
 	private WebElement gridResultadoCheckBox1;
 
-	@FindBy(id = "idXTPEDIDO11")
+	@FindBy(id = "XTPEDIDO11")
 	private WebElement gridResultadoAcao1;
 
-	@FindBy(id = "idXTNOMEFORN11")
+	@FindBy(id = "XTNOMEFORN11")
 	private WebElement gridResultadoFornecedor1;
 
-	@FindBy(id = "idXTQTVOL11")
+	@FindBy(id = "XTQTVOL11")
 	private WebElement gridResultadoQuantVolum1;
 
-	@FindBy(id = "idXTRECEIVER1")
+	@FindBy(id = "XTRECEIVER1")
 	private WebElement gridResultadoReceiver1;
 
-	@FindBy(id = "idXTDTCANC11")
+	@FindBy(id = "XTDTCANC11")
 	private WebElement gridResultadoDataCancelamento1;
 
-	@FindBy(id = "idXTTPPED11")
+	@FindBy(id = "XTTPPED11")
 	private WebElement gridResultadoTipoPedido;
+
+	@FindBy(id = "TDTPREV")
+	private WebElement entradaPrevista;
 
 	AgendamentoCPT85Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getEntradaPrevista() {
+		return entradaPrevista;
 	}
 
 	public WebElement getLabelTituloPagina() {

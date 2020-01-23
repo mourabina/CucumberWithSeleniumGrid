@@ -8,61 +8,67 @@ import org.openqa.selenium.support.PageFactory;
 import commons.BaseTest;
 
 public class MonitoramentoReceiverCPC76Page extends BaseTest {
-	
-	
-	@FindBy(id = "idLABEL14")
+
+	@FindBy(id = "LABEL14")
 	private WebElement labelTituloPagina;
-	
-	@FindBy(id = "idTL_FILIAL_WM")
+
+	@FindBy(id = "TL_FILIAL_WM")
 	private WebElement inputDeparta;
-	
-	@FindBy(id = "idTL_DTAGENDA_PESQ")
+
+	@FindBy(id = "TL_DTAGENDA_PESQ")
 	private WebElement inputDataAgenda;
-	
-	@FindBy(id = "idTL_STATUS_PESQ")
+
+	@FindBy(id = "TL_STATUS_PESQ")
 	private WebElement inputStatus;
-	
-	@FindBy(id = "idTL_PEDIDO_PESQ")
+
+	@FindBy(id = "TL_PEDIDO_PESQ")
 	private WebElement inputPedido;
-	
-	@FindBy(id = "idXTL_CITENS1")
+
+	@FindBy(id = "TL_COD_CESTA")
+	private WebElement codCesta;
+
+	@FindBy(id = "XTL_CITENS1")
 	private WebElement inputItens1;
-	
-	@FindBy(id = "idXTL_GGUIA1")
+
+	@FindBy(id = "XTL_GGUIA1")
 	private WebElement inputGuia1;
-	
-	@FindBy(id = "idXTL_RECEIVER1")
+
+	@FindBy(id = "XTL_RECEIVER1")
 	private WebElement inputReceiver1;
-	
-	@FindBy(id = "idXTL_CONSOLIDADO1")
+
+	@FindBy(id = "XTL_CONSOLIDADO1")
 	private WebElement inputRecConsolidado1;
-	
-	@FindBy(id = "idXTL_DOCA1")
+
+	@FindBy(id = "XTL_DOCA1")
 	private WebElement inputDoca1;
-	
-	@FindBy(id = "idXTL_AGENDA1")
+
+	@FindBy(id = "XTL_AGENDA1")
 	private WebElement inputAgenda1;
-	
-	@FindBy(id = "idXTL_PEDIDO1")
+
+	@FindBy(id = "XTL_PEDIDO1")
 	private WebElement inputPedido1;
-	
-	@FindBy(id = "idXTL_QTD_VOL1")
+
+	@FindBy(id = "XTL_QTD_VOL1")
 	private WebElement inputQuantVolu1;
-	
-	@FindBy(id = "idXTL_STATUS1")
+
+	@FindBy(id = "XTL_STATUS1")
 	private WebElement inputStatus1;
-	
-	@FindBy(id = "idXTL_FRACAO1")
+
+	@FindBy(id = "XTL_FRACAO1")
 	private WebElement inputFracao1;
-	
-	@FindBy(id = "idXTL_DTAGENDA1")
+
+	@FindBy(id = "XTL_DTAGENDA1")
 	private WebElement inputDataAgenda1;
-	
-	@FindBy(id = "idXTL_FORNEC1")
+
+	@FindBy(id = "XTL_FORNEC1")
 	private WebElement inputFornecedor1;
 
-	MonitoramentoReceiverCPC76Page(WebDriver webDriver){
+	MonitoramentoReceiverCPC76Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getCodCesta() {
+		return codCesta;
 	}
 
 	public WebElement getLabelTituloPagina() {

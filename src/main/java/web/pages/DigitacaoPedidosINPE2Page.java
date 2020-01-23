@@ -8,75 +8,82 @@ import org.openqa.selenium.support.PageFactory;
 import commons.BaseTest;
 
 public class DigitacaoPedidosINPE2Page extends BaseTest {
-	
-	@FindBy(id = "idLABEL34")
+
+	@FindBy(id = "LABEL34")
 	private WebElement labelTituloPagina;
-	
-	@FindBy(id = "idTL_REG")
+
+	@FindBy(id = "TL_REG")
 	private WebElement inputRegional;
-	
-	@FindBy(id = "idOPCAO")
+
+	@FindBy(id = "OPCAO")
 	private WebElement inputOpcao;
-	
-	@FindBy(id = "idTL_PROD")
+
+	@FindBy(id = "TL_PROD")
 	private WebElement inputProduto;
-	
-	@FindBy(id = "idTL_FORN")
+
+	@FindBy(id = "TL_FORN")
 	private WebElement inputFornecedor;
-	
-	@FindBy(id = "idQTDE")
+
+	@FindBy(id = "QTDE")
 	private WebElement inputQuatidade;
-	
-	@FindBy(id = "idNUM_EVE")
+
+	@FindBy(id = "NUM_EVE")
 	private WebElement inputEvento;
-	
-	@FindBy(id = "idTL_OBSP")
+
+	@FindBy(id = "TL_OBSP")
 	private WebElement inputObservacao;
-	
-	@FindBy(id = "idTL_COMP")
+
+	@FindBy(id = "TL_COMP")
 	private WebElement inputComprador;
-	
-	@FindBy(id = "idTL_PCOMPRA")
+
+	@FindBy(id = "TL_PCOMPRA")
 	private WebElement inputPRCompras;
-	
-	@FindBy(id = "idTL_PEDGRAT")
+
+	@FindBy(id = "TL_PEDGRAT")
 	private WebElement inputGratis;
-	
-	@FindBy(id = "idTL_DTENT")
+
+	@FindBy(id = "TL_DTENT")
 	private WebElement inputDataEntrega;
-	
-	@FindBy(id = "idTL_DESCT")
+
+	@FindBy(id = "TL_DESCT")
 	private WebElement inputDesconto;
-	
-	@FindBy(id = "idTL_MOTG")
+
+	@FindBy(id = "TL_MOTG")
 	private WebElement inputMotivo;
-	
-	@FindBy(id = "idTL_CPAGTO")
+
+	@FindBy(id = "TL_CPAGTO")
 	private WebElement inputCodigoPagamento;
-	
-	@FindBy(id = "idNUM_CONTR")
+
+	@FindBy(id = "NUM_CONTR")
 	private WebElement inputContr;
-	
-	@FindBy(id = "idTL_CLASP")
+
+	@FindBy(id = "TL_CLASP")
 	private WebElement inputClassif;
-	
-	@FindBy(id = "idTL_ICM")
+
+	@FindBy(id = "TL_ICM")
 	private WebElement inputICMS;
-	
-	@FindBy(id = "idTL_HREDI")
+
+	@FindBy(id = "TL_HREDI")
 	private WebElement inputHREDI;
-	
-	@FindBy(id = "idEXEC_PED")
+
+	@FindBy(id = "EXEC_PED")
 	private WebElement inputExecutarPedido;
-	
-	@FindBy(id = "idEXEC_REL")
+
+	@FindBy(id = "EXEC_REL")
 	private WebElement inputBaixarRelatorio;
-	
-	@FindBy(id = "idEXEC_IMP")
+
+	@FindBy(id = "EXEC_IMP")
 	private WebElement inputIMpressora;
+
+	@FindBy(id = "TL_IPI")
+	private WebElement inputIPI;
 
 	public DigitacaoPedidosINPE2Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getInputIPI() {
+		return inputIPI;
 	}
 
 	public WebElement getLabelTituloPagina() {
