@@ -19,7 +19,7 @@ public enum AgendamentoCPT85Enum implements AgendamentoCPT85Interface {
 			return agendamentoCPT85page.getInputDataAgenda();
 		}
 	},
-	DATA_PREV_ENTRADA("Data Prev Entrega") {
+	DATA_PREV_ENTRADA("Data Prev Entrada") {
 		@Override
 		public WebElement getElement(AgendamentoCPT85Page agendamentoCPT85page) {
 			return agendamentoCPT85page.getInputDataEntrada();

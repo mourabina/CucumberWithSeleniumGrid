@@ -31,5 +31,19 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		intAgend.getElement(this.agenda).sendKeys(valor);
 		addEvidenciaWeb("Campo: " + campo + " com o valor: " + valor);
 	}
+	
+	public String retornaValorCampo(String campo) {
+		AgendamentoCPT85Interface intAgend = AgendamentoCPT85Enum.valueOf(campo.replace(" ","_").toUpperCase());
+		addEvidenciaWeb("Retornando o valor do campo" + campo);
+		return intAgend.getElement(this.agenda).getText();
+		
+	}
+	
+	public void clicarBotaoIncluir() {
+		this.agenda.getButtonIncluir().click();
+	}
+	public void clicarBotaoConsultar() {
+		this.agenda.getButtonConsultar().click();
+	}
 
 }
