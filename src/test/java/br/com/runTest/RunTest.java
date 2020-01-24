@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"configuration", 
 				"commons"},
 
-		tags = { "@Login" })
+		tags = { "@Agendamento" })
 
 public class RunTest extends BaseTest {
 

@@ -10,4 +10,7 @@ Funcionalidade: Agendamento SAD
     E estou executando o teste
       | id | Número do CT | Nome do CT                     | Nome do executor | Sprint |
       |  1 |            1 | Validar o login no sistema SAD | Matheus MAchado  | T1     |
-    E acessar a tela "CPC10" (SAD)
+    E acessar a tela "CPT85" (SAD)
+    Quando preencho os campos
+      | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |

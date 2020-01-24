@@ -61,7 +61,7 @@ public enum AgendamentoCPT85Enum implements AgendamentoCPT85Interface {
 			return agendamentoCPT85page.getInputSerieNota();
 		}
 	},
-	TRASNPORTADORA("Trasportadora") {
+	TRANSPORTADORA("Transportadora") {
 		@Override
 		public WebElement getElement(AgendamentoCPT85Page agendamentoCPT85page) {
 			return agendamentoCPT85page.getInputTransportadora();
