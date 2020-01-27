@@ -3,7 +3,7 @@ package web.steps;
 import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.AgendamentoFuncionalidade;
 import web.funcionalidade.LoginFuncionalidade;
@@ -18,7 +18,7 @@ public class AgendamentoStep {
 		this.login = new LoginFuncionalidade();
 	}
 
-	@Quando("^preencho os campos de Datas e$")
+	@Dado("^preencho os campos de Datas e$")
 	public void preenchoOsCampos(DataTable params) {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
@@ -26,12 +26,12 @@ public class AgendamentoStep {
 
 	}
 
-	@E("^clicono botao incluir$")
+	@Quando("^clico no botao incluir$")
 	public void clicarBotaoIncluir() {
 		this.agenda.clicarBotaoIncluir();
 	}
 
-	@E("^salvo o valor do campo Agenda e faco uma nova consulta como Valor salvo$")
+	@Quando("^faco a consulta com a agenda recem gerada$")
 	public void salvarValorCampoAgendaFacoNovaConsultaValorAgenda() {
 		VariaveisEstaticas.setAGENDA(this.agenda.retornaValorCampo("Agenda"));
 		this.login.acessarTela("CPT85");

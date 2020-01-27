@@ -16,7 +16,7 @@ public class LoginStep {
 		this.login.loginSAD(user, filial);
 	}
 
-	@Dado("^acessar a tela \"([^\"]*)\" \\(SAD\\)$")
+	@Dado("^que estou na tela \"([^\"]*)\"$")
 	public void acessarATelaSAD(String tela) {
 		this.login.acessarTela(tela);	
 	}
