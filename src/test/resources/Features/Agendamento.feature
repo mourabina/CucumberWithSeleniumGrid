@@ -14,7 +14,7 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E preencho os campos de Datas e
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
-      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+      |              1800 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
@@ -27,7 +27,7 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E que tenha uma agenda criada
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
-      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+      |              1800 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando pesquisar a agenda
     Entao deve retornar os dados da agenda
 
@@ -40,7 +40,7 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E que tenha uma agenda criada
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
-      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+      |              1800 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando pesquisar a agenda
     E acionar o botão deletar
     Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **"
@@ -54,7 +54,7 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E que tenha uma agenda criada
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
-      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+      |              1800 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando pesquisar a agenda
     E altero as informacoes da Agenda e clico em Alterar
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
