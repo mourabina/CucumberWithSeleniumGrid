@@ -67,6 +67,10 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Consulta realizada, dados retornados");
 	}
 	
+	public void clicarBtnDeletar() {
+		this.agenda.getButtonDeletar().click();
+	}
+	
 	public void incluirAguardar() {
 		this.clicarBotaoIncluir();
 		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(this.agenda.getInputAgenda(), "value", "0")));
@@ -78,9 +82,17 @@ public class AgendamentoFuncionalidade extends BaseTest {
 	}
 	
 	public String retornaMensagemExibida() {
+		wait.until(ExpectedConditions.visibilityOf(this.agenda.getMsgExibida()));
 		addEvidenciaWeb("Mensagem Exibida");
+		System.out.println(this.agenda.getMsgExibida().getText());
 		return this.agenda.getMsgExibida().getText();
 	}
 	
+	public void deletarConsultar() {
+		this.clicarBtnDeletar();
+		addEvidenciaWeb("Botão deletar acionado");
+		this.clicarBotaoConsultar();
+		addEvidenciaWeb("Consulta da agenda após deletar");
+	}
 
 }

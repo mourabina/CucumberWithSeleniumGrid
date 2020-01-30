@@ -43,9 +43,9 @@ public class AgendamentoStep {
 	}
 
 	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
-	public void validarCriacaoAgenda(String campo){
+	public void validarCriacaoAgenda(String campo) {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
-	
+
 	}
 
 	@Dado("^que tenha uma agenda criada$")
@@ -58,7 +58,7 @@ public class AgendamentoStep {
 	@Quando("^pesquisar a agenda$")
 	public void pequisarAgendaCriada() {
 		this.login.voltarHomePage();
-		this.login.acessarTela("CPT85");	
+		this.login.acessarTela("CPT85");
 		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());
 		this.agenda.clicarBotaoConsultar();
 	}
@@ -73,18 +73,23 @@ public class AgendamentoStep {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Contato"));
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Fone"));
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));		
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
 	}
 
-	@Quando("^altero as informcoes da Agenda e clico em Alterar$")
-	public void alterarInformacoesAgenda(){
+	@Quando("^altero as informacoes da Agenda e clico em Alterar$")
+	public void alterarInformacoesAgenda() {
 		this.agenda.alterarInformacoesAgenda();
 		this.agenda.clicarBotaoAlterar();
 	}
 
 	@Entao("^deve ser exibido a mensagem \"([^\"]*)\"$")
-	public void valdiarMensagemExibida(String msg){
+	public void validarMensagemExibida(String msg) {
 		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
+	}
+
+	@Quando("^acionar o botão deletar$")
+	public void deletarAgenda() {
+		this.agenda.deletarConsultar();
 	}
 
 }

@@ -30,6 +30,20 @@ Funcionalidade: Agendamento SAD
     Quando pesquisar a agenda
     Entao deve retornar os dados da agenda
 
+  @BRITQEA826 @web
+  Cenario: 826 - Deletar agendamento via tela 'CPT85'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                           | Nome do executor | Sprint |
+      | 826 | BRITQEA-826  | Deletar agendamento via tela 'CPT85' | Matheus Machado  | S1     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+    Quando pesquisar a agenda
+    E acionar o botão deletar
+    Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **"
+
   @BRITQEA827 @web
   Cenario: 827 - Alterar agendamento via tela 'CPT85'
     Dado que estou logado com usuario/filial "818181"/"7467"
@@ -41,6 +55,5 @@ Funcionalidade: Agendamento SAD
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       |              1500 | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando pesquisar a agenda
-    E altero as informcoes da Agenda e clico em Alterar
+    E altero as informacoes da Agenda e clico em Alterar
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
-
