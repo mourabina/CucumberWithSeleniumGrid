@@ -43,7 +43,7 @@ public class AgendamentoStep {
 	}
 
 	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
-	public void oCampoDeveSerPreenchidoComOValorDaAgenda(String campo){
+	public void validarCriacaoAgenda(String campo){
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
 	
 	}
@@ -75,4 +75,19 @@ public class AgendamentoStep {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));		
 	}
+
+	@Quando("^altero as informcoes da Agenda e clico em Alterar$")
+	public void alterarInformacoesAgenda(){
+		this.login.acessarTela("CPT85");
+		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());
+		this.agenda.clicarBotaoConsultar();
+		this.agenda.alterarInformacoesAgenda();
+		this.agenda.clicarBotaoAlterar();
+	}
+
+	@Entao("^deve ser exibido a mensagem \"([^\"]*)\"$")
+	public void valdiarMensagemExibida(String msg){
+		Assert.assertEquals(msg, this.agenda.retornaMensagemExibida());
+	}
+
 }

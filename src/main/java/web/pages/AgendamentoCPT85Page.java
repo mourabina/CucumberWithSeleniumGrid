@@ -129,8 +129,15 @@ public class AgendamentoCPT85Page extends BaseTest {
 	@FindBy(id = "TDTPREV")
 	private WebElement entradaPrevista;
 
+	@FindBy(id = "alerta_sad")
+	private WebElement msgExibida;
+
 	public AgendamentoCPT85Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getMsgExibida() {
+		return msgExibida;
 	}
 
 	public WebElement getEntradaPrevista() {
