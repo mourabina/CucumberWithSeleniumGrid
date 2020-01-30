@@ -7,7 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage{
 	
-
+	@FindBy(xpath = "//*[@href=\"MENUG\"]")
+	private WebElement HomePageIcon;
+	
 	@FindBy(id = "auxProxTela")
 	private WebElement inputProxiTela;
 	
@@ -66,6 +68,14 @@ public class HomePage{
 
 	public WebElement getFiscal() {
 		return fiscal;
+	}
+
+	public WebElement getHomePageIcon() {
+		return HomePageIcon;
+	}
+
+	public WebElement getBtntransmitir() {
+		return Btntransmitir;
 	}
 
 }

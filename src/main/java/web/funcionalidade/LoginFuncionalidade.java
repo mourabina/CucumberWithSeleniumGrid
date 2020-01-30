@@ -31,5 +31,11 @@ public class LoginFuncionalidade extends BaseTest{
 	public void acessarTela(String tela) {
 		this.home.getInputProxiTela().sendKeys(tela);
 		this.home.getBtnTransmitir().click();
+		addEvidenciaWeb("Acesso a tela: " + tela);
+	}
+	
+	public void voltarHomePage() {
+		this.home.getHomePageIcon().click();
+		addEvidenciaWeb("Homepage acessada");
 	}
 }

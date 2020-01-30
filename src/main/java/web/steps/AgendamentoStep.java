@@ -26,7 +26,6 @@ public class AgendamentoStep {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampos(params);
-
 	}
 
 	@Quando("^clico no botao incluir$")
@@ -47,5 +46,33 @@ public class AgendamentoStep {
 	public void oCampoDeveSerPreenchidoComOValorDaAgenda(String campo){
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
 	
+	}
+
+	@Dado("^que tenha uma agenda criada$")
+	public void criaAgenda(DataTable params) {
+		this.preenchoOsCampos(params);
+		this.agenda.incluirAguardar();
+		VariaveisEstaticas.setAGENDA(this.agenda.retornaValorCampo("Agenda"));
+	}
+
+	@Quando("^pesquisar a agenda$")
+	public void pequisarAgendaCriada() {
+		this.login.voltarHomePage();
+		this.login.acessarTela("CPT85");	
+		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());
+		this.agenda.clicarBotaoConsultar();
+	}
+
+	@Entao("^deve retornar os dados da agenda$")
+	public void validarCamposPreenchidos() {
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Agenda"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Prev Entrada"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Hora Prev Entrada"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Transportadora"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Contato"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Fone"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));		
 	}
 }
