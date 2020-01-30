@@ -16,3 +16,17 @@ Funcionalidade: Agendamento SAD
       |              1500 | TransAutomaçãoo | Sr Selenium | 11 31314040 | N         | N          |
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
+
+  @BRITQEA827 @web
+  Cenario: 827 - Alterar agendamento via tela 'CPT85'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                           | Nome do executor | Sprint |
+      | 827 | BRITQEA-827  | Alterar agendamento via tela 'CPT85' | Hiilário Bina    | S1     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e
+      | Hora Prev Entrada | Transportadora  | Contato     | Fone        | Perecivel | Alto Risco |
+      |              1500 | TransAutomaçãoo | Sr Selenium | 11 31314040 | N         | N          |
+    E clico no botao incluir
+    Quando altero as informcoes da Agenda e clico em Alterar
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
