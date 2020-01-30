@@ -5,7 +5,6 @@ import java.util.Set;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import commons.BaseTest;
-import commons.funcionalidade.GeracaoData;
 import io.cucumber.datatable.DataTable;
 import web.bean.enums.AgendamentoCPT85Enum;
 import web.bean.interfaces.AgendamentoCPT85Interface;
@@ -29,7 +28,7 @@ public class AgendamentoFuncionalidade extends BaseTest {
 	}
 	
 	public void alterarInformacoesAgenda() {
-		this.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaDataAtual());
+		this.preencherCampoValor("Hora Prev Entrada", "1700");
 		this.preencherCampoValor("Transportadora","NomeAlterado");
 		this.preencherCampoValor("Contato","Automação");
 		this.preencherCampoValor("Fone", "11 54859632");

@@ -78,16 +78,13 @@ public class AgendamentoStep {
 
 	@Quando("^altero as informcoes da Agenda e clico em Alterar$")
 	public void alterarInformacoesAgenda(){
-		this.login.acessarTela("CPT85");
-		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());
-		this.agenda.clicarBotaoConsultar();
 		this.agenda.alterarInformacoesAgenda();
 		this.agenda.clicarBotaoAlterar();
 	}
 
 	@Entao("^deve ser exibido a mensagem \"([^\"]*)\"$")
 	public void valdiarMensagemExibida(String msg){
-		Assert.assertEquals(msg, this.agenda.retornaMensagemExibida());
+		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
 	}
 
 }
