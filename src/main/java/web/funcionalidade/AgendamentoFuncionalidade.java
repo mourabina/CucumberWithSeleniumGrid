@@ -39,6 +39,13 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		
 	}
 	
+	public boolean validaCampoVazio(String campo) {
+		AgendamentoCPT85Interface intAgend = AgendamentoCPT85Enum.valueOf(campo.replace(" ","_").toUpperCase());
+		addEvidenciaWeb("O valor do campo" + campo);
+		return intAgend.getElement(this.agenda).getAttribute("value").isEmpty();
+		
+	}
+	
 	public void clicarBotaoIncluir() {
 		this.agenda.getButtonIncluir().click();
 	}

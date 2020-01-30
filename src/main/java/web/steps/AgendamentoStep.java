@@ -1,9 +1,12 @@
 package web.steps;
 
+import org.junit.Assert;
+
 import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.AgendamentoFuncionalidade;
 import web.funcionalidade.LoginFuncionalidade;
@@ -38,5 +41,11 @@ public class AgendamentoStep {
 		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());
 		this.agenda.clicarBotaoConsultar();
 
+	}
+
+	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
+	public void oCampoDeveSerPreenchidoComOValorDaAgenda(String campo){
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
+	
 	}
 }

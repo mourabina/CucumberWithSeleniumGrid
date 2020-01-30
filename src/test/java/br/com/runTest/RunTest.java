@@ -1,9 +1,9 @@
 package br.com.runTest;
 
+import org.junit.After;
 import org.junit.runner.RunWith;
 
 import commons.BaseTest;
-import io.cucumber.java.After;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
@@ -16,10 +16,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"configuration", 
 				"commons"},
 
-		tags = { "@Agendamento" })
+		tags = { "@" })
 
 public class RunTest extends BaseTest {
-	@After
+   @After
 	public void closeDriver() {
 		closeDriver();
 	}
