@@ -76,7 +76,7 @@ public class AgendamentoStep {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));		
 	}
 
-	@Quando("^altero as informcoes da Agenda e clico em Alterar$")
+	@Quando("^altero as informacoes da Agenda e clico em Alterar$")
 	public void alterarInformacoesAgenda(){
 		this.agenda.alterarInformacoesAgenda();
 		this.agenda.clicarBotaoAlterar();
@@ -85,6 +85,11 @@ public class AgendamentoStep {
 	@Entao("^deve ser exibido a mensagem \"([^\"]*)\"$")
 	public void valdiarMensagemExibida(String msg){
 		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
+	}
+
+	@Quando("^acionar o botão deletar$")
+	public void deletarEConsultar() {
+		this.agenda.deletarConsultar();
 	}
 
 }

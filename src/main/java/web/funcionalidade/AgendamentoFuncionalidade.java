@@ -78,8 +78,16 @@ public class AgendamentoFuncionalidade extends BaseTest {
 	}
 	
 	public String retornaMensagemExibida() {
+		wait.until(ExpectedConditions.visibilityOf(this.agenda.getMsgExibida()));
 		addEvidenciaWeb("Mensagem Exibida");
 		return this.agenda.getMsgExibida().getText();
+	}
+	
+	public void deletarConsultar() {
+		this.agenda.getButtonDeletar();
+		addEvidenciaWeb("Botão deletar acionado");
+		this.agenda.getButtonConsultar();
+		addEvidenciaWeb("Consulta do registro recem deletado");
 	}
 	
 
