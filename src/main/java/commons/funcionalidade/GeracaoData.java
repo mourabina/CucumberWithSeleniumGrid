@@ -3,6 +3,7 @@ package commons.funcionalidade;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import commons.BaseTest;
 
@@ -15,22 +16,30 @@ public class GeracaoData extends BaseTest {
 		return sdf.format(data).toString();
 	}
 
+	public static String retornaHoraAtual() {
+		GregorianCalendar gc = new GregorianCalendar();
+		gc.setTime(new Date());
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		gc.add(Calendar.HOUR,1);
+		return sdf.format(gc.getTime());
+	}
+
 	public static String retornaDataAtualMaisMeses(int quant) {
-		SimpleDateFormat sdf = new 	SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Calendar cal = Calendar.getInstance();
-	    cal.add(Calendar.MONTH, quant);
-	 
+		cal.add(Calendar.MONTH, quant);
+
 		return sdf.format(cal.getTime()).toString();
 	}
-	
+
 	public static String retornaDataAtualMenosMeses(int quant) {
-		SimpleDateFormat sdf = new 	SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Calendar cal = Calendar.getInstance();
-	    cal.add(Calendar.MONTH, - quant);
-	 
+		cal.add(Calendar.MONTH, -quant);
+
 		return sdf.format(cal.getTime()).toString();
 	}
-	
+
 	public static String retornaDataHoraAtual() {
 		Date data = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");

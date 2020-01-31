@@ -21,10 +21,11 @@ public class AgendamentoStep {
 		this.login = new LoginFuncionalidade();
 	}
 
-	@Dado("^preencho os campos de Datas e$")
+	@Dado("^preencho os campos de Datas e Hora$")
 	public void preenchoOsCampos(DataTable params) {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaHoraAtual().replace(":"," "));
 		this.agenda.preencherCampos(params);
 	}
 
@@ -90,6 +91,14 @@ public class AgendamentoStep {
 	@Quando("^acionar o botão deletar$")
 	public void deletarEConsultar() {
 		this.agenda.deletarConsultar();
+	}
+
+	@Quando("^altero as informacoes da Agenda e aciono o botao Alterar$")
+	public void alterarInformacoesAgendaClicarBotaoAlterar(DataTable params){
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampos(params);
+		this.agenda.clicarBotaoAlterar();
+		
 	}
 
 }
