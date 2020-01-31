@@ -84,9 +84,9 @@ public class AgendamentoFuncionalidade extends BaseTest {
 	}
 	
 	public void deletarConsultar() {
-		this.agenda.getButtonDeletar().click();;
+		this.agenda.getButtonDeletar().click();
 		addEvidenciaWeb("Botão deletar acionado");
-		this.agenda.getButtonConsultar().click();;
+		this.agenda.getButtonConsultar().click();
 		addEvidenciaWeb("Consulta do registro recem deletado");
 	}
 	
