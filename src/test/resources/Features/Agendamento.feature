@@ -161,3 +161,68 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato      | Fone      | Perecivel | Alto Risco |
       | BigAutomacao   | Sr Automacao | 11 525289 | N         | N          |
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+
+  @BRITQEA977 @web
+  Cenario: 977 -  Incluir criar agendamento - 'Alto Risco' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                         | Nome do executor     | Sprint |
+      | 977 | BRITQEA-977  | Incluir criar agendamento - 'Alto Risco' em branco | Matheus MAchado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel |
+      | TransAutomação | Sr Selenium | 11 31314040 | N         |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] ** RISCO DEVE SER "S" OU "N" **"
+
+  @BRITQEA976 @web
+  Cenario: 976 -  Incluir criar agendamento - 'Perecivel' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                        | Nome do executor     | Sprint |
+      | 976 | BRITQEA-976  | Incluir criar agendamento - 'Perecivel' em branco | Matheus MAchado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | N          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
+
+  @BRITQEA975 @web
+  Cenario: 975 -  Incluir criar agendamento - 'Fone' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                   | Nome do executor     | Sprint |
+      | 975 | BRITQEA-975  | Incluir criar agendamento - 'Fone' em branco | Matheus MAchado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | N         | N          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
+
+  @BRITQEA974 @web
+  Cenario: 974 -  Incluir criar agendamento - 'Contato' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                      | Nome do executor     | Sprint |
+      | 974 | BRITQEA-974  | Incluir criar agendamento - 'Contato' em branco | Matheus MAchado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | 11 31314040 | N         | N          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **"
+
+  @BRITQEA973 @web
+  Cenario: 973 -  Incluir criar agendamento - 'Transportadora' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                             | Nome do executor     | Sprint |
+      | 973 | BRITQEA-973  | Incluir criar agendamento - 'Transportadora' em branco | Matheus MAchado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Contato     | Fone        | Perecivel | Alto Risco |
+      | Sr Selenium | 11 31314040 | N         | N          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"

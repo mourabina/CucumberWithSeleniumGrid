@@ -16,10 +16,10 @@ public class GeracaoData extends BaseTest {
 		return sdf.format(data).toString();
 	}
 
-	public static String retornaHoraAtual() {
+	public static String retornaProxHora() {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
 		gc.add(Calendar.HOUR,1);
 		return sdf.format(gc.getTime());
 	}
