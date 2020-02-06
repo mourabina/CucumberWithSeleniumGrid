@@ -44,12 +44,6 @@ public class AgendamentoStep {
 
 	}
 
-	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
-	public void validarCriacaoAgenda(String campo) {
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
-
-	}
-
 	@Dado("^que tenha uma agenda criada$")
 	public void criaAgenda(DataTable params) {
 		this.preenchoOsCampos(params);
@@ -65,28 +59,10 @@ public class AgendamentoStep {
 		this.agenda.clicarBotaoConsultar();
 	}
 
-	@Entao("^deve retornar os dados da agenda$")
-	public void validarCamposPreenchidos() {
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Agenda"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Prev Entrada"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Hora Prev Entrada"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Transportadora"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Contato"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Fone"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
-	}
-
 	@Quando("^altero as informacoes da Agenda e clico em Alterar$")
 	public void alterarInformacoesAgenda() {
 		this.agenda.alterarInformacoesAgenda();
 		this.agenda.clicarBotaoAlterar();
-	}
-
-	@Entao("^deve ser exibido a mensagem \"(.*)\"$")
-	public void valdiarMensagemExibida(String msg) {
-		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
 	}
 
 	@Quando("^acionar o botão deletar$")
@@ -102,63 +78,103 @@ public class AgendamentoStep {
 
 	}
 
+	@Quando("^preencho o campo \"([^\"]*)\" com os valores \"([^\"]*)\"$")
+	public void preencherCampoComValoresInvalidos(String campo, String valor) {
+		this.agenda.preencherCampoValor(campo, valor);
+
+	}
+
 	@E("^preencho os campos de Hora$")
-	public void preenchoOsCamposDeHora(DataTable params){
+	public void preenchoOsCamposDeHora(DataTable params) {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 		this.agenda.preencherCampos(params);
 	}
 
 	@E("^preencho os campos de Data$")
-	public void preenchoOsCamposData(DataTable params){
+	public void preenchoOsCamposData(DataTable params) {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaHoraAntesAtual());
 		this.agenda.preencherCampos(params);
 	}
 
-	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\" ,\"([^\"]*)\"$")
-	public void validarExibicaoMensagem(String valor1, String valor2){
-
-	}
-
 	@E("^preencho os campos de Hora e Data Entrada$")
-	public void validarPreenchimentoCamposDataAgendaLentras(DataTable params){
+	public void validarPreenchimentoCamposDataAgendaLentras(DataTable params) {
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 		this.agenda.preencherCampos(params);
 	}
 
-	@Entao("^o campo \"([^\"]*)\" deve esta vazio$")
-	public void validarCampoVazio(String campo){
-		Assert.assertTrue("Campo " + campo + "Não Está Vazio", this.agenda.validaCampoVazio(campo));
-		
-	}
-
 	@E("^preencho os campos de Hora e Data Agenda$")
-	public void validarPreenchimentoCampoHoraPrevisEntradaLetras(DataTable params){
+	public void validarPreenchimentoCampoHoraPrevisEntradaLetras(DataTable params) {
 		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
 		this.agenda.preencherCampos(params);
 	}
 
-	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\"$")
-	public void deveSerExibidoASeguinteMensagem(String mensagem){
-		mensagem = mensagem.replace("[HORA]", this.agenda.retornaValorCampo("Hora Prev Entrada").split(":")[0]);
-		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(mensagem));
-		}
+	@E("^altero o campo \"([^\"]*)\" deixando ele em branco, depois aciono o botao Alterar$")
+	public void deveAlterarValorCampo(String campo) {
+		this.agenda.limparCampos(campo);
+		;
+		this.agenda.clicarBotaoAlterar();
 
-	@Quando("^preencho o campo \"([^\"]*)\" com os valores \"([^\"]*)\"$")
-	public void preencherCampoComValoresInvalidos(String campo, String valor){
-		this.agenda.preencherCampoValor(campo, valor);
-		
 	}
 
-	@E("^altero o campo \"([^\"]*)\" deixando ele em branco, depois aciono o botao Alterar$")
-	public void deveAlterarValorCampo(String campo){
-		this.agenda.limparCampos(campo);;
+	@E("^altero o campo \"([^\"]*)\" para Hora anterior a atual, depois aciono o botao Alterar$")
+	public void alterarValorCampoDataHoraAnteriorAtual(String campo) {
+		this.agenda.preencherCampoValor(campo, GeracaoData.retornaHoraAntesAtual());
 		this.agenda.clicarBotaoAlterar();
-		
+
+	}
+
+	@E("^altero o campo \"([^\"]*)\" para \"([^\"]*)\" depois clico em Alterar$")
+	public void alterarValorCampoHoraEntrega(String campo, String valor) {
+		this.agenda.preencherCampoValor(campo, valor);
+		this.agenda.clicarBotaoAlterar();
+
+	}
+
+	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
+	public void validarCriacaoAgenda(String campo) {
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
+
+	}
+
+	@Entao("^deve ser exibido a mensagem \"(.*)\"$")
+	public void valdiarMensagemExibida(String msg) {
+		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
+
+	}
+
+	@Entao("^deve ser exibido a mensagem no Alert \"([^\"]*)\"$")
+	public void validarExibicaoMensagemAlert(String mmsg) {
+		Assert.assertTrue("Mensagem não Encontrada", this.agenda.retornaMensagemAlert().contains(mmsg));
+	}
+
+	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\"$")
+	public void deveSerExibidoASeguinteMensagem(String mensagem) {
+		mensagem = mensagem.replace("[HORA]", this.agenda.retornaValorCampo("Hora Prev Entrada").split(":")[0]);
+		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(mensagem));
+	}
+
+	@Entao("^o campo \"([^\"]*)\" deve esta vazio$")
+	public void validarCampoVazio(String campo) {
+		Assert.assertTrue("Campo " + campo + "Não Está Vazio", this.agenda.validaCampoVazio(campo));
+
+	}
+
+	@Entao("^deve retornar os dados da agenda$")
+	public void validarCamposPreenchidos() {
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Agenda"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Prev Entrada"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Hora Prev Entrada"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Transportadora"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Contato"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Fone"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
+		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
 	}
 
 }

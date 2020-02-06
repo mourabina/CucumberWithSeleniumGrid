@@ -377,3 +377,127 @@ Funcionalidade: Agendamento SAD
     Quando pesquisar a agenda
     E altero o campo "Transportadora" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
+
+  @BRITQEA1009 @web
+  Cenario: 1009 -  Alterar o valor campo 'Contato' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                  | Nome do executor | Sprint |
+      | 1009 | BRITQEA-1009 | Alterar o valor campo 'Contato' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Contato" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDA **"
+
+  @BRITQEA1010 @web
+  Cenario: 1010 -  Alterar o valor campo 'Fone' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                               | Nome do executor | Sprint |
+      | 1010 | BRITQEA-1010 | Alterar o valor campo 'Fone' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Fone" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
+
+  @BRITQEA1011 @web
+  Cenario: 1011 -  Alterar o valor campo 'Perecível' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                    | Nome do executor | Sprint |
+      | 1011 | BRITQEA-1011 | Alterar o valor campo 'Perecível' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Perecivel" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
+
+  @BRITQEA1012 @web
+  Cenario: 1012 -  Alterar o valor campo 'Alto Risco' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                     | Nome do executor | Sprint |
+      | 1012 | BRITQEA-1012 | Alterar o valor campo 'Alto Risco' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Alto Risco" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem "[1] ** ALTO RISCO DEVE SER "S" OU "N" **"
+
+  @BRITQEA1013 @web
+  Cenario: 1013 -  Alterar o valor campo 'Agenda' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                 | Nome do executor | Sprint |
+      | 1013 | BRITQEA-1013 | Alterar o valor campo 'Agenda' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Agenda" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem no Alert "[1] *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***"
+
+  @BRITQEA1014 @web
+  Cenario: 1014 -  Alterar Agenda - Hora Incorreta
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 1014 | BRITQEA-1014 | Alterar Agenda - Hora Incorreta | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Hora Prev Entrada" para Hora anterior a atual, depois aciono o botao Alterar
+    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
+
+  @BRITQEA1015 @web
+  Cenario: 1015 -   Alterar Agenda - Data Incorreta
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 1015 | BRITQEA-1015 | Alterar Agenda - Data Incorreta | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Data Prev Entrada" para "010115" depois clico em Alterar
+    Entao deve ser exibido a mensagem "[1] 10115 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
+
+  @BRITQEA1019 @web
+  Cenario: 1019 -   Inserir Caracteres Especiais - Campo 'Perecível'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                       | Nome do executor     | Sprint |
+      | 1019 | BRITQEA-1019 | Inserir Caracteres Especiais - Campo 'Perecível' | Matheus Machado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | @         | S          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] @ ** PERECIVEL DEVE SER "S" OU "N" **"
+
+  @BRITQEA1020 @web
+  Cenario: 1020 -   Inserir Caracteres Especiais - Campo 'Alto Risco'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                       | Nome do executor     | Sprint |
+      | 1020 | BRITQEA-1020 | Inserir Caracteres Especiais - Campo 'Alto Risco' | Matheus Machado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | @          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] @ ** RISCO DEVE SER "S" OU "N" **"
