@@ -23,6 +23,14 @@ public class GeracaoData extends BaseTest {
 		gc.add(Calendar.HOUR,1);
 		return sdf.format(gc.getTime());
 	}
+	
+	public static String retornaHoraAntesAtual() {
+		GregorianCalendar gc = new GregorianCalendar();
+		gc.setTime(new Date());
+		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+		gc.add(Calendar.HOUR,-2);
+		return sdf.format(gc.getTime());
+	}
 
 	public static String retornaDataAtualMaisMeses(int quant) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");

@@ -43,6 +43,12 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
 	}
 	
+	public void limparCampos(String campo) {
+		AgendamentoCPT85Interface intAgend = AgendamentoCPT85Enum.valueOf(campo.replace(" ","_").toUpperCase());
+		intAgend.getElement(this.agenda).clear();
+		addEvidenciaWeb("Campo: " + campo + " está vazio");
+	}
+	
 	public String retornaValorCampo(String campo) {
 		AgendamentoCPT85Interface intAgend = AgendamentoCPT85Enum.valueOf(campo.replace(" ","_").toUpperCase());
 		addEvidenciaWeb("Retornando o valor do campo" + campo);
@@ -52,7 +58,7 @@ public class AgendamentoFuncionalidade extends BaseTest {
 	
 	public boolean validaCampoVazio(String campo) {
 		AgendamentoCPT85Interface intAgend = AgendamentoCPT85Enum.valueOf(campo.replace(" ","_").toUpperCase());
-		addEvidenciaWeb("Campo " + campo + "Preenchido comsucesso");
+		addEvidenciaWeb("Campo " + campo);
 		return intAgend.getElement(this.agenda).getAttribute("value").isEmpty();
 		
 	}

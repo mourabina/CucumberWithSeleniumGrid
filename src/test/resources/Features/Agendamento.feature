@@ -265,3 +265,115 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | D         | S          |
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] D ** PERECIVEL DEVE SER "S" OU "N" **"
+
+  @BRITQEA992 @web
+  Cenario: 992 -  Inserir Agenda - Data Incorreta
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 992 | BRITQEA-992  | Inserir Agenda - Data Incorreta | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Hora
+      | Data Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      |            050216 | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] 50216 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
+
+  @BRITQEA993 @web
+  Cenario: 993 -  Inserir Agenda - Hora Incorreta
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 993 | BRITQEA-993  | Inserir Agenda - Hora Incorreta | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Data
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
+
+  @BRITQEA994 @web
+  Cenario: 994 -  Inserir Caracteres Especiais - Campo 'Data Agenda'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                         | Nome do executor | Sprint |
+      | 994 | BRITQEA-994  | Inserir Caracteres Especiais - Campo 'Data Agenda' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Hora e Data Entrada
+      | Data Agenda | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | !@#$%&*~    | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao o campo "Data Agenda" deve esta vazio
+
+  @BRITQEA995 @web
+  Cenario: 995 -  Inserir Letras - Campo 'Data Agenda'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                           | Nome do executor | Sprint |
+      | 995 | BRITQEA-995  | Inserir Letras - Campo 'Data Agenda' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Hora e Data Entrada
+      | Data Agenda | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | Agenda      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao o campo "Data Agenda" deve esta vazio
+
+  @BRITQEA996 @web
+  Cenario: 996 -  Inserir Caracteres Especiais - Campo 'Hora Prev Entrada'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                               | Nome do executor | Sprint |
+      | 996 | BRITQEA-996  | Inserir Caracteres Especiais - Campo 'Hora Prev Entrada' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Hora e Data Agenda
+      | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | !@#$%&*~          | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao o campo "Hora Prev Entrada" deve esta vazio
+
+  @BRITQEA997 @web
+  Cenario: 997 -  Inserir Letras - Campo 'Hora Prev Entrada'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id  | Numero do CT | Nome do CT                                 | Nome do executor | Sprint |
+      | 997 | BRITQEA-997  | Inserir Letras - Campo 'Hora Prev Entrada' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Hora e Data Agenda
+      | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | ABCD              | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando clico no botao incluir
+    Entao o campo "Hora Prev Entrada" deve esta vazio
+
+  @BRITQEA1002 @web
+  Cenario: 1002 -   Inserir Caracteres Especiais - Campo 'Agenda'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                    | Nome do executor | Sprint |
+      | 1002 | BRITQEA-1002 | Inserir Caracteres Especiais - Campo 'Agenda' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    Quando preencho o campo "Agenda" com os valores "~!@#$%&*"
+    Entao o campo "Agenda" deve esta vazio
+
+  @BRITQEA1003 @web
+  Cenario: 1003 -   Inserir Letras - Campo 'Agenda'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 1003 | BRITQEA-1003 | Inserir Letras - Campo 'Agenda' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    Quando preencho o campo "Agenda" com os valores "ABCDE"
+    Entao o campo "Agenda" deve esta vazio
+
+  @BRITQEA1004 @web
+  Cenario: 1004 -  Alterar o valor campo 'Transportadora' para Branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                         | Nome do executor | Sprint |
+      | 1004 | BRITQEA-1004 | Alterar o valor campo 'Transportadora' para Branco | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E que tenha uma agenda criada
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+    Quando pesquisar a agenda
+    E altero o campo "Transportadora" deixando ele em branco, depois aciono o botao Alterar
+    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
