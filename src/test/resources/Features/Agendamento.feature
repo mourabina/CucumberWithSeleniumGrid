@@ -41,8 +41,7 @@ Funcionalidade: Agendamento SAD
     E que tenha uma agenda criada
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
-    Quando pesquisar a agenda
-    E acionar o botão deletar
+    Quando acionar o botão deletar
     Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **"
 
   @BRITQEA827 @web
