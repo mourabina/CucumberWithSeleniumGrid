@@ -7,13 +7,13 @@ import web.pages.GeracaoPedidosGERPDPage;
 
 public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 
-	COMPR("Compr") {
+	COMPRADOR("Comprador") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputComp();
 		}
 	},
-	FORN("Forn") {
+	FORNEC("Fornec") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputForn();
@@ -73,7 +73,7 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputCodTranspo();
 		}
 	},
-	Data_1("Data 1") {
+	DATA_1("Data 1") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputDatas1();
@@ -97,7 +97,7 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputGratis();
 		}
 	},
-	CLA("Cla") {
+	CLASSIF_PED("Classif Ped") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputClassif();
@@ -113,18 +113,6 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputTextPRZ();
-		}
-	},
-	DF("DF") {
-		@Override
-		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
-			return geracaoPedidosGERPD.getInputDesconto();
-		}
-	},
-	BON("BON") {
-		@Override
-		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
-			return geracaoPedidosGERPD.getInputBonus();
 		}
 	},
 	CONT("Cont") {
@@ -155,6 +143,18 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputObs();
+		}
+	},
+	CODIGO_DO_PRODUTO("Codigo do Produto") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getCodItem();
+		}
+	},
+	DESCRICAO_DO_PRODUTO("Descricao do Produto") {
+		@Override
+		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
+			return geracaoPedidosGERPD.getDescricaoItem();
 		}
 	};
 	
