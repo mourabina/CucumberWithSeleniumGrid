@@ -108,6 +108,18 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputHREDI();
 		}
+	},
+	CODIGO_FILIAL("Codigo Filial") {
+		@Override
+		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
+			return digitacaoPedidosINPE2.getInputHREDI();
+		}
+	},
+	NOME_FILIAL("Nome Filial") {
+		@Override
+		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
+			return digitacaoPedidosINPE2.getInputHREDI();
+		}
 	};
 
 	DigitacaoPedidosINPE2Enum(String s) {

@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import commons.BaseTest;
-
-public class GeracaoPedidosGERPDPage extends BaseTest {
+public class GeracaoPedidosGERPDPage {
 
 	@FindBy(id = "LABEL55")
 	private WebElement labelTituloPagina;
@@ -81,91 +79,137 @@ public class GeracaoPedidosGERPDPage extends BaseTest {
 	@FindBy(id = "OBSERV")
 	private WebElement inputObs;
 
-	@FindBy(id = "XCOD_PROD1")
-	private WebElement inputCodProduto;
-
-	@FindBy(id = "XNOME_PROD1")
-	private WebElement inputDescProduto;
-
-	@FindBy(id = "XPR_COMPRA1")
-	private WebElement inputValorCompra1;
-
-	@FindBy(id = "XDESCX1")
-	private WebElement inputValorDesc;
-
-	@FindBy(id = "XIPI1")
-	private WebElement inputValorDesc1;
-
-	@FindBy(id = "XBONIF1")
-	private WebElement inputBonificacao;
-
-	@FindBy(id = "XICM1")
-	private WebElement inputICMS;
-
-	@FindBy(id = "XCOD1")
-	private WebElement inputPrazo1;
-
-	@FindBy(id = "XPRZ1")
-	private WebElement inputPrazo2;
-
-	@FindBy(id = "XDESCTO1")
-	private WebElement inputDFIN1;
-
-	@FindBy(id = "XBONUS1")
-	private WebElement inputBonus;
-
-	@FindBy(id = "XIMP1")
-	private WebElement inputIMP;
-
-	@FindBy(id = "XEMB1")
-	private WebElement inputEMB;
-
-	@FindBy(id = "XLES1")
-	private WebElement inputLES;
-
-	@FindBy(id = "XPV_ATU1")
-	private WebElement inputPVATU;
-
-	@FindBy(id = "XMRG_REAL1XSD")
-	private WebElement inputMReal;
-
-	@FindBy(id = "XMRG_REAL1")
-	private WebElement inputMReal1;
-
-	@FindBy(id = "XPEND_FATM1")
-	private WebElement inputPendFatur;
-
-	@FindBy(id = "XDDE1")
-	private WebElement inputDDE;
-
-	@FindBy(id = "XPEND_FORN1")
-	private WebElement inputPendForne;
-
 	@FindBy(id = "EXEC_PED")
 	private WebElement inputExecutarPedido;
 
-	@FindBy(id = "EXEC_REL")
-	private WebElement inputBaixaRelatorio;
+	@FindBy(id = "BT_CONSULTA")
+	private WebElement bt_consultarPedido;
 
-	@FindBy(id = "EXEC_IMP")
-	private WebElement inputIMpressora;
+	@FindBy(id = "BT_CONSULTA2")
+	private WebElement bt_consultarTabelaCompra;
 
-	@FindBy(id = "DESCTO_HD")
-	private WebElement inputDesconto;
+	@FindBy(id = "BT_ADD")
+	private WebElement bt_incluir;
 
-	@FindBy(id = "BONUS_HD")
-	private WebElement bonus;
+	@FindBy(id = "BT_CHG")
+	private WebElement bt_alterar;
 
-	GeracaoPedidosGERPDPage(WebDriver webDriver) {
+	@FindBy(id = "BT_DEL")
+	private WebElement bt_excluir;
+
+	@FindBy(id = "panel_PR_COMPRA_0")
+	private WebElement inpuGridtPrecoCompra;
+
+	@FindBy(id = "panel_DESCX_0")
+	private WebElement inputGridDesconto;
+
+	@FindBy(id = "panel_IPI_0")
+	private WebElement inputGridIPI;
+
+	@FindBy(id = "panel_BONIF_0")
+	private WebElement inputGridBonificacao;
+
+	@FindBy(id = "panel_ICM_0")
+	private WebElement inputGridICM;
+
+	@FindBy(id = "panel_PEND_FORN_0")
+	private WebElement inputGridPrecoFornecedor;
+
+	@FindBy(id = "panel_ESTOQ_0")
+	private WebElement inputGridEstoque;
+
+	@FindBy(id = "panel_DDE_0")
+	private WebElement inputGridDDE;
+
+	@FindBy(id = "panel_QTD1_0")
+	private WebElement valorCompra;
+
+	@FindBy(id = "panel_OPCAO_0_checkbox")
+	private WebElement opcaoItemCheckbox;
+
+	@FindBy(id = "panel_COD_PROD_0")
+	private WebElement codItem;
+
+	@FindBy(id = "panel_NOME_PROD_0")
+	private WebElement descricaoItem;
+
+	@FindBy(id = "alerta_sad")
+	private WebElement msg;
+
+	public GeracaoPedidosGERPDPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
 
-	public WebElement getBonus() {
-		return bonus;
+	public WebElement getMsg() {
+		return msg;
 	}
 
-	public WebElement getInputDesconto() {
-		return inputDesconto;
+	public WebElement getInpuGridtPrecoCompra() {
+		return inpuGridtPrecoCompra;
+	}
+
+	public WebElement getInputGridDesconto() {
+		return inputGridDesconto;
+	}
+
+	public WebElement getInputGridIPI() {
+		return inputGridIPI;
+	}
+
+	public WebElement getInputGridBonificacao() {
+		return inputGridBonificacao;
+	}
+
+	public WebElement getInputGridICM() {
+		return inputGridICM;
+	}
+
+	public WebElement getInputGridPrecoFornecedor() {
+		return inputGridPrecoFornecedor;
+	}
+
+	public WebElement getInputGridEstoque() {
+		return inputGridEstoque;
+	}
+
+	public WebElement getInputGridDDE() {
+		return inputGridDDE;
+	}
+
+	public WebElement getValorCompra() {
+		return valorCompra;
+	}
+
+	public WebElement getOpcaoItemCheckbox() {
+		return opcaoItemCheckbox;
+	}
+
+	public WebElement getCodItem() {
+		return codItem;
+	}
+
+	public WebElement getDescricaoItem() {
+		return descricaoItem;
+	}
+
+	public WebElement getBt_consultarPedido() {
+		return bt_consultarPedido;
+	}
+
+	public WebElement getBt_consultarTabelaCompra() {
+		return bt_consultarTabelaCompra;
+	}
+
+	public WebElement getBt_incluir() {
+		return bt_incluir;
+	}
+
+	public WebElement getBt_alterar() {
+		return bt_alterar;
+	}
+
+	public WebElement getBt_excluir() {
+		return bt_excluir;
 	}
 
 	public WebElement getLabelTituloPagina() {
@@ -264,96 +308,8 @@ public class GeracaoPedidosGERPDPage extends BaseTest {
 		return inputObs;
 	}
 
-	public WebElement getInputCodProduto() {
-		return inputCodProduto;
-	}
-
-	public WebElement getInputDescProduto() {
-		return inputDescProduto;
-	}
-
-	public WebElement getInputValorCompra1() {
-		return inputValorCompra1;
-	}
-
-	public WebElement getInputValorDesc() {
-		return inputValorDesc;
-	}
-
-	public WebElement getInputValorDesc1() {
-		return inputValorDesc1;
-	}
-
-	public WebElement getInputBonificacao() {
-		return inputBonificacao;
-	}
-
-	public WebElement getInputICMS() {
-		return inputICMS;
-	}
-
-	public WebElement getInputPrazo1() {
-		return inputPrazo1;
-	}
-
-	public WebElement getInputPrazo2() {
-		return inputPrazo2;
-	}
-
-	public WebElement getInputDFIN1() {
-		return inputDFIN1;
-	}
-
-	public WebElement getInputBonus() {
-		return inputBonus;
-	}
-
-	public WebElement getInputIMP() {
-		return inputIMP;
-	}
-
-	public WebElement getInputEMB() {
-		return inputEMB;
-	}
-
-	public WebElement getInputLES() {
-		return inputLES;
-	}
-
-	public WebElement getInputPVATU() {
-		return inputPVATU;
-	}
-
-	public WebElement getInputMReal() {
-		return inputMReal;
-	}
-
-	public WebElement getInputMReal1() {
-		return inputMReal1;
-	}
-
-	public WebElement getInputPendFatur() {
-		return inputPendFatur;
-	}
-
-	public WebElement getInputDDE() {
-		return inputDDE;
-	}
-
-	public WebElement getInputPendForne() {
-		return inputPendForne;
-	}
-
 	public WebElement getInputExecutarPedido() {
 		return inputExecutarPedido;
-	}
-
-	public WebElement getInputBaixaRelatorio() {
-		return inputBaixaRelatorio;
-	}
-
-	public WebElement getInputIMpressora() {
-		return inputIMpressora;
 	}
 
 }

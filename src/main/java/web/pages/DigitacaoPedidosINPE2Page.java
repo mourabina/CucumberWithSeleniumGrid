@@ -78,8 +78,22 @@ public class DigitacaoPedidosINPE2Page extends BaseTest {
 	@FindBy(id = "TL_IPI")
 	private WebElement inputIPI;
 
+	@FindBy(id = "panel_FILENT1_WM_0")
+	private WebElement labelCodigoFilial;
+
+	@FindBy(id = "panel_NOMEFIL1_0")
+	private WebElement labelNomeFilial;
+
 	public DigitacaoPedidosINPE2Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getLabelCodigoFilial() {
+		return labelCodigoFilial;
+	}
+
+	public WebElement getLabelNomeFilial() {
+		return labelNomeFilial;
 	}
 
 	public WebElement getInputIPI() {

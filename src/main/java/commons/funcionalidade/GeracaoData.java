@@ -39,6 +39,14 @@ public class GeracaoData extends BaseTest {
 
 		return sdf.format(cal.getTime()).toString();
 	}
+	
+	public static String retornaDataAtualMaisDias(int quant) {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DAY_OF_MONTH, +quant);
+
+		return sdf.format(cal.getTime()).toString();
+	}
 
 	public static String retornaDataAtualMenosMeses(int quant) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
