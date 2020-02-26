@@ -28,8 +28,8 @@ Funcionalidade: Pedido_Estocado SAD
     E que estou na tela "GERPD"
     E preencho os campos mais os campos de Data
       | Comprador | Fornec  |
-      |       028 | 3500684 |
-    E seleciono a opcao "T" no campo "Classif Ped"
+      |       020 | 3500863 |
+    E seleciono a opcao "A" no campo "Classif Ped"
     Quando clico no botao Consultar Tabela  Compra
     Entao deve ser exibido no GRID o "Codigo do Produto" e a "Descricao do Produto"
 

@@ -22,7 +22,7 @@ public class PedidoEstocadoStep {
 	@Dado("preencho os campos mais os campos de Data")
 	public void preenchoOsCamposMaisOsCamposDeData(DataTable dataTable) {
 		this.pedidos.preencherCampos(dataTable);
-		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtual());
+		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 	}
 
 	@Quando("clico no botao Consultar Tabela  Compra")
