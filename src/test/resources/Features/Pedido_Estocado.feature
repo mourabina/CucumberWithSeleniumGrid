@@ -240,3 +240,59 @@ Funcionalidade: Pedido_Estocado SAD
     E que estou na tela "GERPD"
     E preencher o campo "Transp" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2211 @web
+  Cenario: 2211 - Inserir caracteres especiais no campo 'Emp'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                  | Nome do executor | Sprint |
+      | 2211 | BRITQEA-2211 | Inserir caracteres especiais no campo 'Emp' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    Quando preencher o campo "Emp" com o valor "!@#$%&*"
+    Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2212 @web
+  Cenario: 2212 - Inserir letras no campo 'Emp'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                    | Nome do executor | Sprint |
+      | 2212 | BRITQEA-2212 | Inserir letras no campo 'Emp' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E preencher o campo "Emp" com o valor "ABCDEF"
+    Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2213 @web
+  Cenario: 2213 - Inserir caracteres especiais no campo 'Datas'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                    | Nome do executor | Sprint |
+      | 2213 | BRITQEA-2213 | Inserir caracteres especiais no campo 'Datas' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    Quando preencher os campos Datas com o valor "!@#$%&*"
+    Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2214 @web
+  Cenario: 2214 - Inserir letras no campo 'Datas'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 2214 | BRITQEA-2214 | Inserir letras no campo 'Datas' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    Quando preencher os campos Datas com o valor "ABCDEF"
+    Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2198 @web
+  Cenario: 2198 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2198 | BRITQEA-2198 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos mais os campos de Data
+      | Comprador | Fornec  | Pesquisa |
+      |       028 | 3500684 |     4785 |
+    E seleciono a opcao "A" no campo "Classif Ped"
+    E Seleciono produto e digito a quantidade "10" e clico no botao incluir
+    E deve ser gerado um numero do pedido
+    Quando faco uma pesquisa na tela "SOLPD" com o campo "FORN"
+    Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD

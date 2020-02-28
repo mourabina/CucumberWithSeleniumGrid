@@ -76,5 +76,11 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.gerpd.getBt_consultarTabelaCompra().click();
 		
 	}
+	public void preencherCamposDatas(String valor) {
+		this.preencherCampoValor("Data 1", valor);
+		this.preencherCampoValor("Data 2", valor);
+		this.preencherCampoValor("Data 3", valor);
+	}
+	
 
 }

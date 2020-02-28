@@ -30,43 +30,46 @@ public class PedidoEstocadoStep {
 		this.pedidos.clicarBotaoConsultaPedido();
 	}
 
-
 	@Entao("^deve ser apresentado a mensagem \"([^\"]*)\"$")
-	public void validarMensagemExibida(String msg){
+	public void validarMensagemExibida(String msg) {
 		Assert.assertTrue(this.pedidos.retornaMensagemExibida().contains(msg));
-		
+
 	}
 
 	@E("^preencher o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
-	public void preencherOCampoComOValor(String campo, String valor){
+	public void preencherOCampoComOValor(String campo, String valor) {
 		this.pedidos.preencherCampoValor(campo, valor);
-		
+
 	}
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
-	public void valdiarExibicaoInfomacaoItensGRidResultado(String campo1, String campo2){
+	public void valdiarExibicaoInfomacaoItensGRidResultado(String campo1, String campo2) {
 		Assert.assertFalse("Camapo " + campo1 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo1));
 		Assert.assertFalse("Camapo " + campo2 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo2));
 	}
 
 	@E("^seleciono a opcao \"([^\"]*)\" no campo \"([^\"]*)\"$")
-	public void selecionarValorCampoComboBox(String valor, String campo){
+	public void selecionarValorCampoComboBox(String valor, String campo) {
 		this.pedidos.selecionarValorComboBox(campo, valor);
-		
+
 	}
 
 	@Então("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
-	public void deveSerExibidoOValorNoCampo(String valor, String campo){
+	public void deveSerExibidoOValorNoCampo(String valor, String campo) {
 		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
-		
+
 	}
 
 	@Quando("^clico no botao Consultar Tabela de Compra$")
-	public void clicarBotaoConsultarTabelaCompra(){
+	public void clicarBotaoConsultarTabelaCompra() {
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
-		
+
 	}
 
-	
+	@Quando("^preencher os campos Datas com o valor \"([^\"]*)\"$")
+	public void preencherTodosCamposDatas(String valor) {
+		this.pedidos.preencherCamposDatas(valor);
+
+	}
 
 }
