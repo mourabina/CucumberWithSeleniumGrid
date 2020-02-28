@@ -92,5 +92,11 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 			assertFalse("Campo Nome produto está vazio", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty());
 		}
 	}
+	public void preencherCamposDatas(String valor) {
+		this.preencherCampoValor("Data 1", valor);
+		this.preencherCampoValor("Data 2", valor);
+		this.preencherCampoValor("Data 3", valor);
+	}
+	
 
 }

@@ -79,13 +79,13 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputDatas1();
 		}
 	},
-	Data_2("Data 2") {
+	DATA_2("Data 2") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputDatas2();
 		}
 	},
-	Data_3("Data 3") {
+	DATA_3("Data 3") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputDatas3();
@@ -127,7 +127,7 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputEVE();
 		}
 	},
-	EMPRE("Empre") {
+	EMP("Emp") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputEmpre();
