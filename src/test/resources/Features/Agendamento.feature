@@ -1,5 +1,5 @@
 #language: pt
-#Author: Matheus Machado
+#Author: Hilário Bina
 #Version: 1.0
 #Encoding: UTF-8
 @Agendamento

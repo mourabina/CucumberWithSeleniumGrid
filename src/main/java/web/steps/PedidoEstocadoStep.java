@@ -9,14 +9,14 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import web.funcionalidade.PedidosFuncionalidade;
+import web.funcionalidade.PedidosEstocadosFuncionalidade;
 
 public class PedidoEstocadoStep {
 
-	private PedidosFuncionalidade pedidos;
+	private PedidosEstocadosFuncionalidade pedidos;
 
 	public PedidoEstocadoStep() {
-		this.pedidos = new PedidosFuncionalidade();
+		this.pedidos = new PedidosEstocadosFuncionalidade();
 	}
 
 	@Dado("preencho os campos mais os campos de Data")
@@ -25,9 +25,9 @@ public class PedidoEstocadoStep {
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 	}
 
-	@Quando("clico no botao Consultar Tabela  Compra")
+	@Quando("clico no botao Consultar Pedido")
 	public void clicoNoBotaoConsultarPedido() {
-		this.pedidos.clicarBotaoConsultaTabelaCompra();
+		this.pedidos.clicarBotaoConsultaPedido();
 	}
 
 
@@ -45,8 +45,8 @@ public class PedidoEstocadoStep {
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
 	public void valdiarExibicaoInfomacaoItensGRidResultado(String campo1, String campo2){
-		Assert.assertTrue("Camapo " + campo1 + "Não está sendo exibido", !this.pedidos.retornaValorCampo(campo1).equals(" "));
-		Assert.assertTrue("Camapo " + campo2 + "Não está sendo exibido", !this.pedidos.retornaValorCampo(campo1).equals(" "));
+		Assert.assertFalse("Camapo " + campo1 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo1));
+		Assert.assertFalse("Camapo " + campo2 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo2));
 	}
 
 	@E("^seleciono a opcao \"([^\"]*)\" no campo \"([^\"]*)\"$")
@@ -60,5 +60,13 @@ public class PedidoEstocadoStep {
 		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
 		
 	}
+
+	@Quando("^clico no botao Consultar Tabela de Compra$")
+	public void clicarBotaoConsultarTabelaCompra(){
+		this.pedidos.clicarBotaoConsultarTabelaCompra();
+		
+	}
+
+	
 
 }

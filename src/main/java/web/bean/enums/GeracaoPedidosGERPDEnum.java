@@ -43,7 +43,7 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInpuPesqui();
 		}
 	},
-	FIL("Fil") {
+	FILIAL("Filial") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputFlial();
@@ -67,7 +67,7 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputFrete();
 		}
 	},
-	COD_TRANSPORTADORA("Cod Transportadora") {
+	TRANSP("Transp") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputCodTranspo();
@@ -115,13 +115,13 @@ public enum GeracaoPedidosGERPDEnum implements GeracaoPedidosGERPDInterface {
 			return geracaoPedidosGERPD.getInputTextPRZ();
 		}
 	},
-	CONT("Cont") {
+	CONTATO("Contato") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputCont();
 		}
 	},
-	EVE("Eve") {
+	EVENTO("Evento") {
 		@Override
 		public WebElement getElement(GeracaoPedidosGERPDPage geracaoPedidosGERPD) {
 			return geracaoPedidosGERPD.getInputEVE();

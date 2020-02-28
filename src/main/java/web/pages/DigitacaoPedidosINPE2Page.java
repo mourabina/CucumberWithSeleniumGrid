@@ -84,8 +84,57 @@ public class DigitacaoPedidosINPE2Page extends BaseTest {
 	@FindBy(id = "panel_NOMEFIL1_0")
 	private WebElement labelNomeFilial;
 
+	@FindBy(id = "BT_CONSULTA")
+	private WebElement bt_ConsultarPedido;
+
+	@FindBy(id = "BT_CONSULTA2")
+	private WebElement bt_ConsultarLoja;
+
+	@FindBy(id = "BT_ADD")
+	private WebElement bt_incluir;
+
+	@FindBy(id = "BT_CHG")
+	private WebElement bt_alterar;
+
+	@FindBy(id = "BT_DEL")
+	private WebElement bt_excluir;
+
+	@FindBy(id = "panel_TL_OPC1_0_checkbox")
+	private WebElement checkboxOpcaoLoja;
+
+	@FindBy(id = "panel_QTDADE1_0")
+	private WebElement gridQuantidade;
+
 	public DigitacaoPedidosINPE2Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getGridQuantidade() {
+		return gridQuantidade;
+	}
+
+	public WebElement getCheckboxOpcaoLoja() {
+		return checkboxOpcaoLoja;
+	}
+
+	public WebElement getBt_ConsultarPedido() {
+		return bt_ConsultarPedido;
+	}
+
+	public WebElement getBt_ConsultarLoja() {
+		return bt_ConsultarLoja;
+	}
+
+	public WebElement getBt_incluir() {
+		return bt_incluir;
+	}
+
+	public WebElement getBt_alterar() {
+		return bt_alterar;
+	}
+
+	public WebElement getBt_excluir() {
+		return bt_excluir;
 	}
 
 	public WebElement getLabelCodigoFilial() {

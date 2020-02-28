@@ -10,11 +10,11 @@ import web.bean.enums.GeracaoPedidosGERPDEnum;
 import web.bean.interfaces.GeracaoPedidosGERPDInterface;
 import web.pages.GeracaoPedidosGERPDPage;
 
-public class PedidosFuncionalidade extends BaseTest {
+public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	private GeracaoPedidosGERPDPage gerpd;
 
-	public PedidosFuncionalidade() {
+	public PedidosEstocadosFuncionalidade() {
 		this.gerpd = new GeracaoPedidosGERPDPage(webDriver);
 	}
 
@@ -61,14 +61,20 @@ public class PedidosFuncionalidade extends BaseTest {
 		});
 	}
 
-	public void clicarBotaoConsultaTabelaCompra() {
+	public void clicarBotaoConsultaPedido() {
 		addEvidenciaWeb("Clicando no Botão Consultar Tabela Compra");
-		this.gerpd.getBt_consultarTabelaCompra().click();
+		this.gerpd.getBt_consultarPedido().click();
 	}
 
 	public String retornaMensagemExibida() {
 		addEvidenciaWeb("Mensagem Exibida");
 		return this.gerpd.getMsg().getText();
+	}
+
+	public void clicarBotaoConsultarTabelaCompra() {
+		addEvidenciaWeb("Clicando no botão Consulta Tabela de Compra");
+		this.gerpd.getBt_consultarTabelaCompra().click();
+		
 	}
 
 }
