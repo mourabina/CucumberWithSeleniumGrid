@@ -8,8 +8,14 @@ public class VariaveisEstaticas {
 	private static String COD_PRODUTO;
 	private static String QUANT;
 	private static String DATA_ENTRADA;
-	
-	
+	private static String FILIAL;
+
+	public static void setFILIAL(String fILIAL) {
+		FILIAL = fILIAL;
+	}
+	public static String getFILIAL() {
+		return FILIAL;
+	}
 
 	public static String getCOMPRADOR() {
 		return COMPRADOR;

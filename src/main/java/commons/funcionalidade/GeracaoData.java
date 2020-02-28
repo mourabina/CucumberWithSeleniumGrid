@@ -1,5 +1,6 @@
 package commons.funcionalidade;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -62,6 +63,15 @@ public class GeracaoData extends BaseTest {
 
 		return sdf.format(cal.getTime()).toString();
 	}
+	public static String retornaDataFormatada(String data) throws ParseException {
+		Date sdf = new SimpleDateFormat("dd/MM/yy").parse(data);
+		String dataFormatada = new SimpleDateFormat("dd/MM/yy").format(sdf);
+		return dataFormatada.replace("/","");
+	}
+	
+	
+	
+	
 
 	public static String retornaDataHoraAtual() {
 		Date data = new Date();

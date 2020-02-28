@@ -9,7 +9,7 @@ public class GeracaoPedidosGERPDPage {
 
 	@FindBy(id = "form")
 	private WebElement form;
-	
+
 	@FindBy(id = "LABEL55")
 	private WebElement labelTituloPagina;
 
@@ -139,8 +139,15 @@ public class GeracaoPedidosGERPDPage {
 	@FindBy(id = "alerta_sad")
 	private WebElement msg;
 
+	@FindBy(id = "EXEC_PED_FX")
+	private WebElement bt_ExeutarPedido;
+
 	public GeracaoPedidosGERPDPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getBt_ExeutarPedido() {
+		return bt_ExeutarPedido;
 	}
 
 	public WebElement getMsg() {

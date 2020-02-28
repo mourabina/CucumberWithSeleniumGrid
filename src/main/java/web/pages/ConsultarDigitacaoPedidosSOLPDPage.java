@@ -12,13 +12,13 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "LABEL20")
 	private WebElement labelTituloPagina;
 	
-	@FindBy(id = "COD_LOC")
+	@FindBy(id = "panel_COD_LOCAL_0")
 	private WebElement inputLocal;
 	
 	@FindBy(id = "COD_FORNEC")
 	private WebElement inputFornecedor;
 	
-	@FindBy(id = "COD_LOJA_WM")
+	@FindBy(id = "panel_LOJA_WM_0")
 	private WebElement inputFilial;
 	
 	@FindBy(id = "COD_COMPR")
@@ -27,7 +27,7 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "COD_PROD_PESQ")
 	private WebElement inputProduto;
 	
-	@FindBy(id = "DATA_PESQ")
+	@FindBy(id = "panel_DATA_X_0")
 	private WebElement inputData;
 	
 	@FindBy(id = "HORA_PESQ")
@@ -36,22 +36,22 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "SIT_PESQ")
 	private WebElement inputSituacao;
 	
-	@FindBy(id = "XCOD_LOCAL1")
+	@FindBy(id = "panel_COD_LOCAL_0")
 	private WebElement textLocal;
 	
-	@FindBy(id = "XCOD_FORN1")
+	@FindBy(id = "panel_COD_FORN_0")
 	private WebElement textFornecedor;
 	
-	@FindBy(id = "XNOME_FORN1")
+	@FindBy(id = "panel_NOME_FORN_0")
 	private WebElement textNomeFornecedor;
 	
-	@FindBy(id = "XEST1")
+	@FindBy(id = "panel_EST_0")
 	private WebElement textUF;
 	
-	@FindBy(id = "XLOJA_WM1")
+	@FindBy(id = "panel_LOJA_WM_0")
 	private WebElement textLoja;
 	
-	@FindBy(id = "XCOMPR1")
+	@FindBy(id = "panel_COMPR_0")
 	private WebElement textCPR;
 	
 	@FindBy(id = "XCOD_TIPO1")
@@ -66,10 +66,10 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "XDESC_CLAS1")
 	private WebElement textDescCalssificacao;
 	
-	@FindBy(id = "XCOD_PROD1")
+	@FindBy(id = "panel_COD_PROD_0")
 	private WebElement textProduto;
 	
-	@FindBy(id = "XQUANT1")
+	@FindBy(id = "panel_QUANT_0")
 	private WebElement textQuanti;
 	
 	@FindBy(id = "XPRECO1")
@@ -78,7 +78,7 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "XDESCX1")
 	private WebElement textDesconto;
 	
-	@FindBy(id = "XDATA_X1")
+	@FindBy(id = "panel_DATA_X_0")
 	private WebElement textDataEntrada;
 	
 	@FindBy(id = "XDATA_DIG1")
@@ -86,8 +86,9 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	
 	@FindBy(id = "XHORA_DIG1")
 	private WebElement textHoraDigitada;
+	
 
-	ConsultarDigitacaoPedidosSOLPDPage(WebDriver webDriver){
+	public ConsultarDigitacaoPedidosSOLPDPage(WebDriver webDriver){
 		PageFactory.initElements(webDriver, this);
 		
 	}

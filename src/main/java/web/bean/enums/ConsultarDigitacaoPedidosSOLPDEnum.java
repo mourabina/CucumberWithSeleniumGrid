@@ -10,7 +10,7 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 	LOCAL("Local") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getInputLocal();
+			return consultarDigitacaoPedidosSOLPD.getTextLocal();
 		}
 	},
 	FORN("Forn") {
@@ -22,25 +22,25 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 	FILIAL("Filial") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getInputFilial();
+			return consultarDigitacaoPedidosSOLPD.getTextLoja();
 		}
 	},
 	COMPR("Compr") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getInputCompr();
+			return consultarDigitacaoPedidosSOLPD.getTextCPR();
 		}
 	},
 	PRODUTO("Produto") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getInputProduto();
+			return consultarDigitacaoPedidosSOLPD.getTextProduto();
 		}
 	},
 	DATA("Data") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getInputData();
+			return consultarDigitacaoPedidosSOLPD.getTextDataEntrada();
 		}
 	},
 	HORA("Hora") {
@@ -53,6 +53,30 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
 			return consultarDigitacaoPedidosSOLPD.getInputSituacao();
+		}
+	},
+	QTDA("Qtda") {
+		@Override
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getTextQuanti();
+		}
+	},
+	FORNECEDOR("Fornecedor") {
+		@Override
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getTextFornecedor();
+		}
+	},
+	GRID_LOCAL("Grid Local") {
+		@Override
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getTextLocal();
+		}
+	},
+	LOJA("Loja") {
+		@Override
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getTextLoja();
 		}
 	};
 

@@ -249,8 +249,8 @@ Funcionalidade: Pedido_Estocado SAD
       | 2216 | BRITQEA-2216 | Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado | Matheus Machado  | S1     |
     E que estou na tela "GERPD"
     E preencho os campos da GERPD
-      | Comprador | Fornec  | 
-      |       028 | 3500684 | 
+      | Comprador | Fornec  |
+      |       028 | 3500684 |
     Quando clico no botao Consultar Tabela de Compra
     Entao grid deve estar populada
 
@@ -294,19 +294,18 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher os campos Datas com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2198 @web
-  Cenario: 2198 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A'
+  @BRITQEA2215 @web
+  Cenario: 2215 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
-      | 2198 | BRITQEA-2198 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A' | Hiilário Bina    | S1     |
+      | 2215 | BRITQEA-2215 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencho os campos mais os campos de Data
       | Comprador | Fornec  | Pesquisa |
-      |       028 | 3500684 |     4785 |
+      |       025 | 3509175 |     1661 |
     E seleciono a opcao "A" no campo "Classif Ped"
-    E Seleciono produto e digito a quantidade "10" e clico no botao incluir
+    E Seleciono produto e digito a quantidade "10" e clico nos botaes incluir e Executar Pedido
     E deve ser gerado um numero do pedido
     Quando faco uma pesquisa na tela "SOLPD" com o campo "FORN"
     Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
-

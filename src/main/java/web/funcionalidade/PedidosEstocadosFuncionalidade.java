@@ -5,9 +5,12 @@ import static org.junit.Assert.assertFalse;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
+import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import web.bean.enums.GeracaoPedidosGERPDEnum;
 import web.bean.interfaces.GeracaoPedidosGERPDInterface;
@@ -16,9 +19,11 @@ import web.pages.GeracaoPedidosGERPDPage;
 public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	private GeracaoPedidosGERPDPage gerpd;
+	
 
 	public PedidosEstocadosFuncionalidade() {
 		this.gerpd = new GeracaoPedidosGERPDPage(webDriver);
+		
 	}
 
 	public void preencherCampoValor(String campo, String valor) {
@@ -96,6 +101,37 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.preencherCampoValor("Data 1", valor);
 		this.preencherCampoValor("Data 2", valor);
 		this.preencherCampoValor("Data 3", valor);
+	}
+	
+	public void selecionarComboBox() {
+		this.gerpd.getOpcaoItemCheckbox().click();
+	}
+	
+	public void preencherCampoCompra(String quant) {
+		this.gerpd.getValorCompra().clear();
+		this.gerpd.getValorCompra().sendKeys(quant);
+	}
+	
+	public void clicarBotaoIncluir() {
+		this.gerpd.getBt_incluir().click();
+	}
+		
+	public void clicarBotaoExecutarPedido() {
+		this.gerpd.getBt_ExeutarPedido().click();
+	}
+	
+	public void salvarInformacoesPedido() {
+		VariaveisEstaticas.setFORNEC(this.gerpd.getInputForn().getAttribute("value"));
+		VariaveisEstaticas.setFILIAL(this.gerpd.getInputFlial().getAttribute("value"));
+		VariaveisEstaticas.setCOMPRADOR(this.gerpd.getInputComp().getAttribute("value"));
+		VariaveisEstaticas.setQUANT(this.gerpd.getValorCompra().getAttribute("value"));
+		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
+		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
+	}
+	
+	public void executarComandoEnter() {
+		Actions builder = new Actions(webDriver);        
+		builder.sendKeys(Keys.ENTER).perform();
 	}
 	
 
