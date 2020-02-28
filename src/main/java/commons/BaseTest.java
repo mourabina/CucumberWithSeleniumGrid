@@ -1,12 +1,17 @@
 package commons;
 
+import static org.junit.Assert.assertFalse;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import configuration.AccountCredentialsUsers;
@@ -118,5 +123,21 @@ public class BaseTest {
 	 */
 	private String takeScreenshot(WebDriver driver) {
 		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+	}
+	
+	public void waitForPageToLoad(WebDriver driver) {
+	    ExpectedCondition < Boolean > pageLoad = new
+	    ExpectedCondition < Boolean > () {
+	        public Boolean apply(WebDriver driver) {
+	            return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+	        }
+	    };
+
+	    Wait < WebDriver > wait = new WebDriverWait(driver, 60);
+	    try {
+	        wait.until(pageLoad);
+	    } catch (Throwable pageLoadWaitError) {
+	        assertFalse("Timeout during page load", true);
+	    }
 	}
 }

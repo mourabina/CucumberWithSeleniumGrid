@@ -240,3 +240,16 @@ Funcionalidade: Pedido_Estocado SAD
     E que estou na tela "GERPD"
     E preencher o campo "Transp" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2216 @web
+  Cenario: 2216 - Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                                  | Nome do executor | Sprint |
+      | 2216 | BRITQEA-2216 | Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos da GERPD
+      | Comprador | Fornec  | 
+      |       028 | 3500684 | 
+    Quando clico no botao Consultar Tabela de Compra
+    Entao grid deve estar populada

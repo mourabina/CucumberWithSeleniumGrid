@@ -7,6 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class GeracaoPedidosGERPDPage {
 
+	@FindBy(id = "form")
+	private WebElement form;
+	
 	@FindBy(id = "LABEL55")
 	private WebElement labelTituloPagina;
 
@@ -312,4 +315,7 @@ public class GeracaoPedidosGERPDPage {
 		return inputExecutarPedido;
 	}
 
+	public WebElement getForm() {
+		return form;
+	}
 }

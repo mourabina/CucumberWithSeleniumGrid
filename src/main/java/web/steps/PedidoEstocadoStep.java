@@ -30,6 +30,10 @@ public class PedidoEstocadoStep {
 		this.pedidos.clicarBotaoConsultaPedido();
 	}
 
+	@Dado("^preencho os campos da GERPD$")
+	public void preencherFormulario(DataTable params){
+		this.pedidos.preencherCampos(params);
+	}
 
 	@Entao("^deve ser apresentado a mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg){
@@ -64,9 +68,11 @@ public class PedidoEstocadoStep {
 	@Quando("^clico no botao Consultar Tabela de Compra$")
 	public void clicarBotaoConsultarTabelaCompra(){
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
-		
 	}
 
-	
+	@Entao("^grid deve estar populada$")
+	public void verificarGrid(){
+		this.pedidos.verificarGrid();
+	}
 
 }

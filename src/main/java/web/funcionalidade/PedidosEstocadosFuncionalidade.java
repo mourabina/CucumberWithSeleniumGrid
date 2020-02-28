@@ -1,7 +1,10 @@
 package web.funcionalidade;
 
+import static org.junit.Assert.assertFalse;
+
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
@@ -74,7 +77,20 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void clicarBotaoConsultarTabelaCompra() {
 		addEvidenciaWeb("Clicando no botão Consulta Tabela de Compra");
 		this.gerpd.getBt_consultarTabelaCompra().click();
-		
+		this.aguardaReload();
+	}
+	
+	public void aguardaReload() {
+		waitForPageToLoad(webDriver);
+	}
+	
+	public void verificarGrid() {
+		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		for (int i = 0; i < qtde; i++) {
+			webDriver.findElement(By.id("panel_COD_PROD_" + i)).getText();
+			assertFalse("Campo Codigo está vazio", webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
+			assertFalse("Campo Nome produto está vazio", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty());
+		}
 	}
 
 }
