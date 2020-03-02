@@ -108,6 +108,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void verificaPrimeiroItemGrid() {
+		addEvidenciaWeb("Verificar se item está sendo apresentado");
 		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
 		for (int i = 0; i < qtde; i++) {
 			webDriver.findElement(By.id("panel_COD_PROD_" + i)).getText();
@@ -122,7 +123,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 				assertTrue("Campo Nome produto não está vazio",
 						webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty());
 			}
-		}
+		}		
 	}
 
 	public void preencherCamposDatas(String valor) {
@@ -136,6 +137,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setDESCRICAO(this.gerpd.getDescricaoItem().getAttribute("value"));
 		this.gerpd.getOpcaoItemCheckbox().click();
 		this.gerpd.getQtdeCompra().sendKeys("10");
+		addEvidenciaWeb("Incluindo primeiro item da lista no pedido");
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}

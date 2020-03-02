@@ -33,6 +33,7 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 	public void pesquisar() {
 		Actions action = new Actions(webDriver);
 		action.sendKeys(Keys.ENTER).perform();
+		addEvidenciaWeb("Consulta realizada");
 	}
 	
 }
