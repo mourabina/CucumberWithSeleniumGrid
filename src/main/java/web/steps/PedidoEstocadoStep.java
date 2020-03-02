@@ -1,4 +1,5 @@
 package web.steps;
+import static org.junit.Assert.assertEquals;
 
 import java.text.ParseException;
 
@@ -38,10 +39,23 @@ public class PedidoEstocadoStep {
 	public void acionarBotaoConsultarPedido() {
 		this.pedidos.clicarBotaoConsultaPedido();
 	}
-
+	
 	@Dado("^preencho os campos da GERPD$")
-	public void preencherFormulario(DataTable params){
+	public void preencherFormulario(DataTable params) {
 		this.pedidos.preencherCampos(params);
+	}
+
+	@Dado("^que tenha um item incluido$")
+	public void incluirItem(DataTable params) {
+		this.pedidos.preencherCampos(params);
+		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.pedidos.clicarBotaoConsultarTabelaCompra();
+		this.pedidos.incluirPrimeiroItem();
+	}
+
+	@Quando("clico no botao Consultar Pedido")
+	public void acionarBtnConsultar() {
+		this.pedidos.clicarBotaoConsultaPedido();
 	}
 
 	@Entao("^deve ser apresentado a mensagem \"([^\"]*)\"$")
@@ -82,13 +96,6 @@ public class PedidoEstocadoStep {
 
 	}
 
-	@Entao("^grid deve estar populada$")
-	public void verificarGrid(){
-		this.pedidos.verificarGrid();
-
-
-	}
-
 	@Quando("^preencher os campos Datas com o valor \"([^\"]*)\"$")
 	public void preencherTodosCamposDatas(String valor) {
 		this.pedidos.preencherCamposDatas(valor);
@@ -123,9 +130,20 @@ public class PedidoEstocadoStep {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Compr"), VariaveisEstaticas.getCOMPRADOR());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Produto"), VariaveisEstaticas.getCOD_PRODUTO());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
-		String a = GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString());
 		Assert.assertEquals(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString()), VariaveisEstaticas.getDATA_ENTRADA());
-		
+	}
+	
+	@Entao("^grid deve estar populada$")
+	public void verificarGrid() {
+		this.pedidos.verificarTodosResultadoGrid();
+	}
+
+	@Entao("^a grid deve apresentar somente o item incluso$")
+	public void verificarGridUmItem(){
+		this.pedidos.verificaPrimeiroItemGrid();
+		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
+		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
+		this.pedidos.excluirPrimeiroItem();
 	}
 
 }
