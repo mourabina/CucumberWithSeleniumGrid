@@ -51,7 +51,7 @@ public class GeracaoData extends BaseTest {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DAY_OF_MONTH, +quant);
-
+		System.out.println(sdf.format(cal.getTime()).toString());
 		return sdf.format(cal.getTime()).toString();
 	}
 

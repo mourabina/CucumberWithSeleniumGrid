@@ -249,8 +249,8 @@ Funcionalidade: Pedido_Estocado SAD
       | 2216 | BRITQEA-2216 | Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado | Matheus Machado  | S1     |
     E que estou na tela "GERPD"
     E preencho os campos da GERPD
-      | Comprador | Fornec  | 
-      |       028 | 3500684 | 
+      | Comprador | Fornec  |
+      |       028 | 3500684 |
     Quando clico no botao Consultar Tabela de Compra
     Entao grid deve estar populada
 
@@ -310,3 +310,15 @@ Funcionalidade: Pedido_Estocado SAD
     Quando faco uma pesquisa na tela "SOLPD" com o campo "FORN"
     Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
 
+  @BRITQEA2108 @web
+  Cenario: 2108 - Incluir produto&item - pedido estocado
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                             | Nome do executor     | Sprint |
+      | 2108 | BRITQEA-2108 | Incluir produto&item - pedido estocado | Matheus Machado luiz | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um item incluido
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       017 | 3523912 |    56849 | T           |
+    Quando clico no botao Consultar Pedido
+    Entao a grid deve apresentar somente o item incluso

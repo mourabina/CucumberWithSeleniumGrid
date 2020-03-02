@@ -16,7 +16,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"configuration", 
 				"commons"},
 
-		tags = { "@BRITQEA2216" })
+		tags = { "@BRITQEA2108" })
 
 public class RunTest extends BaseTest {
    @After

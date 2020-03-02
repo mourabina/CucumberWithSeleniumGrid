@@ -8,6 +8,7 @@ public class VariaveisEstaticas {
 	private static String COD_PRODUTO;
 	private static String QUANT;
 	private static String DATA_ENTRADA;
+	private static String DESCRICAO;
 	
 	
 
@@ -57,6 +58,14 @@ public class VariaveisEstaticas {
 
 	public static void setAGENDA(String aGENDA) {
 		AGENDA = aGENDA;
+	}
+
+	public static String getDESCRICAO() {
+		return DESCRICAO;
+	}
+
+	public static void setDESCRICAO(String dESCRICAO) {
+		DESCRICAO = dESCRICAO;
 	}
 
 }

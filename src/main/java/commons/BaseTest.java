@@ -132,7 +132,6 @@ public class BaseTest {
 	            return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
 	        }
 	    };
-
 	    Wait < WebDriver > wait = new WebDriverWait(driver, 60);
 	    try {
 	        wait.until(pageLoad);

@@ -125,7 +125,7 @@ public class GeracaoPedidosGERPDPage {
 	private WebElement inputGridDDE;
 
 	@FindBy(id = "panel_QTD1_0")
-	private WebElement valorCompra;
+	private WebElement qtdeCompra;
 
 	@FindBy(id = "panel_OPCAO_0_checkbox")
 	private WebElement opcaoItemCheckbox;
@@ -179,8 +179,8 @@ public class GeracaoPedidosGERPDPage {
 		return inputGridDDE;
 	}
 
-	public WebElement getValorCompra() {
-		return valorCompra;
+	public WebElement getQtdeCompra() {
+		return qtdeCompra;
 	}
 
 	public WebElement getOpcaoItemCheckbox() {

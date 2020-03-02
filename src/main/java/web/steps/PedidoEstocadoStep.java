@@ -1,8 +1,11 @@
 package web.steps;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Assert;
 
 import commons.funcionalidade.GeracaoData;
+import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
@@ -25,14 +28,22 @@ public class PedidoEstocadoStep {
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 	}
 
-	@Quando("clico no botao Consultar Pedido")
-	public void clicoNoBotaoConsultarPedido() {
-		this.pedidos.clicarBotaoConsultaPedido();
+	@Dado("^preencho os campos da GERPD$")
+	public void preencherFormulario(DataTable params) {
+		this.pedidos.preencherCampos(params);
 	}
 
-	@Dado("^preencho os campos da GERPD$")
-	public void preencherFormulario(DataTable params){
+	@Dado("^que tenha um item incluido$")
+	public void incluirItem(DataTable params) {
 		this.pedidos.preencherCampos(params);
+		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.pedidos.clicarBotaoConsultarTabelaCompra();
+		this.pedidos.incluirPrimeiroItem();
+	}
+
+	@Quando("clico no botao Consultar Pedido")
+	public void acionarBtnConsultar() {
+		this.pedidos.clicarBotaoConsultaPedido();
 	}
 
 	@Entao("^deve ser apresentado a mensagem \"([^\"]*)\"$")
@@ -71,17 +82,23 @@ public class PedidoEstocadoStep {
 
 	}
 
-	@Entao("^grid deve estar populada$")
-	public void verificarGrid(){
-		this.pedidos.verificarGrid();
-
-
-	}
-
 	@Quando("^preencher os campos Datas com o valor \"([^\"]*)\"$")
 	public void preencherTodosCamposDatas(String valor) {
 		this.pedidos.preencherCamposDatas(valor);
 
+	}
+
+	@Entao("^grid deve estar populada$")
+	public void verificarGrid() {
+		this.pedidos.verificarTodosResultadoGrid();
+	}
+
+	@Entao("^a grid deve apresentar somente o item incluso$")
+	public void verificarGridUmItem(){
+		this.pedidos.verificaPrimeiroItemGrid();
+		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
+		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
+		this.pedidos.excluirPrimeiroItem();
 	}
 
 }
