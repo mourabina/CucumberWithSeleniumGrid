@@ -87,6 +87,11 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "XHORA_DIG1")
 	private WebElement textHoraDigitada;
 	
+	@FindBy(id = "panel_COD_SIT_0")
+	private WebElement situacaoRegistro;
+	
+	@FindBy(id = "panel_HORA_DIG_0")
+	private WebElement horaRegistro;
 
 	public ConsultarDigitacaoPedidosSOLPDPage(WebDriver webDriver){
 		PageFactory.initElements(webDriver, this);
@@ -195,6 +200,14 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 
 	public WebElement getTextHoraDigitada() {
 		return textHoraDigitada;
+	}
+
+	public WebElement getSituacaoRegistro() {
+		return situacaoRegistro;
+	}
+
+	public WebElement getHoraRegistro() {
+		return horaRegistro;
 	}
 
 }

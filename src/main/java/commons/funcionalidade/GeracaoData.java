@@ -32,6 +32,14 @@ public class GeracaoData extends BaseTest {
 		return Integer.valueOf(sdf.format(gc.getTime()));
 	}
 	
+	public static String retornaHoraAtualMenosMinutos(Integer minutos) {
+		GregorianCalendar gc = new GregorianCalendar();
+		gc.setTime(new Date());
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		gc.add(Calendar.SECOND,-minutos);
+		return sdf.format(gc.getTime()).toString();
+	}
+	
 	public static String retornaHoraAntesAtual() {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
@@ -52,7 +60,6 @@ public class GeracaoData extends BaseTest {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DAY_OF_MONTH, +quant);
-		System.out.println(sdf.format(cal.getTime()).toString());
 		return sdf.format(cal.getTime()).toString();
 	}
 

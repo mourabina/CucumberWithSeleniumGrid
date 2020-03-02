@@ -1,5 +1,8 @@
 package web.funcionalidade;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+
 import commons.BaseTest;
 import web.bean.enums.ConsultarDigitacaoPedidosSOLPDEnum;
 import web.bean.interfaces.ConsultarDigitacaoPedidosSOLPDInterface;
@@ -12,9 +15,7 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 	
 	public ConsultaDigitacaoDePedidosSOLPDFuncionalidade() {
 		this.solpd = new ConsultarDigitacaoPedidosSOLPDPage(webDriver);
-	}
-	
-	
+	}	
 	
 	public void preencherCampoValor(String campo, String valor) {
 		ConsultarDigitacaoPedidosSOLPDInterface pedido = ConsultarDigitacaoPedidosSOLPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
@@ -27,7 +28,11 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 		ConsultarDigitacaoPedidosSOLPDInterface pedido = ConsultarDigitacaoPedidosSOLPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
 		addEvidenciaWeb("Retornando o valor do campo" + campo);
 		return pedido.getElement(this.solpd).getAttribute("value");
-
 	}
-
+	
+	public void pesquisar() {
+		Actions action = new Actions(webDriver);
+		action.sendKeys(Keys.ENTER).perform();
+	}
+	
 }

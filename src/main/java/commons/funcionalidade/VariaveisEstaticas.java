@@ -10,7 +10,7 @@ public class VariaveisEstaticas {
 	private static String DATA_ENTRADA;
 	private static String FILIAL;
 	private static String DESCRICAO;
-
+	private static String HORA;
 
 	public static void setFILIAL(String fILIAL) {
 		FILIAL = fILIAL;
@@ -74,6 +74,14 @@ public class VariaveisEstaticas {
 
 	public static void setDESCRICAO(String dESCRICAO) {
 		DESCRICAO = dESCRICAO;
+	}
+
+	public static String getHORA() {
+		return HORA;
+	}
+
+	public static void setHORA(String hORA) {
+		HORA = hORA;
 	}
 
 }

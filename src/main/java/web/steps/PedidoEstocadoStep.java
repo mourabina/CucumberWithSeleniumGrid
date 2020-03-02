@@ -1,5 +1,6 @@
 package web.steps;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.text.ParseException;
 
@@ -33,11 +34,6 @@ public class PedidoEstocadoStep {
 	public void preencherCamposObrigtorios(DataTable dataTable) {
 		this.pedidos.preencherCampos(dataTable);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
-	}
-
-	@Quando("clico no botao Consultar Pedido")
-	public void acionarBotaoConsultarPedido() {
-		this.pedidos.clicarBotaoConsultaPedido();
 	}
 	
 	@Dado("^preencho os campos da GERPD$")
@@ -146,4 +142,27 @@ public class PedidoEstocadoStep {
 		this.pedidos.excluirPrimeiroItem();
 	}
 
+	@Dado("^que tenha um item excluido$")
+	public void adcionarExcluirItem(DataTable params) throws Throwable {
+		this.incluirItem(params);
+		this.acionarBtnConsultar();
+		this.pedidos.verificaPrimeiroItemGrid();
+		this.pedidos.excluirPrimeiroItem();
+	}
+
+	@Quando("^consultar o fornecedor (\\d+) na SOLPD$")
+	public void consultaFornSOLPD(int forn){
+		this.login.acessarTela("SOLPD");	
+		this.solpd.preencherCampoValor("Forn",Integer.toString(forn));
+		this.solpd.pesquisar();
+	}
+
+	@Entao("^deve retornar o item com status \"([^\"]*)\"$")
+	public void validarItemSOLPD(String status){
+		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
+		assertTrue(this.solpd.retornaValorCampo("Hora registro").contains(VariaveisEstaticas.getHORA()));
+		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
+	}
 }
+
+

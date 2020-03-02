@@ -322,3 +322,16 @@ Funcionalidade: Pedido_Estocado SAD
       |       017 | 3523912 |    56849 | T           |
     Quando clico no botao Consultar Pedido
     Entao a grid deve apresentar somente o item incluso
+
+  @BRITQEA2111 @web
+  Cenario: 2111 - Excluir pedido estocado
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT              | Nome do executor     | Sprint |
+      | 2111 | BRITQEA-2111 | Excluir pedido estocado | Matheus Machado luiz | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um item excluido
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       017 | 3523912 |    56849 | T           |
+    Quando consultar o fornecedor 3523912 na SOLPD
+    Entao deve retornar o item com status "SOLICITACAO CANCELADA"

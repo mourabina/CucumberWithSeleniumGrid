@@ -78,7 +78,24 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
 			return consultarDigitacaoPedidosSOLPD.getTextLoja();
 		}
+	},
+	NOME_FORNECEDOR("Nome Fornecedor"){
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getTextNomeFornecedor();
+		}
+	},
+	SITUACAO_REGISTRO("Nome Fornecedor"){
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getSituacaoRegistro();
+		}
+	},
+	HORA_REGISTRO("Nome Fornecedor"){
+		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
+			return consultarDigitacaoPedidosSOLPD.getHoraRegistro();
+		}
 	};
+	
+	
 
 	ConsultarDigitacaoPedidosSOLPDEnum(String s) {
 

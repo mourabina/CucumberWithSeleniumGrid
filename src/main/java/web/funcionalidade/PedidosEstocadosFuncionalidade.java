@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
+import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import web.bean.enums.GeracaoPedidosGERPDEnum;
@@ -173,6 +174,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void excluirPrimeiroItem() {
 		this.gerpd.getOpcaoItemCheckbox().click();
 		this.gerpd.getBt_excluir().click();
+		VariaveisEstaticas.setHORA(GeracaoData.retornaHoraAtualMenosMinutos(194));
 		this.aguardaReload();
 	}
 
