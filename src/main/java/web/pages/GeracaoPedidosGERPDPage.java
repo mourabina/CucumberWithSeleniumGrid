@@ -127,8 +127,14 @@ public class GeracaoPedidosGERPDPage {
 	@FindBy(id = "panel_QTD1_0")
 	private WebElement qtdeCompra;
 
+	@FindBy(id = "panel_QTD1_1")
+	private WebElement qtdeCompra1;
+
 	@FindBy(id = "panel_OPCAO_0_checkbox")
 	private WebElement opcaoItemCheckbox;
+
+	@FindBy(id = "panel_OPCAO_1_checkbox")
+	private WebElement opcaoItemCheckbox1;
 
 	@FindBy(id = "panel_COD_PROD_0")
 	private WebElement codItem;
@@ -144,6 +150,14 @@ public class GeracaoPedidosGERPDPage {
 
 	public GeracaoPedidosGERPDPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getQtdeCompra1() {
+		return qtdeCompra1;
+	}
+
+	public WebElement getOpcaoItemCheckbox1() {
+		return opcaoItemCheckbox1;
 	}
 
 	public WebElement getBt_ExeutarPedido() {

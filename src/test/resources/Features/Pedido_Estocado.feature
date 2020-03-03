@@ -19,6 +19,33 @@ Funcionalidade: Pedido_Estocado SAD
     Quando clico no botao Consultar Pedido
     Então deve ser exibido o valor "4785" no campo "Codigo do Produto"
 
+  @BRITQEA2108 @web
+  Cenario: 2108 - Incluir produto&item - pedido estocado
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                             | Nome do executor     | Sprint |
+      | 2108 | BRITQEA-2108 | Incluir produto&item - pedido estocado | Matheus Machado luiz | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um item incluido
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       017 | 3523912 |    56849 | T           |
+    Quando clico no botao Consultar Pedido
+    Entao a grid deve apresentar somente o item incluso
+
+  @BRITQEA2109 @web
+  Cenario: 2109 - Executando pedido estocado
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                 | Nome do executor | Sprint |
+      | 2109 | BRITQEA-2109 | Executando pedido estocado | Hilário Bina     | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um item incluido
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | T           |
+    E Seleciono produto e digito a quantidade "10" e clico nos botaes incluir e Executar Pedido
+    Quando faco uma pesquisa na tela "SOLPD" com o campo "FORN"
+    Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
+
   @BRITQEA2110 @web
   Cenario: 2110 - Consulta de pedido 'Estocado'
     Dado que estou logado com usuario/filial "818181"/"7467"
@@ -158,7 +185,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |
       | 2200 | BRITQEA-2200 | Inserir letras no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Contato" com o valor "ABCDEF"
+    Quando preencher o campo "Contato" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2201 @web
@@ -178,7 +205,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |
       | 2202 | BRITQEA-2202 | Inserir letras no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Evento" com o valor "ABCDEF"
+    Quando preencher o campo "Evento" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2203 @web
@@ -198,7 +225,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
       | 2204 | BRITQEA-2204 | Inserir letras no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "RedeSP" com o valor "ABCDEF"
+    Quando preencher o campo "RedeSP" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2205 @web
@@ -218,7 +245,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
       | 2206 | BRITQEA-2206 | Inserir letras no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Dist" com o valor "ABCDEF"
+    Quando preencher o campo "Dist" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2207 @web
@@ -238,7 +265,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
       | 2208 | BRITQEA-2208 | Inserir letras no campo 'Transp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Transp" com o valor "ABCDEF"
+    Quando preencher o campo "Transp" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2216 @web
@@ -271,7 +298,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                    | Nome do executor | Sprint |
       | 2212 | BRITQEA-2212 | Inserir letras no campo 'Emp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Emp" com o valor "ABCDEF"
+    Quando preencher o campo "Emp" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
   @BRITQEA2213 @web
@@ -309,19 +336,6 @@ Funcionalidade: Pedido_Estocado SAD
     E deve ser gerado um numero do pedido
     Quando faco uma pesquisa na tela "SOLPD" com o campo "FORN"
     Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
-
-  @BRITQEA2108 @web
-  Cenario: 2108 - Incluir produto&item - pedido estocado
-    Dado que estou logado com usuario/filial "818181"/"7467"
-    E estou executando o teste
-      | id   | Numero do CT | Nome do CT                             | Nome do executor     | Sprint |
-      | 2108 | BRITQEA-2108 | Incluir produto&item - pedido estocado | Matheus Machado luiz | S1     |
-    E que estou na tela "GERPD"
-    E que tenha um item incluido
-      | Comprador | Fornec  | Pesquisa | Classif Ped |
-      |       017 | 3523912 |    56849 | T           |
-    Quando clico no botao Consultar Pedido
-    Entao a grid deve apresentar somente o item incluso
 
   @BRITQEA2111 @web
   Cenario: 2111 - Excluir pedido estocado

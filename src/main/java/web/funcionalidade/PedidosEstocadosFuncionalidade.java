@@ -145,11 +145,13 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void selecionarComboBox() {
 		this.gerpd.getOpcaoItemCheckbox().click();
 	}
+
 	
 	public void preencherCampoCompra(String quant) {
 		this.gerpd.getQtdeCompra().clear();
 		this.gerpd.getQtdeCompra().sendKeys(quant);
 	}
+
 	
 	public void clicarBotaoIncluir() {
 		this.gerpd.getBt_incluir().click();
@@ -160,14 +162,16 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 	
 	public void salvarInformacoesPedido() {
+	
 		VariaveisEstaticas.setFORNEC(this.gerpd.getInputForn().getAttribute("value"));
 		VariaveisEstaticas.setFILIAL(this.gerpd.getInputFlial().getAttribute("value"));
 		VariaveisEstaticas.setCOMPRADOR(this.gerpd.getInputComp().getAttribute("value"));
 		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
 		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
-		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
+		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getInpuPesqui().getAttribute("value"));
 	}
 	
+		
 	public void executarComandoEnter() {
 		Actions builder = new Actions(webDriver);        
 		builder.sendKeys(Keys.ENTER).perform();

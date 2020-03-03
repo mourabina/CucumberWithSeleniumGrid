@@ -1,4 +1,5 @@
 package web.steps;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -35,7 +36,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.preencherCampos(dataTable);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 	}
-	
+
 	@Dado("^preencho os campos da GERPD$")
 	public void preencherFormulario(DataTable params) {
 		this.pedidos.preencherCampos(params);
@@ -99,43 +100,48 @@ public class PedidoEstocadoStep {
 	}
 
 	@Quando("^Seleciono produto e digito a quantidade \"([^\"]*)\" e clico nos botaes incluir e Executar Pedido$")
-	public void selecionarProdutoDigitarQuantClicarBotaoIncluir(String quant){
+	public void selecionarProdutoDigitarQuantClicarBotaoIncluir(String quant) {
 		this.pedidos.selecionarComboBox();
 		this.pedidos.preencherCampoCompra(quant);
+		this.pedidos.salvarInformacoesPedido();
 		this.pedidos.clicarBotaoIncluir();
 		this.pedidos.aguardaReload();
-		this.pedidos.salvarInformacoesPedido();
 		this.pedidos.clicarBotaoExecutarPedido();
 	}
 
 	@Entao("^deve ser gerado um numero do pedido$")
-	public void validarGeracaoNumeroPedido(){
-		Assert.assertTrue("Número Pedido não foi gerador", this.pedidos.retornaMensagemExibida().contains("Seu numero de requisição !"));
+	public void validarGeracaoNumeroPedido() {
+
+		Assert.assertTrue("Número Pedido não foi gerador",
+				this.pedidos.retornaMensagemExibida().contains("Seu numero de requisição !"));
+
 	}
 
 	@Quando("^faco uma pesquisa na tela \"([^\"]*)\" com o campo \"([^\"]*)\"$")
-	public void facoUmaPesquisaNaTelaComOCampo(String tela, String campo){
+	public void facoUmaPesquisaNaTelaComOCampo(String tela, String campo) {
 		this.login.acessarTela(tela);
 		this.solpd.preencherCampoValor(campo, VariaveisEstaticas.getFORNEC());
 		this.pedidos.executarComandoEnter();
 	}
 
 	@Entao("^deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD$")
-	public void validarExibicaoDadosPedidosEstocados() throws ParseException{
+	public void validarExibicaoDadosPedidosEstocados() throws ParseException {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Loja"), VariaveisEstaticas.getFILIAL());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Compr"), VariaveisEstaticas.getCOMPRADOR());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Produto"), VariaveisEstaticas.getCOD_PRODUTO());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
-		Assert.assertEquals(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString()), VariaveisEstaticas.getDATA_ENTRADA());
+		Assert.assertTrue(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString())
+				.contains(VariaveisEstaticas.getDATA_ENTRADA()));
+
 	}
-	
+
 	@Entao("^grid deve estar populada$")
 	public void verificarGrid() {
 		this.pedidos.verificarTodosResultadoGrid();
 	}
 
 	@Entao("^a grid deve apresentar somente o item incluso$")
-	public void verificarGridUmItem(){
+	public void verificarGridUmItem() {
 		this.pedidos.verificaPrimeiroItemGrid();
 		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
 		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
@@ -151,18 +157,17 @@ public class PedidoEstocadoStep {
 	}
 
 	@Quando("^consultar o fornecedor (\\d+) na SOLPD$")
-	public void consultaFornSOLPD(int forn){
-		this.login.acessarTela("SOLPD");	
-		this.solpd.preencherCampoValor("Forn",Integer.toString(forn));
+	public void consultaFornSOLPD(int forn) {
+		this.login.acessarTela("SOLPD");
+		this.solpd.preencherCampoValor("Forn", Integer.toString(forn));
 		this.solpd.pesquisar();
 	}
 
 	@Entao("^deve retornar o item com status \"([^\"]*)\"$")
-	public void validarItemSOLPD(String status){
+	public void validarItemSOLPD(String status) {
 		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
 		assertTrue(this.solpd.retornaValorCampo("Hora registro").contains(VariaveisEstaticas.getHORA()));
 		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
 	}
+
 }
-
-
