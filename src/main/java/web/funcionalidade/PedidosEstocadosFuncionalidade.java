@@ -131,7 +131,8 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void incluirItens(int qtdeItens) {
 		addEvidenciaWeb("Verificar se item está sendo apresentado");
 
-		List<Map<String, String>> values = new ArrayList<Map<String, String>>();;
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
+		;
 
 		for (int i = 0; i < qtdeItens; i++) {
 			Map<String, String> map = new HashMap<String, String>();
@@ -141,15 +142,17 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 			map.put("Descricao", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
 			map.put("Quantidade", "10");
 			values.add(map);
-			addEvidenciaWeb("Incluindo item: " +  webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
+			addEvidenciaWeb(
+					"Incluindo item: " + webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
 		}
 		VariaveisEstaticas.setMap(values);
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}
-	
-	public List<Map<String,String>> retornaItens(int qtde){
-		List<Map<String, String>> values = new ArrayList<Map<String, String>>();;
+
+	public List<Map<String, String>> retornaItens(int qtde) {
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
+		;
 
 		for (int i = 0; i < qtde; i++) {
 			Map<String, String> map = new HashMap<String, String>();
@@ -158,10 +161,10 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 			map.put("Quantidade", webDriver.findElement(By.id("panel_QTD1_" + i)).getAttribute("value"));
 			values.add(map);
 		}
-		
+
 		return values;
 	}
-	
+
 	public void excluirMultiplosItens(int qtde) {
 		for (int i = 0; i < qtde; i++) {
 			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
@@ -205,12 +208,13 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void salvarInformacoesPedido() {
+
 		VariaveisEstaticas.setFORNEC(this.gerpd.getInputForn().getAttribute("value"));
 		VariaveisEstaticas.setFILIAL(this.gerpd.getInputFlial().getAttribute("value"));
 		VariaveisEstaticas.setCOMPRADOR(this.gerpd.getInputComp().getAttribute("value"));
 		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
 		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
-		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
+		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getInpuPesqui().getAttribute("value"));
 	}
 
 	public void executarComandoEnter() {
