@@ -317,7 +317,7 @@ Funcionalidade: Pedido_Estocado SAD
       | id   | Numero do CT | Nome do CT                             | Nome do executor     | Sprint |
       | 2108 | BRITQEA-2108 | Incluir produto&item - pedido estocado | Matheus Machado luiz | S1     |
     E que estou na tela "GERPD"
-    E que tenha um item incluido
+    E que tenha um item incluso
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
     Quando clico no botao Consultar Pedido
@@ -335,3 +335,16 @@ Funcionalidade: Pedido_Estocado SAD
       |       017 | 3523912 |    56849 | T           |
     Quando consultar o fornecedor 3523912 na SOLPD
     Entao deve retornar o item com status "SOLICITACAO CANCELADA"
+
+  @BRITQEA2112 @web
+  Cenario: 2112 - Incluir mais de um produto&item
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor     | Sprint |
+      | 2112 | BRITQEA-2112 | Incluir mais de um produto&item | Matheus Machado luiz | S1     |
+    E que estou na tela "GERPD"
+    E que tenha 2 itens inclusos
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       017 | 3523912 |    56849 | T           |
+    Quando clico no botao Consultar Pedido
+    Entao a grid deve apresentar os 2 itens inclusos

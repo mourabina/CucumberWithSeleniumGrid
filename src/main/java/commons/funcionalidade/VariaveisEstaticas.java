@@ -1,5 +1,8 @@
 package commons.funcionalidade;
 
+import java.util.List;
+import java.util.Map;
+
 public class VariaveisEstaticas {
 
 	private static String AGENDA;
@@ -11,6 +14,7 @@ public class VariaveisEstaticas {
 	private static String FILIAL;
 	private static String DESCRICAO;
 	private static String HORA;
+	private static List<Map<String,String>> map;
 
 	public static void setFILIAL(String fILIAL) {
 		FILIAL = fILIAL;
@@ -84,4 +88,11 @@ public class VariaveisEstaticas {
 		HORA = hORA;
 	}
 
+	public static List<Map<String, String>> getMap() {
+		return map;
+	}
+
+	public static void setMap(List<Map<String, String>> map) {
+		VariaveisEstaticas.map = map;
+	}
 }

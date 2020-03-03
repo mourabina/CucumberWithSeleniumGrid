@@ -3,6 +3,10 @@ package web.funcionalidade;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -21,21 +25,21 @@ import web.pages.GeracaoPedidosGERPDPage;
 public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	private GeracaoPedidosGERPDPage gerpd;
-	
 
 	public PedidosEstocadosFuncionalidade() {
 		this.gerpd = new GeracaoPedidosGERPDPage(webDriver);
-		
+
 	}
 
 	public void preencherCampoValor(String campo, String valor) {
 		if (campo.equalsIgnoreCase("classif ped"))
 			this.selecionarValorComboBox(campo, valor);
 		else {
-			GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
+			GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum
+					.valueOf(campo.replace(" ", "_").toUpperCase());
 			pedido.getElement(this.gerpd).clear();
 			pedido.getElement(this.gerpd).sendKeys(valor);
-			addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);	
+			addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
 		}
 	}
 
@@ -99,7 +103,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void verificarTodosResultadoGrid() {
 		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
 		for (int i = 0; i < qtde; i++) {
-			webDriver.findElement(By.id("panel_COD_PROD_" + i)).getText();
 			assertFalse("Campo Codigo está vazio",
 					webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
 			assertFalse("Campo Nome produto está vazio",
@@ -107,12 +110,11 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		}
 	}
 
-	public void verificaPrimeiroItemGrid() {
+	public void verificaItemGrid(int qtdeItens) {
 		addEvidenciaWeb("Verificar se item está sendo apresentado");
 		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
 		for (int i = 0; i < qtde; i++) {
-			webDriver.findElement(By.id("panel_COD_PROD_" + i)).getText();
-			if (i == 0) {
+			if (i < qtdeItens) {
 				assertFalse("Campo Codigo está vazio",
 						webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
 				assertFalse("Campo Nome produto está vazio",
@@ -123,7 +125,50 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 				assertTrue("Campo Nome produto não está vazio",
 						webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty());
 			}
-		}		
+		}
+	}
+
+	public void incluirItens(int qtdeItens) {
+		addEvidenciaWeb("Verificar se item está sendo apresentado");
+
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();;
+
+		for (int i = 0; i < qtdeItens; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			webDriver.findElement(By.id("panel_QTD1_" + i)).sendKeys("10");
+			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
+			map.put("Codigo", webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value"));
+			map.put("Descricao", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
+			map.put("Quantidade", "10");
+			values.add(map);
+			addEvidenciaWeb("Incluindo item: " +  webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
+		}
+		VariaveisEstaticas.setMap(values);
+		this.gerpd.getBt_incluir().click();
+		this.aguardaReload();
+	}
+	
+	public List<Map<String,String>> retornaItens(int qtde){
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();;
+
+		for (int i = 0; i < qtde; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("Codigo", webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value"));
+			map.put("Descricao", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
+			map.put("Quantidade", webDriver.findElement(By.id("panel_QTD1_" + i)).getAttribute("value"));
+			values.add(map);
+		}
+		
+		return values;
+	}
+	
+	public void excluirMultiplosItens(int qtde) {
+		for (int i = 0; i < qtde; i++) {
+			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
+		}
+		this.gerpd.getBt_excluir().click();
+		VariaveisEstaticas.setHORA(GeracaoData.retornaHoraAtualMenosSegundos(194));
+		this.aguardaReload();
 	}
 
 	public void preencherCamposDatas(String valor) {
@@ -141,24 +186,24 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}
-	
+
 	public void selecionarComboBox() {
 		this.gerpd.getOpcaoItemCheckbox().click();
 	}
-	
+
 	public void preencherCampoCompra(String quant) {
 		this.gerpd.getQtdeCompra().clear();
 		this.gerpd.getQtdeCompra().sendKeys(quant);
 	}
-	
+
 	public void clicarBotaoIncluir() {
 		this.gerpd.getBt_incluir().click();
 	}
-		
+
 	public void clicarBotaoExecutarPedido() {
 		this.gerpd.getBt_ExeutarPedido().click();
 	}
-	
+
 	public void salvarInformacoesPedido() {
 		VariaveisEstaticas.setFORNEC(this.gerpd.getInputForn().getAttribute("value"));
 		VariaveisEstaticas.setFILIAL(this.gerpd.getInputFlial().getAttribute("value"));
@@ -167,16 +212,16 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
 		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
 	}
-	
+
 	public void executarComandoEnter() {
-		Actions builder = new Actions(webDriver);        
+		Actions builder = new Actions(webDriver);
 		builder.sendKeys(Keys.ENTER).perform();
 	}
-	
+
 	public void excluirPrimeiroItem() {
 		this.gerpd.getOpcaoItemCheckbox().click();
 		this.gerpd.getBt_excluir().click();
-		VariaveisEstaticas.setHORA(GeracaoData.retornaHoraAtualMenosMinutos(194));
+		VariaveisEstaticas.setHORA(GeracaoData.retornaHoraAtualMenosSegundos(194));
 		this.aguardaReload();
 	}
 
