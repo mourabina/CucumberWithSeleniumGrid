@@ -35,7 +35,7 @@ public class GeracaoData extends BaseTest {
 	public static String retornaHoraAtualMenosSegundos(Integer segundos) {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		gc.add(Calendar.SECOND,-segundos);
 		return sdf.format(gc.getTime()).toString();
 	}

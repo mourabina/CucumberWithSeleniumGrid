@@ -19,7 +19,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputProduto();
 		}
 	},
-	FORNECEDOR("Fornecedor") {
+	FORNEC("Fornec") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputFornecedor();
@@ -85,7 +85,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputContr();
 		}
 	},
-	CLASSIFIC("Classific") {
+	CLASSIF_PED("Classif Ped") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputClassif();

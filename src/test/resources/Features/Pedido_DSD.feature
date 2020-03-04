@@ -17,16 +17,15 @@ Funcionalidade: Pedido_Dsd
     Entao deve ser exibido no GRID o "Codigo Filial" e a "Nome Filial" na Tela Inpe
 
   @BRITQEA2186 @web
-  Cenario: 2186 - Consulta de produtos - 'DSD'
+  Cenario: 2186 - Incluir produto&item - pedido DSD
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
-      | id   | Numero do CT | Nome do CT                   | Nome do executor | Sprint |
-      | 2186 | BRITQEA-2186 | Consulta de produtos - 'DSD' | Hiilário Bina    | S1     |
+      | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |
+      | 2186 | BRITQEA-2186 | Incluir produto&item - pedido DSD | Hiilário Bina    | S1     |
     E que estou na tela "INPE2"
-    Quando preencho o campo "Produto" com o valor "23084" da tela INPE
-    E clico no botao Consultar Lojas
-    E preencho os campos mais os campos de Data de Entrega e Classif Ped
-      | Comprador | Fornecedor |
-      |       049 |    3506921 |
-    E Seleciono uma Loja preencho quantidade e clico em incluir
-    #Entao deve ser exibido no GRID o "Codigo Filial" e a "Nome Filial" na Tela Inpe
+    E pesquiso uma loja com o campo "Produto" com o valor "32916"
+    E que tenha 1 itens inclusos DSD
+      | Comprador | Fornec  |
+      |       043 | 3514753 |
+    Quando consultar o fornecedor 3514753 na SOLPD
+    Entao a grid da Tela "SOLPD" deve apresentar os 1 itens inclusos

@@ -80,6 +80,7 @@ Funcionalidade: Pedido_Estocado SAD
     E preencher o campo "Pesquisa" com o valor "ABCDEF"
     Entao deve ser apresentado a mensagem "Caracter inválido em campos numéricos."
 
+ 
   @BRITQEA2191 @web
   Cenario: 2191 - Inserir caracteres especiais no campo 'Filial'
     Dado que estou logado com usuario/filial "818181"/"7467"
