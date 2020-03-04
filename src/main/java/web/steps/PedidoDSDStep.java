@@ -4,6 +4,7 @@ import org.junit.Assert;
 
 import commons.funcionalidade.GeracaoData;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.DigitacaoPedidosDSDCROSSFuncionalidade;
@@ -42,8 +43,8 @@ public class PedidoDSDStep {
 
 
 	@Quando("^preencho os campos mais os campos de Data de Entrega e Classif Ped$")
-	public void preencherCamposDataEntrega(DataTable dataTable){
-		this.inpe.preencherCampos(dataTable);
+	public void preencherCamposDataEntrega(DataTable params){
+		this.inpe.preencherCampos(params);
 		this.inpe.selecionarValorCampoClassificacao();
 		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(2));
 		
@@ -56,5 +57,16 @@ public class PedidoDSDStep {
 		this.inpe.selecionarLoja();
 		this.inpe.preencherCampoValor("Quantidade", "10");
 		this.inpe.clicarBotaoIncluir();
+	}
+
+
+
+	@Dado("^que tenha (\\d+) itens inclusos DSD$")
+	public void incluirItenDSD(int quant, DataTable params){
+		this.inpe.preencherCampos(params);
+		this.inpe.selecionarValorCampoClassificacao();
+		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
+		this.inpe.incluirItens(quant);
+		
 	}
 }

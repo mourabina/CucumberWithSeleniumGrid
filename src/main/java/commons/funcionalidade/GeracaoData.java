@@ -21,30 +21,30 @@ public class GeracaoData extends BaseTest {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
 		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
-		gc.add(Calendar.HOUR,1);
+		gc.add(Calendar.HOUR, 1);
 		return sdf.format(gc.getTime());
 	}
-	
+
 	public static Integer retornaHoraAtual() {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
 		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
 		return Integer.valueOf(sdf.format(gc.getTime()));
 	}
-	
+
 	public static String retornaHHmm(Integer segundos) {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-		gc.add(Calendar.SECOND,-segundos);
+		gc.add(Calendar.SECOND, -segundos);
 		return sdf.format(gc.getTime()).toString();
 	}
-	
+
 	public static String retornaHoraAntesAtual() {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
 		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
-		gc.add(Calendar.HOUR,-2);
+		gc.add(Calendar.HOUR, -2);
 		return sdf.format(gc.getTime());
 	}
 
@@ -55,7 +55,7 @@ public class GeracaoData extends BaseTest {
 
 		return sdf.format(cal.getTime()).toString();
 	}
-	
+
 	public static String retornaDataAtualMaisDias(int quant) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
 		Calendar cal = Calendar.getInstance();
@@ -70,15 +70,12 @@ public class GeracaoData extends BaseTest {
 
 		return sdf.format(cal.getTime()).toString();
 	}
+
 	public static String retornaDataFormatada(String data) throws ParseException {
 		Date sdf = new SimpleDateFormat("dd/MM/yy").parse(data);
 		String dataFormatada = new SimpleDateFormat("dd/MM/yy").format(sdf);
-		return dataFormatada.replace("/","");
+		return dataFormatada.replace("/", "");
 	}
-	
-	
-	
-	
 
 	public static String retornaDataHoraAtual() {
 		Date data = new Date();

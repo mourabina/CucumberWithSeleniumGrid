@@ -138,6 +138,7 @@ public class PedidoEstocadoStep {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
 		Assert.assertTrue(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString())
 				.contains(VariaveisEstaticas.getDATA_ENTRADA()));
+		this.pedidos.excluirPrimeiroItem();
 
 	}
 
@@ -158,7 +159,7 @@ public class PedidoEstocadoStep {
 	@Entao("^deve retornar o item com situação \"([^\"]*)\"$")
 	public void validarItemSOLPD(String status) {
 		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
-		assertTrue(this.solpd.retornaValorCampo("Hora registro").contains(VariaveisEstaticas.getHORA()));
+		assertTrue(this.solpd.retornaValorCampo("Hora Registro").contains(VariaveisEstaticas.getHORA()));
 		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
 	}
 
@@ -170,6 +171,8 @@ public class PedidoEstocadoStep {
 	@Então("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
 	public void validarExibicaoValorCampo(String valor, String campo) {
 		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
+		this.pedidos.excluirMultiplosItens(1);
+		
 	}
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
@@ -189,5 +192,11 @@ public class PedidoEstocadoStep {
 	@Entao("^a grid deve apresentar o item excluido com a situação \"([^\"]*)\"$")
 	public void verificarPrimeiroItemSituacao(String sit) throws ParseException {
 		assertTrue("Item não encontrado com situação/hora de cancelamento correta", this.pedidos.verificarItensSOLPD(VariaveisEstaticas.getMap().get(0).get("Codigo"), sit));
+}
+	@Quando("^clico no botao Executar Pedido$")
+	public void acionarBotaoExecutarPedido(){
+		this.pedidos.clicarBotaoExecutarPedido();
+		this.pedidos.aguardaReload();
+
 	}
 }

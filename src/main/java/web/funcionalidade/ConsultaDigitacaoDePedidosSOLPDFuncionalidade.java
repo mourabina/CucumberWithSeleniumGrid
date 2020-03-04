@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 import commons.BaseTest;
+import commons.funcionalidade.VariaveisEstaticas;
 import web.bean.enums.ConsultarDigitacaoPedidosSOLPDEnum;
 import web.bean.interfaces.ConsultarDigitacaoPedidosSOLPDInterface;
 import web.pages.ConsultarDigitacaoPedidosSOLPDPage;
@@ -34,6 +35,13 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 		Actions action = new Actions(webDriver);
 		action.sendKeys(Keys.ENTER).perform();
 		addEvidenciaWeb("Consulta realizada");
+	}
+	
+	public void pegarValoresParaExclusao() {
+		VariaveisEstaticas.setCOD_PRODUTO(this.retornaValorCampo("Produto"));
+		VariaveisEstaticas.setCOMPRADOR(this.retornaValorCampo("Compr"));
+		VariaveisEstaticas.setFORNEC(this.retornaValorCampo("Fornecedor"));
+		
 	}
 	
 }
