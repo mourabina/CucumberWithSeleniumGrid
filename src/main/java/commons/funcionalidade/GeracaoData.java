@@ -32,10 +32,10 @@ public class GeracaoData extends BaseTest {
 		return Integer.valueOf(sdf.format(gc.getTime()));
 	}
 	
-	public static String retornaHoraAtualMenosSegundos(Integer segundos) {
+	public static String retornaHHmm(Integer segundos) {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTime(new Date());
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		gc.add(Calendar.SECOND,-segundos);
 		return sdf.format(gc.getTime()).toString();
 	}

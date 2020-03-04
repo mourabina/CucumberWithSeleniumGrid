@@ -33,6 +33,7 @@ public class PedidoEstocadoStep {
 	@Dado("^que tenha (\\d+) itens inclusos$")
 	public void incluirMaisItens(int qtde, DataTable params) {
 		this.preencherCamposObrigtorios(params);
+		this.pedidos.limparPedido(params);
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 		this.pedidos.incluirItens(qtde);
 	}
@@ -52,7 +53,6 @@ public class PedidoEstocadoStep {
 	public void adcionarExcluirItem(DataTable params){
 		this.incluirItem(params);
 		this.acionarBtnConsultar();
-		this.pedidos.verificaItemGrid(1);
 		this.pedidos.excluirPrimeiroItem();
 	}
 
@@ -60,6 +60,7 @@ public class PedidoEstocadoStep {
 	public void incluirItem(DataTable params) {
 		this.pedidos.preencherCampos(params);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.pedidos.limparPedido(params);
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 		this.pedidos.incluirPrimeiroItem();
 	}
@@ -116,6 +117,12 @@ public class PedidoEstocadoStep {
 		this.solpd.preencherCampoValor("Forn", Integer.toString(forn));
 		this.solpd.pesquisar();
 	}
+	
+	@Quando("^excluo um item do pedido$")
+	public void excluirItemPedido() {
+		this.pedidos.clicarBotaoConsultaPedido();
+		this.pedidos.excluirPrimeiroItem();
+	}
 
 	@Entao("^deve ser gerado um numero do pedido$")
 	public void validarGeracaoNumeroPedido() {
@@ -148,7 +155,7 @@ public class PedidoEstocadoStep {
 	}
 
 
-	@Entao("^deve retornar o item com status \"([^\"]*)\"$")
+	@Entao("^deve retornar o item com situação \"([^\"]*)\"$")
 	public void validarItemSOLPD(String status) {
 		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
 		assertTrue(this.solpd.retornaValorCampo("Hora registro").contains(VariaveisEstaticas.getHORA()));
@@ -174,10 +181,13 @@ public class PedidoEstocadoStep {
 	@Entao("^a grid deve apresentar os (\\d+) itens inclusos$")
 	public void verificarMultiplosItens(int qtde) {
 		this.pedidos.verificaItemGrid(2);
-		System.out.println(VariaveisEstaticas.getMap());
-		System.out.println(this.pedidos.retornaItens(qtde));
 		assertEquals("Itens não são os mesmos que os inseridos", VariaveisEstaticas.getMap(),
 				this.pedidos.retornaItens(qtde));
 		this.pedidos.excluirMultiplosItens(qtde);
+	}
+
+	@Entao("^a grid deve apresentar o item excluido com a situação \"([^\"]*)\"$")
+	public void verificarPrimeiroItemSituacao(String sit) throws ParseException {
+		assertTrue("Item não encontrado com situação/hora de cancelamento correta", this.pedidos.verificarItensSOLPD(VariaveisEstaticas.getMap().get(0).get("Codigo"), sit));
 	}
 }

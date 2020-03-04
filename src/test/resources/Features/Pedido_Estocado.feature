@@ -348,7 +348,7 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
     Quando consultar o fornecedor 3523912 na SOLPD
-    Entao deve retornar o item com status "SOLICITACAO CANCELADA"
+    Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2112 @web
   Cenario: 2112 - Incluir mais de um produto&item
@@ -362,3 +362,17 @@ Funcionalidade: Pedido_Estocado SAD
       |       017 | 3523912 |    56849 | T           |
     Quando clico no botao Consultar Pedido
     Entao a grid deve apresentar os 2 itens inclusos
+
+  @BRITQEA2174 @web
+  Cenario: 2174 - Excluir um item de pedido estocado com mais de um item
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                             | Nome do executor     | Sprint |
+      | 2174 | BRITQEA-2174 | Excluir um item de pedido estocado com mais de um item | Matheus Machado luiz | S1     |
+    E que estou na tela "GERPD"
+    E que tenha 2 itens inclusos
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       017 | 3523912 |    56849 | T           |
+    Quando excluo um item do pedido
+    E consultar o fornecedor 3523912 na SOLPD
+    Entao a grid deve apresentar o item excluido com a situação "SOLICITACAO CANCELADA"

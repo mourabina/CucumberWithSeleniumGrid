@@ -84,12 +84,12 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 			return consultarDigitacaoPedidosSOLPD.getTextNomeFornecedor();
 		}
 	},
-	SITUACAO_REGISTRO("Nome Fornecedor"){
+	SITUACAO_REGISTRO("Situacao Registro"){
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
 			return consultarDigitacaoPedidosSOLPD.getSituacaoRegistro();
 		}
 	},
-	HORA_REGISTRO("Nome Fornecedor"){
+	HORA_REGISTRO("Hora Registro"){
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
 			return consultarDigitacaoPedidosSOLPD.getHoraRegistro();
 		}
