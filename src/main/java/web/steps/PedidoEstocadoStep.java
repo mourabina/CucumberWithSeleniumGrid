@@ -188,6 +188,24 @@ public class PedidoEstocadoStep {
 
 	@Entao("^a grid deve apresentar o item excluido com a situação \"([^\"]*)\"$")
 	public void verificarPrimeiroItemSituacao(String sit) throws ParseException {
-		assertTrue("Item não encontrado com situação/hora de cancelamento correta", this.pedidos.verificarItensSOLPD(VariaveisEstaticas.getMap().get(0).get("Codigo"), sit));
+		assertTrue("Item não encontrado com situação/hora de cancelamento correta", this.pedidos.verificarItemSOLPD(VariaveisEstaticas.getMap().get(0).get("Codigo"), sit));
+	}
+
+	@Entao("^a grid deve apresentar os itens excluidos com a situação \"([^\"]*)\"$")
+	public void verificarTodosItensInclusos(String sit) {
+		VariaveisEstaticas.getMap().forEach(x -> {
+			try {
+				assertTrue("Item: " + x.get("Codigo") + ", não encontrado com situação/hora de cancelamento correta", this.pedidos.verificarItemSOLPD(x.get("Codigo"), sit));
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+		});
+	}
+
+	@Dado("^que tenha (\\d+) itens excluidos$")
+	public void excluirMultiplosItens(int qtde, DataTable params) {
+		this.incluirMaisItens(qtde, params);
+		this.acionarBtnConsultar();
+		this.pedidos.excluirMultiplosItens(qtde);
 	}
 }

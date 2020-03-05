@@ -246,7 +246,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.aguardaReload();
 	}
 
-	public boolean verificarItensSOLPD(String codItem, String situacao) throws ParseException {
+	public boolean verificarItemSOLPD(String codItem, String situacao) throws ParseException {
 		boolean registro = false;
 
 		do {
