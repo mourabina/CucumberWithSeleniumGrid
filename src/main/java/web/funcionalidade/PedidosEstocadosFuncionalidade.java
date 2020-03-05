@@ -170,6 +170,21 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 		return values;
 	}
+	
+	public List<Map<String, String>> retornaItensSOLPD(int qtde) {
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
+		;
+
+		for (int i = 0; i < qtde; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("Codigo", webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value"));
+			map.put("Descricao", webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value"));
+			map.put("Quantidade", webDriver.findElement(By.id("panel_QTD1_" + i)).getAttribute("value"));
+			values.add(map);
+		}
+
+		return values;
+	}
 
 	public void excluirMultiplosItens(int qtde) {
 		for (int i = 0; i < qtde; i++) {
