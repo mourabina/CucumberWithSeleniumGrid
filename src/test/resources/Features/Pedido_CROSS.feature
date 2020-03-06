@@ -40,7 +40,7 @@ Funcionalidade: Pedido_Cross SAD
       | Comprador | Fornec  | Produto |
       |       028 | 3512102 |    6814 |
     Quando consultar o fornecedor 3512102 na SOLPD
-    Entao deve retornar o item com status "SOLICITACAO CANCELADA"
+    Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2184 @web
   Cenario: 2184 - Excluir mais de uma loja&filial do pedido CROSS
@@ -53,4 +53,290 @@ Funcionalidade: Pedido_Cross SAD
       | Comprador | Fornec  | Produto |
       |       028 | 3512102 |    6814 |
     Quando consultar o fornecedor 3512102 na SOLPD
-    Entao deve retornar o item com status "SOLICITACAO CANCELADA"
+    Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
+
+  @BRITQEA2233 @web
+  Cenario: 2233 - Consulta Lojas sem preencher o campo 'Produtos' - CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                              | Nome do executor | Sprint |
+      | 2233 | BRITQEA-2233 | Consulta Lojas sem preencher o campo 'Produtos' - CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando clico no botao Pesquisar Lojas sem preencher nenhum campo
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO PRODUTO DEVE SER INFORMADO"
+
+  @BRITQEA2234 @web
+  Cenario: 2234 - Consulta Pedido sem preencher o campo 'Produtos' - CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                               | Nome do executor | Sprint |
+      | 2234 | BRITQEA-2234 | Consulta Pedido sem preencher o campo 'Produtos' - CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando clico no botao Pesquisar Pedido sem preencher nenhum campo
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO PRODUTO DEVE SER INFORMADO"
+
+  @BRITQEA2235 @web
+  Cenario: 2235 - Consulta Pedido preenchendo o campo 'Produtos' - CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                             | Nome do executor | Sprint |
+      | 2235 | BRITQEA-2235 | Consulta Pedido preenchendo o campo 'Produtos' - CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Produto" com o valor "6814" e clico em consultar Pedido
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO FORNECEDOR DEVE SER INFORMADO"
+
+  @BRITQEA2236 @web
+  Cenario: 2236 - Consulta Pedido preenchendo os campos 'Produtos' e 'Fornec' - CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                          | Nome do executor | Sprint |
+      | 2236 | BRITQEA-2236 | Consulta Pedido preenchendo os campos 'Produtos' e 'Fornec' - CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho os campos e clico em Consultar Pedido
+      | Produto | Fornec  |
+      |    6814 | 3512102 |
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO COMPRADOR DEVE SER INFORMADO"
+
+  @BRITQEA2237 @web
+  Cenario: 2237 - Consulta Pedido preenchendo os campos 'Produtos', 'Fornec' e 'Comprador'- CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                                      | Nome do executor | Sprint |
+      | 2237 | BRITQEA-2237 | Consulta Pedido preenchendo os campos 'Produtos', 'Fornec' e 'Comprador'- CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho os campos e clico em Consultar Pedido
+      | Produto | Fornec  | Comprador |
+      |    6814 | 3512102 |       028 |
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO DATA DE ENTREGA DEVE SER INFORMADA"
+
+  @BRITQEA2238 @web
+  Cenario: 2238 - Consulta Pedido preenchendo os campos 'Produtos', 'Fornec', 'Comprador' e 'Dt.Entrega' - CROSS
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                                                     | Nome do executor | Sprint |
+      | 2238 | BRITQEA-2238 | Consulta Pedido preenchendo os campos 'Produtos', 'Fornec', 'Comprador' e 'Dt.Entrega' - CROSS | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho os campos e "DT Entrega" e clico em Consultar Pedido
+      | Produto | Fornec  | Comprador |
+      |    6814 | 3512102 |       028 |
+    Entao deve ser exibida a mensagem "[1] ATENÇÃO CLASSIFICACAO DO PEDIDO NAO CADASTRADA"
+
+  @BRITQEA2240 @web
+  Cenario: 2240 - Inserir caracteres especiais no campo 'Regional'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                       | Nome do executor | Sprint |
+      | 2240 | BRITQEA-2240 | Inserir caracteres especiais no campo 'Regional' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Regional" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2241 @web
+  Cenario: 2241 - Inserir letras no campo 'Regional'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                         | Nome do executor | Sprint |
+      | 2241 | BRITQEA-2241 | Inserir letras no campo 'Regional' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Regional" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2242 @web
+  Cenario: 2242 - Inserir caracteres especiais no campo 'Produto'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                      | Nome do executor | Sprint |
+      | 2242 | BRITQEA-2242 | Inserir caracteres especiais no campo 'Produto' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Produto" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2243 @web
+  Cenario: 2243 - Inserir letras no campo 'Produto'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |
+      | 2243 | BRITQEA-2243 | Inserir letras no campo 'Produto' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Produto" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2244 @web
+  Cenario: 2244 - Inserir caracteres especiais no campo 'Comprador'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                        | Nome do executor | Sprint |
+      | 2244 | BRITQEA-2244 | Inserir caracteres especiais no campo 'Comprador' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Comprador" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2245 @web
+  Cenario: 2245 - Inserir letras no campo 'Comprador'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                          | Nome do executor | Sprint |
+      | 2245 | BRITQEA-2245 | Inserir letras no campo 'Comprador' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Comprador" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2246 @web
+  Cenario: 2246 - Inserir caracteres especiais no campo 'DT Entrega'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                         | Nome do executor | Sprint |
+      | 2246 | BRITQEA-2246 | Inserir caracteres especiais no campo 'DT Entrega' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "DT Entrega" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2247 @web
+  Cenario: 2247 - Inserir letras no campo 'DT Entrega'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                           | Nome do executor | Sprint |
+      | 2247 | BRITQEA-2247 | Inserir letras no campo 'DT Entrega' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "DT Entrega" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2248 @web
+  Cenario: 2248 - Inserir caracteres especiais no campo 'Quant'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                    | Nome do executor | Sprint |
+      | 2248 | BRITQEA-2248 | Inserir caracteres especiais no campo 'Quant' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Quant" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2249 @web
+  Cenario: 2249 - Inserir letras no campo 'Quant'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                      | Nome do executor | Sprint |
+      | 2249 | BRITQEA-2249 | Inserir letras no campo 'Quant' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Quant" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2250 @web
+  Cenario: 2250 - Inserir caracteres especiais no campo 'Comprador'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                        | Nome do executor | Sprint |
+      | 2250 | BRITQEA-2250 | Inserir caracteres especiais no campo 'Comprador' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Comprador" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2251 @web
+  Cenario: 2251 - Inserir letras no campo 'Comprador'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                          | Nome do executor | Sprint |
+      | 2251 | BRITQEA-2251 | Inserir letras no campo 'Comprador' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Comprador" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2253 @web
+  Cenario: 2253 - Inserir caracteres especiais no campo 'Desc'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                   | Nome do executor | Sprint |
+      | 2253 | BRITQEA-2253 | Inserir caracteres especiais no campo 'Desc' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Desc" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2254 @web
+  Cenario: 2254 - Inserir letras no campo 'Desc'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                     | Nome do executor | Sprint |
+      | 2254 | BRITQEA-2254 | Inserir letras no campo 'Desc' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Desc" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2255 @web
+  Cenario: 2255 - Inserir caracteres especiais no campo 'IPI'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                  | Nome do executor | Sprint |
+      | 2255 | BRITQEA-2255 | Inserir caracteres especiais no campo 'IPI' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "ipi" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2256 @web
+  Cenario: 2256 - Inserir letras no campo 'IPI'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                    | Nome do executor | Sprint |
+      | 2256 | BRITQEA-2256 | Inserir letras no campo 'IPI' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "ipi" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2257 @web
+  Cenario: 2257 - Inserir caracteres especiais no campo 'ICM'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                  | Nome do executor | Sprint |
+      | 2257 | BRITQEA-2257 | Inserir caracteres especiais no campo 'ICM' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "icm" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2258 @web
+  Cenario: 2258 - Inserir letras no campo 'ICM'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                    | Nome do executor | Sprint |
+      | 2258 | BRITQEA-2258 | Inserir letras no campo 'ICM' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "icm" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2259 @web
+  Cenario: 2259 - Inserir caracteres especiais no campo 'Contrato'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                       | Nome do executor | Sprint |
+      | 2259 | BRITQEA-2259 | Inserir caracteres especiais no campo 'Contrato' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Contrato" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2260 @web
+  Cenario: 2260 - Inserir letras no campo 'ICM'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                         | Nome do executor | Sprint |
+      | 2260 | BRITQEA-2260 | Inserir letras no campo 'Contrato' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Contrato" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2261 @web
+  Cenario: 2261 - Inserir caracteres especiais no campo 'Evento'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                     | Nome do executor | Sprint |
+      | 2261 | BRITQEA-2261 | Inserir caracteres especiais no campo 'Evento' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Evento" com o valor "@#$%&*~"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2262 @web
+  Cenario: 2262 - Inserir letras no campo 'Evento'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
+      | 2262 | BRITQEA-2262 | Inserir letras no campo 'Evento' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando preencho o campo "Evento" com o valor "ABCDE"
+    Entao deve ser exibida a mensagem "Caracter inválido em campos numéricos."

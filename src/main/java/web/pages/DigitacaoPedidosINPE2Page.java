@@ -104,10 +104,16 @@ public class DigitacaoPedidosINPE2Page extends BaseTest {
 
 	@FindBy(id = "panel_QTDADE1_0")
 	private WebElement gridQuantidade;
-	
-	
+
+	@FindBy(id = "alerta_sad")
+	private WebElement msg;
+
 	public DigitacaoPedidosINPE2Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getMsg() {
+		return msg;
 	}
 
 	public WebElement getGridQuantidade() {
