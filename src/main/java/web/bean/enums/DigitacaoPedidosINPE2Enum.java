@@ -25,7 +25,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputFornecedor();
 		}
 	},
-	QUANTI("Quanti") {
+	QUANT("Quant") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputQuatidade();
@@ -67,7 +67,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputDataEntrega();
 		}
 	},
-	DESCONTO("Desconto") {
+	DESC("Des") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputDesconto();
@@ -79,7 +79,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputOpcao();
 		}
 	},
-	CONTR("Contr") {
+	CONTRATO("Contrato") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputContr();

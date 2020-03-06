@@ -10,63 +10,53 @@ import io.cucumber.java.pt.Quando;
 import web.funcionalidade.DigitacaoPedidosDSDCROSSFuncionalidade;
 
 public class PedidoDSDStep {
-	
+
 	private DigitacaoPedidosDSDCROSSFuncionalidade inpe;
-	
+
 	public PedidoDSDStep() {
 		this.inpe = new DigitacaoPedidosDSDCROSSFuncionalidade();
 	}
-	
-	
-	
+
 	@Quando("preencho o campo {string} com o valor {string} da tela INPE")
 	public void preenchoCampoTelaInpe2(String campo, String valor) {
-	    this.inpe.preencherCampoValor(campo, valor);
+		this.inpe.preencherCampoValor(campo, valor);
 	}
-
-
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\" na Tela Inpe$")
-	public void validarExibicaoLabelsTelaInpe(String campo1, String campo2){
-		Assert.assertFalse("Camapo " + campo1 + "Não está sendo exibido", this.inpe.retornaValorCampo(campo1).equals(" "));
-		Assert.assertFalse("Camapo " + campo2 + "Não está sendo exibido", this.inpe.retornaValorCampo(campo1).equals(" "));
+	public void validarExibicaoLabelsTelaInpe(String campo1, String campo2) {
+		Assert.assertFalse("Camapo " + campo1 + "Não está sendo exibido",
+				this.inpe.retornaValorCampo(campo1).equals(" "));
+		Assert.assertFalse("Camapo " + campo2 + "Não está sendo exibido",
+				this.inpe.retornaValorCampo(campo1).equals(" "));
 	}
-
-
 
 	@Quando("^clico no botao Consultar Lojas$")
-	public void clicoBotaoConsultarLojas(){
+	public void clicoBotaoConsultarLojas() {
 		this.inpe.ClicarBotaConsultarLojas();
-		
+
 	}
 
-
-
 	@Quando("^preencho os campos mais os campos de Data de Entrega e Classif Ped$")
-	public void preencherCamposDataEntrega(DataTable params){
+	public void preencherCamposDataEntrega(DataTable params) {
 		this.inpe.preencherCampos(params);
 		this.inpe.selecionarValorCampoClassificacao();
 		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(2));
-		
+
 	}
 
-
-
 	@Quando("^Seleciono uma Loja preencho quantidade e clico em incluir$")
-	public void selecionoUmaLojaPreenchoQuantidadeEClicoEmIncluir() throws Throwable {
+	public void selecionoUmaLojaPreenchoQuantidadeEClicoEmIncluir(){
 		this.inpe.selecionarLoja();
 		this.inpe.preencherCampoValor("Quantidade", "10");
 		this.inpe.clicarBotaoIncluir();
 	}
 
-
-
 	@Dado("^que tenha (\\d+) itens inclusos DSD$")
-	public void incluirItenDSD(int quant, DataTable params){
+	public void incluirItenDSD(int quant, DataTable params) {
 		this.inpe.preencherCampos(params);
 		this.inpe.selecionarValorCampoClassificacao();
 		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
 		this.inpe.incluirItens(quant);
-		
+
 	}
 }

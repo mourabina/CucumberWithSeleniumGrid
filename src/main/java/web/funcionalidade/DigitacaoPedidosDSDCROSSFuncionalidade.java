@@ -223,5 +223,10 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		}
 
 	}
+	
+	public String retornaMensagem() {
+		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getAttribute("value"));
+		return this.inpe2.getMsg().getText();
+	}
 
 }
