@@ -386,3 +386,39 @@ Funcionalidade: Pedido_Estocado SAD
       |       017 | 3523912 |    56849 | T           |
     Quando consultar o fornecedor 3523912 na SOLPD
     Entao a grid deve apresentar os itens excluidos com a situação "SOLICITACAO CANCELADA"
+
+  @BRITQEA2270 @web
+  Cenario: 2270 - Consulta Pedido - campo 'Comprador' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                    | Nome do executor     | Sprint |
+      | 2270 | BRITQEA-2270 | Consulta Pedido - campo 'Comprador' em branco | Matheus Machado Luiz | S1     |
+    E que estou na tela "GERPD"
+    Quando clico no botao Consultar Pedido
+    Entao deve apresentar a mensagem "[1] 0 COMPRADOR NAO CADASTRADO"
+
+  @BRITQEA2271 @web
+  Cenario: 2271 - Consulta Pedido - campo 'Fornec' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                 | Nome do executor     | Sprint |
+      | 2271 | BRITQEA-2271 | Consulta Pedido - campo 'Fornec' em branco | Matheus Machado Luiz | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos da GERPD
+      | Comprador |
+      |       017 |
+    Quando clico no botao Consultar Pedido
+    Entao deve apresentar a mensagem "[1] 0 FORNECEDOR NAO CADASTRADO"
+
+  @BRITQEA2272 @web
+  Cenario: 2272 - Consulta Pedido - campo 'Datas' em branco
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                | Nome do executor     | Sprint |
+      | 2272 | BRITQEA-2272 | Consulta Pedido - campo 'Datas' em branco | Matheus Machado Luiz | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos da GERPD
+      | Comprador | Fornec  |
+      |       017 | 3523912 |
+    Quando clico no botao Consultar Pedido
+    Entao deve apresentar a mensagem "[1] ATENÇÃO PARA Alterar, Excluir OU Consulta Pedido, INFORMAR SÓ UMA DATA."
