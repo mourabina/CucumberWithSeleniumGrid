@@ -35,7 +35,7 @@ public class PedidoCrossStep extends BaseTest {
 	}
 
 	@Dado("que tenha {int} itens inclusos Cross")
-	public void incluirIntesCross(Integer quant, DataTable params) throws ParseException {
+	public void incluirItemCross(Integer quant, DataTable params) throws ParseException {
 		this.dsdCross.preencherCampos(params);
 		this.dsdCross.selecionarValorCampoClassificacao();
 		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
@@ -43,15 +43,8 @@ public class PedidoCrossStep extends BaseTest {
 
 	}
 
-	@Entao("^a grid da Tela INPE deve apresentar os (\\d+) itens inclusos$")
-	public void validarLojaQuantiIntensGridINPE2(int quant) throws ParseException {
-		assertEquals("Itens não são os mesmos que os inseridos", VariaveisEstaticas.getMap(),
-				this.dsdCross.retornaItens(quant));
-		this.dsdCross.excluirMultiplosItensIMPE2(quant);
-	}
-
-	@Entao("^a grid da Tela \"([^\"]*)\" deve apresentar os (\\d+) itens inclusos$")
-	public void validarLojaQuantiIntensGridINPE2(String tela, int quant) throws ParseException {
+	@Entao("^a grid da Tela SOLPD deve apresentar os (\\d+) itens inclusos$")
+	public void validarLojaQuantItensGridINPE2(int quant) throws ParseException {
 		assertEquals("Itens não são os mesmos que os inseridos", VariaveisEstaticas.getMap(),
 				this.dsdCross.retornaItens(quant));
 		this.solpd.pegarValoresParaExclusao();
@@ -59,14 +52,14 @@ public class PedidoCrossStep extends BaseTest {
 	}
 
 	@Dado("^que tenha \"([^\"]*)\" iten Cross Excluido com o Produto \"([^\"]*)\"$")
-	public void incluirExcluirIten(int quant, String valor, DataTable params){
+	public void incluirExcluirItem(int quant, String valor, DataTable params){
 		this.dsdCross.preencherCampoValor("Produto", valor);
 		this.dsdCross.clicarBotaoConsultarLoja();
 		this.dsdCross.preencherCampos(params);
 		this.dsdCross.selecionarValorCampoClassificacao();
 		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
 		this.dsdCross.incluirItens(quant);
-		this.dsdCross.clicarBotaoConcultarPedido();
+		this.dsdCross.acionarBtnConsultarPedido();
 		this.dsdCross.selecionarLojasINPE2();
 		VariaveisEstaticas.setHORA(GeracaoData.retornaHHmm(195));
 		this.dsdCross.ClicarBotaoExcluir();
@@ -77,45 +70,42 @@ public class PedidoCrossStep extends BaseTest {
 		this.dsdCross.verificarTodosResultadoGrid();
 	}
 
-	@Quando("^clico no botao Pesquisar Lojas sem preencher nenhum campo$")
-	public void acionarBotaoPesquisarLojasSemPreencherCampos(){
+	@Quando("^clico no botao Pesquisar Lojas$")
+	public void acionatBtnPesquisarLoja(){
 		this.dsdCross.ClicarBotaConsultarLojas();
 	}
 
-	@Entao("^deve ser exibida a mensagem \"([^\"]*)\"$")
+	@Entao("^deve exibir a mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg){
-		Assert.assertTrue("A mensagem: " + msg , this.dsdCross.retornaMensagem().contains(msg));
-		
+		Assert.assertTrue("A mensagem não condiz com o esperado", this.dsdCross.retornaMensagem().contains(msg));		
 	}
 
-	@Quando("^clico no botao Pesquisar Pedido sem preencher nenhum campo$")
-	public void acionarBotaoPesquisarPedidoSemPreencherCampos(){
-		this.dsdCross.clicarBotaoConcultarPedido();
+	@Quando("^clico no botao Pesquisar Pedido$")
+	public void acionatBtnPesquisarPedido(){
+		this.dsdCross.acionarBtnConsultarPedido();
 	}
 
-	@Quando("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\" e clico em consultar Pedido$")
-	public void preencherCampoConsultarPedido(String campo, String valor){
+	@Quando("^realizo a consulta de pedido com o campo \"([^\"]*)\" contendo o valor \"([^\"]*)\"$")
+	public void consultarPedidoPreenchendoCampo(String campo, String valor){
 		this.dsdCross.preencherCampoValor(campo, valor);
-		this.dsdCross.clicarBotaoConcultarPedido();
+		this.dsdCross.acionarBtnConsultarPedido();
 	}
 
-	@Quando("^preencho os campos e clico em Consultar Pedido$")
-	public void preencherCamposClicarBotaoConsultarPedido(DataTable params){
+	@Quando("^realizo a consulta de pedidos com os campos preenchidos$")
+	public void consultarPedidoPreenchendoCampos(DataTable params){
 		this.dsdCross.preencherCampos(params);
-		this.dsdCross.clicarBotaoConcultarPedido();
-		
+		this.dsdCross.acionarBtnConsultarPedido();
 	}
 
-	@Quando("^preencho os campos e \"([^\"]*)\" e clico em Consultar Pedido$")
+	@Quando("^realizo a consulta de pedidos com os campos obrigatorios preenchidos$")
 	public void preencherCamposMenosDataEntrega(String dtEntrega, DataTable params){
-		this.preencherCamposClicarBotaoConsultarPedido(params);
-		this.dsdCross.preencherCampoValor(dtEntrega, GeracaoData.retornaDataAtualMaisDias(1));
-		this.dsdCross.clicarBotaoConcultarPedido();
+		this.consultarPedidoPreenchendoCampos(params);
+		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
+		this.dsdCross.acionarBtnConsultarPedido();
 	}
 
 	@Quando("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
-	public void validarPeenchimenentoCampos(String campo, String valor){
+	public void validarPreenchimentoCampos(String campo, String valor){
 		this.dsdCross.preencherCampoValor(campo, valor);
 	}
-
 }

@@ -28,4 +28,4 @@ Funcionalidade: Pedido_Dsd
       | Comprador | Fornec  |
       |       043 | 3514753 |
     Quando consultar o fornecedor 3514753 na SOLPD
-    Entao a grid da Tela "SOLPD" deve apresentar os 1 itens inclusos
+    Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos

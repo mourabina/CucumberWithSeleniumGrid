@@ -31,7 +31,7 @@ public class PedidoDSDStep {
 	}
 
 	@Quando("^clico no botao Consultar Lojas$")
-	public void clicoBotaoConsultarLojas() {
+	public void acionarBtnConsultarLojas() {
 		this.inpe.ClicarBotaConsultarLojas();
 
 	}
@@ -42,13 +42,6 @@ public class PedidoDSDStep {
 		this.inpe.selecionarValorCampoClassificacao();
 		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(2));
 
-	}
-
-	@Quando("^Seleciono uma Loja preencho quantidade e clico em incluir$")
-	public void selecionoUmaLojaPreenchoQuantidadeEClicoEmIncluir(){
-		this.inpe.selecionarLoja();
-		this.inpe.preencherCampoValor("Quantidade", "10");
-		this.inpe.clicarBotaoIncluir();
 	}
 
 	@Dado("^que tenha (\\d+) itens inclusos DSD$")

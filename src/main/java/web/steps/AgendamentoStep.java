@@ -36,7 +36,7 @@ public class AgendamentoStep {
 	}
 
 	@Quando("^faco a consulta com a agenda recem gerada$")
-	public void salvarValorCampoAgendaFacoNovaConsultaValorAgenda() {
+	public void novaConsultaAgenda() {
 		VariaveisEstaticas.setAGENDA(this.agenda.retornaValorCampo("Agenda"));
 		this.login.acessarTela("CPT85");
 		this.agenda.preencherCampoValor("Agenda", VariaveisEstaticas.getAGENDA());

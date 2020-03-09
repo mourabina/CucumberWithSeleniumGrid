@@ -40,8 +40,7 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 	public void pegarValoresParaExclusao() {
 		VariaveisEstaticas.setCOD_PRODUTO(this.retornaValorCampo("Produto"));
 		VariaveisEstaticas.setCOMPRADOR(this.retornaValorCampo("Compr"));
-		VariaveisEstaticas.setFORNEC(this.retornaValorCampo("Fornecedor"));
-		
+		VariaveisEstaticas.setFORNEC(this.retornaValorCampo("Fornecedor"));		
 	}
 	
 }

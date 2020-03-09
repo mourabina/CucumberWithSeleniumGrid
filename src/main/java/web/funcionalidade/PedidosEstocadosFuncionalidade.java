@@ -83,7 +83,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		});
 	}
 
-	public void clicarBotaoConsultaPedido() {
+	public void clicarBtnConsultaPedido() {
 		addEvidenciaWeb("Clicando no Botão Consultar Tabela Compra");
 		this.gerpd.getBt_consultarPedido().click();
 		waitForPageToLoad(webDriver);
@@ -290,7 +290,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 	
 	public void limparPedido(DataTable params) {
-		this.clicarBotaoConsultaPedido();
+		this.clicarBtnConsultaPedido();
 		System.out.println(this.gerpd.getMsg().getText());
 		if(!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS")) {
 			this.excluirTodosItensPedido();

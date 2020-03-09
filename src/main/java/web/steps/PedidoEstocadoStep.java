@@ -73,41 +73,31 @@ public class PedidoEstocadoStep {
 	}
 
 	@Quando("^preencher o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
-	public void preencherCamposValores(String campo, String valor) {
+	public void preencherCampoValor(String campo, String valor) {
 		this.pedidos.preencherCampoValor(campo, valor);
 
 	}
 
 	@Quando("^clico no botao Consultar Tabela de Compra$")
-	public void acionarBotaoConsultarTabelaCompra() {
+	public void acionarBtConsultarTabelaCompra() {
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 
 	}
 
 	@Quando("^preencher os campos Datas com o valor \"([^\"]*)\"$")
-	public void preencherTodosCamposDatas(String valor) {
+	public void preencherCamposDatas(String valor) {
 		this.pedidos.preencherCamposDatas(valor);
-	}
-
-	@Quando("^Seleciono produto e digito a quantidade \"([^\"]*)\" e clico nos botaes incluir e Executar Pedido$")
-	public void selecionarProdutoDigitarQuantClicarBotaoIncluir(String quant) {
-		this.pedidos.selecionarComboBox();
-		this.pedidos.preencherCampoCompra(quant);
-		this.pedidos.salvarInformacoesPedido();
-		this.pedidos.clicarBotaoIncluir();
-		this.pedidos.aguardaReload();
-		this.pedidos.clicarBotaoExecutarPedido();
 	}
 
 	@Quando("clico no botao Consultar Pedido")
 	public void acionarBtnConsultar() {
-		this.pedidos.clicarBotaoConsultaPedido();
+		this.pedidos.clicarBtnConsultaPedido();
 	}
 
-	@Quando("^faco uma pesquisa na tela \"([^\"]*)\" com o campo \"([^\"]*)\"$")
-	public void facoUmaPesquisaNaTelaComOCampo(String tela, String campo) {
+	@Quando("^pesquiso pelo fornecedor na SOLPD$")
+	public void pesquisaFornecSOLPD(String tela, String campo) {
 		this.login.acessarTela(tela);
-		this.solpd.preencherCampoValor(campo, VariaveisEstaticas.getFORNEC());
+		this.solpd.preencherCampoValor("forn", VariaveisEstaticas.getFORNEC());
 		this.pedidos.executarComandoEnter();
 	}
 
@@ -120,7 +110,7 @@ public class PedidoEstocadoStep {
 
 	@Quando("^excluo um item do pedido$")
 	public void excluirItemPedido() {
-		this.pedidos.clicarBotaoConsultaPedido();
+		this.pedidos.clicarBtnConsultaPedido();
 		this.pedidos.excluirPrimeiroItem();
 	}
 
@@ -148,7 +138,7 @@ public class PedidoEstocadoStep {
 	}
 
 	@Entao("^a grid deve apresentar somente o item incluso$")
-	public void verificarGridUmItem() {
+	public void verificarGridItem() {
 		this.pedidos.verificaItemGrid(1);
 		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
 		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
@@ -162,7 +152,7 @@ public class PedidoEstocadoStep {
 		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
 	}
 
-	@Entao("^deve ser apresentado a mensagem \"([^\"]*)\"$")
+	@Entao("^deve apresentar a mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg) {
 		Assert.assertTrue(this.pedidos.retornaMensagemExibida().contains(msg));
 	}
@@ -218,5 +208,11 @@ public class PedidoEstocadoStep {
 		this.pedidos.clicarBotaoExecutarPedido();
 		this.pedidos.aguardaReload();
 
+	}
+
+	@Dado("^que tenha um pedido com um item$")
+	public void executarPedidoComItem(DataTable params) {
+		this.incluirItem(params);
+		this.pedidos.clicarBotaoExecutarPedido();
 	}
 }

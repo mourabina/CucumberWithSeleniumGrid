@@ -86,7 +86,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	}
 
-	public boolean validaCampoVazio(String campo) {
+	public boolean validarCampoVazio(String campo) {
 		DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		addEvidenciaWeb("Campo " + campo);
@@ -193,7 +193,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	}
 
-	public void clicarBotaoConcultarPedido() {
+	public void acionarBtnConsultarPedido() {
 		addEvidenciaWeb("Clicando Botão Consultar Pedido");
 		this.inpe2.getBt_ConsultarPedido().click();
 		this.pedido.aguardaReload();
