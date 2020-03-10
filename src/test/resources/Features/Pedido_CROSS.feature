@@ -5,12 +5,12 @@
 @PedidoCROSS
 Funcionalidade: Pedido_Cross SAD
 
-  @BRITQEA2176 @web
-  Cenario: 2176 - Consulta de produtos - CROSS
+  @BRITQEA2267 @web
+  Cenario: 2267 - Consulta de produtos - CROSS
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                   | Nome do executor | Sprint |
-      | 2176 | BRITQEA-2176 | Consulta de produtos - CROSS | Hilário Bina     | S1     |
+      | 2267 | BRITQEA-2267 | Consulta de produtos - CROSS | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando pesquiso uma loja com o campo "Produto" com o valor "6814"
     Entao deve ser populado o Grid de Resultados da INPE
@@ -340,3 +340,49 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     Quando preencho o campo "Evento" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2263 @web
+  Cenario: 2263 - Inserir caracteres especiais no campo 'Quantidade' - Segunda Grid
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                        | Nome do executor | Sprint |
+      | 2263 | BRITQEA-2263 | Inserir caracteres especiais no campo 'Quantidade' - Segunda Grid | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    E pesquiso uma loja com o campo "Produto" com o valor "6814"
+    Quando preencho os campos Quantidade com o valor "@#$%&*~"
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2264 @web
+  Cenario: 2264 - Inserir letras no campo 'Quantidade' - Segunda Grid'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                           | Nome do executor | Sprint |
+      | 2264 | BRITQEA-2264 | Inserir letras no campo 'Quantidade' - Segunda Grid' | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    E pesquiso uma loja com o campo "Produto" com o valor "6814"
+    Quando preencho os campos Quantidade com o valor "ABCDE"
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+
+  @BRITQEA2267A @web
+  Cenario: 2267A - Consulta de produtos - Estocados
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id    | Numero do CT  | Nome do CT                       | Nome do executor | Sprint |
+      | 2267A | BRITQEA-2267A | Consulta de produtos - Estocados | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    Quando pesquiso uma loja com o campo "Produto" com o valor "1661"
+    Entao deve ser populado o Grid de Resultados da INPE
+
+  @BRITQEA2269 @web
+  Cenario: 2269 - Incluir e executar pedido CROSS - Campo 'Preço Compra' preenchido
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                        | Nome do executor | Sprint |
+      | 2269 | BRITQEA-2269 | Incluir e executar pedido CROSS - Campo 'Preço Compra' preenchido | Hilário Bina     | S1     |
+    E que estou na tela "INPE2"
+    E pesquiso uma loja com o campo "Produto" com o valor "6814"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Preco Compra |
+      |       028 | 3512102 |         45,0 |
+    Quando consultar o fornecedor 3512102 na SOLPD
+    Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos

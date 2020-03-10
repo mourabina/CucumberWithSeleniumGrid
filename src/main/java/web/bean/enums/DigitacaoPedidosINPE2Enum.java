@@ -49,7 +49,7 @@ public enum DigitacaoPedidosINPE2Enum implements DigitacaoPedidosINPE2Interface 
 			return digitacaoPedidosINPE2.getInputComprador();
 		}
 	},
-	PRCOMPRA("PRCompra") {
+	PRECO_COMPRA("Preco Compra") {
 		@Override
 		public WebElement getElement(DigitacaoPedidosINPE2Page digitacaoPedidosINPE2) {
 			return digitacaoPedidosINPE2.getInputPRCompras();

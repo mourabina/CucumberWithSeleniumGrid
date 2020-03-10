@@ -108,4 +108,10 @@ public class PedidoCrossStep extends BaseTest {
 	public void validarPreenchimentoCampos(String campo, String valor){
 		this.dsdCross.preencherCampoValor(campo, valor);
 	}
+
+	@Quando("^preencho os campos Quantidade com o valor \"([^\"]*)\"$")
+	public void preenherCampoQauntidadeGrid(String valor){
+		this.dsdCross.validarCampoQuantidadeGrid(valor);
+		
+	}
 }

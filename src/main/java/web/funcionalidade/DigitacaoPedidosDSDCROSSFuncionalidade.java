@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
@@ -200,7 +201,8 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 
 	public void verificarTodosResultadoGrid() {
-		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		int qtde = webDriver.findElements(By.xpath("//input[contains(@id, 'panel_FILENT1_WM_') and @value != '']"))
+				.size();
 		for (int i = 0; i < qtde; i++) {
 			assertFalse("Campo Codigo está vazio",
 					webDriver.findElement(By.id("panel_FILENT1_WM_" + i)).getAttribute("value").isEmpty());
@@ -211,11 +213,11 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	public void selecionarLojasINPE2() {
 		int qtdeLinhas = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
-		int qtdeColunas = webDriver.findElements(By.xpath("//*[contains(@id,'panel_NOMEFIL')]")).size()/qtdeLinhas;
+		int qtdeColunas = webDriver.findElements(By.xpath("//*[contains(@id,'panel_NOMEFIL')]")).size() / qtdeLinhas;
 		for (int y = 1; y <= qtdeColunas; y++) {
 			for (int i = 0; i < qtdeLinhas; i++) {
-				if (!webDriver.findElement(By.id("panel_FILENT"+y+"_WM_" + i)).getAttribute("value").isEmpty()) {
-					webDriver.findElement(By.id("panel_TL_OPC"+y+"_" + i + "_checkbox")).click();
+				if (!webDriver.findElement(By.id("panel_FILENT" + y + "_WM_" + i)).getAttribute("value").isEmpty()) {
+					webDriver.findElement(By.id("panel_TL_OPC" + y + "_" + i + "_checkbox")).click();
 
 				}
 			}
@@ -223,7 +225,21 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		}
 
 	}
-	
+
+	public void validarCampoQuantidadeGrid(String valor) {
+		int qtdeLinhas = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		int qtdeColunas = webDriver.findElements(By.xpath("//*[contains(@id,'panel_NOMEFIL')]")).size() / qtdeLinhas;
+		for (int y = 1; y <= qtdeColunas; y++) {
+			for (int i = 0; i < qtdeLinhas; i++) {
+				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).clear();
+				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).sendKeys(valor);
+
+			}
+
+		}
+
+	}
+
 	public String retornaMensagem() {
 		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getAttribute("value"));
 		return this.inpe2.getMsg().getText();

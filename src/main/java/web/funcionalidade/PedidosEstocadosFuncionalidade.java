@@ -107,7 +107,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void verificarTodosResultadoGrid() {
-		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		int qtde = webDriver.findElements(By.xpath("//input[contains(@id, 'panel_FILENT1_WM_')")).size();
 		for (int i = 0; i < qtde; i++) {
 			assertFalse("Campo Codigo está vazio",
 					webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
