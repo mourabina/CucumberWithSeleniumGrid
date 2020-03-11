@@ -6,7 +6,7 @@
 Funcionalidade: Pedido_Dsd
 
   @BRITQEA2185 @web
-  Cenario: 2185 - Consulta de produtos - 'DSD'
+  Cenario: 2185 - Consulta de produtos DSD na INPE2
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                   | Nome do executor | Sprint |
@@ -17,7 +17,7 @@ Funcionalidade: Pedido_Dsd
     Entao deve ser exibido no GRID o "Codigo Filial" e a "Nome Filial" na Tela Inpe
 
   @BRITQEA2186 @web
-  Cenario: 2186 - Incluir produto&item - pedido DSD
+  Cenario: 2186 - Incluir produto DSD na INPE2
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |

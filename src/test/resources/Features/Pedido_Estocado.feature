@@ -484,4 +484,16 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       043 | 3514753 |    32916 | T           |
     Entao deve apresentar a mensagem "[1] ATENÇÃO ITEM DIRETO. NAO FAZER PEDIDO ESTOCADO"
-    
+
+  @BRITQEA2322 @web
+  Cenario: 2322 - Alterar valores dos produtos estocados na GERPD
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                      | Nome do executor | Sprint |
+      | 2322 | BRITQEA-2322 | Alterar valores dos produtos estocados na GERPD | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos mais os campos de Data
+      | Comprador | Fornec  | Pesquisa |
+      |       028 | 3500684 |     4785 |
+    Quando clico no botao Alterar
+    Entao deve apresentar a mensagem "[1] ATENÇÃO DEVE PRIMEIRO CONSULTAR PEDIDO"

@@ -205,7 +205,7 @@ public class PedidoEstocadoStep {
 
 	@Quando("^clico no botao Executar Pedido$")
 	public void acionarBotaoExecutarPedido() {
-		this.pedidos.clicarBotaoExecutarPedido();
+		this.pedidos.acionarBtnExecutarPedido();
 		this.pedidos.aguardaReload();
 
 	}
@@ -213,7 +213,7 @@ public class PedidoEstocadoStep {
 	@Dado("^que tenha um pedido com um item$")
 	public void executarPedidoComItem(DataTable params) {
 		this.incluirItem(params);
-		this.pedidos.clicarBotaoExecutarPedido();
+		this.pedidos.acionarBtnExecutarPedido();
 	}
 
 	@Entao("^grid deve apresentar o produto pesquisado$")
@@ -224,5 +224,10 @@ public class PedidoEstocadoStep {
 	@Quando("^tento incluir (\\d+) item na GERPD$")
 	public void incluirItemGERPD(int qtde,DataTable params) throws Throwable {
 		this.incluirMaisItens(qtde, params);
+	}
+
+	@Quando("^clico no botao Alterar$")
+	public void acionarBtnAlterar() {
+		this.pedidos.acionarBtnAlterar();
 	}
 }
