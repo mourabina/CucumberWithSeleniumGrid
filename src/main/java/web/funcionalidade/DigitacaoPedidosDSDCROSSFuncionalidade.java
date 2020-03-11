@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
@@ -35,11 +34,15 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 
 	public void preencherCampoValor(String campo, String valor) {
+		if (campo.equalsIgnoreCase("classif ped"))
+			this.selecionarValorComboBox(campo, valor);
+		else {
 		DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		pedido.getElement(this.inpe2).clear();
 		pedido.getElement(this.inpe2).sendKeys(valor);
 		addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
+		}
 	}
 
 	public void selecionarValorComboBox(String campo, String valor) {
@@ -244,5 +247,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getAttribute("value"));
 		return this.inpe2.getMsg().getText();
 	}
+	
+
 
 }

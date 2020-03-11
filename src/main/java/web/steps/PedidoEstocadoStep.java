@@ -142,7 +142,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.verificaItemGrid(1);
 		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
 		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
-		this.pedidos.excluirPrimeiroItem();
+//		this.pedidos.excluirPrimeiroItem();
 	}
 
 	@Entao("^deve retornar o item com situação \"([^\"]*)\"$")
@@ -214,5 +214,15 @@ public class PedidoEstocadoStep {
 	public void executarPedidoComItem(DataTable params) {
 		this.incluirItem(params);
 		this.pedidos.clicarBotaoExecutarPedido();
+	}
+
+	@Entao("^grid deve apresentar o produto pesquisado$")
+	public void gridDeveApresentarOProdutoPesquisado() throws Throwable {
+		this.pedidos.verificarConsultaItem(VariaveisEstaticas.getCOD_PRODUTO());
+	}
+
+	@Quando("^tento incluir (\\d+) item na GERPD$")
+	public void incluirItemGERPD(int qtde,DataTable params) throws Throwable {
+		this.incluirMaisItens(qtde, params);
 	}
 }

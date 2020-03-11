@@ -20,11 +20,11 @@ Funcionalidade: Pedido_Estocado SAD
     Então deve ser exibido o valor "4785" no campo "Codigo do Produto"
 
   @BRITQEA2108 @web
-  Cenario: 2108 - Incluir produto&item - pedido estocado
+  Cenario: 2108 - Incluir produto - pedido estocado
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
-      | id   | Numero do CT | Nome do CT                             | Nome do executor     | Sprint |
-      | 2108 | BRITQEA-2108 | Incluir produto&item - pedido estocado | Matheus Machado luiz | S1     |
+      | id   | Numero do CT | Nome do CT                        | Nome do executor     | Sprint |
+      | 2108 | BRITQEA-2108 | Incluir produto - pedido estocado | Matheus Machado luiz | S1     |
     E que estou na tela "GERPD"
     E que tenha um item incluso
       | Comprador | Fornec  | Pesquisa | Classif Ped |
@@ -348,11 +348,11 @@ Funcionalidade: Pedido_Estocado SAD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2112 @web
-  Cenario: 2112 - Incluir mais de um produto&item
+  Cenario: 2112 - Incluir mais de um produto
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
-      | id   | Numero do CT | Nome do CT                      | Nome do executor     | Sprint |
-      | 2112 | BRITQEA-2112 | Incluir mais de um produto&item | Matheus Machado luiz | S1     |
+      | id   | Numero do CT | Nome do CT                 | Nome do executor     | Sprint |
+      | 2112 | BRITQEA-2112 | Incluir mais de um produto | Matheus Machado luiz | S1     |
     E que estou na tela "GERPD"
     E que tenha 2 itens inclusos
       | Comprador | Fornec  | Pesquisa | Classif Ped |
@@ -422,3 +422,66 @@ Funcionalidade: Pedido_Estocado SAD
       |       017 | 3523912 |
     Quando clico no botao Consultar Pedido
     Entao deve apresentar a mensagem "[1] ATENÇÃO PARA Alterar, Excluir OU Consulta Pedido, INFORMAR SÓ UMA DATA."
+
+  @BRITQEA2268 @web
+  Cenario: 2268 - Incluir produto estocado INPE2
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                     | Nome do executor     | Sprint |
+      | 2268 | BRITQEA-2268 | Incluir produto estocado INPE2 | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    Quando tento incluir 1 item na INPE2
+      | Comprador | Fornec  | Classif Ped | Produto |
+      |       017 | 3523912 | T           |   56849 |
+    Entao deve apresentar a mensagem ""
+
+  @BRITQEA2316 @web
+  Cenario: 2316 - Consulta de produto CROSS na GERPD
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                         | Nome do executor | Sprint |
+      | 2316 | BRITQEA-2316 | Consulta de produto CROSS na GERPD | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos da GERPD
+      | Comprador | Fornec  | Pesquisa |
+      |       028 | 3512102 |     6814 |
+    Quando clico no botao Consultar Tabela de Compra
+    Entao grid deve apresentar o produto pesquisado
+
+  @BRITQEA2317 @web
+  Cenario: 2317 - Incluir produto cross na GERPD
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                     | Nome do executor | Sprint |
+      | 2317 | BRITQEA-2317 | Incluir produto cross na GERPD | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    Quando tento incluir 1 item na GERPD
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       028 | 3512102 |     6814 | T           |
+    Entao deve apresentar a mensagem "[1] ATENÇÃO ITEM CROSS. NAO FAZER PEDIDO ESTOCADO"
+
+  @BRITQEA2320 @web
+  Cenario: 2320 - Consulta de produto DSD na GERPD
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
+      | 2320 | BRITQEA-2320 | Consulta de produto DSD na GERPD | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    E preencho os campos da GERPD
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       043 | 3514753 |    32916 | T           |
+    Quando clico no botao Consultar Tabela de Compra
+    Entao grid deve apresentar o produto pesquisado
+
+  @BRITQEA2321 @web
+  Cenario: 2321 - Incluir produto DSD na GERPD
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                   | Nome do executor | Sprint |
+      | 2321 | BRITQEA-2321 | Incluir produto DSD na GERPD | Matheus Machado  | S1     |
+    E que estou na tela "GERPD"
+    Quando tento incluir 1 item na GERPD
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       043 | 3514753 |    32916 | T           |
+    Entao deve apresentar a mensagem "[1] ATENÇÃO ITEM DIRETO. NAO FAZER PEDIDO ESTOCADO"
+    

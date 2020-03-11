@@ -1,5 +1,6 @@
 package web.funcionalidade;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +28,7 @@ import web.pages.GeracaoPedidosGERPDPage;
 public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	private GeracaoPedidosGERPDPage gerpd;
-	private LoginFuncionalidade login; 
+	private LoginFuncionalidade login;
 
 	public PedidosEstocadosFuncionalidade() {
 		this.gerpd = new GeracaoPedidosGERPDPage(webDriver);
@@ -79,6 +80,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 			Set<String> headers = line.keySet();
 			headers.forEach(header -> {
 				this.preencherCampoValor(header, line.get(header));
+				this.guardarValores(header, line.get(header));
 			});
 		});
 	}
@@ -107,7 +109,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void verificarTodosResultadoGrid() {
-		int qtde = webDriver.findElements(By.xpath("//input[contains(@id, 'panel_FILENT1_WM_')")).size();
+		int qtde = webDriver.findElements(By.xpath(this.gerpd.getGridResultados())).size();
 		for (int i = 0; i < qtde; i++) {
 			assertFalse("Campo Codigo está vazio",
 					webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
@@ -118,7 +120,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public void verificaItemGrid(int qtdeItens) {
 		addEvidenciaWeb("Verificar se item está sendo apresentado");
-		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		int qtde = webDriver.findElements(By.xpath(this.gerpd.getGridResultados())).size();
 		for (int i = 0; i < qtde; i++) {
 			if (i < qtdeItens) {
 				assertFalse("Campo Codigo está vazio",
@@ -132,6 +134,13 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 						webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty());
 			}
 		}
+	}
+
+	public void verificarConsultaItem(String codigo) {
+		assertFalse("Campo Codigo está vazio",
+				this.gerpd.getCodItem().getAttribute("value").isEmpty());
+		assertFalse("Campo Nome produto está vazio",this.gerpd.getDescricaoItem().getAttribute("value").isEmpty());
+		assertEquals(this.gerpd.getCodItem().getAttribute("value").toString(), codigo);
 	}
 
 	public void incluirItens(int qtdeItens) {
@@ -170,7 +179,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 		return values;
 	}
-	
+
 	public List<Map<String, String>> retornaItensSOLPD(int qtde) {
 		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
 		;
@@ -196,7 +205,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void excluirTodosItensPedido() {
-		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
+		int qtde = webDriver.findElements(By.xpath(this.gerpd.getGridResultados())).size();
 
 		for (int i = 0; i < qtde; i++) {
 			if (!webDriver.findElement(By.id("panel_NOME_PROD_" + i)).getAttribute("value").isEmpty())
@@ -288,17 +297,32 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 		return registro;
 	}
-	
+
 	public void limparPedido(DataTable params) {
 		this.clicarBtnConsultaPedido();
-		System.out.println(this.gerpd.getMsg().getText());
-		if(!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS")) {
+		if (!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS")) {
 			this.excluirTodosItensPedido();
 		}
 		this.login.voltarHomePage();
 		this.login.acessarTela("GERPD");
 		this.preencherCampos(params);
 		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
-			
+
+	}
+
+	public void guardarValores(String campo, String valor) {
+		switch (campo.toUpperCase()) {
+		case "FORNEC":
+			VariaveisEstaticas.setFORNEC(valor);
+			break;
+		case "COMPRADOR":
+			VariaveisEstaticas.setCOMPRADOR(valor);
+			break;
+		case "PESQUISA":
+			VariaveisEstaticas.setCOD_PRODUTO(valor);
+			break;
+		default:
+			break;
+		}
 	}
 }

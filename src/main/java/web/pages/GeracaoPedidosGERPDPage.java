@@ -147,6 +147,8 @@ public class GeracaoPedidosGERPDPage {
 
 	@FindBy(id = "EXEC_PED_FX")
 	private WebElement bt_ExeutarPedido;
+	
+	private String gridResultados = "//span/span[contains(@id,\"panel_panel\")]";
 
 	public GeracaoPedidosGERPDPage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
@@ -338,5 +340,9 @@ public class GeracaoPedidosGERPDPage {
 
 	public WebElement getForm() {
 		return form;
+	}
+
+	public String getGridResultados() {
+		return gridResultados;
 	}
 }

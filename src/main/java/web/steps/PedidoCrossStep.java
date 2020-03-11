@@ -39,6 +39,7 @@ public class PedidoCrossStep extends BaseTest {
 		this.dsdCross.preencherCampos(params);
 		this.dsdCross.selecionarValorCampoClassificacao();
 		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
+		this.dsdCross.ClicarBotaConsultarLojas();
 		this.dsdCross.incluirItens(quant);
 
 	}
@@ -113,5 +114,10 @@ public class PedidoCrossStep extends BaseTest {
 	public void preenherCampoQauntidadeGrid(String valor){
 		this.dsdCross.validarCampoQuantidadeGrid(valor);
 		
+	}
+
+	@Quando("^tento incluir (\\d+) item na INPE2$")
+	public void incluirItemINPE2(int quant, DataTable params) throws ParseException {
+		this.incluirItemCross(quant, params);
 	}
 }
