@@ -242,11 +242,15 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.gerpd.getQtdeCompra().sendKeys(quant);
 	}
 
-	public void clicarBotaoIncluir() {
+	public void acionarBtnIncluir() {
 		this.gerpd.getBt_incluir().click();
 	}
-
-	public void clicarBotaoExecutarPedido() {
+	
+	public void acionarBtnAlterar() {
+		this.gerpd.getBt_alterar().click();
+		this.aguardaReload();
+	}
+	public void acionarBtnExecutarPedido() {
 		this.gerpd.getBt_ExeutarPedido().click();
 	}
 
