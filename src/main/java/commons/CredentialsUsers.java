@@ -15,7 +15,7 @@ public enum CredentialsUsers implements AccountCredentialsUsers {
 
 		@Override
 		public String password() {
-			return "@Utom@C1";
+			return "Auto@123";
 		}
 		
 	}

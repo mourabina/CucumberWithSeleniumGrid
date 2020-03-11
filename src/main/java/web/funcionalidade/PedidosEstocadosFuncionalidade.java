@@ -27,7 +27,7 @@ import web.pages.GeracaoPedidosGERPDPage;
 public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	private GeracaoPedidosGERPDPage gerpd;
-	private LoginFuncionalidade login; 
+	private LoginFuncionalidade login;
 
 	public PedidosEstocadosFuncionalidade() {
 		this.gerpd = new GeracaoPedidosGERPDPage(webDriver);
@@ -107,7 +107,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void verificarTodosResultadoGrid() {
-		int qtde = webDriver.findElements(By.xpath("//input[contains(@id, 'panel_FILENT1_WM_')")).size();
+		int qtde = webDriver.findElements(By.xpath("//span/span[contains(@id,\"panel_panel\")]")).size();
 		for (int i = 0; i < qtde; i++) {
 			assertFalse("Campo Codigo está vazio",
 					webDriver.findElement(By.id("panel_COD_PROD_" + i)).getAttribute("value").isEmpty());
@@ -170,7 +170,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 		return values;
 	}
-	
+
 	public List<Map<String, String>> retornaItensSOLPD(int qtde) {
 		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
 		;
@@ -217,8 +217,10 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
 		VariaveisEstaticas.setDESCRICAO(this.gerpd.getDescricaoItem().getAttribute("value"));
 		this.gerpd.getOpcaoItemCheckbox().click();
+		this.gerpd.getQtdeCompra().clear();
 		this.gerpd.getQtdeCompra().sendKeys("10");
 		addEvidenciaWeb("Incluindo primeiro item da lista no pedido");
+		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}
@@ -261,6 +263,24 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.aguardaReload();
 	}
 
+	public void excluirIntensGERPD(int qtde) {
+		
+		this.login.acessarTela("GERPD");
+		this.preencherCampoValor("Comprador", VariaveisEstaticas.getCOMPRADOR());
+		this.preencherCampoValor("Fornec", VariaveisEstaticas.getFORNEC());
+		this.selecionarValorCampoClassificacao();
+		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.preencherCampoValor("Pesquisa", VariaveisEstaticas.getCOD_PRODUTO());
+		this.gerpd.getBt_consultarPedido().click();
+		this.aguardaReload();
+		for (int i = 0; i < qtde; i++) {
+			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
+		}
+		this.gerpd.getBt_excluir().click();
+		this.aguardaReload();
+		addEvidenciaWeb("Intens Excluidos");
+	}
+
 	public boolean verificarItemSOLPD(String codItem, String situacao) throws ParseException {
 		boolean registro = false;
 
@@ -288,17 +308,31 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 		return registro;
 	}
-	
+
 	public void limparPedido(DataTable params) {
 		this.clicarBtnConsultaPedido();
-		System.out.println(this.gerpd.getMsg().getText());
-		if(!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS")) {
+		//!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS"
+		;
+		if (!SeleniumRobot.existElementWeb("//div[@id='alerta_sad']")) {
 			this.excluirTodosItensPedido();
 		}
 		this.login.voltarHomePage();
 		this.login.acessarTela("GERPD");
 		this.preencherCampos(params);
 		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
-			
+
+	}
+	public void selecionarValorCampoClassificacao() {
+		Select combo = new Select(this.gerpd.getInputClassif());
+		int i = GeracaoData.retornaHoraAtual();
+		if (i <= 1530) {
+			combo.selectByValue("T");
+			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "T");
+		} else {
+			combo.selectByValue("A");
+			this.selecionarValorComboBox("Hr Edi", "S - Sim");
+			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "A");
+		}
+
 	}
 }

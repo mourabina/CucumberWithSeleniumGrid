@@ -331,7 +331,7 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | A           |
     E deve ser gerado um numero do pedido
-    Quando consultar o fornecedor 3523912 na SOLPD
+    Quando consultar o fornecedor 3509175 na SOLPD
     Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
 
   @BRITQEA2111 @web

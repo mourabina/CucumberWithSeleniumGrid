@@ -2,7 +2,7 @@
 #Author: Hilário Bina
 #Version: 1.0
 #Encoding: UTF-8
-@PedidoEstocado
+@PedidoDSD
 Funcionalidade: Pedido_Dsd
 
   @BRITQEA2185 @web
