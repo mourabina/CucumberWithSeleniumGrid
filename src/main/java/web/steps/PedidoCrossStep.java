@@ -99,10 +99,11 @@ public class PedidoCrossStep extends BaseTest {
 	}
 
 	@Quando("^realizo a consulta de pedidos com os campos obrigatorios preenchidos$")
-	public void preencherCamposMenosDataEntrega(String dtEntrega, DataTable params){
+	public void preencherCamposMenosDataEntrega(DataTable params){
 		this.consultarPedidoPreenchendoCampos(params);
 		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
 		this.dsdCross.acionarBtnConsultarPedido();
+		
 	}
 
 	@Quando("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")

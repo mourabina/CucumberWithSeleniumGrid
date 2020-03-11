@@ -61,6 +61,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.preencherCampos(params);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 		this.pedidos.limparPedido(params);
+		this.pedidos.salvarInformacoesPedido();
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 		this.pedidos.incluirPrimeiroItem();
 	}
@@ -95,8 +96,8 @@ public class PedidoEstocadoStep {
 	}
 
 	@Quando("^pesquiso pelo fornecedor na SOLPD$")
-	public void pesquisaFornecSOLPD(String tela, String campo) {
-		this.login.acessarTela(tela);
+	public void pesquisaFornecSOLPD() {
+		this.login.acessarTela("SOLPD");
 		this.solpd.preencherCampoValor("forn", VariaveisEstaticas.getFORNEC());
 		this.pedidos.executarComandoEnter();
 	}
@@ -123,12 +124,13 @@ public class PedidoEstocadoStep {
 	@Entao("^deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD$")
 	public void validarExibicaoDadosPedidosEstocados() throws ParseException {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Loja"), VariaveisEstaticas.getFILIAL());
-		Assert.assertEquals(this.solpd.retornaValorCampo("Compr"), VariaveisEstaticas.getCOMPRADOR());
+		Assert.assertEquals(this.solpd.retornaValorCampo("Grid Local"), VariaveisEstaticas.getCOMPRADOR());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Produto"), VariaveisEstaticas.getCOD_PRODUTO());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
 		Assert.assertTrue(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString())
 				.contains(VariaveisEstaticas.getDATA_ENTRADA()));
-		this.pedidos.excluirPrimeiroItem();
+		this.solpd.pegarValoresParaExclusao();
+		this.pedidos.excluirIntensGERPD(1);;
 
 	}
 

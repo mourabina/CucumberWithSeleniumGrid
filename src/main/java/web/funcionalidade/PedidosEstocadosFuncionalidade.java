@@ -137,9 +137,8 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void verificarConsultaItem(String codigo) {
-		assertFalse("Campo Codigo está vazio",
-				this.gerpd.getCodItem().getAttribute("value").isEmpty());
-		assertFalse("Campo Nome produto está vazio",this.gerpd.getDescricaoItem().getAttribute("value").isEmpty());
+		assertFalse("Campo Codigo está vazio", this.gerpd.getCodItem().getAttribute("value").isEmpty());
+		assertFalse("Campo Nome produto está vazio", this.gerpd.getDescricaoItem().getAttribute("value").isEmpty());
 		assertEquals(this.gerpd.getCodItem().getAttribute("value").toString(), codigo);
 	}
 
@@ -226,8 +225,10 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
 		VariaveisEstaticas.setDESCRICAO(this.gerpd.getDescricaoItem().getAttribute("value"));
 		this.gerpd.getOpcaoItemCheckbox().click();
+		this.gerpd.getQtdeCompra().clear();
 		this.gerpd.getQtdeCompra().sendKeys("10");
 		addEvidenciaWeb("Incluindo primeiro item da lista no pedido");
+		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}
@@ -270,6 +271,24 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.aguardaReload();
 	}
 
+	public void excluirIntensGERPD(int qtde) {
+
+		this.login.acessarTela("GERPD");
+		this.preencherCampoValor("Comprador", VariaveisEstaticas.getCOMPRADOR());
+		this.preencherCampoValor("Fornec", VariaveisEstaticas.getFORNEC());
+		this.selecionarValorCampoClassificacao();
+		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.preencherCampoValor("Pesquisa", VariaveisEstaticas.getCOD_PRODUTO());
+		this.gerpd.getBt_consultarPedido().click();
+		this.aguardaReload();
+		for (int i = 0; i < qtde; i++) {
+			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
+		}
+		this.gerpd.getBt_excluir().click();
+		this.aguardaReload();
+		addEvidenciaWeb("Intens Excluidos");
+	}
+
 	public boolean verificarItemSOLPD(String codItem, String situacao) throws ParseException {
 		boolean registro = false;
 
@@ -300,7 +319,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public void limparPedido(DataTable params) {
 		this.clicarBtnConsultaPedido();
-		if (!this.gerpd.getMsg().getText().contains("[1] ATENÇÃO NAO EXISTEM PRODUTOS")) {
+		if (!SeleniumRobot.existElementWeb("//div[@id='alerta_sad']")) {
 			this.excluirTodosItensPedido();
 		}
 		this.login.voltarHomePage();
@@ -324,5 +343,20 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		default:
 			break;
 		}
+	}
+
+	public void selecionarValorCampoClassificacao() {
+		Select combo = new Select(this.gerpd.getInputClassif());
+		int i = GeracaoData.retornaHoraAtual();
+		if (i <= 1530) {
+			combo.selectByValue("T");
+			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "T");
+		} else {
+			combo.selectByValue("A");
+			this.selecionarValorComboBox("Hr Edi", "S - Sim");
+			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "A");
+		}
+
+
 	}
 }
