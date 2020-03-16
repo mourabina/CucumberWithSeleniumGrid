@@ -37,7 +37,6 @@ public class PedidoCrossStep extends BaseTest {
 	@Dado("que tenha {int} itens inclusos Cross")
 	public void incluirItemCross(Integer quant, DataTable params) throws ParseException {
 		this.dsdCross.preencherCampos(params);
-		this.dsdCross.selecionarValorCampoClassificacao();
 		this.dsdCross.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
 		this.dsdCross.ClicarBotaConsultarLojas();
 		this.dsdCross.incluirItens(quant);

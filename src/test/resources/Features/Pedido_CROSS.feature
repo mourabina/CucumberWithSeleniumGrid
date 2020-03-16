@@ -380,9 +380,8 @@ Funcionalidade: Pedido_Cross SAD
       | id   | Numero do CT | Nome do CT                                                        | Nome do executor | Sprint |
       | 2269 | BRITQEA-2269 | Incluir e executar pedido CROSS - Campo 'Preço Compra' preenchido | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
-    E pesquiso uma loja com o campo "Produto" com o valor "6814"
     E que tenha 1 itens inclusos Cross
-      | Comprador | Fornec  | Preco Compra |
-      |       028 | 3512102 |         45,0 |
+      | Comprador | Fornec  | Preco Compra | Produto |
+      |       028 | 3512102 |         45,0 |    6814 |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos

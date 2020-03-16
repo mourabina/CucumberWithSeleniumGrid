@@ -76,7 +76,6 @@ public class PedidoEstocadoStep {
 	@Quando("^preencher o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
 	public void preencherCampoValor(String campo, String valor) {
 		this.pedidos.preencherCampoValor(campo, valor);
-
 	}
 
 	@Quando("^clico no botao Consultar Tabela de Compra$")
@@ -162,8 +161,6 @@ public class PedidoEstocadoStep {
 	@Então("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
 	public void validarExibicaoValorCampo(String valor, String campo) {
 		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
-		this.pedidos.excluirMultiplosItens(1);
-
 	}
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")

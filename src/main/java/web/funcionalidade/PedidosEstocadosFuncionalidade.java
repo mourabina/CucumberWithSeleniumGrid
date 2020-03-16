@@ -14,6 +14,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
@@ -37,8 +38,10 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void preencherCampoValor(String campo, String valor) {
-		if (campo.equalsIgnoreCase("classif ped"))
+		if (campo.equalsIgnoreCase("classif ped")) {
 			this.selecionarValorComboBox(campo, valor);
+			this.selecionarValorCampoClassificacao();	
+		}
 		else {
 			GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum
 					.valueOf(campo.replace(" ", "_").toUpperCase());
@@ -92,6 +95,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public String retornaMensagemExibida() {
+		wait.until(ExpectedConditions.visibilityOf(this.gerpd.getMsg()));
 		addEvidenciaWeb("Mensagem Exibida");
 		return this.gerpd.getMsg().getText();
 	}
@@ -350,17 +354,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		Select combo = new Select(this.gerpd.getInputClassif());
-		int i = GeracaoData.retornaHoraAtual();
-		if (i <= 1530) {
-			combo.selectByValue("T");
-			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "T");
-		} else {
-			combo.selectByValue("A");
-			this.selecionarValorComboBox("Hr Edi", "S - Sim");
-			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "A");
-		}
-
-
+		if (GeracaoData.retornaHoraAtual() >= 1530) 
+			this.selecionarValorComboBox("Hr Edi", "S");
 	}
 }

@@ -21,6 +21,7 @@ public enum Web implements WebApplication{
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("profile.default_content_setting_values.notifications", 2);
 			ChromeOptions options = new ChromeOptions();
+//			options.setHeadless(true);
 			options.setExperimentalOption("prefs", prefs);
 
 			return new ChromeDriver(options);

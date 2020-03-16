@@ -34,9 +34,10 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 
 	public void preencherCampoValor(String campo, String valor) {
-		if (campo.equalsIgnoreCase("classif ped"))
+		if (campo.equalsIgnoreCase("classif ped")) {
 			this.selecionarValorComboBox(campo, valor);
-		else {
+			this.selecionarValorCampoClassificacao();	
+		} else {
 		DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		pedido.getElement(this.inpe2).clear();
@@ -49,22 +50,9 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		Select combo = new Select(pedido.getElement(this.inpe2));
+		pedido.getElement(this.inpe2).click();
 		combo.selectByValue(valor);
 		addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
-	}
-
-	public void selecionarValorCampoClassificacao() {
-		Select combo = new Select(this.inpe2.getInputClassif());
-		int i = GeracaoData.retornaHoraAtual();
-		if (i <= 1530) {
-			combo.selectByValue("T");
-			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "T");
-		} else {
-			combo.selectByValue("A");
-			this.selecionarCampoCombo("Hr Edi", "S - Sim");
-			addEvidenciaWeb("Preechimeno do campo: Classificação com o valor :  " + "A");
-		}
-
 	}
 
 	public void limparCampos(String campo) {
@@ -125,7 +113,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	public void clicarBotaoIncluir() {
 		this.inpe2.getBt_incluir().click();
-
+		this.pedido.aguardaReload();
 	}
 
 	public List<Map<String, String>> retornaItens(int qtde) throws ParseException {
@@ -148,7 +136,6 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Verificar se item está sendo apresentado");
 
 		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
-		;
 
 		for (int i = 0; i < qtdeItens; i++) {
 			Map<String, String> map = new HashMap<String, String>();
@@ -162,8 +149,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 			addEvidenciaWeb("Incluindo item: " + webDriver.findElement(By.id("TL_DESC")).getAttribute("value"));
 		}
 		VariaveisEstaticas.setMap(values);
-		this.inpe2.getBt_incluir().click();
-		this.pedido.aguardaReload();
+		this.clicarBotaoIncluir();
 	}
 
 	public void excluirMultiplosItensIMPE2(int qtde) {
@@ -248,6 +234,9 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		return this.inpe2.getMsg().getText();
 	}
 	
-
+	public void selecionarValorCampoClassificacao() {
+		if (GeracaoData.retornaHoraAtual() >= 1500) 
+			this.selecionarValorComboBox("Hr Edi", "S");
+	}
 
 }

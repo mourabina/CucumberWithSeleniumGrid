@@ -13,9 +13,8 @@ Funcionalidade: Pedido_Estocado SAD
       | 2107 | BRITQEA-2107 | Consulta de produto item - "Estocado" | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencho os campos mais os campos de Data
-      | Comprador | Fornec  | Pesquisa |
-      |       028 | 3500684 |     4785 |
-    E seleciono a opcao "T" no campo "Classif Ped"
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       028 | 3500684 |     4785 | T           |
     Quando clico no botao Consultar Pedido
     Então deve ser exibido o valor "4785" no campo "Codigo do Produto"
 
@@ -53,9 +52,9 @@ Funcionalidade: Pedido_Estocado SAD
       | 2110 | BRITQEA-2110 | Consulta de pedido 'Estocado' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencho os campos mais os campos de Data
-      | Comprador | Fornec  |
-      |       028 | 3500684 |
-    E seleciono a opcao "T" no campo "Classif Ped"
+      | Comprador | Fornec  | Classif Ped |
+      |       028 | 3500684 | T           |
+
     Quando clico no botao Consultar Pedido
     Entao deve ser exibido no GRID o "Codigo do Produto" e a "Descricao do Produto"
 
@@ -331,7 +330,7 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | A           |
     E deve ser gerado um numero do pedido
-    Quando consultar o fornecedor 3509175 na SOLPD
+    Quando pesquiso pelo fornecedor na SOLPD
     Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
 
   @BRITQEA2111 @web
@@ -344,7 +343,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um item excluido
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
-    Quando consultar o fornecedor 3523912 na SOLPD
+    Quando pesquiso pelo fornecedor na SOLPD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2112 @web
@@ -371,7 +370,7 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
     Quando excluo um item do pedido
-    E consultar o fornecedor 3523912 na SOLPD
+    Quando pesquiso pelo fornecedor na SOLPD
     Entao a grid deve apresentar o item excluido com a situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2175 @web
@@ -384,7 +383,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha 2 itens excluidos
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
-    Quando consultar o fornecedor 3523912 na SOLPD
+    Quando pesquiso pelo fornecedor na SOLPD
     Entao a grid deve apresentar os itens excluidos com a situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2270 @web

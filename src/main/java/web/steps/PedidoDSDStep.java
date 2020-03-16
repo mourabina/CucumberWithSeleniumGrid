@@ -48,8 +48,8 @@ public class PedidoDSDStep {
 	public void incluirItenDSD(int quant, DataTable params) {
 		this.inpe.preencherCampos(params);
 		this.inpe.selecionarValorCampoClassificacao();
-		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
+		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));	
+		this.inpe.clicarBotaoConsultarLoja();
 		this.inpe.incluirItens(quant);
-
 	}
 }

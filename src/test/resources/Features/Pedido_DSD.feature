@@ -23,10 +23,9 @@ Funcionalidade: Pedido_Dsd
       | id   | Numero do CT | Nome do CT                        | Nome do executor | Sprint |
       | 2186 | BRITQEA-2186 | Incluir produto&item - pedido DSD | Hiilário Bina    | S1     |
     E que estou na tela "INPE2"
-    E pesquiso uma loja com o campo "Produto" com o valor "32916"
     E que tenha 1 itens inclusos DSD
-      | Comprador | Fornec  |
-      |       043 | 3514753 |
+      | Comprador | Fornec  | Produto |
+      |       043 | 3514753 |   32916 |
     Quando consultar o fornecedor 3514753 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
 
@@ -37,9 +36,8 @@ Funcionalidade: Pedido_Dsd
       | id   | Numero do CT | Nome do CT                                           | Nome do executor | Sprint |
       | 2266 | BRITQEA-2266 | Incluir pedido DSD - Campo 'Preço Compra' preenchido | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
-    E pesquiso uma loja com o campo "Produto" com o valor "32916"
     E que tenha 1 itens inclusos Cross
-      | Comprador | Fornec  | Preco Compra |
-      |       043 | 3514753 |        45,00 |
+      | Comprador | Fornec  | Preco Compra | Produto |
+      |       043 | 3514753 |        45,00 |   32916 |
     Quando consultar o fornecedor 3514753 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
