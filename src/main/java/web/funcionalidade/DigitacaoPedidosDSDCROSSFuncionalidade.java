@@ -91,6 +91,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 			Set<String> headers = line.keySet();
 			headers.forEach(header -> {
 				this.preencherCampoValor(header, line.get(header));
+				VariaveisEstaticas.guardarValores(header, line.get(header));
 			});
 		});
 	}
@@ -235,7 +236,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 	
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1500) 
+		if (GeracaoData.retornaHoraAtual() >= 1515) 
 			this.selecionarValorComboBox("Hr Edi", "S");
 	}
 

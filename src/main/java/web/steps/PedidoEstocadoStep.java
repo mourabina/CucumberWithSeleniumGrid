@@ -229,4 +229,5 @@ public class PedidoEstocadoStep {
 	public void acionarBtnAlterar() {
 		this.pedidos.acionarBtnAlterar();
 	}
+
 }

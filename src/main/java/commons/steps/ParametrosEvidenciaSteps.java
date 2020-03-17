@@ -16,8 +16,7 @@ public class ParametrosEvidenciaSteps {
 	public void estouExecutandoOTeste(DataTable params) throws Throwable {
 		
 		System.out.println("Definindo os parametros da evidencia . . .");
-		
-		
+				
 		this.realizandoTesteFuncionalidade.executandoTeste(params);
 		
 		System.out.println("Parâmetros de evidência ok");

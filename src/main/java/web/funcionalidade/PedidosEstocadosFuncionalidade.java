@@ -83,7 +83,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 			Set<String> headers = line.keySet();
 			headers.forEach(header -> {
 				this.preencherCampoValor(header, line.get(header));
-				this.guardarValores(header, line.get(header));
+				VariaveisEstaticas.guardarValores(header, line.get(header));
 			});
 		});
 	}
@@ -335,22 +335,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.preencherCampos(params);
 		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 
-	}
-
-	public void guardarValores(String campo, String valor) {
-		switch (campo.toUpperCase()) {
-		case "FORNEC":
-			VariaveisEstaticas.setFORNEC(valor);
-			break;
-		case "COMPRADOR":
-			VariaveisEstaticas.setCOMPRADOR(valor);
-			break;
-		case "PESQUISA":
-			VariaveisEstaticas.setCOD_PRODUTO(valor);
-			break;
-		default:
-			break;
-		}
 	}
 
 	public void selecionarValorCampoClassificacao() {

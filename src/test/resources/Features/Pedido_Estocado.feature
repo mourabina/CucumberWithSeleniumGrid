@@ -15,8 +15,8 @@ Funcionalidade: Pedido_Estocado SAD
     E preencho os campos mais os campos de Data
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       028 | 3500684 |     4785 | T           |
-    Quando clico no botao Consultar Pedido
-    Então deve ser exibido o valor "4785" no campo "Codigo do Produto"
+    Quando clico no botao Consultar Tabela de Compra
+    Então grid deve apresentar o produto pesquisado
 
   @BRITQEA2108 @web
   Cenario: 2108 - Incluir produto - pedido estocado
@@ -54,7 +54,6 @@ Funcionalidade: Pedido_Estocado SAD
     E preencho os campos mais os campos de Data
       | Comprador | Fornec  | Classif Ped |
       |       028 | 3500684 | T           |
-
     Quando clico no botao Consultar Pedido
     Entao deve ser exibido no GRID o "Codigo do Produto" e a "Descricao do Produto"
 

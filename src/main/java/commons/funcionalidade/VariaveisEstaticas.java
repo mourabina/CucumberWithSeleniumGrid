@@ -9,12 +9,13 @@ public class VariaveisEstaticas {
 	private static String COMPRADOR;
 	private static String FORNEC;
 	private static String COD_PRODUTO;
+	private static String CLASSIF_PED;
 	private static String QUANT;
 	private static String DATA_ENTRADA;
 	private static String FILIAL;
 	private static String DESCRICAO;
 	private static String HORA;
-	private static List<Map<String,String>> map;
+	private static List<Map<String, String>> map;
 
 	public static void setFILIAL(String fILIAL) {
 		FILIAL = fILIAL;
@@ -94,5 +95,35 @@ public class VariaveisEstaticas {
 
 	public static void setMap(List<Map<String, String>> map) {
 		VariaveisEstaticas.map = map;
+	}
+
+	public static String getCLASSIF_PED() {
+		return CLASSIF_PED;
+	}
+
+	public static void setCLASSIF_PED(String cLASSIF_PED) {
+		CLASSIF_PED = cLASSIF_PED;
+	}
+
+	public static void guardarValores(String campo, String valor) {
+		switch (campo.toUpperCase()) {
+		case "FORNEC":
+			VariaveisEstaticas.setFORNEC(valor);
+			break;
+		case "COMPRADOR":
+			VariaveisEstaticas.setCOMPRADOR(valor);
+			break;
+		case "PESQUISA":
+			VariaveisEstaticas.setCOD_PRODUTO(valor);
+			break;
+		case "PRODUTO":
+			VariaveisEstaticas.setCOD_PRODUTO(valor);
+			break;
+		case "CLASSIF PED":
+			VariaveisEstaticas.setCLASSIF_PED(valor);
+			break;
+		default:
+			break;
+		}
 	}
 }
