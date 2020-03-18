@@ -52,8 +52,8 @@ Funcionalidade: Pedido_Estocado SAD
       | 2110 | BRITQEA-2110 | Consulta de pedido 'Estocado' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencho os campos mais os campos de Data
-      | Comprador | Fornec  | Classif Ped |
-      |       028 | 3500684 | T           |
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | T           |
     Quando clico no botao Consultar Pedido
     Entao deve ser exibido no GRID o "Codigo do Produto" e a "Descricao do Produto"
 

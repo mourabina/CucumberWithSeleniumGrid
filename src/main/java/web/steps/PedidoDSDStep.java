@@ -47,7 +47,8 @@ public class PedidoDSDStep {
 	@Dado("^que tenha (\\d+) itens inclusos DSD$")
 	public void incluirItenDSD(int quant, DataTable params) {
 		this.inpe.preencherCampos(params);
-		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));	
+		this.inpe.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
+		this.inpe.limparPedidoINPE2(params);
 		this.inpe.clicarBotaoConsultarLoja();
 		this.inpe.incluirItens(quant);
 	}

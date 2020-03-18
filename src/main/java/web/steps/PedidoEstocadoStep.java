@@ -39,9 +39,9 @@ public class PedidoEstocadoStep {
 	}
 
 	@Dado("preencho os campos mais os campos de Data")
-	public void preencherCamposObrigtorios(DataTable dataTable) {
-		this.pedidos.preencherCampos(dataTable);
-		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+	public void preencherCamposObrigtorios(DataTable params) {
+		this.pedidos.limparPedido(params);
+		this.incluirItem(params);
 	}
 
 	@Dado("^preencho os campos da GERPD$")
@@ -128,8 +128,6 @@ public class PedidoEstocadoStep {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
 		Assert.assertTrue(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString())
 				.contains(VariaveisEstaticas.getDATA_ENTRADA()));
-		this.solpd.pegarValoresParaExclusao();
-		this.pedidos.excluirIntensGERPD(1);;
 
 	}
 
@@ -143,13 +141,13 @@ public class PedidoEstocadoStep {
 		this.pedidos.verificaItemGrid(1);
 		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
 		assertEquals(this.pedidos.retornaValorCampo("codigo do produto"), VariaveisEstaticas.getCOD_PRODUTO());
-//		this.pedidos.excluirPrimeiroItem();
+
 	}
 
 	@Entao("^deve retornar o item com situação \"([^\"]*)\"$")
 	public void validarItemSOLPD(String status) {
 		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
-		assertTrue(this.solpd.retornaValorCampo("Hora Registro").contains(VariaveisEstaticas.getHORA()));
+		assertTrue("Hora de exclusão: " + VariaveisEstaticas.getHORA() + " - Hora Sistema: " + this.solpd.retornaValorCampo("Hora Registro").toString(),this.solpd.retornaValorCampo("Hora Registro").contains(VariaveisEstaticas.getHORA()));
 		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
 	}
 
@@ -212,6 +210,7 @@ public class PedidoEstocadoStep {
 	@Dado("^que tenha um pedido com um item$")
 	public void executarPedidoComItem(DataTable params) {
 		this.incluirItem(params);
+		this.pedidos.limparPedido(params);
 		this.pedidos.acionarBtnExecutarPedido();
 	}
 
@@ -221,8 +220,9 @@ public class PedidoEstocadoStep {
 	}
 
 	@Quando("^tento incluir (\\d+) item na GERPD$")
-	public void incluirItemGERPD(int qtde,DataTable params) throws Throwable {
+	public void incluirItemGERPD(int qtde, DataTable params) throws Throwable {
 		this.incluirMaisItens(qtde, params);
+		this.pedidos.limparPedido(params);
 	}
 
 	@Quando("^clico no botao Alterar$")

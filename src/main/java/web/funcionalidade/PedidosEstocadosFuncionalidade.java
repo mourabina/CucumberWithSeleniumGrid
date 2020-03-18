@@ -70,6 +70,14 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		return pedido.getElement(this.gerpd).getAttribute("value");
 
 	}
+	
+	public String retornaValorCampoCombo(String campo) {
+		GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
+		addEvidenciaWeb("Retornando o valor do campo" + campo);
+		Select combo = new Select(pedido.getElement(this.gerpd));
+		return combo.getFirstSelectedOption().getAttribute("value");
+
+	}
 
 	public boolean validaCampoVazio(String campo) {
 		GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
@@ -265,6 +273,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
 		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
 		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getInpuPesqui().getAttribute("value"));
+		VariaveisEstaticas.setCLASSIF_PED(this.retornaValorCampoCombo("Classif Ped"));
 	}
 
 	public void executarComandoEnter() {
@@ -284,7 +293,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.login.acessarTela("GERPD");
 		this.preencherCampoValor("Comprador", VariaveisEstaticas.getCOMPRADOR());
 		this.preencherCampoValor("Fornec", VariaveisEstaticas.getFORNEC());
-		this.selecionarValorCampoClassificacao();
+		this.preencherCampoValor("Classif Ped",VariaveisEstaticas.getCLASSIF_PED());;
 		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 		this.preencherCampoValor("Pesquisa", VariaveisEstaticas.getCOD_PRODUTO());
 		this.gerpd.getBt_consultarPedido().click();
@@ -338,7 +347,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1530) 
+		if (GeracaoData.retornaHoraAtual() >= 1510) 
 			this.selecionarValorComboBox("Hr Edi", "S");
 	}
 }

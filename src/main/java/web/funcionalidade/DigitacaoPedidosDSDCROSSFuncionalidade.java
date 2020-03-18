@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import commons.BaseTest;
+import commons.SeleniumRobot;
 import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
@@ -36,13 +37,14 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	public void preencherCampoValor(String campo, String valor) {
 		if (campo.equalsIgnoreCase("classif ped")) {
 			this.selecionarValorComboBox(campo, valor);
-			this.selecionarValorCampoClassificacao();	
+			this.selecionarValorCampoClassificacao();
+			addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
 		} else {
-		DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
-				.valueOf(campo.replace(" ", "_").toUpperCase());
-		pedido.getElement(this.inpe2).clear();
-		pedido.getElement(this.inpe2).sendKeys(valor);
-		addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
+			DigitacaoPedidosINPE2Interface pedido = DigitacaoPedidosINPE2Enum
+					.valueOf(campo.replace(" ", "_").toUpperCase());
+			pedido.getElement(this.inpe2).clear();
+			pedido.getElement(this.inpe2).sendKeys(valor);
+			addEvidenciaWeb("Preechimeno do campo: " + campo + " com o valor: " + valor);
 		}
 	}
 
@@ -110,11 +112,13 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	public void clicarBotaoConsultarLoja() {
 		this.inpe2.getBt_ConsultarLoja().click();
 		this.pedido.aguardaReload();
+		addEvidenciaWeb("Botão Consultar Loja Acionado com Sucesso");
 	}
 
 	public void clicarBotaoIncluir() {
 		this.inpe2.getBt_incluir().click();
 		this.pedido.aguardaReload();
+		addEvidenciaWeb("Botão Incluir Acionado com Sucesso");
 	}
 
 	public List<Map<String, String>> retornaItens(int qtde) throws ParseException {
@@ -180,8 +184,9 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 
 	public void ClicarBotaoExcluir() {
+		VariaveisEstaticas.setHORA(GeracaoData.retornaHHmm(195));
 		this.inpe2.getBt_excluir().click();
-
+		this.pedido.aguardaReload();
 	}
 
 	public void acionarBtnConsultarPedido() {
@@ -208,11 +213,23 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 			for (int i = 0; i < qtdeLinhas; i++) {
 				if (!webDriver.findElement(By.id("panel_FILENT" + y + "_WM_" + i)).getAttribute("value").isEmpty()) {
 					webDriver.findElement(By.id("panel_TL_OPC" + y + "_" + i + "_checkbox")).click();
-
 				}
 			}
 
 		}
+
+	}
+
+	public void limparPedidoINPE2(DataTable params) {
+		this.acionarBtnConsultarPedido();
+		if (!SeleniumRobot.existElementWeb("//div[@id='alerta_sad']")) {
+			this.selecionarLojasINPE2();
+			this.ClicarBotaoExcluir();
+		}
+		this.login.voltarHomePage();
+		this.login.acessarTela("INPE2");
+		this.preencherCampos(params);
+		this.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(1));
 
 	}
 
@@ -223,20 +240,21 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 			for (int i = 0; i < qtdeLinhas; i++) {
 				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).clear();
 				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).sendKeys(valor);
+				
 
 			}
 
 		}
-
+		addEvidenciaWeb("Campos Quantidade preenchidos com o valor :" +valor);
 	}
 
 	public String retornaMensagem() {
 		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getAttribute("value"));
 		return this.inpe2.getMsg().getText();
 	}
-	
+
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1515) 
+		if (GeracaoData.retornaHoraAtual() >= 1515)
 			this.selecionarValorComboBox("Hr Edi", "S");
 	}
 

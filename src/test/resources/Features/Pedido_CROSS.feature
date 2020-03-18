@@ -22,10 +22,9 @@ Funcionalidade: Pedido_Cross SAD
       | id   | Numero do CT | Nome do CT                          | Nome do executor | Sprint |
       | 2177 | BRITQEA-2177 | Incluir produto&item - pedido CROSS | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
-    E pesquiso uma loja com o campo "Produto" com o valor "6814"
     E que tenha 1 itens inclusos Cross
-      | Comprador | Fornec  |
-      |       028 | 3512102 |
+      | Comprador | Fornec  | Classif Ped | Produto |
+      |       028 | 3512102 | T           |    6814 |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
 
@@ -36,22 +35,22 @@ Funcionalidade: Pedido_Cross SAD
       | id   | Numero do CT | Nome do CT           | Nome do executor | Sprint |
       | 2183 | BRITQEA-2183 | Excluir pedido CROSS | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
-    E que tenha "1" iten Cross Excluido com o Produto "6814"
-      | Comprador | Fornec  | Produto |
-      |       028 | 3512102 |    6814 |
+    E que tenha "1" item Cross Excluido
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | T           |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2184 @web
-  Cenario: 2184 - Excluir mais de uma loja&filial do pedido CROSS
+  Cenario: 2184 - Excluir mais de uma loja filial do pedido CROSS
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                                      | Nome do executor | Sprint |
-      | 2184 | BRITQEA-2184 | Excluir mais de uma loja&filial do pedido CROSS | Hilário Bina     | S1     |
+      | 2184 | BRITQEA-2184 | Excluir mais de uma loja filial do pedido CROSS | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
-    E que tenha "2" iten Cross Excluido com o Produto "6814"
-      | Comprador | Fornec  | Produto |
-      |       028 | 3512102 |    6814 |
+    E que tenha "2" item Cross Excluido
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | T           |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
@@ -105,8 +104,8 @@ Funcionalidade: Pedido_Cross SAD
       | 2237 | BRITQEA-2237 | Consulta Pedido preenchendo os campos 'Produtos', 'Fornec' e 'Comprador'- CROSS | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando realizo a consulta de pedidos com os campos preenchidos
-      | Produto | Fornec  | Comprador |
-      |    6814 | 3512102 |       028 |
+      | Produto | Fornec  | Comprador | Classif Ped |
+      |    6814 | 3512102 |       028 | T           |
     Entao deve exibir a mensagem "[1] ATENÇÃO DATA DE ENTREGA DEVE SER INFORMADA"
 
   @BRITQEA2238 @web
@@ -381,7 +380,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2269 | BRITQEA-2269 | Incluir e executar pedido CROSS - Campo 'Preço Compra' preenchido | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     E que tenha 1 itens inclusos Cross
-      | Comprador | Fornec  | Preco Compra | Produto |
-      |       028 | 3512102 |         45,0 |    6814 |
+      | Comprador | Fornec  | Preco Compra | Produto | Classif Ped |
+      |       028 | 3512102 |         45,0 |    6814 | T           |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
