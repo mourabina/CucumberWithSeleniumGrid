@@ -222,7 +222,7 @@ public class PedidoEstocadoStep {
 	@Quando("^tento incluir (\\d+) item na GERPD$")
 	public void incluirItemGERPD(int qtde, DataTable params) throws Throwable {
 		this.incluirMaisItens(qtde, params);
-		this.pedidos.limparPedido(params);
+		
 	}
 
 	@Quando("^clico no botao Alterar$")

@@ -369,7 +369,7 @@ Funcionalidade: Pedido_Estocado SAD
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       017 | 3523912 |    56849 | T           |
     Quando excluo um item do pedido
-    Quando pesquiso pelo fornecedor na SOLPD
+    E pesquiso pelo fornecedor na SOLPD
     Entao a grid deve apresentar o item excluido com a situação "SOLICITACAO CANCELADA"
 
   @BRITQEA2175 @web
@@ -431,7 +431,8 @@ Funcionalidade: Pedido_Estocado SAD
     Quando tento incluir 1 item na INPE2
       | Comprador | Fornec  | Classif Ped | Produto |
       |       017 | 3523912 | T           |   56849 |
-    Entao deve apresentar a mensagem ""
+    E consultar o fornecedor 3523912 na SOLPD
+    Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
 
   @BRITQEA2316 @web
   Cenario: 2316 - Consulta de produto CROSS na GERPD
