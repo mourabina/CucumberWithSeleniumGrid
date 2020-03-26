@@ -200,7 +200,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.excluirMultiplosItens(qtde);
 	}
 
-	@Quando("^clico no botao Executar Pedido$")
+	@Quando("^acionar o botao Executar Pedido$")
 	public void acionarBotaoExecutarPedido() {
 		this.pedidos.acionarBtnExecutarPedido();
 		this.pedidos.aguardaReload();

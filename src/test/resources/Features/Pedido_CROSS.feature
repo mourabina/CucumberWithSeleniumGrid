@@ -384,3 +384,68 @@ Funcionalidade: Pedido_Cross SAD
       |       028 | 3512102 |         45,0 |    6814 | T           |
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao a grid da Tela SOLPD deve apresentar os 1 itens inclusos
+
+  @BRITQEA2815 @web
+  Cenario: 2815 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'S'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                   | Nome do executor     | Sprint |
+      | 2815 | BRITQEA-2815 | Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'S' | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | S           |
+    Quando acionar o botao Executar Pedido
+    Entao deve apresentar a mensagem "Seu número de requisição !"
+
+  @BRITQEA2814 @web
+  Cenario: 2814 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'P'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                   | Nome do executor     | Sprint |
+      | 2814 | BRITQEA-2814 | Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'P' | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | P           |
+    Quando acionar o botao Executar Pedido
+    Entao deve apresentar a mensagem "Seu número de requisição !"
+
+  @BRITQEA2813 @web
+  Cenario: 2813 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'O'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                   | Nome do executor     | Sprint |
+      | 2813 | BRITQEA-2813 | Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'O' | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | O           |
+    Quando acionar o botao Executar Pedido
+    Entao deve apresentar a mensagem "Seu número de requisição !"
+
+  @BRITQEA2812 @web
+  Cenario: 2812 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'N'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                   | Nome do executor     | Sprint |
+      | 2812 | BRITQEA-2812 | Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'N' | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | O           |
+    Quando acionar o botao Executar Pedido
+    Entao deve apresentar a mensagem "Seu número de requisição !"
+
+  @BRITQEA2811 @web
+  Cenario: 2811 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'M'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                   | Nome do executor     | Sprint |
+      | 2811 | BRITQEA-2811 | Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'M' | Matheus Machado Luiz | S1     |
+    E que estou na tela "INPE2"
+    E que tenha 1 itens inclusos Cross
+      | Comprador | Fornec  | Produto | Classif Ped |
+      |       028 | 3512102 |    6814 | M           |
+    Quando acionar o botao Executar Pedido
+    Entao deve apresentar a mensagem "Seu número de requisição !"
