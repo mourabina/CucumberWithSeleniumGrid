@@ -211,8 +211,7 @@ public class PedidoEstocadoStep {
 	public void executarPedidoComItem(DataTable params) {
 		this.incluirItem(params);
 		this.pedidos.limparPedido(params);
-		this.pedidos.acionarBtnExecutarPedido();
-	}
+			}
 
 	@Entao("^grid deve apresentar o produto pesquisado$")
 	public void gridDeveApresentarOProdutoPesquisado() throws Throwable {
@@ -228,6 +227,12 @@ public class PedidoEstocadoStep {
 	@Quando("^clico no botao Alterar$")
 	public void acionarBtnAlterar() {
 		this.pedidos.acionarBtnAlterar();
+	}
+
+	@Entao("^deve apresentar a mensagem o numero do pedido$")
+	public void validarGeracaoPedido(){
+		Assert.assertTrue("Número do Pedido não foi Gerado",this.pedidos.valdiarGeracaoNumeroPedido());
+		
 	}
 
 }

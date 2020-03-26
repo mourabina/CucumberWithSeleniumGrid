@@ -40,9 +40,8 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void preencherCampoValor(String campo, String valor) {
 		if (campo.equalsIgnoreCase("classif ped")) {
 			this.selecionarValorComboBox(campo, valor);
-			this.selecionarValorCampoClassificacao();	
-		}
-		else {
+			this.selecionarValorCampoClassificacao();
+		} else {
 			GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum
 					.valueOf(campo.replace(" ", "_").toUpperCase());
 			pedido.getElement(this.gerpd).clear();
@@ -70,7 +69,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		return pedido.getElement(this.gerpd).getAttribute("value");
 
 	}
-	
+
 	public String retornaValorCampoCombo(String campo) {
 		GeracaoPedidosGERPDInterface pedido = GeracaoPedidosGERPDEnum.valueOf(campo.replace(" ", "_").toUpperCase());
 		addEvidenciaWeb("Retornando o valor do campo" + campo);
@@ -257,11 +256,12 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	public void acionarBtnIncluir() {
 		this.gerpd.getBt_incluir().click();
 	}
-	
+
 	public void acionarBtnAlterar() {
 		this.gerpd.getBt_alterar().click();
 		this.aguardaReload();
 	}
+
 	public void acionarBtnExecutarPedido() {
 		this.gerpd.getBt_ExeutarPedido().click();
 	}
@@ -293,7 +293,8 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.login.acessarTela("GERPD");
 		this.preencherCampoValor("Comprador", VariaveisEstaticas.getCOMPRADOR());
 		this.preencherCampoValor("Fornec", VariaveisEstaticas.getFORNEC());
-		this.preencherCampoValor("Classif Ped",VariaveisEstaticas.getCLASSIF_PED());;
+		this.preencherCampoValor("Classif Ped", VariaveisEstaticas.getCLASSIF_PED());
+		;
 		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 		this.preencherCampoValor("Pesquisa", VariaveisEstaticas.getCOD_PRODUTO());
 		this.gerpd.getBt_consultarPedido().click();
@@ -347,7 +348,12 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1510) 
-			this.selecionarValorComboBox("Hr Edi", "S");
+		if (GeracaoData.retornaHoraAtual() >= 1510)
+			this.selecionarValorComboBox("HR Edi", "S");
+	}
+
+	public boolean valdiarGeracaoNumeroPedido() {
+		return this.gerpd.getMsg().getText().contains("Seu numero de requisição !");
+		
 	}
 }

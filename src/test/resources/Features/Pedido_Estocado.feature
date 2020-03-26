@@ -328,9 +328,8 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | A           |
-    E deve ser gerado um numero do pedido
-    Quando pesquiso pelo fornecedor na SOLPD
-    Entao deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2111 @web
   Cenario: 2111 - Excluir pedido estocado
@@ -496,3 +495,107 @@ Funcionalidade: Pedido_Estocado SAD
       |       028 | 3500684 |     4785 |
     Quando clico no botao Alterar
     Entao deve apresentar a mensagem "[1] ATENÇÃO DEVE PRIMEIRO CONSULTAR PEDIDO"
+
+  @BRITQEA2798 @web
+  Cenario: 2798 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'F'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2798 | BRITQEA-2798 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'F' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | F           |
+   Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2799 @web
+  Cenario: 2799 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'I'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2799 | BRITQEA-2799 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'I' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | F           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2800 @web
+  Cenario: 2800 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'M'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2800 | BRITQEA-2800 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'M' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | M           |
+   Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2801 @web
+  Cenario: 2801 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'N'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2801 | BRITQEA-2801 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'N' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | N           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2802 @web
+  Cenario: 2802 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'O'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2802 | BRITQEA-2802 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'O' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | O           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2803 @web
+  Cenario: 2803 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'P'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2803 | BRITQEA-2803 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'P' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | P           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2804 @web
+  Cenario: 2804 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'S'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2804 | BRITQEA-2804 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'S' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | P           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
+
+  @BRITQEA2805 @web
+  Cenario: 2805 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'V'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                      | Nome do executor | Sprint |
+      | 2805 | BRITQEA-2805 | Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'V' | Hiilário Bina    | S1     |
+    E que estou na tela "GERPD"
+    E que tenha um pedido com um item
+      | Comprador | Fornec  | Pesquisa | Classif Ped |
+      |       025 | 3509175 |     1661 | V           |
+    Quando clico no botao Executar Pedido
+    Entao deve apresentar a mensagem o numero do pedido
