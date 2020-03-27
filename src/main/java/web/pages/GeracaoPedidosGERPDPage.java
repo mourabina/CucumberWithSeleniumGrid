@@ -146,7 +146,7 @@ public class GeracaoPedidosGERPDPage {
 	private WebElement msg;
 
 	@FindBy(id = "EXEC_PED_FX")
-	private WebElement bt_ExeutarPedido;
+	private WebElement bt_ExecutarPedido;
 	
 	private String gridResultados = "//span/span[contains(@id,\"panel_panel\")]";
 
@@ -162,8 +162,8 @@ public class GeracaoPedidosGERPDPage {
 		return opcaoItemCheckbox1;
 	}
 
-	public WebElement getBt_ExeutarPedido() {
-		return bt_ExeutarPedido;
+	public WebElement getBt_ExecutarPedido() {
+		return bt_ExecutarPedido;
 	}
 
 	public WebElement getMsg() {

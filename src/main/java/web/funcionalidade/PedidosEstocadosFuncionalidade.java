@@ -263,7 +263,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void acionarBtnExecutarPedido() {
-		this.gerpd.getBt_ExeutarPedido().click();
+		this.gerpd.getBt_ExecutarPedido().click();
 	}
 
 	public void salvarInformacoesPedido() {
