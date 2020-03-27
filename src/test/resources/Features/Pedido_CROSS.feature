@@ -433,7 +433,7 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     E que tenha 1 itens inclusos Cross
       | Comprador | Fornec  | Produto | Classif Ped |
-      |       028 | 3512102 |    6814 | O           |
+      |       028 | 3512102 |    6814 | N           |
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 

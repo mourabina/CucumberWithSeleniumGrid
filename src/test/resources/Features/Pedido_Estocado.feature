@@ -328,7 +328,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | A           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2111 @web
@@ -506,7 +506,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | F           |
-   Quando clico no botao Executar Pedido
+   Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2799 @web
@@ -519,7 +519,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | F           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2800 @web
@@ -532,7 +532,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | M           |
-   Quando clico no botao Executar Pedido
+   Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2801 @web
@@ -545,7 +545,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | N           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2802 @web
@@ -558,7 +558,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | O           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2803 @web
@@ -571,7 +571,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | P           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2804 @web
@@ -584,7 +584,7 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | P           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
 
   @BRITQEA2805 @web
@@ -597,5 +597,5 @@ Funcionalidade: Pedido_Estocado SAD
     E que tenha um pedido com um item
       | Comprador | Fornec  | Pesquisa | Classif Ped |
       |       025 | 3509175 |     1661 | V           |
-    Quando clico no botao Executar Pedido
+    Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem o numero do pedido
