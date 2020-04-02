@@ -492,7 +492,7 @@ Funcionalidade: Agendamento SAD
   Cenario: 1020 -   Inserir Caracteres Especiais - Campo 'Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
-      | id   | Numero do CT | Nome do CT                                       | Nome do executor     | Sprint |
+      | id   | Numero do CT | Nome do CT                                        | Nome do executor     | Sprint |
       | 1020 | BRITQEA-1020 | Inserir Caracteres Especiais - Campo 'Alto Risco' | Matheus Machado Luiz | S3     |
     E que estou na tela "CPT85"
     E preencho os campos de Datas e Hora
@@ -500,3 +500,40 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | @          |
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] @ ** RISCO DEVE SER "S" OU "N" **"
+
+  @BRITQEA2840 @web
+  Cenario: 2840 -  Inserir Letras - Campo 'Fone'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                    | Nome do executor | Sprint |
+      | 2840 | BRITQEA-2840 | Inserir Letras - Campo 'Fone' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | ZZ ABCDEFGH | S         | N          |
+    Quando clico no botao incluir
+    Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
+
+  @BRITQEA2842 @web
+  Cenario: 2842 -    Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Perecível'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                    | Nome do executor | Sprint |
+      | 2842 | BRITQEA-2842 | Inserir Letras (diferentes de 'S' ou 'N') - Campo `Perecível' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | H         | N          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] H ** PERECIVEL DEVE SER "S" OU "N" **"
+
+  @BRITQEA2844 @web
+  Cenario: 2844 -    Consultar agendamento - Somente com o campo Data Agenda
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                              | Nome do executor | Sprint |
+      | 2844 | BRITQEA-2844 | Consultar agendamento - Somente com o campo Data Agenda | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho somente os campos de Datas e Hora
+    Quando clico no botao consultar
+    Entao deve ser exibido a mensagem "[1] 0 *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***"

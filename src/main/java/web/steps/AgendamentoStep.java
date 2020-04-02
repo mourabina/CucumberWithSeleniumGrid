@@ -177,4 +177,17 @@ public class AgendamentoStep {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
 	}
 
+	@E("^preencho somente os campos de Datas e Hora$")
+	public void preencherCampoDataHora(){
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
+	}
+
+	@Quando("^clico no botao consultar$")
+	public void acionarBotaoConsultar(){
+		this.agenda.clicarBotaoConsultar();
+		
+	}
+
 }
