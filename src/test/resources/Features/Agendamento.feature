@@ -71,6 +71,19 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
+  @BRITQEA2845 @web
+  Cenario: 2845 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'N'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                               | Nome do executor | Sprint |
+      | 2845 | BRITQEA-2845 | Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'N' | Hiilário Bina    | S1     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
+    Quando clico no botao incluir
+    Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
+
   @BRITQEA947 @web
   Cenario: 947 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' =  'S' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
@@ -226,6 +239,19 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
 
+  @BRITQEA2843 @web
+  Cenario: 2843 -  Inserir Letras (diferentes de 'S' ou 'N') - Campo `Alto Risco'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                                     | Nome do executor     | Sprint |
+      | 2843 | BRITQEA-2843 | Inserir Letras (diferentes de 'S' ou 'N') - Campo `Alto Risco' | Matheus Machado Luiz | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | 11 31314040 | N         | X          |
+    Quando clico no botao incluir
+    Entao deve ser exibido a mensagem "[1] X ** RISCO DEVE SER "S" OU "N" **"
+
   @BRITQEA977 @web
   Cenario: 977 -  Incluir criar agendamento - 'Alto Risco' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
@@ -326,9 +352,22 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E preencho os campos de Hora e Data Agenda
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
-      | !@#$%&*~          | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
+      | !@$%&*~           | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
     Entao o campo "Hora Prev Entrada" deve esta vazio
+
+  @BRITQEA2841 @web
+  Cenario: 2841 -  Inserir Caracteres Especiais - Campo 'Fone'
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                               | Nome do executor | Sprint |
+      | 2841 | BRITQEA-2841 | Inserir Caracteres Especiais - Campo 'Fone' | Hilário Bina     | S3     |
+    E que estou na tela "CPT85"
+    E preencho os campos de Datas e Hora
+      | Transportadora | Contato     | Fone      | Perecivel | Alto Risco |
+      | TransAutomação | Sr Selenium | !@$%^&*() | S         | S          |
+    Quando clico no botao incluir
+    Entao o campo "Fone" deve esta vazio
 
   @BRITQEA997 @web
   Cenario: 997 -  Inserir Letras - Campo 'Hora Prev Entrada'
