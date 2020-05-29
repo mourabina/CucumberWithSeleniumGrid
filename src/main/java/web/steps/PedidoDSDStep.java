@@ -52,4 +52,5 @@ public class PedidoDSDStep {
 		this.inpe.clicarBotaoConsultarLoja();
 		this.inpe.incluirItens(quant);
 	}
+	
 }

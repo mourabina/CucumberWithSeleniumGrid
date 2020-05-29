@@ -234,5 +234,4 @@ public class PedidoEstocadoStep {
 		Assert.assertTrue("Número do Pedido não foi Gerado",this.pedidos.valdiarGeracaoNumeroPedido());
 		
 	}
-
 }

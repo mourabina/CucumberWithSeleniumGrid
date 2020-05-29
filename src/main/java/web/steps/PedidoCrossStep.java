@@ -112,4 +112,5 @@ public class PedidoCrossStep extends BaseTest {
 	public void incluirItemINPE2(int quant, DataTable params) throws ParseException {
 		this.incluirItemCross(quant, params);
 	}
+
 }

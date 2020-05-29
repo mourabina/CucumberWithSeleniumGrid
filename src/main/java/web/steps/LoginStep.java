@@ -21,4 +21,9 @@ public class LoginStep {
 		this.login.acessarTela(tela);	
 	}
 
+	@Dado("^acessar o RF com usuário \"([^\"]*)\"$")
+	public void acessarRF(String usuario) throws Throwable {
+		this.login.acessarRF(usuario);
+	}
+
 }
