@@ -177,7 +177,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public List<Map<String, String>> retornaItens(int qtde) {
 		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
-		;
 
 		for (int i = 0; i < qtde; i++) {
 			Map<String, String> map = new HashMap<String, String>();
@@ -192,7 +191,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public List<Map<String, String>> retornaItensSOLPD(int qtde) {
 		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
-		;
 
 		for (int i = 0; i < qtde; i++) {
 			Map<String, String> map = new HashMap<String, String>();

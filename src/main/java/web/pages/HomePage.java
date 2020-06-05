@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage{
 	
-	@FindBy(xpath = "//*[@href=\"MENUG\"]")
+	@FindBy(xpath = "//*[contains(@href,\"MENUG\")]")
 	private WebElement HomePageIcon;
 	
 	@FindBy(id = "auxProxTela")

@@ -109,3 +109,25 @@ Funcionalidade: Turno CD e RF
     E turno do CD está aberto
     Quando pressiono enter após preencher o campo com "S"
     Então sistema deve apresentar o alerta "TURNO A SER FECHADO FOI ABERTO A MENOS DE UM HORA"
+
+  @BRITQEA5293 @web
+  Cenario: 5293 - Fechar turno CD com menos de uma hora da abertura
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                                        | Nome sdo executor    | Sprint |
+      | 5293 | BRITQEA-5293 | Fechar turno CD com menos de uma hora da abertura | Matheus Machado Luiz | S1     |
+    E que estou na tela "FAT07"
+    E turno do CD está aberto
+    Quando pressiono enter após preencher o campo com "S"
+    Então sistema deve apresentar o alerta "TURNO A SER FECHADO FOI ABERTO A MENOS DE UM HORA"
+
+  @BRITQEA5291 @web
+  Cenario: 5291 - Manutenção de turno do SADRF
+    Dado que estou logado com usuario/filial "818181"/"7467"
+    E estou executando o teste
+      | id   | Numero do CT | Nome do CT                   | Nome sdo executor    | Sprint |
+      | 5291 | BRITQEA-5291 | Manutenção de turno do SADRF | Matheus Machado Luiz | S1     |
+    E que estou na tela "RFA03"
+		E consulto o turno de hoje
+		Quando submeto o registro com os dados alterados 
+		Então o registro deve ser alterado

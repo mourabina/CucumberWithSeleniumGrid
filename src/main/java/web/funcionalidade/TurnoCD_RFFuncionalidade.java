@@ -5,6 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import commons.BaseTest;
+import commons.funcionalidade.GeracaoData;
+import commons.funcionalidade.VariaveisEstaticas;
+import web.pages.ManutencaoAtividadeExtraRFA03Page;
 import web.pages.ManutencaoDeTurnoExpedicaoFAT07Page;
 import web.pages.RF.ExpedicaoPage;
 import web.pages.RF.Expedicao_AbreFechaTurnoPage;
@@ -16,12 +19,17 @@ public class TurnoCD_RFFuncionalidade extends BaseTest {
 	private MenuPrincipalRFPage menuRF;
 	private ExpedicaoPage ExpedicaoMenu;
 	private Expedicao_AbreFechaTurnoPage AbreFechaExp;
+	private ManutencaoAtividadeExtraRFA03Page ManuAtividade;
+	private LoginFuncionalidade login;
+	private static String dt;
 
 	public TurnoCD_RFFuncionalidade() {
 		this.fat07 = new ManutencaoDeTurnoExpedicaoFAT07Page(webDriver);
 		this.menuRF = new MenuPrincipalRFPage(webDriver);
 		this.ExpedicaoMenu = new ExpedicaoPage(webDriver);
 		this.AbreFechaExp = new Expedicao_AbreFechaTurnoPage(webDriver);
+		this.ManuAtividade = new ManutencaoAtividadeExtraRFA03Page(webDriver);
+		this.login = new LoginFuncionalidade();
 	}
 
 	public void preencherCampo(String valor) {
@@ -71,5 +79,42 @@ public class TurnoCD_RFFuncionalidade extends BaseTest {
 	public String getTextoAlerta() {
 		Alert alert = ExpectedConditions.alertIsPresent().apply(webDriver);
 		return alert.getText();
+	}
+	
+	public void consultarTurnoFechado() {
+		this.ManuAtividade.getUsuario().sendKeys(VariaveisEstaticas.getUSUARIO());
+		this.ManuAtividade.getDtTurno().sendKeys(GeracaoData.retornaDataAtualMaisDias(0));
+		this.ManuAtividade.getTurno().sendKeys("1");
+		this.ManuAtividade.getOpcao().sendKeys("INQ");
+		this.ManuAtividade.getOpcao().sendKeys(Keys.ENTER);
+		wait.until(ExpectedConditions.attributeToBeNotEmpty(this.ManuAtividade.getTurnoNormalHrInicial(), "value"));
+
+	}
+	
+	public void alterarValoresTurno() {
+		this.ManuAtividade.getTurnoNormalHrInicial().clear();
+		this.ManuAtividade.getTurnoNormalHrInicial().sendKeys("1000");
+		this.ManuAtividade.getTurnoNormalHrFim().clear();
+		this.ManuAtividade.getTurnoNormalHrFim().sendKeys("1100");
+		this.ManuAtividade.getTurnoNormalDtFim().clear();
+		dt = GeracaoData.retornaDataAtualMaisDias(1);
+		dt = dt.replace("/","");
+		if(dt.substring(0,1).matches("0"))
+			dt = dt.replaceFirst("0","");
+		this.ManuAtividade.getTurnoNormalDtFim().sendKeys(dt);
+		this.ManuAtividade.getConfirmacao().sendKeys("S");
+		this.ManuAtividade.getTurnoNormalAcao().click();
+		this.ManuAtividade.getOpcao().clear();
+		this.ManuAtividade.getOpcao().sendKeys("CHG");
+		this.ManuAtividade.getOpcao().sendKeys(Keys.ENTER);		
+	}
+	
+	public boolean verificarRegistroAlterado() {
+		this.login.voltarHomePage();
+		this.login.acessarTela("RFA03");
+		this.consultarTurnoFechado();
+		return this.ManuAtividade.getTurnoNormalHrInicial().getAttribute("value").equals("1000")
+				&& this.ManuAtividade.getTurnoNormalHrFim().getAttribute("value").equals("1100")
+				&& this.ManuAtividade.getTurnoNormalDtFim().getAttribute("value").equals(dt);		
 	}
 }

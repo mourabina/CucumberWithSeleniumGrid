@@ -65,4 +65,19 @@ public class TurnoCdRfStep {
 		assertTrue("Alerta não está presente", this.turnos.verificaAlertaPresente());
 		assertTrue("Alerta não contem mensagem esperada",this.turnos.getTextoAlerta().contains(msg));
 	}
+
+	@Dado("^consulto o turno de hoje$")
+	public void consultaTurnoHoje(){
+		this.turnos.consultarTurnoFechado();
+	}
+
+	@Quando("^submeto o registro com os dados alterados$")
+	public void alteroRegistroTurno(){
+		this.turnos.alterarValoresTurno();
+	}
+
+	@Então("^o registro deve ser alterado$")
+	public void verificarTurnoAlterado() {
+		assertTrue("Dados não foram alterados", this.turnos.verificarRegistroAlterado());
+	}
 }

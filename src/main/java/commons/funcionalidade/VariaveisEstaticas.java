@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class VariaveisEstaticas {
 
+	private static String USUARIO;
 	private static String AGENDA;
 	private static String COMPRADOR;
 	private static String FORNEC;
@@ -125,5 +126,13 @@ public class VariaveisEstaticas {
 		default:
 			break;
 		}
+	}
+
+	public static String getUSUARIO() {
+		return USUARIO;
+	}
+
+	public static void setUSUARIO(String uSUARIO) {
+		USUARIO = uSUARIO;
 	}
 }

@@ -25,6 +25,7 @@ public class LoginFuncionalidade extends BaseTest {
 	public void loginSAD(String usuario, String filial) {
 		webDriver.get(Urls.SAD_QA);
 		wait.until(ExpectedConditions.visibilityOf(this.login.getInputUser()));
+		VariaveisEstaticas.setUSUARIO(usuario);
 		this.login.getInputUser().sendKeys(usuario);
 		this.login.getInputPass().sendKeys(CredentialsUsers.USER_WEB_SAD_QA.password());
 		this.login.getInputEmpresa().sendKeys("01");
