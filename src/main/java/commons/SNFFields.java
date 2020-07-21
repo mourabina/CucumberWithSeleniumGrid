@@ -194,6 +194,10 @@ public class SNFFields {
 			"CD_MODL_DOCT_FISC_NFE", "CD_SERE_DOCT_FISC_NFE", "NR_DOCT_FISC_NFE", "NR_ITEM", "NR_SEQA_RSTR",
 			"NR_LOTE_PROD", "QT_PROD_LOTE", "DT_FABR_PROD", "DT_VALD_PROD", "CD_AGRG_PROD", "CD_USER_MANU", "TS_MANU" };
 
+	private static final String[] LAYOUTS = new String[] { "201", "203", "204", "205", "206", "207", "208", "209",
+			"210", "211", "212", "213", "214", "215", "216", "217", "220", "221", "222", "225", "226", "227", "228",
+			"237", "238", "239"};
+
 	public static String[] getNfe() {
 		return NFE;
 	}
@@ -204,6 +208,102 @@ public class SNFFields {
 
 	public static String[] getNfeProd() {
 		return NFE_PROD;
+	}
+
+	public static String[] getNfeDi() {
+		return NFE_DI;
+	}
+
+	public static String[] getNfeAdi() {
+		return NFE_ADI;
+	}
+
+	public static String[] getNfeVeic() {
+		return NFE_VEIC;
+	}
+
+	public static String[] getNfeMedc() {
+		return NFE_MEDC;
+	}
+
+	public static String[] getNfeArma() {
+		return NFE_ARMA;
+	}
+
+	public static String[] getNfeRebq() {
+		return NFE_REBQ;
+	}
+
+	public static String[] getNfeVolu() {
+		return NFE_VOLU;
+	}
+
+	public static String[] getNfeLacr() {
+		return NFE_LACR;
+	}
+
+	public static String[] getNfeDupl() {
+		return NFE_DUPL;
+	}
+
+	public static String[] getNfeComb() {
+		return NFE_COMB;
+	}
+
+	public static String[] getNfeObsvCtbt() {
+		return NFE_OBSV_CTBT;
+	}
+
+	public static String[] getNfeObsvFisc() {
+		return NFE_OBSV_FISC;
+	}
+
+	public static String[] getNfeProcRefe() {
+		return NFE_PROC_REFE;
+	}
+
+	public static String[] getNfeCanc() {
+		return NFE_CANC;
+	}
+
+	public static String[] getNfeCce() {
+		return NFE_CCE;
+	}
+
+	public static String[] getNfeSoltEvet() {
+		return NFE_SOLT_EVET;
+	}
+
+	public static String[] getNfeAutrDown() {
+		return NFE_AUTR_DOWN;
+	}
+
+	public static String[] getNfeExpt() {
+		return NFE_EXPT;
+	}
+
+	public static String[] getNfeFrmaPgto() {
+		return NFE_FRMA_PGTO;
+	}
+
+	public static String[] getNfeNve() {
+		return NFE_NVE;
+	}
+
+	public static String[] getNfeSoltPediPror() {
+		return NFE_SOLT_PEDI_PROR;
+	}
+
+	public static String[] getNfeSoltPediItem() {
+		return NFE_SOLT_PEDI_ITEM;
+	}
+
+	public static String[] getNfeRstr() {
+		return NFE_RSTR;
+	}
+
+	public static String[] getLayouts() {
+		return LAYOUTS;
 	}
 
 }

@@ -18,8 +18,7 @@ public class LoginStep {
 
 	@Dado("^que estou logado com usuario/filial \"([^\"]*)\"/\"([^\"]*)\"$")
 	public void loginSAD(String user, String filial) throws FileNotFoundException{
-		this.auth.getToken();
-//		this.login.loginSAD(user, filial);		
+		this.login.loginSAD(user, filial);		
 	}
 
 	@Dado("^que estou na tela \"([^\"]*)\"$")
