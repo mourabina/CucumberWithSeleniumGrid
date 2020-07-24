@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class InspecaoManualCPT61 {
+public class InspecaoManualCPT61Page {
 
 	@FindBy(id = "InspecaoManualCPT61")
 	private WebElement text_dep;
@@ -88,7 +88,7 @@ public class InspecaoManualCPT61 {
 	@FindBy(id = "TL_CANCEL_GUIA")
 	private WebElement button_CancelamentoCompletoGuia;
 
-	public InspecaoManualCPT61(WebDriver webDriver) {
+	public InspecaoManualCPT61Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
 
