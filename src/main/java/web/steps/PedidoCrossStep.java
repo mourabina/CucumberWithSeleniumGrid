@@ -11,7 +11,7 @@ import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.DigitacaoPedidosDSDCROSSFuncionalidade;
 
@@ -41,7 +41,7 @@ public class PedidoCrossStep extends BaseTest {
 
 	}
 
-	@Entao("^a grid da Tela SOLPD deve apresentar os (\\d+) itens inclusos$")
+	@Então("^a grid da Tela SOLPD deve apresentar os (\\d+) itens inclusos$")
 	public void validarLojaQuantItensGridINPE2(int quant) throws ParseException {
 		assertEquals("Itens não são os mesmos que os inseridos", VariaveisEstaticas.getMap(),
 				this.dsdCross.retornaItens(quant));
@@ -56,7 +56,7 @@ public class PedidoCrossStep extends BaseTest {
 		this.dsdCross.ClicarBotaoExcluir();
 	}
 
-	@Entao("^deve ser populado o Grid de Resultados da INPE$")
+	@Então("^deve ser populado o Grid de Resultados da INPE$")
 	public void validarGridPopuladoINPE2() {
 		this.dsdCross.verificarTodosResultadoGrid();
 	}
@@ -66,7 +66,7 @@ public class PedidoCrossStep extends BaseTest {
 		this.dsdCross.ClicarBotaConsultarLojas();
 	}
 
-	@Entao("^deve exibir a mensagem \"([^\"]*)\"$")
+	@Então("^deve exibir a mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg) {
 		Assert.assertTrue("A mensagem não condiz com o esperado", this.dsdCross.retornaMensagem().contains(msg));
 	}

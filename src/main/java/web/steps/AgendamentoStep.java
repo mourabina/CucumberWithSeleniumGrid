@@ -7,7 +7,7 @@ import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.AgendamentoFuncionalidade;
 import web.funcionalidade.LoginFuncionalidade;
@@ -135,36 +135,36 @@ public class AgendamentoStep {
 
 	}
 
-	@Entao("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
+	@Então("^o campo \"([^\"]*)\" deve ser preenchido com o valor da Agenda$")
 	public void validarCriacaoAgenda(String campo) {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio(campo));
 
 	}
 
-	@Entao("^deve ser exibido a mensagem \"(.*)\"$")
+	@Então("^deve ser exibido a mensagem \"(.*)\"$")
 	public void valdiarMensagemExibida(String msg) {
 		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
 
 	}
 
-	@Entao("^deve ser exibido a mensagem no Alert \"([^\"]*)\"$")
+	@Então("^deve ser exibido a mensagem no Alert \"([^\"]*)\"$")
 	public void validarExibicaoMensagemAlert(String mmsg) {
 		Assert.assertTrue("Mensagem não Encontrada", this.agenda.retornaMensagemAlert().contains(mmsg));
 	}
 
-	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\"$")
+	@Então("^deve ser exibido a seguinte mensagem \"([^\"]*)\"$")
 	public void deveSerExibidoASeguinteMensagem(String mensagem) {
 		mensagem = mensagem.replace("[HORA]", this.agenda.retornaValorCampo("Hora Prev Entrada").split(":")[0]);
 		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(mensagem));
 	}
 
-	@Entao("^o campo \"([^\"]*)\" deve esta vazio$")
+	@Então("^o campo \"([^\"]*)\" deve esta vazio$")
 	public void validarCampoVazio(String campo) {
 		Assert.assertTrue("Campo " + campo + "Não Está Vazio", this.agenda.validaCampoVazio(campo));
 
 	}
 
-	@Entao("^deve retornar os dados da agenda$")
+	@Então("^deve retornar os dados da agenda$")
 	public void validarCamposPreenchidos() {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Agenda"));
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));

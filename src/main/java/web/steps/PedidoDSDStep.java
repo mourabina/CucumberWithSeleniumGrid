@@ -5,7 +5,7 @@ import org.junit.Assert;
 import commons.funcionalidade.GeracaoData;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.DigitacaoPedidosDSDCROSSFuncionalidade;
 
@@ -22,7 +22,7 @@ public class PedidoDSDStep {
 		this.inpe.preencherCampoValor(campo, valor);
 	}
 
-	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\" na Tela Inpe$")
+	@Então("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\" na Tela Inpe$")
 	public void validarExibicaoLabelsTelaInpe(String campo1, String campo2) {
 		Assert.assertFalse("Camapo " + campo1 + "Não está sendo exibido",
 				this.inpe.retornaValorCampo(campo1).equals(" "));
@@ -52,5 +52,5 @@ public class PedidoDSDStep {
 		this.inpe.clicarBotaoConsultarLoja();
 		this.inpe.incluirItens(quant);
 	}
-	
+
 }
