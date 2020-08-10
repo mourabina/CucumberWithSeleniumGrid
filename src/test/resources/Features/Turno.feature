@@ -12,7 +12,7 @@ Funcionalidade: Turno CD e RF
       | id   | Numero do CT | Nome do CT           | Nome do executor     | Sprint |
       | 5285 | BRITQEA-5285 | Abertura de turno CD | Matheus Machado Luiz | S1     |
     E que estou na tela "FAT07"
-    #	Quando pressiono enter após preencher o campo com "S"
+    Quando pressiono enter após preencher o campo com "S"
     Então sistema deve abrir o turno
 
   @BRITQEA5287 @web
