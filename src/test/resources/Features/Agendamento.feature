@@ -58,7 +58,7 @@ Funcionalidade: Agendamento SAD
     E altero as informacoes da Agenda e clico em Alterar
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
 
-  @BRITQEA946 @web
+  @BRITQEA946 @web @Tela
   Cenario: 946 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'S' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -71,7 +71,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA2845 @web
+  @BRITQEA2845 @web  @Tela
   Cenario: 2845 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -84,7 +84,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA947 @web
+  @BRITQEA947 @web @Tela
   Cenario: 947 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' =  'S' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -97,7 +97,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA950 @web
+  @BRITQEA950 @web @Tela
   Cenario: 950 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -110,7 +110,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA952 @web
+  @BRITQEA952 @web @Tela
   Cenario: 952 -  Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -126,7 +126,7 @@ Funcionalidade: Agendamento SAD
       | BigAutomacao   | Sr Automacao | 11 525289 | N         | S          |
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
 
-  @BRITQEA954 @web
+  @BRITQEA954 @web @Tela
   Cenario: 954 -  Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'S' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -142,7 +142,7 @@ Funcionalidade: Agendamento SAD
       | BigAutomacao   | Sr Automacao | 11 525289 | S         | N          |
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
 
-  @BRITQEA955 @web
+  @BRITQEA955 @web @Tela
   Cenario: 955 - Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -158,7 +158,7 @@ Funcionalidade: Agendamento SAD
       | BigAutomacao   | Sr Automacao | 11 525289 | S         | S          |
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
 
-  @BRITQEA956 @web
+  @BRITQEA956 @web @Tela
   Cenario: 956 - Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -174,7 +174,7 @@ Funcionalidade: Agendamento SAD
       | BigAutomacao   | Sr Automacao | 11 525289 | N         | N          |
     Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
 
-  @BRITQEA972 @web
+  @BRITQEA972 @web @Tela
   Cenario: 972 -   Incluir criar agendamento - Campo 'Agenda' preenchido
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -187,7 +187,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] 5 *** AGENDA NAO PODE SER INFORMADA NA INCLUSAO ***"
 
-  @BRITQEA973 @web
+  @BRITQEA973 @web @Tela
   Cenario: 973 -  Incluir criar agendamento - 'Transportadora' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -200,7 +200,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
 
-  @BRITQEA974 @web
+  @BRITQEA974 @web @Tela
   Cenario: 974 -  Incluir criar agendamento - 'Contato' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -213,7 +213,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **"
 
-  @BRITQEA975 @web
+  @BRITQEA975 @web @Tela
   Cenario: 975 -  Incluir criar agendamento - 'Fone' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -226,7 +226,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
 
-  @BRITQEA976 @web
+  @BRITQEA976 @web @Tela
   Cenario: 976 -  Incluir criar agendamento - 'Perecivel' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -239,7 +239,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
 
-  @BRITQEA2843 @web
+  @BRITQEA2843 @web @Tela
   Cenario: 2843 -  Inserir Letras (diferentes de 'S' ou 'N') - Campo `Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -252,7 +252,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] X ** RISCO DEVE SER "S" OU "N" **"
 
-  @BRITQEA977 @web
+  @BRITQEA977 @web @Tela
   Cenario: 977 -  Incluir criar agendamento - 'Alto Risco' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -265,7 +265,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] ** RISCO DEVE SER "S" OU "N" **"
 
-  @BRITQEA985 @web
+  @BRITQEA985 @web @Tela
   Cenario: 985 -  Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -278,7 +278,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] D ** RISCO DEVE SER "S" OU "N" **"
 
-  @BRITQEA986 @web
+  @BRITQEA986 @web @Tela
   Cenario: 986 - Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -291,7 +291,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] D ** PERECIVEL DEVE SER "S" OU "N" **"
 
-  @BRITQEA992 @web
+  @BRITQEA992 @web @Tela
   Cenario: 992 -  Inserir Agenda - Data Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -304,7 +304,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] 50216 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
 
-  @BRITQEA993 @web
+  @BRITQEA993 @web @Tela
   Cenario: 993 -  Inserir Agenda - Hora Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -317,7 +317,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
 
-  @BRITQEA994 @web
+  @BRITQEA994 @web @Tela
   Cenario: 994 -  Inserir Caracteres Especiais - Campo 'Data Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -330,7 +330,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Data Agenda" deve esta vazio
 
-  @BRITQEA995 @web
+  @BRITQEA995 @web @Tela
   Cenario: 995 -  Inserir Letras - Campo 'Data Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -343,7 +343,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Data Agenda" deve esta vazio
 
-  @BRITQEA996 @web
+  @BRITQEA996 @web @Tela
   Cenario: 996 -  Inserir Caracteres Especiais - Campo 'Hora Prev Entrada'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -356,7 +356,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Hora Prev Entrada" deve esta vazio
 
-  @BRITQEA2841 @web
+  @BRITQEA2841 @web @Tela
   Cenario: 2841 -  Inserir Caracteres Especiais - Campo 'Fone'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -369,7 +369,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Fone" deve esta vazio
 
-  @BRITQEA997 @web
+  @BRITQEA997 @web @Tela
   Cenario: 997 -  Inserir Letras - Campo 'Hora Prev Entrada'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -382,7 +382,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Hora Prev Entrada" deve esta vazio
 
-  @BRITQEA1002 @web
+  @BRITQEA1002 @web @Tela
   Cenario: 1002 -   Inserir Caracteres Especiais - Campo 'Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -392,7 +392,7 @@ Funcionalidade: Agendamento SAD
     Quando preencho o campo "Agenda" com os valores "~!@#$%&*"
     Entao o campo "Agenda" deve esta vazio
 
-  @BRITQEA1003 @web
+  @BRITQEA1003 @web @Tela
   Cenario: 1003 -   Inserir Letras - Campo 'Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -402,7 +402,7 @@ Funcionalidade: Agendamento SAD
     Quando preencho o campo "Agenda" com os valores "ABCDE"
     Entao o campo "Agenda" deve esta vazio
 
-  @BRITQEA1004 @web
+  @BRITQEA1004 @web @Tela
   Cenario: 1004 -  Alterar o valor campo 'Transportadora' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -416,7 +416,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Transportadora" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
 
-  @BRITQEA1009 @web
+  @BRITQEA1009 @web @Tela
   Cenario: 1009 -  Alterar o valor campo 'Contato' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -430,7 +430,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Contato" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDA **"
 
-  @BRITQEA1010 @web
+  @BRITQEA1010 @web @Tela
   Cenario: 1010 -  Alterar o valor campo 'Fone' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -444,7 +444,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Fone" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
 
-  @BRITQEA1011 @web
+  @BRITQEA1011 @web @Tela
   Cenario: 1011 -  Alterar o valor campo 'Perecível' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -458,7 +458,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Perecivel" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
 
-  @BRITQEA1012 @web
+  @BRITQEA1012 @web @Tela
   Cenario: 1012 -  Alterar o valor campo 'Alto Risco' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -472,7 +472,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Alto Risco" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem "[1] ** ALTO RISCO DEVE SER "S" OU "N" **"
 
-  @BRITQEA1013 @web
+  @BRITQEA1013 @web @Tela
   Cenario: 1013 -  Alterar o valor campo 'Agenda' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -486,7 +486,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Agenda" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem no Alert "[1] *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***"
 
-  @BRITQEA1014 @web
+  @BRITQEA1014 @web @Tela
   Cenario: 1014 -  Alterar Agenda - Hora Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -500,7 +500,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Hora Prev Entrada" para Hora anterior a atual, depois aciono o botao Alterar
     Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
 
-  @BRITQEA1015 @web
+  @BRITQEA1015 @web @Tela
   Cenario: 1015 -   Alterar Agenda - Data Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -514,7 +514,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Data Prev Entrada" para "010115" depois clico em Alterar
     Entao deve ser exibido a mensagem "[1] 10115 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
 
-  @BRITQEA1019 @web
+  @BRITQEA1019 @web @Tela
   Cenario: 1019 -   Inserir Caracteres Especiais - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -527,7 +527,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] @ ** PERECIVEL DEVE SER "S" OU "N" **"
 
-  @BRITQEA1020 @web
+  @BRITQEA1020 @web @Tela
   Cenario: 1020 -   Inserir Caracteres Especiais - Campo 'Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -540,7 +540,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] @ ** RISCO DEVE SER "S" OU "N" **"
 
-  @BRITQEA2840 @web
+  @BRITQEA2840 @web @Tela
   Cenario: 2840 -  Inserir Letras - Campo 'Fone'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -553,7 +553,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA2842 @web
+  @BRITQEA2842 @web @Tela
   Cenario: 2842 -    Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -566,7 +566,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] H ** PERECIVEL DEVE SER "S" OU "N" **"
 
-  @BRITQEA2844 @web
+  @BRITQEA2844 @web 
   Cenario: 2844 -    Consultar agendamento - Somente com o campo Data Agenda
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
