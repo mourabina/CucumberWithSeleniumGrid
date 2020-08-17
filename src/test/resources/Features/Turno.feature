@@ -15,7 +15,7 @@ Funcionalidade: Turno CD e RF
     Quando pressiono enter após preencher o campo com "S"
     Então sistema deve abrir o turno
 
-  @BRITQEA5287 @web
+  @BRITQEA5287 @web @Tela
   Cenario: 5287 - Abrir turno CD com caractere especial
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -25,7 +25,7 @@ Funcionalidade: Turno CD e RF
     Quando pressiono enter após preencher o campo com "@"
     Então sistema não deve abrir o turno apresentando a mensagem "ATENÇÃO *** DIGITAR "N" OU "S" ***"
 
-  @BRITQEA5286 @web
+  @BRITQEA5286 @web @Tela
   Cenario: 5286 - Abrir turno CD com caractere divergente
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -46,7 +46,7 @@ Funcionalidade: Turno CD e RF
     Quando pressiono enter após preencher o campo com "S"
     Então sistema deve fechar o turno
 
-  @BRITQEA5294 @web
+  @BRITQEA5294 @web @Tela
   Cenario: 5294 - Fechar turno CD com caractere especial
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -56,7 +56,7 @@ Funcionalidade: Turno CD e RF
     Quando pressiono enter após preencher o campo com "@"
     Então sistema não deve fechar o turno apresentando a mensagem "ATENÇÃO *** DIGITAR "N" OU "S" ***"
 
-  @BRITQEA5295 @web
+  @BRITQEA5295 @web @Tela
   Cenario: 5295 - Fechar turno CD com caractere divergente
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
