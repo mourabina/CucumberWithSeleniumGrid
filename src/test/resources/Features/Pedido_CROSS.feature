@@ -54,7 +54,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
-  @BRITQEA2233 @web
+  @BRITQEA2233 @web 
   Cenario: 2233 - Consulta Lojas sem preencher o campo 'Produtos' - CROSS
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -120,7 +120,7 @@ Funcionalidade: Pedido_Cross SAD
       |    6814 | 3512102 |       028 |
     Entao deve exibir a mensagem "[1] ATENÇÃO CLASSIFICACAO DO PEDIDO NAO CADASTRADA"
 
-  @BRITQEA2240 @web
+  @BRITQEA2240 @web @Tela
   Cenario: 2240 - Inserir caracteres especiais no campo 'Regional'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -130,7 +130,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Regional" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2241 @web
+  @BRITQEA2241 @web @Tela
   Cenario: 2241 - Inserir letras no campo 'Regional'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -140,7 +140,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Regional" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2242 @web
+  @BRITQEA2242 @web  @Tela
   Cenario: 2242 - Inserir caracteres especiais no campo 'Produto'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -149,8 +149,8 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     Quando preencho o campo "Produto" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
-
-  @BRITQEA2243 @web
+ 
+  @BRITQEA2243 @web @Tela
   Cenario: 2243 - Inserir letras no campo 'Produto'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -160,7 +160,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Produto" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2244 @web
+  @BRITQEA2244 @web @Tela
   Cenario: 2244 - Inserir caracteres especiais no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -170,7 +170,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Comprador" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2245 @web
+  @BRITQEA2245 @web @Tela
   Cenario: 2245 - Inserir letras no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -180,7 +180,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Comprador" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2246 @web
+  @BRITQEA2246 @web @Tela
   Cenario: 2246 - Inserir caracteres especiais no campo 'DT Entrega'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -190,7 +190,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "DT Entrega" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2247 @web
+  @BRITQEA2247 @web @Tela
   Cenario: 2247 - Inserir letras no campo 'DT Entrega'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -200,7 +200,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "DT Entrega" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2248 @web
+  @BRITQEA2248 @web @Tela
   Cenario: 2248 - Inserir caracteres especiais no campo 'Quant'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -210,7 +210,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Quant" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2249 @web
+  @BRITQEA2249 @web @Tela
   Cenario: 2249 - Inserir letras no campo 'Quant'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -220,7 +220,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Quant" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2250 @web
+  @BRITQEA2250 @web @Tela
   Cenario: 2250 - Inserir caracteres especiais no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -230,7 +230,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Comprador" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2251 @web
+  @BRITQEA2251 @web @Tela
   Cenario: 2251 - Inserir letras no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -240,7 +240,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Comprador" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2253 @web
+  @BRITQEA2253 @web @Tela
   Cenario: 2253 - Inserir caracteres especiais no campo 'Desc'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -250,7 +250,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Desc" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2254 @web
+  @BRITQEA2254 @web @Tela
   Cenario: 2254 - Inserir letras no campo 'Desc'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -260,7 +260,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Desc" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2255 @web
+  @BRITQEA2255 @web @Tela
   Cenario: 2255 - Inserir caracteres especiais no campo 'IPI'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -270,7 +270,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "ipi" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2256 @web
+  @BRITQEA2256 @web @Tela
   Cenario: 2256 - Inserir letras no campo 'IPI'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -280,7 +280,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "ipi" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2257 @web
+  @BRITQEA2257 @web @Tela
   Cenario: 2257 - Inserir caracteres especiais no campo 'ICM'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -290,7 +290,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "icm" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2258 @web
+  @BRITQEA2258 @web @Tela
   Cenario: 2258 - Inserir letras no campo 'ICM'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -300,7 +300,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "icm" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2259 @web
+  @BRITQEA2259 @web @Tela
   Cenario: 2259 - Inserir caracteres especiais no campo 'Contrato'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -310,7 +310,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Contrato" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2260 @web
+  @BRITQEA2260 @web @Tela
   Cenario: 2260 - Inserir letras no campo 'ICM'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -320,7 +320,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Contrato" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2261 @web
+  @BRITQEA2261 @web @Tela
   Cenario: 2261 - Inserir caracteres especiais no campo 'Evento'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -330,7 +330,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Evento" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2262 @web
+  @BRITQEA2262 @web @Tela
   Cenario: 2262 - Inserir letras no campo 'Evento'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -340,7 +340,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Evento" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2263 @web
+  @BRITQEA2263 @web @Tela
   Cenario: 2263 - Inserir caracteres especiais no campo 'Quantidade' - Segunda Grid
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -351,7 +351,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho os campos Quantidade com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2264 @web
+  @BRITQEA2264 @web @Tela
   Cenario: 2264 - Inserir letras no campo 'Quantidade' - Segunda Grid'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
