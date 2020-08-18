@@ -11,7 +11,7 @@ import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import web.funcionalidade.ConsultaDigitacaoDePedidosSOLPDFuncionalidade;
 import web.funcionalidade.LoginFuncionalidade;
@@ -113,13 +113,13 @@ public class PedidoEstocadoStep {
 		this.pedidos.excluirPrimeiroItem();
 	}
 
-	@Então("^deve ser gerado um numero do pedido$")
+	@Entao("^deve ser gerado um numero do pedido$")
 	public void validarGeracaoNumeroPedido() {
 		Assert.assertTrue("Número Pedido não foi gerador",
 				this.pedidos.retornaMensagemExibida().contains("Seu numero de requisição !"));
 	}
 
-	@Então("^deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD$")
+	@Entao("^deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD$")
 	public void validarExibicaoDadosPedidosEstocados() throws ParseException {
 		Assert.assertEquals(this.solpd.retornaValorCampo("Loja"), VariaveisEstaticas.getFILIAL());
 		Assert.assertEquals(this.solpd.retornaValorCampo("Grid Local"), VariaveisEstaticas.getCOMPRADOR());
@@ -130,12 +130,12 @@ public class PedidoEstocadoStep {
 
 	}
 
-	@Então("^grid deve estar populada$")
+	@Entao("^grid deve estar populada$")
 	public void verificarGrid() {
 		this.pedidos.verificarTodosResultadoGrid();
 	}
 
-	@Então("^a grid deve apresentar somente o item incluso$")
+	@Entao("^a grid deve apresentar somente o item incluso$")
 	public void verificarGridItem() {
 		this.pedidos.verificaItemGrid(1);
 		assertEquals(this.pedidos.retornaValorCampo("Descricao do produto"), VariaveisEstaticas.getDESCRICAO());
@@ -143,7 +143,7 @@ public class PedidoEstocadoStep {
 
 	}
 
-	@Então("^deve retornar o item com situação \"([^\"]*)\"$")
+	@Entao("^deve retornar o item com situação \"([^\"]*)\"$")
 	public void validarItemSOLPD(String status) {
 		assertEquals(VariaveisEstaticas.getCOD_PRODUTO(), this.solpd.retornaValorCampo("Produto"));
 		assertTrue(
@@ -153,23 +153,23 @@ public class PedidoEstocadoStep {
 		assertEquals(this.solpd.retornaValorCampo("Situacao registro"), status);
 	}
 
-	@Então("^deve apresentar a mensagem \"([^\"]*)\"$")
+	@Entao("^deve apresentar a mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg) {
 		Assert.assertTrue(this.pedidos.retornaMensagemExibida().contains(msg));
 	}
 
-	@Então("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
+	@Entao("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
 	public void validarExibicaoValorCampo(String valor, String campo) {
 		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
 	}
 
-	@Então("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
+	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
 	public void valdiarExibicaoInfomacaoItensGRidResultado(String campo1, String campo2) {
 		Assert.assertFalse("Campo " + campo1 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo1));
 		Assert.assertFalse("Campo " + campo2 + "Não está sendo exibido", this.pedidos.validaCampoVazio(campo2));
 	}
 
-	@Então("^a grid deve apresentar os (\\d+) itens inclusos$")
+	@Entao("^a grid deve apresentar os (\\d+) itens inclusos$")
 	public void verificarMultiplosItens(int qtde) {
 		this.pedidos.verificaItemGrid(2);
 		assertEquals("Itens não são os mesmos que os inseridos", VariaveisEstaticas.getMap(),
@@ -177,13 +177,13 @@ public class PedidoEstocadoStep {
 		this.pedidos.excluirMultiplosItens(qtde);
 	}
 
-	@Então("^a grid deve apresentar o item excluido com a situação \"([^\"]*)\"$")
+	@Entao("^a grid deve apresentar o item excluido com a situação \"([^\"]*)\"$")
 	public void verificarPrimeiroItemSituacao(String sit) throws ParseException {
 		assertTrue("Item não encontrado com situação/hora de cancelamento correta",
 				this.pedidos.verificarItemSOLPD(VariaveisEstaticas.getMap().get(0).get("Codigo"), sit));
 	}
 
-	@Então("^a grid deve apresentar os itens excluidos com a situação \"([^\"]*)\"$")
+	@Entao("^a grid deve apresentar os itens excluidos com a situação \"([^\"]*)\"$")
 	public void verificarTodosItensInclusos(String sit) {
 		VariaveisEstaticas.getMap().forEach(x -> {
 			try {
@@ -215,7 +215,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.limparPedido(params);
 	}
 
-	@Então("^grid deve apresentar o produto pesquisado$")
+	@Entao("^grid deve apresentar o produto pesquisado$")
 	public void gridDeveApresentarOProdutoPesquisado() throws Throwable {
 		this.pedidos.verificarConsultaItem(VariaveisEstaticas.getCOD_PRODUTO());
 	}
@@ -231,7 +231,7 @@ public class PedidoEstocadoStep {
 		this.pedidos.acionarBtnAlterar();
 	}
 
-	@Então("^deve apresentar a mensagem o numero do pedido$")
+	@Entao("^deve apresentar a mensagem o numero do pedido$")
 	public void validarGeracaoPedido() {
 		Assert.assertTrue("Número do Pedido não foi Gerado", this.pedidos.valdiarGeracaoNumeroPedido());
 
