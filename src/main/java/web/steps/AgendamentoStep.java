@@ -143,7 +143,7 @@ public class AgendamentoStep {
 
 	@Entao("^deve ser exibido a mensagem \"(.*)\"$")
 	public void valdiarMensagemExibida(String msg) {
-		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(msg));
+		Assert.assertTrue("Mensagem não está igual ao esperado" + this.agenda.retornaMensagemExibida(), this.agenda.retornaMensagemExibida().contains(msg));
 
 	}
 
@@ -160,21 +160,21 @@ public class AgendamentoStep {
 
 	@Entao("^o campo \"([^\"]*)\" deve esta vazio$")
 	public void validarCampoVazio(String campo) {
-		Assert.assertTrue("Campo " + campo + "Não Está Vazio", this.agenda.validaCampoVazio(campo));
+		Assert.assertTrue("Campo " + campo + " não Está Vazio", this.agenda.validaCampoVazio(campo));
 
 	}
 
 	@Entao("^deve retornar os dados da agenda$")
 	public void validarCamposPreenchidos() {
 		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Agenda"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Data Prev Entrada"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Hora Prev Entrada"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Transportadora"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Contato"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Fone"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Perecivel"));
-		Assert.assertFalse("Campo Agenda não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
+		Assert.assertFalse("Campo Data Agenda não está vazio", this.agenda.validaCampoVazio("Data Agenda"));
+		Assert.assertFalse("Campo Data Prev Entrada não está vazio", this.agenda.validaCampoVazio("Data Prev Entrada"));
+		Assert.assertFalse("Campo Hora Prev Entrada não está vazio", this.agenda.validaCampoVazio("Hora Prev Entrada"));
+		Assert.assertFalse("Campo Transportadora não está vazio", this.agenda.validaCampoVazio("Transportadora"));
+		Assert.assertFalse("Campo Contato não está vazio", this.agenda.validaCampoVazio("Contato"));
+		Assert.assertFalse("Campo Fone não está vazio", this.agenda.validaCampoVazio("Fone"));
+		Assert.assertFalse("Campo Perecivel não está vazio", this.agenda.validaCampoVazio("Perecivel"));
+		Assert.assertFalse("Campo Alto Risco não está vazio", this.agenda.validaCampoVazio("Alto Risco"));
 	}
 
 	@E("^preencho somente os campos de Datas e Hora$")

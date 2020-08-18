@@ -428,7 +428,7 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Contato" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDA **"
+    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **"
 
   @BRITQEA1010 @web @Tela
   Cenario: 1010 -  Alterar o valor campo 'Fone' para Branco
