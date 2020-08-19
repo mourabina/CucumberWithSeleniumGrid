@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -252,7 +251,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	public String retornaMensagem() {
 		wait.until(ExpectedConditions.visibilityOf(this.inpe2.getMsg()));
-		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getAttribute("value"));
+		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getText());
 		return this.inpe2.getMsg().getText();
 	}
 

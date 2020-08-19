@@ -54,7 +54,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando consultar o fornecedor 3512102 na SOLPD
     Entao deve retornar o item com situação "SOLICITACAO CANCELADA"
 
-  @BRITQEA2233 @web 
+  @BRITQEA2233 @web
   Cenario: 2233 - Consulta Lojas sem preencher o campo 'Produtos' - CROSS
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -120,7 +120,7 @@ Funcionalidade: Pedido_Cross SAD
       |    6814 | 3512102 |       028 |
     Entao deve exibir a mensagem "[1] ATENÇÃO CLASSIFICACAO DO PEDIDO NAO CADASTRADA"
 
-  @BRITQEA2240 @web @Tela
+  @BRITQEA2240 @web @Tela1
   Cenario: 2240 - Inserir caracteres especiais no campo 'Regional'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -140,7 +140,7 @@ Funcionalidade: Pedido_Cross SAD
     Quando preencho o campo "Regional" com o valor "ABCDE"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
 
-  @BRITQEA2242 @web  @Tela
+  @BRITQEA2242 @web @Tela
   Cenario: 2242 - Inserir caracteres especiais no campo 'Produto'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -149,7 +149,7 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     Quando preencho o campo "Produto" com o valor "@#$%&*~"
     Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
- 
+
   @BRITQEA2243 @web @Tela
   Cenario: 2243 - Inserir letras no campo 'Produto'
     Dado que estou logado com usuario/filial "818181"/"7467"
