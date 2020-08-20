@@ -113,4 +113,9 @@ public class PedidoCrossStep extends BaseTest {
 		this.incluirItemCross(quant, params);
 	}
 
+	@Entao("^deve exibir a mensagem \"([^\"]*)\" ou \"([^\"]*)\"$")
+	public void verificarMultiplasMensagens(String msg, String msg2) throws Throwable {
+		Assert.assertTrue("A mensagem não condiz com o esperado", this.dsdCross.retornaMensagem().contains(msg)||this.dsdCross.retornaMensagem().contains(msg2));
+	}
+
 }

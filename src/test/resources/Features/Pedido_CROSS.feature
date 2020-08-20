@@ -120,7 +120,7 @@ Funcionalidade: Pedido_Cross SAD
       |    6814 | 3512102 |       028 |
     Entao deve exibir a mensagem "[1] ATENÇÃO CLASSIFICACAO DO PEDIDO NAO CADASTRADA"
 
-  @BRITQEA2240 @web @Tela1
+  @BRITQEA2240 @web @Tela
   Cenario: 2240 - Inserir caracteres especiais no campo 'Regional'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -128,7 +128,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2240 | BRITQEA-2240 | Inserir caracteres especiais no campo 'Regional' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Regional" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" ou "Invalid character in numeric fields"
 
   @BRITQEA2241 @web @Tela
   Cenario: 2241 - Inserir letras no campo 'Regional'
@@ -138,7 +138,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2241 | BRITQEA-2241 | Inserir letras no campo 'Regional' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Regional" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2242 @web @Tela
   Cenario: 2242 - Inserir caracteres especiais no campo 'Produto'
@@ -148,7 +148,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2242 | BRITQEA-2242 | Inserir caracteres especiais no campo 'Produto' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Produto" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2243 @web @Tela
   Cenario: 2243 - Inserir letras no campo 'Produto'
@@ -158,7 +158,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2243 | BRITQEA-2243 | Inserir letras no campo 'Produto' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Produto" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2244 @web @Tela
   Cenario: 2244 - Inserir caracteres especiais no campo 'Comprador'
@@ -168,7 +168,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2244 | BRITQEA-2244 | Inserir caracteres especiais no campo 'Comprador' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Comprador" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2245 @web @Tela
   Cenario: 2245 - Inserir letras no campo 'Comprador'
@@ -178,7 +178,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2245 | BRITQEA-2245 | Inserir letras no campo 'Comprador' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Comprador" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2246 @web @Tela
   Cenario: 2246 - Inserir caracteres especiais no campo 'DT Entrega'
@@ -188,7 +188,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2246 | BRITQEA-2246 | Inserir caracteres especiais no campo 'DT Entrega' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "DT Entrega" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2247 @web @Tela
   Cenario: 2247 - Inserir letras no campo 'DT Entrega'
@@ -198,7 +198,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2247 | BRITQEA-2247 | Inserir letras no campo 'DT Entrega' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "DT Entrega" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2248 @web @Tela
   Cenario: 2248 - Inserir caracteres especiais no campo 'Quant'
@@ -208,7 +208,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2248 | BRITQEA-2248 | Inserir caracteres especiais no campo 'Quant' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Quant" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2249 @web @Tela
   Cenario: 2249 - Inserir letras no campo 'Quant'
@@ -218,7 +218,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2249 | BRITQEA-2249 | Inserir letras no campo 'Quant' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Quant" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2250 @web @Tela
   Cenario: 2250 - Inserir caracteres especiais no campo 'Comprador'
@@ -228,7 +228,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2250 | BRITQEA-2250 | Inserir caracteres especiais no campo 'Comprador' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Comprador" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2251 @web @Tela
   Cenario: 2251 - Inserir letras no campo 'Comprador'
@@ -238,7 +238,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2251 | BRITQEA-2251 | Inserir letras no campo 'Comprador' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Comprador" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2253 @web @Tela
   Cenario: 2253 - Inserir caracteres especiais no campo 'Desc'
@@ -248,7 +248,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2253 | BRITQEA-2253 | Inserir caracteres especiais no campo 'Desc' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Desc" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2254 @web @Tela
   Cenario: 2254 - Inserir letras no campo 'Desc'
@@ -258,7 +258,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2254 | BRITQEA-2254 | Inserir letras no campo 'Desc' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Desc" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2255 @web @Tela
   Cenario: 2255 - Inserir caracteres especiais no campo 'IPI'
@@ -268,7 +268,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2255 | BRITQEA-2255 | Inserir caracteres especiais no campo 'IPI' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "ipi" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2256 @web @Tela
   Cenario: 2256 - Inserir letras no campo 'IPI'
@@ -278,7 +278,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2256 | BRITQEA-2256 | Inserir letras no campo 'IPI' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "ipi" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2257 @web @Tela
   Cenario: 2257 - Inserir caracteres especiais no campo 'ICM'
@@ -288,7 +288,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2257 | BRITQEA-2257 | Inserir caracteres especiais no campo 'ICM' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "icm" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2258 @web @Tela
   Cenario: 2258 - Inserir letras no campo 'ICM'
@@ -298,7 +298,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2258 | BRITQEA-2258 | Inserir letras no campo 'ICM' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "icm" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2259 @web @Tela
   Cenario: 2259 - Inserir caracteres especiais no campo 'Contrato'
@@ -308,7 +308,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2259 | BRITQEA-2259 | Inserir caracteres especiais no campo 'Contrato' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Contrato" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2260 @web @Tela
   Cenario: 2260 - Inserir letras no campo 'ICM'
@@ -318,7 +318,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2260 | BRITQEA-2260 | Inserir letras no campo 'Contrato' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Contrato" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2261 @web @Tela
   Cenario: 2261 - Inserir caracteres especiais no campo 'Evento'
@@ -328,7 +328,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2261 | BRITQEA-2261 | Inserir caracteres especiais no campo 'Evento' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Evento" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2262 @web @Tela
   Cenario: 2262 - Inserir letras no campo 'Evento'
@@ -338,7 +338,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2262 | BRITQEA-2262 | Inserir letras no campo 'Evento' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Evento" com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2263 @web @Tela
   Cenario: 2263 - Inserir caracteres especiais no campo 'Quantidade' - Segunda Grid
@@ -349,7 +349,7 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     E pesquiso uma loja com o campo "Produto" com o valor "6814"
     Quando preencho os campos Quantidade com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2264 @web @Tela
   Cenario: 2264 - Inserir letras no campo 'Quantidade' - Segunda Grid'
@@ -360,7 +360,7 @@ Funcionalidade: Pedido_Cross SAD
     E que estou na tela "INPE2"
     E pesquiso uma loja com o campo "Produto" com o valor "6814"
     Quando preencho os campos Quantidade com o valor "ABCDE"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos."
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2267A @web
   Cenario: 2267A - Consulta de produtos - Estocados

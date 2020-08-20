@@ -65,7 +65,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2169 | BRITQEA-2169 | Inserir caracteres especiais no campo 'Pesquisa Item' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Pesquisa" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2171 @web @Tela
   Cenario: 2171 - Inserir letras no campo 'Pesquisa Item'
@@ -75,7 +75,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2171 | BRITQEA-2171 | Inserir letras no campo 'Pesquisa Item' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencher o campo "Pesquisa" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2191 @web @Tela
   Cenario: 2191 - Inserir caracteres especiais no campo 'Filial'
@@ -85,7 +85,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2191 | BRITQEA-2191 | Inserir caracteres especiais no campo 'Filial' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Filial" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" ou "Invalid character in numeric fields"
  
   @BRITQEA2192 @web @Tela
   Cenario: 2192 - Inserir letras no campo 'Filial'
@@ -95,7 +95,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2192 | BRITQEA-2192 | Inserir letras no campo 'Filial' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencher o campo "Filial" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2193 @web @Tela
   Cenario: 2193 - Inserir caracteres especiais no campo 'Comprador'
@@ -105,7 +105,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2193 | BRITQEA-2193 | Inserir caracteres especiais no campo 'Comprador' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Comprador" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2194 @web @Tela
   Cenario: 2194 - Inserir letras no campo 'Comprador'
@@ -115,7 +115,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2194 | BRITQEA-2194 | Inserir letras no campo 'Comprador' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencher o campo "Comprador" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2195 @web @Tela
   Cenario: 2195 - Consulta Tabela Compra - campo 'Comprador' em branco
@@ -139,7 +139,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2196 | BRITQEA-2196 | Inserir caracteres especiais no campo 'Fornec' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Fornec" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2197 @web @Tela
   Cenario: 2197 - Inserir letras no campo 'Fornec'
@@ -149,7 +149,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2197 | BRITQEA-2197 | Inserir letras no campo 'Fornec' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     E preencher o campo "Fornec" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2198 @web @Tela
   Cenario: 2198 - Consulta Tabela Compra - campo 'Fornec' em branco
@@ -173,7 +173,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2199 | BRITQEA-2199 | Inserir caracteres especiais no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Contato" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2200 @web @Tela
   Cenario: 2200 - Inserir letras no campo 'Contato'
@@ -183,7 +183,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2200 | BRITQEA-2200 | Inserir letras no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Contato" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2201 @web @Tela
   Cenario: 2201 - Inserir caracteres especiais no campo 'Evento'
@@ -193,7 +193,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2201 | BRITQEA-2201 | Inserir caracteres especiais no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Evento" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2202 @web @Tela
   Cenario: 2202 - Inserir letras no campo 'Evento'
@@ -203,7 +203,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2202 | BRITQEA-2202 | Inserir letras no campo 'Contato' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Evento" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2203 @web @Tela
   Cenario: 2203 - Inserir caracteres especiais no campo 'RedeSP'
@@ -213,7 +213,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2203 | BRITQEA-2203 | Inserir caracteres especiais no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "RedeSP" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2204 @web @Tela
   Cenario: 2204 - Inserir letras no campo 'RedeSP'
@@ -223,7 +223,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2204 | BRITQEA-2204 | Inserir letras no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "RedeSP" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2205 @web @Tela
   Cenario: 2205 - Inserir caracteres especiais no campo 'Dist'
@@ -233,7 +233,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2205 | BRITQEA-2205 | Inserir caracteres especiais no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Dist" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2206 @web @Tela
   Cenario: 2206 - Inserir letras no campo 'Dist'
@@ -243,7 +243,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2206 | BRITQEA-2206 | Inserir letras no campo 'RedeSP' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Dist" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2207 @web @Tela
   Cenario: 2207 - Inserir caracteres especiais no campo 'Transp'
@@ -253,7 +253,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2207 | BRITQEA-2207 | Inserir caracteres especiais no campo 'Transp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Transp" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2208 @web @Tela
   Cenario: 2208 - Inserir letras no campo 'Transp'
@@ -263,7 +263,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2208 | BRITQEA-2208 | Inserir letras no campo 'Transp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Transp" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2216 @web @Tela
   Cenario: 2216 - Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado
@@ -286,7 +286,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2211 | BRITQEA-2211 | Inserir caracteres especiais no campo 'Emp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Emp" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2212 @web @Tela
   Cenario: 2212 - Inserir letras no campo 'Emp'
@@ -296,7 +296,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2212 | BRITQEA-2212 | Inserir letras no campo 'Emp' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Emp" com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2213 @web @Tela
   Cenario: 2213 - Inserir caracteres especiais no campo 'Datas'
@@ -306,7 +306,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2213 | BRITQEA-2213 | Inserir caracteres especiais no campo 'Datas' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher os campos Datas com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2214 @web @Tela
   Cenario: 2214 - Inserir letras no campo 'Datas'
@@ -316,7 +316,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2214 | BRITQEA-2214 | Inserir letras no campo 'Datas' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher os campos Datas com o valor "ABCDEF"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos."
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
   @BRITQEA2215 @web @Tela
   Cenario: 2215 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A'

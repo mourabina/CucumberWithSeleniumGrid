@@ -251,7 +251,7 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 
 	public String retornaMensagem() {
 		wait.until(ExpectedConditions.visibilityOf(this.inpe2.getMsg()));
-		addEvidenciaWeb("Mensagem Exibida" + this.inpe2.getMsg().getText());
+		addEvidenciaWeb("Mensagem Exibida: " + this.inpe2.getMsg().getText());
 		return this.inpe2.getMsg().getText();
 	}
 

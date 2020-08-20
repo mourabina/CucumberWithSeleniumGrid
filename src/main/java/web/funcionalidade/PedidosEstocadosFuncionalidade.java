@@ -103,7 +103,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public String retornaMensagemExibida() {
 		wait.until(ExpectedConditions.visibilityOf(this.gerpd.getMsg()));
-		addEvidenciaWeb("Mensagem Exibida");
+		addEvidenciaWeb("Mensagem Exibida: " +this.gerpd.getMsg().getText());
 		return this.gerpd.getMsg().getText();
 	}
 

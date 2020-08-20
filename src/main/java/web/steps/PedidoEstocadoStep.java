@@ -236,4 +236,10 @@ public class PedidoEstocadoStep {
 		Assert.assertTrue("Número do Pedido não foi Gerado", this.pedidos.valdiarGeracaoNumeroPedido());
 
 	}
+
+	@Entao("^deve apresentar a mensagem \"([^\"]*)\" ou \"([^\"]*)\"$")
+	public void verificarMultiplasMensagens(String msg, String msg2) throws Throwable {
+		Assert.assertTrue("Mensagem não condiz com o esperado", this.pedidos.retornaMensagemExibida().contains(msg)
+				|| this.pedidos.retornaMensagemExibida().contains(msg2));
+	}
 }
