@@ -85,7 +85,7 @@ Funcionalidade: Pedido_Estocado SAD
       | 2191 | BRITQEA-2191 | Inserir caracteres especiais no campo 'Filial' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
     Quando preencher o campo "Filial" com o valor "!@#$%&*"
-    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" ou "Invalid character in numeric fields"
+    Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" 
  
   @BRITQEA2192 @web @Tela
   Cenario: 2192 - Inserir letras no campo 'Filial'

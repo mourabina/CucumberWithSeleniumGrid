@@ -261,6 +261,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void acionarBtnExecutarPedido() {
+		wait.until(ExpectedConditions.elementToBeClickable(this.gerpd.getBt_ExecutarPedido()));
 		this.gerpd.getBt_ExecutarPedido().click();
 	}
 

@@ -128,7 +128,7 @@ Funcionalidade: Pedido_Cross SAD
       | 2240 | BRITQEA-2240 | Inserir caracteres especiais no campo 'Regional' | Hilário Bina     | S1     |
     E que estou na tela "INPE2"
     Quando preencho o campo "Regional" com o valor "@#$%&*~"
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" ou "Invalid character in numeric fields"
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" 
 
   @BRITQEA2241 @web @Tela
   Cenario: 2241 - Inserir letras no campo 'Regional'
