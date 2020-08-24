@@ -128,6 +128,6 @@ Funcionalidade: Turno CD e RF
       | id   | Numero do CT | Nome do CT                   | Nome sdo executor    | Sprint |
       | 5291 | BRITQEA-5291 | Manutenção de turno do SADRF | Matheus Machado Luiz | S1     |
     E que estou na tela "RFA03"
-		E consulto o turno de hoje
-		Quando submeto o registro com os dados alterados 
-		Então o registro deve ser alterado
+    E consulto o turno de hoje
+    Quando submeto o registro com os dados alterados
+    Então o registro deve ser alterado

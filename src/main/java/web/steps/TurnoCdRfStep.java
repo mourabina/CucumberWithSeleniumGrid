@@ -16,7 +16,7 @@ public class TurnoCdRfStep {
 		this.turnos = new TurnoCD_RFFuncionalidade();
 	}
 
-	@Quando("^pressiono enter após preencher o campo com \"([^\"]*)\"$")
+	@Quando("^pressiono enter após preencher o campo com \"(.*)\"$")
 	public void preencherCampoEConfirmar(String valor) {
 		this.turnos.preencherCampo(valor);
 		this.turnos.pressionarEnter();
