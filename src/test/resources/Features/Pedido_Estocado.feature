@@ -318,7 +318,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher os campos Datas com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2215 @web @Tela
+  @BRITQEA2215 @web 
   Cenario: 2215 - Incluir e executar pedido estocado - Campo 'Classifc.Ped' - 'A'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
