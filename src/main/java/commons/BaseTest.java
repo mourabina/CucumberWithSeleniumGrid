@@ -59,6 +59,7 @@ public class BaseTest {
 		webDriver = webApplication.getDriver();
 		webDriver.manage().window().fullscreen();
 		wait = new WebDriverWait(webDriver, 80);
+		shortWait = new WebDriverWait(webDriver, 15);
 	}
 
 	/**
