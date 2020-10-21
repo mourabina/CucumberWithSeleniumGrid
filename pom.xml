@@ -7,6 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Big automation</name>
 	<description>	</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
