@@ -308,7 +308,7 @@ Funcionalidade: 1.4 - Recebimento - Obter Agendamento
     E estou executando o teste
       | id    | Número do CT   | Nome do CT                                                                                            | Nome do executor | Sprint |
       | 10019 | ISDSTBOF-10019 | Validar Pesquisa atraves dos campos 'Unidade de Negocio' e 'Situação(Recebimento ainda a ser criado)' | HIlário Bina     | T1     |
-    E utilizando o tipo de unidade "Centro de Distribuição" com a unidade "7467 - CENTRO DIST MURIBECA"
+    E utilizando o tipo de unidade "Centro de Distribuição" com a unidade "7458 - CENTRO DIST PIRAJA"
     E Acesso a tela "Recebimento" > "Visualizar Recebimento"
     Quando efetuo uma pesquisa atraves do campo Undiade de Negocio e no campo "Situacao" seleciono o valor "Recebimento ainda a ser criado" (Visualizar Recebimento)
     Entao o campo "Situação" deve conter o valor "Recebimento ainda a ser criado" no Grid de Resultado

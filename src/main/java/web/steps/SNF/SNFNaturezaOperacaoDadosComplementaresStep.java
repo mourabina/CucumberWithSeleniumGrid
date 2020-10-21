@@ -610,4 +610,8 @@ public class SNFNaturezaOperacaoDadosComplementaresStep {
 
 	}
 
+	@E("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\" na natureza de op$")
+	public void preenchimentoDoCampoComValores(String campo, String valor) {
+		this.adn.preencherCampoSelecao(campo, valor);
+	}
 }

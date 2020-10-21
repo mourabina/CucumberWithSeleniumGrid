@@ -12,7 +12,7 @@ public class GeracaoData extends BaseTest {
 
 	public static String retornaDataAtual() {
 		Date data = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 		return sdf.format(data).toString();
 	}

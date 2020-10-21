@@ -415,7 +415,7 @@ Funcionalidade: 17.3 - Natureza de Operação e Dados Complementares
     E utilizando o tipo de unidade "Centro de Distribuição" com a unidade "7467 - CENTRO DIST MURIBECA"
     E Acesso a tela "Parametrizacoes Fiscais" > "Parametros Gerais" > "Natureza de Operacao"
     Quando clico no botao Mais
-    E preencho o campo "Descricao de Natureza de Operacao" com o valor "ASS77777@#%&*!"
+    E preencho o campo "Descricao de Natureza de Operacao" com o valor "ASS77777@#%&*!" na natureza de op
     Entao deve ser apresentado o valor "ASS77777@#%&*!" digitado
 
   @ISDSTBOF14100 @webSNF @TelaSNF

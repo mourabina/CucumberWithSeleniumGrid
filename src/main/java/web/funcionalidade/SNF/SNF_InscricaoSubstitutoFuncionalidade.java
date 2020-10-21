@@ -334,16 +334,15 @@ public class SNF_InscricaoSubstitutoFuncionalidade extends BaseTest {
 	}
 
 	public String retornaMensagemAddInscricSubstituto() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='alert alert-success sticky-top']")));
 		addEvidenciaWeb("Mensagem Exibida");
 		return this.insc.getMsg().getText();
 
 	}
 
 	public void alterarValorCampoInscricaoSubstituto() {
-		// this.load.loading();
 		this.insc.getInscricaoSubstituto().clear();
 		this.insc.getInscricaoSubstituto().sendKeys(GeradorNumeroRandomico.geraNumeroQtde(11));
 		this.insc.getButtonSalvar().click();
-		this.load.loading();
 	}
 }
