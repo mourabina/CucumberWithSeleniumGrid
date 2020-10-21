@@ -42,7 +42,7 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando acionar o botão deletar
-    Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **"
+    Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **" na CPT85
 
   @BRITQEA827 @web
   Cenario: 827 - Alterar agendamento via tela 'CPT85'
@@ -56,9 +56,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando pesquisar a agenda
     E altero as informacoes da Agenda e clico em Alterar
-    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***" na CPT85
 
-  @BRITQEA946 @web @Tela
+  @BRITQEA946 @web @TelaSAD
   Cenario: 946 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'S' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -71,7 +71,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA2845 @web  @Tela
+  @BRITQEA2845 @web  @TelaSAD
   Cenario: 2845 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -84,7 +84,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA947 @web @Tela
+  @BRITQEA947 @web @TelaSAD
   Cenario: 947 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' =  'S' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -97,7 +97,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA950 @web @Tela
+  @BRITQEA950 @web @TelaSAD
   Cenario: 950 - Incluir criar agendamento - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -110,7 +110,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA952 @web @Tela
+  @BRITQEA952 @web @TelaSAD
   Cenario: 952 -  Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'N' e 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -124,9 +124,9 @@ Funcionalidade: Agendamento SAD
     E altero as informacoes da Agenda e aciono o botao Alterar
       | Transportadora | Contato      | Fone      | Perecivel | Alto Risco |
       | BigAutomacao   | Sr Automacao | 11 525289 | N         | S          |
-    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***" na CPT85
 
-  @BRITQEA954 @web @Tela
+  @BRITQEA954 @web @TelaSAD
   Cenario: 954 -  Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'S' e 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -140,9 +140,9 @@ Funcionalidade: Agendamento SAD
     E altero as informacoes da Agenda e aciono o botao Alterar
       | Transportadora | Contato      | Fone      | Perecivel | Alto Risco |
       | BigAutomacao   | Sr Automacao | 11 525289 | S         | N          |
-    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***" na CPT85
 
-  @BRITQEA955 @web @Tela
+  @BRITQEA955 @web @TelaSAD
   Cenario: 955 - Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -156,9 +156,9 @@ Funcionalidade: Agendamento SAD
     E altero as informacoes da Agenda e aciono o botao Alterar
       | Transportadora | Contato      | Fone      | Perecivel | Alto Risco |
       | BigAutomacao   | Sr Automacao | 11 525289 | S         | S          |
-    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***" na CPT85
 
-  @BRITQEA956 @web @Tela
+  @BRITQEA956 @web @TelaSAD
   Cenario: 956 - Alterar agenda - Campo 'Perecivel' & 'Alto Risco' = 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -172,9 +172,9 @@ Funcionalidade: Agendamento SAD
     E altero as informacoes da Agenda e aciono o botao Alterar
       | Transportadora | Contato      | Fone      | Perecivel | Alto Risco |
       | BigAutomacao   | Sr Automacao | 11 525289 | N         | N          |
-    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***"
+    Entao deve ser exibido a mensagem "[1] ATENÇÃO *** ALTERACAO EFETUADO COM SUCESSO ***" na CPT85
 
-  @BRITQEA972 @web @Tela
+  @BRITQEA972 @web @TelaSAD
   Cenario: 972 -   Incluir criar agendamento - Campo 'Agenda' preenchido
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -185,9 +185,9 @@ Funcionalidade: Agendamento SAD
       | Agenda | Contato     | Fone        | Perecivel | Alto Risco |
       |   0005 | Sr Selenium | 11 31314040 | N         | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] 5 *** AGENDA NAO PODE SER INFORMADA NA INCLUSAO ***"
+    Entao deve ser exibido a mensagem "[1] 5 *** AGENDA NAO PODE SER INFORMADA NA INCLUSAO ***" na CPT85
 
-  @BRITQEA973 @web @Tela
+  @BRITQEA973 @web @TelaSAD
   Cenario: 973 -  Incluir criar agendamento - 'Transportadora' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -198,9 +198,9 @@ Funcionalidade: Agendamento SAD
       | Contato     | Fone        | Perecivel | Alto Risco |
       | Sr Selenium | 11 31314040 | N         | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
+    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **" na CPT85
 
-  @BRITQEA974 @web @Tela
+  @BRITQEA974 @web @TelaSAD
   Cenario: 974 -  Incluir criar agendamento - 'Contato' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -211,9 +211,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Fone        | Perecivel | Alto Risco |
       | TransAutomação | 11 31314040 | N         | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **"
+    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **" na CPT85
 
-  @BRITQEA975 @web @Tela
+  @BRITQEA975 @web @TelaSAD
   Cenario: 975 -  Incluir criar agendamento - 'Fone' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -224,9 +224,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | N         | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
+    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **" na CPT85
 
-  @BRITQEA976 @web @Tela
+  @BRITQEA976 @web @TelaSAD
   Cenario: 976 -  Incluir criar agendamento - 'Perecivel' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -237,9 +237,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA2843 @web @Tela
+  @BRITQEA2843 @web @TelaSAD
   Cenario: 2843 -  Inserir Letras (diferentes de 'S' ou 'N') - Campo `Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -250,9 +250,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | N         | X          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] X ** RISCO DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] X ** RISCO DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA977 @web @Tela
+  @BRITQEA977 @web @TelaSAD
   Cenario: 977 -  Incluir criar agendamento - 'Alto Risco' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -263,9 +263,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel |
       | TransAutomação | Sr Selenium | 11 31314040 | N         |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] ** RISCO DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] ** RISCO DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA985 @web @Tela
+  @BRITQEA985 @web @TelaSAD
   Cenario: 985 -  Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -276,9 +276,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | S         | D          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] D ** RISCO DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] D ** RISCO DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA986 @web @Tela
+  @BRITQEA986 @web @TelaSAD
   Cenario: 986 - Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -289,9 +289,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | D         | S          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] D ** PERECIVEL DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] D ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA992 @web @Tela
+  @BRITQEA992 @web @TelaSAD
   Cenario: 992 -  Inserir Agenda - Data Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -302,9 +302,9 @@ Funcionalidade: Agendamento SAD
       | Data Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       |            050216 | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] 50216 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
+    Entao deve ser exibido a mensagem "[1] 50216 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **" na CPT85
 
-  @BRITQEA993 @web @Tela
+  @BRITQEA993 @web @TelaSAD
   Cenario: 993 -  Inserir Agenda - Hora Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -315,9 +315,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
+    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **" na CPT85
 
-  @BRITQEA994 @web @Tela
+  @BRITQEA994 @web @TelaSAD
   Cenario: 994 -  Inserir Caracteres Especiais - Campo 'Data Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -328,9 +328,9 @@ Funcionalidade: Agendamento SAD
       | Data Agenda | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | !@#$%&*~    | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao o campo "Data Agenda" deve esta vazio
+    Entao o campo "Data Agenda" deve esta vazio na CPT85
 
-  @BRITQEA995 @web @Tela
+  @BRITQEA995 @web @TelaSAD
   Cenario: 995 -  Inserir Letras - Campo 'Data Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -341,9 +341,9 @@ Funcionalidade: Agendamento SAD
       | Data Agenda | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | Agenda      | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao o campo "Data Agenda" deve esta vazio
+    Entao o campo "Data Agenda" deve esta vazio na CPT85
 
-  @BRITQEA996 @web @Tela
+  @BRITQEA996 @web @TelaSAD
   Cenario: 996 -  Inserir Caracteres Especiais - Campo 'Hora Prev Entrada'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -354,9 +354,9 @@ Funcionalidade: Agendamento SAD
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | !@$%&*~           | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao o campo "Hora Prev Entrada" deve esta vazio
+    Entao o campo "Hora Prev Entrada" deve esta vazio na CPT85
 
-  @BRITQEA2841 @web @Tela
+  @BRITQEA2841 @web @TelaSAD
   Cenario: 2841 -  Inserir Caracteres Especiais - Campo 'Fone'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -367,9 +367,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone      | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | !@$%^&*() | S         | S          |
     Quando clico no botao incluir
-    Entao o campo "Fone" deve esta vazio
+    Entao o campo "Fone" deve esta vazio na CPT85
 
-  @BRITQEA997 @web @Tela
+  @BRITQEA997 @web @TelaSAD
   Cenario: 997 -  Inserir Letras - Campo 'Hora Prev Entrada'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -380,9 +380,9 @@ Funcionalidade: Agendamento SAD
       | Hora Prev Entrada | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | ABCD              | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando clico no botao incluir
-    Entao o campo "Hora Prev Entrada" deve esta vazio
+    Entao o campo "Hora Prev Entrada" deve esta vazio na CPT85
 
-  @BRITQEA1002 @web @Tela
+  @BRITQEA1002 @web @TelaSAD
   Cenario: 1002 -   Inserir Caracteres Especiais - Campo 'Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -390,9 +390,9 @@ Funcionalidade: Agendamento SAD
       | 1002 | BRITQEA-1002 | Inserir Caracteres Especiais - Campo 'Agenda' | Hilário Bina     | S3     |
     E que estou na tela "CPT85"
     Quando preencho o campo "Agenda" com os valores "~!@#$%&*"
-    Entao o campo "Agenda" deve esta vazio
+    Entao o campo "Agenda" deve esta vazio na CPT85
 
-  @BRITQEA1003 @web @Tela
+  @BRITQEA1003 @web @TelaSAD
   Cenario: 1003 -   Inserir Letras - Campo 'Agenda'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -400,9 +400,9 @@ Funcionalidade: Agendamento SAD
       | 1003 | BRITQEA-1003 | Inserir Letras - Campo 'Agenda' | Hilário Bina     | S3     |
     E que estou na tela "CPT85"
     Quando preencho o campo "Agenda" com os valores "ABCDE"
-    Entao o campo "Agenda" deve esta vazio
+    Entao o campo "Agenda" deve esta vazio na CPT85
 
-  @BRITQEA1004 @web @Tela
+  @BRITQEA1004 @web @TelaSAD
   Cenario: 1004 -  Alterar o valor campo 'Transportadora' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -414,9 +414,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Transportadora" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **"
+    Entao deve ser exibido a mensagem "[1] ** TRANSPORTADORA DEVE SER PREENCHIDA **" na CPT85
 
-  @BRITQEA1009 @web @Tela
+  @BRITQEA1009 @web @TelaSAD
   Cenario: 1009 -  Alterar o valor campo 'Contato' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -428,9 +428,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Contato" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **"
+    Entao deve ser exibido a mensagem "[1] ** CONTATO DEVE SER PREENCHIDO **" na CPT85
 
-  @BRITQEA1010 @web @Tela
+  @BRITQEA1010 @web @TelaSAD
   Cenario: 1010 -  Alterar o valor campo 'Fone' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -442,9 +442,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Fone" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **"
+    Entao deve ser exibido a mensagem "[1] ** TELEFONE DEVE SER PREENCHIDO **" na CPT85
 
-  @BRITQEA1011 @web @Tela
+  @BRITQEA1011 @web @TelaSAD
   Cenario: 1011 -  Alterar o valor campo 'Perecível' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -456,9 +456,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Perecivel" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA1012 @web @Tela
+  @BRITQEA1012 @web @TelaSAD
   Cenario: 1012 -  Alterar o valor campo 'Alto Risco' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -470,9 +470,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Alto Risco" deixando ele em branco, depois aciono o botao Alterar
-    Entao deve ser exibido a mensagem "[1] ** ALTO RISCO DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] ** ALTO RISCO DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA1013 @web @Tela
+  @BRITQEA1013 @web @TelaSAD
   Cenario: 1013 -  Alterar o valor campo 'Agenda' para Branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -486,7 +486,7 @@ Funcionalidade: Agendamento SAD
     E altero o campo "Agenda" deixando ele em branco, depois aciono o botao Alterar
     Entao deve ser exibido a mensagem no Alert "[1] *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***"
 
-  @BRITQEA1014 @web @Tela
+  @BRITQEA1014 @web @TelaSAD
   Cenario: 1014 -  Alterar Agenda - Hora Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -498,9 +498,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Hora Prev Entrada" para Hora anterior a atual, depois aciono o botao Alterar
-    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **"
+    Entao deve ser exibido a seguinte mensagem "[1] [HORA] ** HORA/MIN NAO PODE SER INFERIOR A HORA ATUAL **" na CPT85
 
-  @BRITQEA1015 @web @Tela
+  @BRITQEA1015 @web @TelaSAD
   Cenario: 1015 -   Alterar Agenda - Data Incorreta
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -512,9 +512,9 @@ Funcionalidade: Agendamento SAD
       | TransAutomação | Sr Selenium | 11 31314040 | S         | S          |
     Quando pesquisar a agenda
     E altero o campo "Data Prev Entrada" para "010115" depois clico em Alterar
-    Entao deve ser exibido a mensagem "[1] 10115 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **"
+    Entao deve ser exibido a mensagem "[1] 10115 ** PREVISAO ENTREGA NAO PODE SER INFERIOR A DATA DE HOJE **" na CPT85
 
-  @BRITQEA1019 @web @Tela
+  @BRITQEA1019 @web @TelaSAD
   Cenario: 1019 -   Inserir Caracteres Especiais - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -525,9 +525,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | @         | S          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] @ ** PERECIVEL DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] @ ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA1020 @web @Tela
+  @BRITQEA1020 @web @TelaSAD
   Cenario: 1020 -   Inserir Caracteres Especiais - Campo 'Alto Risco'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -538,9 +538,9 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | S         | @          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] @ ** RISCO DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] @ ** RISCO DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA2840 @web @Tela
+  @BRITQEA2840 @web @TelaSAD
   Cenario: 2840 -  Inserir Letras - Campo 'Fone'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -553,7 +553,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA2842 @web @Tela
+  @BRITQEA2842 @web @TelaSAD
   Cenario: 2842 -    Inserir Letras (diferentes de 'S' ou 'N') - Campo 'Perecível'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -564,7 +564,7 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | H         | N          |
     Quando clico no botao incluir
-    Entao deve ser exibido a mensagem "[1] H ** PERECIVEL DEVE SER "S" OU "N" **"
+    Entao deve ser exibido a mensagem "[1] H ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
   @BRITQEA2844 @web 
   Cenario: 2844 -    Consultar agendamento - Somente com o campo Data Agenda
@@ -575,4 +575,4 @@ Funcionalidade: Agendamento SAD
     E que estou na tela "CPT85"
     E preencho somente os campos de Datas e Hora
     Quando clico no botao consultar
-    Entao deve ser exibido a mensagem "[1] 0 *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***"
+    Entao deve ser exibido a mensagem "[1] 0 *** NUMERO DA AGENDA TEM QUE SER INFORMADO PARA CONSULTA DO PEDIDO ***" na CPT85

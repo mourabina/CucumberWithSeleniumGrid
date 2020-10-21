@@ -17,6 +17,19 @@ public enum CredentialsUsers implements AccountCredentialsUsers {
 			return "Aut1235";
 		}
 
-	}
+	},USER_WEB_SNF_QA {
+
+		@Override
+		public String user(String usuario) {
+			
+			return usuario;
+		}
+
+		@Override
+		public String password() {
+			return ",-RE6M|u1(8%gCp2_R;jwOH}yW|a0";
+		}
+		
+	},
 
 }

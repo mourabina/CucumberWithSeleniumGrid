@@ -17,6 +17,88 @@ public class VariaveisEstaticas {
 	private static String DESCRICAO;
 	private static String HORA;
 	private static List<Map<String, String>> map;
+	private static Map<String, String> LISTA;
+	private static String VALOR_GRID;
+	private static String CODIGO;
+
+	public static Map<String, String> getLISTA() {
+		return LISTA;
+	}
+
+	public static void setLISTA(Map<String, String> lISTA) {
+		LISTA = lISTA;
+	}
+
+	public static String getVALOR_GRID() {
+		return VALOR_GRID;
+	}
+
+	public static void setVALOR_GRID(String vALOR_GRID) {
+		VALOR_GRID = vALOR_GRID;
+	}
+
+	public static String getCODIGO() {
+		return CODIGO;
+	}
+
+	public static void setCODIGO(String cODIGO) {
+		CODIGO = cODIGO;
+	}
+
+	public static String getINSCRICAO_SUBSTITUTO() {
+		return INSCRICAO_SUBSTITUTO;
+	}
+
+	public static void setINSCRICAO_SUBSTITUTO(String iNSCRICAO_SUBSTITUTO) {
+		INSCRICAO_SUBSTITUTO = iNSCRICAO_SUBSTITUTO;
+	}
+
+	public static String getHORA_CRIACAO_INSCRICAO() {
+		return HORA_CRIACAO_INSCRICAO;
+	}
+
+	public static void setHORA_CRIACAO_INSCRICAO(String hORA_CRIACAO_INSCRICAO) {
+		HORA_CRIACAO_INSCRICAO = hORA_CRIACAO_INSCRICAO;
+	}
+
+	public static String getINSCRICAO_SUBSTITUTO_ALTERADA() {
+		return INSCRICAO_SUBSTITUTO_ALTERADA;
+	}
+
+	public static void setINSCRICAO_SUBSTITUTO_ALTERADA(String iNSCRICAO_SUBSTITUTO_ALTERADA) {
+		INSCRICAO_SUBSTITUTO_ALTERADA = iNSCRICAO_SUBSTITUTO_ALTERADA;
+	}
+
+	public static String getVALOR_USUARIO() {
+		return VALOR_USUARIO;
+	}
+
+	public static void setVALOR_USUARIO(String vALOR_USUARIO) {
+		VALOR_USUARIO = vALOR_USUARIO;
+	}
+
+	public static String getDESCRICAO_MENSAGEM_LEGAL() {
+		return DESCRICAO_MENSAGEM_LEGAL;
+	}
+
+	public static void setDESCRICAO_MENSAGEM_LEGAL(String dESCRICAO_MENSAGEM_LEGAL) {
+		DESCRICAO_MENSAGEM_LEGAL = dESCRICAO_MENSAGEM_LEGAL;
+	}
+
+	public static String getDESCRICAO_NOVA_MENSAGEM_LEGAL() {
+		return DESCRICAO_NOVA_MENSAGEM_LEGAL;
+	}
+
+	public static void setDESCRICAO_NOVA_MENSAGEM_LEGAL(String dESCRICAO_NOVA_MENSAGEM_LEGAL) {
+		DESCRICAO_NOVA_MENSAGEM_LEGAL = dESCRICAO_NOVA_MENSAGEM_LEGAL;
+	}
+
+	private static String INSCRICAO_SUBSTITUTO;
+	private static String HORA_CRIACAO_INSCRICAO;
+	private static String INSCRICAO_SUBSTITUTO_ALTERADA;
+	private static String VALOR_USUARIO;
+	private static String DESCRICAO_MENSAGEM_LEGAL;
+	private static String DESCRICAO_NOVA_MENSAGEM_LEGAL;
 
 	public static void setFILIAL(String fILIAL) {
 		FILIAL = fILIAL;

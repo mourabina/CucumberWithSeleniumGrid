@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/test/resources/Features/Turno.feature=UTF-8
+encoding//src/test/resources/Features/SAD=UTF-8
+encoding//src/test/resources/Features/SAD/Turno.feature=UTF-8
+encoding//src/test/resources/Features/SNF=UTF-8
 encoding/<project>=UTF-8

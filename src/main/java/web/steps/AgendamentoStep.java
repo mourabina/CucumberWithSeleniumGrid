@@ -141,7 +141,7 @@ public class AgendamentoStep {
 
 	}
 
-	@Entao("^deve ser exibido a mensagem \"(.*)\"$")
+	@Entao("^deve ser exibido a mensagem \"(.*)\" na CPT85$")
 	public void valdiarMensagemExibida(String msg) {
 		Assert.assertTrue("Mensagem não está igual ao esperado" + this.agenda.retornaMensagemExibida(), this.agenda.retornaMensagemExibida().contains(msg));
 
@@ -152,13 +152,13 @@ public class AgendamentoStep {
 		Assert.assertTrue("Mensagem não Encontrada", this.agenda.retornaMensagemAlert().contains(mmsg));
 	}
 
-	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\"$")
+	@Entao("^deve ser exibido a seguinte mensagem \"([^\"]*)\" na CPT85$")
 	public void deveSerExibidoASeguinteMensagem(String mensagem) {
 		mensagem = mensagem.replace("[HORA]", this.agenda.retornaValorCampo("Hora Prev Entrada").split(":")[0]);
 		Assert.assertTrue(this.agenda.retornaMensagemExibida().contains(mensagem));
 	}
 
-	@Entao("^o campo \"([^\"]*)\" deve esta vazio$")
+	@Entao("^o campo \"([^\"]*)\" deve esta vazio na CPT85$")
 	public void validarCampoVazio(String campo) {
 		Assert.assertTrue("Campo " + campo + " não Está Vazio", this.agenda.validaCampoVazio(campo));
 

@@ -57,7 +57,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando clico no botao Consultar Pedido
     Entao deve ser exibido no GRID o "Codigo do Produto" e a "Descricao do Produto"
 
-  @BRITQEA2169 @web @Tela
+  @BRITQEA2169 @web  @TelaSAD
   Cenario: 2169 - Inserir caracteres especiais no campo 'Pesquisa Item'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -67,7 +67,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Pesquisa" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2171 @web @Tela
+  @BRITQEA2171 @web  @TelaSAD
   Cenario: 2171 - Inserir letras no campo 'Pesquisa Item'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -77,7 +77,7 @@ Funcionalidade: Pedido_Estocado SAD
     E preencher o campo "Pesquisa" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2191 @web @Tela
+  @BRITQEA2191 @web  @TelaSAD
   Cenario: 2191 - Inserir caracteres especiais no campo 'Filial'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -87,7 +87,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Filial" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" 
  
-  @BRITQEA2192 @web @Tela
+  @BRITQEA2192 @web  @TelaSAD
   Cenario: 2192 - Inserir letras no campo 'Filial'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -97,7 +97,7 @@ Funcionalidade: Pedido_Estocado SAD
     E preencher o campo "Filial" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2193 @web @Tela
+  @BRITQEA2193 @web  @TelaSAD
   Cenario: 2193 - Inserir caracteres especiais no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -107,7 +107,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Comprador" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2194 @web @Tela
+  @BRITQEA2194 @web  @TelaSAD
   Cenario: 2194 - Inserir letras no campo 'Comprador'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -117,7 +117,7 @@ Funcionalidade: Pedido_Estocado SAD
     E preencher o campo "Comprador" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2195 @web @Tela
+  @BRITQEA2195 @web  @TelaSAD
   Cenario: 2195 - Consulta Tabela Compra - campo 'Comprador' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -127,11 +127,11 @@ Funcionalidade: Pedido_Estocado SAD
     E preencho os campos mais os campos de Data
       | Fornec  |
       | 3500684 |
-    E seleciono a opcao "T" no campo "Classif Ped"
+    E seleciono a opcao "T" no campo "Classif Ped" na GERPD
     Quando clico no botao Consultar Tabela de Compra
     Entao deve apresentar a mensagem "[1] 0 COMPRADOR NAO CADASTRADO"
 
-  @BRITQEA2196 @web @Tela
+  @BRITQEA2196 @web  @TelaSAD
   Cenario: 2196 - Inserir caracteres especiais no campo 'Fornec'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -141,17 +141,17 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Fornec" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2197 @web @Tela
+  @BRITQEA2197 @web  @TelaSAD
   Cenario: 2197 - Inserir letras no campo 'Fornec'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id   | Numero do CT | Nome do CT                       | Nome do executor | Sprint |
       | 2197 | BRITQEA-2197 | Inserir letras no campo 'Fornec' | Hiilário Bina    | S1     |
     E que estou na tela "GERPD"
-    E preencher o campo "Fornec" com o valor "ABCDEF"
+    E preencher o campo "Fornec" com o valor "ABCDEF" 
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2198 @web @Tela
+  @BRITQEA2198 @web  @TelaSAD
   Cenario: 2198 - Consulta Tabela Compra - campo 'Fornec' em branco
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -161,11 +161,11 @@ Funcionalidade: Pedido_Estocado SAD
     E preencho os campos mais os campos de Data
       | Comprador |
       |       028 |
-    E seleciono a opcao "T" no campo "Classif Ped"
+    E seleciono a opcao "T" no campo "Classif Ped" na GERPD
     Quando clico no botao Consultar Tabela de Compra
     Entao deve apresentar a mensagem "[1] 0 FORNECEDOR NAO CADASTRADO"
 
-  @BRITQEA2199 @web @Tela
+  @BRITQEA2199 @web  @TelaSAD
   Cenario: 2199 - Inserir caracteres especiais no campo 'Contato'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -175,7 +175,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Contato" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2200 @web @Tela
+  @BRITQEA2200 @web  @TelaSAD
   Cenario: 2200 - Inserir letras no campo 'Contato'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -185,7 +185,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Contato" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2201 @web @Tela
+  @BRITQEA2201 @web  @TelaSAD
   Cenario: 2201 - Inserir caracteres especiais no campo 'Evento'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -195,7 +195,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Evento" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2202 @web @Tela
+  @BRITQEA2202 @web  @TelaSAD
   Cenario: 2202 - Inserir letras no campo 'Evento'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -205,7 +205,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Evento" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2203 @web @Tela
+  @BRITQEA2203 @web  @TelaSAD
   Cenario: 2203 - Inserir caracteres especiais no campo 'RedeSP'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -215,7 +215,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "RedeSP" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2204 @web @Tela
+  @BRITQEA2204 @web  @TelaSAD
   Cenario: 2204 - Inserir letras no campo 'RedeSP'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -225,7 +225,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "RedeSP" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2205 @web @Tela
+  @BRITQEA2205 @web  @TelaSAD
   Cenario: 2205 - Inserir caracteres especiais no campo 'Dist'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -235,7 +235,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Dist" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2206 @web @Tela
+  @BRITQEA2206 @web  @TelaSAD
   Cenario: 2206 - Inserir letras no campo 'Dist'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -245,7 +245,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Dist" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2207 @web @Tela
+  @BRITQEA2207 @web  @TelaSAD
   Cenario: 2207 - Inserir caracteres especiais no campo 'Transp'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -255,7 +255,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Transp" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2208 @web @Tela
+  @BRITQEA2208 @web  @TelaSAD
   Cenario: 2208 - Inserir letras no campo 'Transp'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -265,7 +265,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Transp" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2216 @web @Tela
+  @BRITQEA2216 @web  @TelaSAD
   Cenario: 2216 - Consulta de produtos&itens sem preencher o campo 'Pesquisa Item' - estocado
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -278,7 +278,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando clico no botao Consultar Tabela de Compra
     Entao grid deve estar populada
 
-  @BRITQEA2211 @web @Tela
+  @BRITQEA2211 @web  @TelaSAD
   Cenario: 2211 - Inserir caracteres especiais no campo 'Emp'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -288,7 +288,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Emp" com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2212 @web @Tela
+  @BRITQEA2212 @web  @TelaSAD
   Cenario: 2212 - Inserir letras no campo 'Emp'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -298,7 +298,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher o campo "Emp" com o valor "ABCDEF"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2213 @web @Tela
+  @BRITQEA2213 @web  @TelaSAD
   Cenario: 2213 - Inserir caracteres especiais no campo 'Datas'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -308,7 +308,7 @@ Funcionalidade: Pedido_Estocado SAD
     Quando preencher os campos Datas com o valor "!@#$%&*"
     Entao deve apresentar a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields"
 
-  @BRITQEA2214 @web @Tela
+  @BRITQEA2214 @web  @TelaSAD
   Cenario: 2214 - Inserir letras no campo 'Datas'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste

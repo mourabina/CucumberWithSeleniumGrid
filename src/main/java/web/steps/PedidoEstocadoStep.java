@@ -65,8 +65,8 @@ public class PedidoEstocadoStep {
 		this.pedidos.incluirPrimeiroItem();
 	}
 
-	@Dado("^seleciono a opcao \"([^\"]*)\" no campo \"([^\"]*)\"$")
-	public void selecionarValorCampoComboBox(String valor, String campo) {
+	@Dado("^seleciono a opcao \"([^\"]*)\" no campo \"([^\"]*)\" na GERPD$")
+	public void PedEstocadoSelecionarValorCampoComboBox(String valor, String campo) {
 		this.pedidos.selecionarValorComboBox(campo, valor);
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 		this.pedidos.aguardaReload();
@@ -158,10 +158,6 @@ public class PedidoEstocadoStep {
 		Assert.assertTrue(this.pedidos.retornaMensagemExibida().contains(msg));
 	}
 
-	@Entao("^deve ser exibido o valor \"([^\"]*)\" no campo \"([^\"]*)\"$")
-	public void validarExibicaoValorCampo(String valor, String campo) {
-		Assert.assertEquals(valor, this.pedidos.retornaValorCampo(campo));
-	}
 
 	@Entao("^deve ser exibido no GRID o \"([^\"]*)\" e a \"([^\"]*)\"$")
 	public void valdiarExibicaoInfomacaoItensGRidResultado(String campo1, String campo2) {
