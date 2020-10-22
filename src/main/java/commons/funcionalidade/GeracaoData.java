@@ -16,6 +16,13 @@ public class GeracaoData extends BaseTest {
 
 		return sdf.format(data).toString();
 	}
+	
+	public static String retornaDataAtualAnoDoisDigitos() {
+		Date data = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+
+		return sdf.format(data).toString();
+	}
 
 	public static String retornaProxHora() {
 		GregorianCalendar gc = new GregorianCalendar();

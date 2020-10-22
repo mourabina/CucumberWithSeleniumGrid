@@ -24,8 +24,8 @@ public class AgendamentoStep {
 
 	@Dado("^preencho os campos de Datas e Hora$")
 	public void preenchoOsCampos(DataTable params) {
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
-		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 		this.agenda.preencherCampos(params);
 	}
@@ -72,7 +72,7 @@ public class AgendamentoStep {
 
 	@Quando("^altero as informacoes da Agenda e aciono o botao Alterar$")
 	public void alterarInformacoesAgendaClicarBotaoAlterar(DataTable params) {
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampos(params);
 		this.agenda.clicarBotaoAlterar();
 
@@ -86,30 +86,30 @@ public class AgendamentoStep {
 
 	@E("^preencho os campos de Hora$")
 	public void preenchoOsCamposDeHora(DataTable params) {
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 		this.agenda.preencherCampos(params);
 	}
 
 	@E("^preencho os campos de Data$")
 	public void preenchoOsCamposData(DataTable params) {
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
-		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaHoraAntesAtual());
 		this.agenda.preencherCampos(params);
 	}
 
 	@E("^preencho os campos de Hora e Data Entrada$")
 	public void validarPreenchimentoCamposDataAgendaLentras(DataTable params) {
-		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 		this.agenda.preencherCampos(params);
 	}
 
 	@E("^preencho os campos de Hora e Data Agenda$")
 	public void validarPreenchimentoCampoHoraPrevisEntradaLetras(DataTable params) {
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
-		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampos(params);
 	}
 
@@ -179,8 +179,8 @@ public class AgendamentoStep {
 
 	@E("^preencho somente os campos de Datas e Hora$")
 	public void preencherCampoDataHora(){
-		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtual());
-		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtual());
+		this.agenda.preencherCampoValor("Data Agenda", GeracaoData.retornaDataAtualAnoDoisDigitos());
+		this.agenda.preencherCampoValor("Data Prev Entrada", GeracaoData.retornaDataAtualAnoDoisDigitos());
 		this.agenda.preencherCampoValor("Hora Prev Entrada", GeracaoData.retornaProxHora());
 	}
 

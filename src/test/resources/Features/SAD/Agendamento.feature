@@ -42,7 +42,7 @@ Funcionalidade: Agendamento SAD
       | Transportadora | Contato     | Fone        | Perecivel | Alto Risco |
       | TransAutomação | Sr Selenium | 11 31314040 | N         | N          |
     Quando acionar o botão deletar
-    Entao deve ser exibido a mensagem "*** ESTA AGENDA ESTA CANCELADA **" na CPT85
+    Entao deve ser exibido a mensagem "*** ATENÇÃO! ESSA AGENDA ESTÁ CANCELADA ***" na CPT85
 
   @BRITQEA827 @web
   Cenario: 827 - Alterar agendamento via tela 'CPT85'
