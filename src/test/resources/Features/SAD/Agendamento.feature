@@ -6,7 +6,7 @@
 Funcionalidade: Agendamento SAD
 
   @BRITQEA824 @web
-  Cenario: 824 - Incluir criar agendamento via tela 'CPT851'
+  Cenario: 824 - Incluir criar agendamento via tela 'CPT85'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
       | id  | Numero do CT | Nome do CT                                 | Nome do executor | Sprint |

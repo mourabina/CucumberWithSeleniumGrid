@@ -20,6 +20,24 @@ public class VariaveisEstaticas {
 	private static Map<String, String> LISTA;
 	private static String VALOR_GRID;
 	private static String CODIGO;
+	private static String NUMERO_PEDIDO;
+	private static String NUMERO_AGENDA;
+
+	public static String getNUMERO_AGENDA() {
+		return NUMERO_AGENDA;
+	}
+
+	public static void setNUMERO_AGENDA(String nUMERO_AGENDA) {
+		NUMERO_AGENDA = nUMERO_AGENDA;
+	}
+
+	public static String getNUMERO_PEDIDO() {
+		return NUMERO_PEDIDO;
+	}
+
+	public static void setNUMERO_PEDIDO(String nUMERO_PEDIDO) {
+		NUMERO_PEDIDO = nUMERO_PEDIDO;
+	}
 
 	public static Map<String, String> getLISTA() {
 		return LISTA;
