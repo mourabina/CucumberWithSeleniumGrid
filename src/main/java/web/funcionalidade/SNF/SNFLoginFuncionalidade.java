@@ -25,7 +25,7 @@ public class SNFLoginFuncionalidade extends BaseTest {
 	}
 
 	public void loginSNF(String usuario) {
-		webDriver.get(Urls.snf_sit);
+		webDriver.get(Urls.snf_sa);
 		wait.until(ExpectedConditions.visibilityOf(this.login.getInputUser()));
 		this.login.getInputUser().sendKeys(usuario);
 		this.login.getInputPass().sendKeys(CredentialsUsers.USER_WEB_SNF_QA.password());
@@ -49,7 +49,7 @@ public class SNFLoginFuncionalidade extends BaseTest {
 		Select TipoUn = new Select(this.perfil.getSelectTipoUnidade());
 		wait.until(ExpectedConditions.elementToBeClickable(this.perfil.getSelectTipoUnidade()));
 		this.perfil.getSelectTipoUnidade().sendKeys(TipoUnidade);
-		if (!TipoUn.getFirstSelectedOption().getText().equals(TipoUnidade)) {
+		if (!TipoUn.getFirstSelectedOption().getText().contains(TipoUnidade)) {
 			this.setTipoUnidade(TipoUnidade);
 		}
 	}
@@ -64,5 +64,10 @@ public class SNFLoginFuncionalidade extends BaseTest {
 			Un = webDriver.findElement(By.xpath("//Select[@formcontrolname=\"buId\"]"));
 			Un.sendKeys(Unidade);
 		}
+	}
+	
+	public void LoginPerfil(String user, String tipoUn, String Un) {
+		this.loginSNF(user);
+		this.SelecionarPerfil(tipoUn, Un);
 	}
 }

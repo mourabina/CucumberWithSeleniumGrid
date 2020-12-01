@@ -3,6 +3,8 @@ package commons;
 import java.io.FileNotFoundException;
 
 import commons.funcionalidade.BodyManipulator;
+import commons.funcionalidade.GeracaoData;
+import commons.funcionalidade.VariaveisEstaticas;
 import io.restassured.RestAssured;
 
 public class SNFApi {
@@ -24,8 +26,10 @@ public class SNFApi {
 				.then().assertThat().statusCode(200).extract().path("token"));
 	}
 
-	public void prepareBody(String NF) {
+	public void generateJson(String NF) {
 		BodyManipulator.fillJson(BodyManipulator.getData(NF));
+		VariaveisEstaticas.setNOTA_FISCAL(GeracaoData.retornaHmmSS());
+		BodyManipulator.setBody(JsonManipulator.setValue(BodyManipulator.getBody(), "NR_DOCT_FISC_NFE", VariaveisEstaticas.getNOTA_FISCAL()));
 		BodyManipulator.generateBody();
 	}
 
@@ -40,6 +44,12 @@ public class SNFApi {
 
 	public static void setToken(String token) {
 		SNFApi.token = token;
+	}
+	
+	public void gerarNFModelo(String tipoPed, String modelo) throws FileNotFoundException {
+		this.generateToken();
+		this.generateJson(modelo+ " - " + tipoPed);
+		this.sendNF();
 	}
 
 }

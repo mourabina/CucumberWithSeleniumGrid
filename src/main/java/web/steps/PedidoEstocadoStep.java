@@ -30,15 +30,15 @@ public class PedidoEstocadoStep {
 	}
 
 	@Dado("^que tenha (\\d+) itens inclusos$")
-	public void incluirMaisItens(int qtde, DataTable params) {
-		this.preencherCamposObrigtorios(params);
+	public void incluirMaisItens(int qtde, DataTable params) throws ParseException {
+		this.preencherCamposObrigatorios(params);
 		this.pedidos.limparPedido(params);
 		this.pedidos.clicarBotaoConsultarTabelaCompra();
 		this.pedidos.incluirItens(qtde);
 	}
 
 	@Dado("preencho os campos mais os campos de Data")
-	public void preencherCamposObrigtorios(DataTable params) {
+	public void preencherCamposObrigatorios(DataTable params) throws ParseException {
 		this.pedidos.limparPedido(params);
 		this.incluirItem(params);
 	}
@@ -49,14 +49,14 @@ public class PedidoEstocadoStep {
 	}
 
 	@Dado("^que tenha um item excluido$")
-	public void adcionarExcluirItem(DataTable params) {
+	public void adcionarExcluirItem(DataTable params) throws ParseException {
 		this.incluirItem(params);
 		this.acionarBtnConsultar();
 		this.pedidos.excluirPrimeiroItem();
 	}
 
 	@Dado("^que tenha um item incluso$")
-	public void incluirItem(DataTable params) {
+	public void incluirItem(DataTable params) throws ParseException {
 		this.pedidos.preencherCampos(params);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 		this.pedidos.limparPedido(params);
@@ -121,13 +121,7 @@ public class PedidoEstocadoStep {
 
 	@Entao("^deve ser exibido as informacoes do pedido com as informacoes utilizadas na tela GERPD$")
 	public void validarExibicaoDadosPedidosEstocados() throws ParseException {
-		Assert.assertEquals(this.solpd.retornaValorCampo("Loja"), VariaveisEstaticas.getFILIAL());
-		Assert.assertEquals(this.solpd.retornaValorCampo("Grid Local"), VariaveisEstaticas.getCOMPRADOR());
-		Assert.assertEquals(this.solpd.retornaValorCampo("Produto"), VariaveisEstaticas.getCOD_PRODUTO());
-		Assert.assertEquals(this.solpd.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
-		Assert.assertTrue(GeracaoData.retornaDataFormatada(this.solpd.retornaValorCampo("Data").toString())
-				.contains(VariaveisEstaticas.getDATA_ENTRADA()));
-
+		this.solpd.validarPedido();
 	}
 
 	@Entao("^grid deve estar populada$")
@@ -192,7 +186,7 @@ public class PedidoEstocadoStep {
 	}
 
 	@Dado("^que tenha (\\d+) itens excluidos$")
-	public void excluirMultiplosItens(int qtde, DataTable params) {
+	public void excluirMultiplosItens(int qtde, DataTable params) throws ParseException {
 		this.incluirMaisItens(qtde, params);
 		this.acionarBtnConsultar();
 		this.pedidos.excluirMultiplosItens(qtde);
@@ -206,7 +200,7 @@ public class PedidoEstocadoStep {
 	}
 
 	@Dado("^que tenha um pedido com um item$")
-	public void executarPedidoComItem(DataTable params) {
+	public void executarPedidoComItem(DataTable params) throws ParseException {
 		this.incluirItem(params);
 		this.pedidos.limparPedido(params);
 	}

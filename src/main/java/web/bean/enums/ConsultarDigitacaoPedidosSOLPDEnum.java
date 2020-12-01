@@ -34,7 +34,7 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 	PRODUTO("Produto") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getTextProduto();
+			return consultarDigitacaoPedidosSOLPD.getInputProduto();
 		}
 	},
 	DATA("Data") {

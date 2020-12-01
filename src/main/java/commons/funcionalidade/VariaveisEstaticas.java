@@ -22,6 +22,25 @@ public class VariaveisEstaticas {
 	private static String CODIGO;
 	private static String NUMERO_PEDIDO;
 	private static String NUMERO_AGENDA;
+	private static String NOTA_FISCAL;
+
+	public static String getNOTA_FISCAL() {
+		return NOTA_FISCAL;
+	}
+
+	public static void setNOTA_FISCAL(String nOTA_FISCAL) {
+		NOTA_FISCAL = nOTA_FISCAL;
+	}
+
+	public static String getMODELO() {
+		return MODELO;
+	}
+
+	public static void setMODELO(String mODELO) {
+		MODELO = mODELO;
+	}
+
+	private static String MODELO;
 
 	public static String getNUMERO_AGENDA() {
 		return NUMERO_AGENDA;

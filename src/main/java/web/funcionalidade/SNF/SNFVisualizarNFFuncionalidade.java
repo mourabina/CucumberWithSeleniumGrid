@@ -20,12 +20,10 @@ import web.pages.SNF.SNFVisualizarNotasFiscaisPage;
 
 public class SNFVisualizarNFFuncionalidade extends BaseTest {
 
-	private SNFVisualizarNotasFiscaisPage NF;
 	private SNFVisualizarNotasFiscaisPage visualizar;
 	private waitLoading load;
 
 	public SNFVisualizarNFFuncionalidade() {
-		this.NF = new SNFVisualizarNotasFiscaisPage(webDriver);
 		this.visualizar = new SNFVisualizarNotasFiscaisPage(webDriver);
 		this.load = new waitLoading();
 	}
@@ -40,75 +38,76 @@ public class SNFVisualizarNFFuncionalidade extends BaseTest {
 
 	public void preencherCampoNumericoQtde(String elem, int qtde) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys(GeradorNumeroRandomico.geraNumeroQtde(qtde));
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys(GeradorNumeroRandomico.geraNumeroQtde(qtde));
 	}
 
 	public String obterValorNumericoRegex(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		return visualizar.getElement(this.NF).getAttribute("value").replaceAll("[/\\D/g]", "");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		return visualizar.getElement(this.visualizar).getAttribute("value").replaceAll("[/\\D/g]", "");
 	}
 
 	public void preencherCampoLetraVNF(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys("ABCD");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys("ABCD");
 		addEvidenciaWeb("Digitando Letras");
 	}
 
 	public void preencherCampoLetraEspeciaisVNF(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys("ABCD~!@#$%^&*()-+=\\/");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys("ABCD~!@#$%^&*()-+=\\/");
 		addEvidenciaWeb("Digitando Letras e Caracteres Especiasi");
 	}
 
 	public void preencherCampoCaracteresEspeciaisVNF(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys("~!@#$%^&*()-+=\\/");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys("~!@#$%^&*()-+=\\/");
 		addEvidenciaWeb("Digitando Caracteres Especiais");
 	}
 
 	public void preencherCampoDataIncorreta(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys("35/15/2019");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys("35/15/2019");
 		addEvidenciaWeb("Digitando Data Invalida");
-		this.NF.getInputPortifolio().click();
+		this.visualizar.getInputPortifolio().click();
 	}
 
 	public void preencherCampoDataCorreta(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys(GeracaoData.retornaDataAtual());
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys(GeracaoData.retornaDataAtual());
 		addEvidenciaWeb("Digitando Data valida");
 	}
+	
 
 	public void preencherCampoComNumeros(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys("1234567890");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys("1234567890");
 		addEvidenciaWeb("Digitando Valores Numericos");
 	}
 
 	public boolean verificarCampoVazio(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		return visualizar.getElement(this.NF).getAttribute("value").isEmpty();
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		return visualizar.getElement(this.visualizar).getAttribute("value").isEmpty();
 	}
 
 	public boolean verificarCampoSelecione(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		return visualizar.getElement(this.NF).getAttribute("value").equals("0: undefined");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		return visualizar.getElement(this.visualizar).getAttribute("value").equals("0: undefined");
 	}
 
 	public boolean verificarCampoLetra(String elem) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		return visualizar.getElement(this.NF).getAttribute("value").equals("ABCD");
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		return visualizar.getElement(this.visualizar).getAttribute("value").equals("ABCD");
 	}
 
 	public void preencherTodosCamposVNFe() {
@@ -149,23 +148,28 @@ public class SNFVisualizarNFFuncionalidade extends BaseTest {
 
 	public void preencherCamposPesquisas(String elem, String valor) {
 		SNF_VisualizarNF visualizar = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
-		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.NF));
-		visualizar.getElement(this.NF).sendKeys(valor);
-		this.NF.getButtonPesquisar().click();	
+		SeleniumRobot.MoveToElementWeb(visualizar.getElement(this.visualizar));
+		visualizar.getElement(this.visualizar).sendKeys(valor);
+		this.visualizar.getButtonPesquisar().click();
+		this.load.loading();
 		addEvidenciaWeb("Preenchedo o campo  " + elem + " com o valor " + valor);
 	}
 
-	public boolean pegarValirGridResultado(String campo,String valor) {
+	public boolean pegarValirGridResultado(String campo, String valor) {
 		this.load.loading();
-		wait.until(ExpectedConditions.elementToBeClickable(this.NF.getUnidadeDeNegocio()));
+		wait.until(ExpectedConditions.elementToBeClickable(this.visualizar.getUnidadeDeNegocio()));
 		List<WebElement> Values = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tbody/tr/td"));
 		List<WebElement> Header = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tr/th"));
 		Map<String, String> grid = new HashMap<String, String>();
-		for(int i = 0; i < Header.size() ; i++) {
+		for (int i = 0; i < Header.size(); i++) {
 			grid.put(Header.get(i).getText(), Values.get(i).getText());
 		}
 		addEvidenciaWeb("Pesquisa efetuada com sucesso atraves dos campos Unidade de Negocio e  " + campo);
 		return grid.get(campo).trim().equals(valor);
-}
+	}
+	
+	public void editarNF() {
+		this.visualizar.getButtonEditar().click();
+	}
 
 }

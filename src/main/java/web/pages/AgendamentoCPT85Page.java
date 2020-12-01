@@ -14,6 +14,9 @@ public class AgendamentoCPT85Page extends BaseTest {
 
 	@FindBy(id = "BTINQUIRY_FX")
 	private WebElement buttonConsultar;
+	
+	@FindBy(id = "Button1_FX")
+	private WebElement buttonConsultarPedido;	
 
 	@FindBy(id = "BTINCLUDE_FX")
 	private WebElement buttonIncluir;
@@ -131,6 +134,14 @@ public class AgendamentoCPT85Page extends BaseTest {
 
 	@FindBy(id = "alerta_sad")
 	private WebElement msgExibida;
+	
+	@FindBy(id = "Button4_FX")
+	private WebElement incluirPedido;
+	
+	@FindBy(id = "TL_REENVIO_FX")
+	private WebElement reenvioSNF;
+
+	
 
 	public AgendamentoCPT85Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
@@ -299,5 +310,16 @@ public class AgendamentoCPT85Page extends BaseTest {
 	public WebElement getGridResultadoTipoPedido() {
 		return gridResultadoTipoPedido;
 	}
-
+	
+	public WebElement getIncluirPedido() {
+		return incluirPedido;
+	}
+	
+	public WebElement getButtonConsultarPedido() {
+		return buttonConsultarPedido;
+	}
+	
+	public WebElement getReenvioSNF() {
+		return reenvioSNF;
+	}
 }

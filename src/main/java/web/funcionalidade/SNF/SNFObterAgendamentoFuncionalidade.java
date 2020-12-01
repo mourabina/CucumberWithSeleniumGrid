@@ -8,6 +8,7 @@ import commons.funcionalidade.GeracaoData;
 import commons.funcionalidade.waitLoading;
 import web.bean.enums.SNF_VisualizarNotaFiscal;
 import web.bean.interfaces.SNF_VisualizarRecebimento;
+import web.pages.SNF.SNFEditarRecebimentoPage;
 import web.pages.SNF.SNFVisualizarNotasFiscaisPage;
 import web.pages.SNF.SNFVisualizarRecebimentoPage;
 
@@ -16,10 +17,12 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 	private SNFVisualizarRecebimentoPage recebi;
 	private SNFVisualizarNotasFiscaisPage nf;
 	private waitLoading wl;
+	private SNFEditarRecebimentoPage editarRecebimento;
 
 	public SNFObterAgendamentoFuncionalidade() {
 		this.recebi = new SNFVisualizarRecebimentoPage(webDriver);
 		this.nf = new SNFVisualizarNotasFiscaisPage(webDriver);
+		this.editarRecebimento = new SNFEditarRecebimentoPage(webDriver);
 		this.wl = new waitLoading();
 	}
 
@@ -155,5 +158,15 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		this.wl.loading();
 		addEvidenciaWeb("Preenchedo o campo  " + elem + " com o valor " + valor);
 	}
-
+	
+	public void editarAgenda() {
+		this.recebi.getButtonEditar().click();
+		this.wl.loading();
+	}
+	
+	public void inserirPlaca() {
+		this.editarRecebimento.getInputPlaca().sendKeys("ABC-1234");
+		this.editarRecebimento.getButtonAtualizar().click();
+		this.wl.loading();		
+	}
 }

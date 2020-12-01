@@ -109,7 +109,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public void clicarBotaoConsultarTabelaCompra() {
 		VariaveisEstaticas.setFORNEC(this.retornaValorCampo("Fornec"));
-		VariaveisEstaticas.setDATA_ENTRADA(this.retornaValorCampo("Data 1"));
 		addEvidenciaWeb("Clicando no botão Consulta Tabela de Compra");
 		this.gerpd.getBt_consultarTabelaCompra().click();
 		this.aguardaReload();
@@ -241,6 +240,19 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.gerpd.getBt_incluir().click();
 		this.aguardaReload();
 	}
+	
+	public void incluirPrimeiroItemQtde(String qtde) {
+		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getCodItem().getAttribute("value"));
+		VariaveisEstaticas.setDESCRICAO(this.gerpd.getDescricaoItem().getAttribute("value"));
+		this.gerpd.getOpcaoItemCheckbox().click();
+		this.gerpd.getQtdeCompra().clear();
+		this.gerpd.getQtdeCompra().sendKeys(qtde);
+		addEvidenciaWeb("Incluindo primeiro item da lista no pedido");
+		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
+		this.gerpd.getBt_incluir().click();
+		this.acionarBtnExecutarPedido();
+		this.aguardaReload();
+	}
 
 	public void selecionarComboBox() {
 		this.gerpd.getOpcaoItemCheckbox().click();
@@ -270,7 +282,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		VariaveisEstaticas.setFILIAL(this.gerpd.getInputFlial().getAttribute("value"));
 		VariaveisEstaticas.setCOMPRADOR(this.gerpd.getInputComp().getAttribute("value"));
 		VariaveisEstaticas.setQUANT(this.gerpd.getQtdeCompra().getAttribute("value"));
-		VariaveisEstaticas.setDATA_ENTRADA(this.gerpd.getInputDatas1().getAttribute("value"));
 		VariaveisEstaticas.setCOD_PRODUTO(this.gerpd.getInpuPesqui().getAttribute("value"));
 		VariaveisEstaticas.setCLASSIF_PED(this.retornaValorCampoCombo("Classif Ped"));
 	}
@@ -320,7 +331,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 				String data = webDriver.findElement(By.id("panel_DATA_X_" + i)).getAttribute("value").toString();
 				if (cod.equals(codItem) && hora.contains(VariaveisEstaticas.getHORA()) && sit.equals(situacao)
 						&& fornec.equals(VariaveisEstaticas.getFORNEC())
-						&& VariaveisEstaticas.getDATA_ENTRADA().equals(GeracaoData.retornaDataFormatada(data))) {
+						&& GeracaoData.retornaDataFormatada(VariaveisEstaticas.getDATA_ENTRADA()).equals(GeracaoData.retornaDataFormatada(data))) {
 					registro = true;
 				}
 			}
@@ -334,7 +345,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		return registro;
 	}
 
-	public void limparPedido(DataTable params) {
+	public void limparPedido(DataTable params) throws ParseException {
 		this.clicarBtnConsultaPedido();
 		if (!SeleniumRobot.existElementWeb("//div[@id='alerta_sad']")) {
 			this.excluirTodosItensPedido();
@@ -342,17 +353,26 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.login.voltarHomePage();
 		this.login.acessarTela("GERPD");
 		this.preencherCampos(params);
-		this.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
+		this.preencherCampoValor("Data 1", GeracaoData.retornaDataFormatada(VariaveisEstaticas.getDATA_ENTRADA()));
 
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1510)
+		if (GeracaoData.retornaHoraAtual() >= 1610)
 			this.selecionarValorComboBox("HR Edi", "S");
 	}
 
 	public boolean valdiarGeracaoNumeroPedido() {
-		return this.gerpd.getMsg().getText().contains("Seu numero de requisição !");
-		
+		return this.gerpd.getMsg().getText().contains("Seu numero de requisição !");		
+	}
+	
+	
+	public void gerarPedidoEstocado(DataTable params, int quantidade) throws ParseException {
+		this.limparPedido(params);
+		this.preencherCampos(params);
+		this.preencherCampoValor("Data 1", GeracaoData.retornaDataFormatada(VariaveisEstaticas.getDATA_ENTRADA()));
+		this.salvarInformacoesPedido();
+		this.clicarBotaoConsultarTabelaCompra();
+		this.incluirPrimeiroItemQtde(Integer.toString(quantidade));
 	}
 }

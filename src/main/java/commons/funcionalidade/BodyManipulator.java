@@ -525,8 +525,9 @@ public class BodyManipulator {
 			default:
 				break;
 			}	
-		}
+		}	
 		bodyStr = bodyStr.concat("\"}");
+		bodyStr = bodyStr.replace("#\"", "~#230||||||||||||||||||#\"");
 	}
 
 	public static JSONObject getBody() {

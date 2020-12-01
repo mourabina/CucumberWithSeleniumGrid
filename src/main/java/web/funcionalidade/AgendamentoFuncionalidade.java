@@ -6,6 +6,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import commons.BaseTest;
+import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.datatable.DataTable;
 import web.bean.enums.AgendamentoCPT85Enum;
 import web.bean.interfaces.AgendamentoCPT85Interface;
@@ -79,6 +80,7 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		this.clicarBotaoIncluir();
 		wait.until(
 				ExpectedConditions.not(ExpectedConditions.attributeToBe(this.agenda.getInputAgenda(), "value", "0")));
+		VariaveisEstaticas.setNUMERO_AGENDA(this.agenda.getInputAgenda().getAttribute("value"));
 		addEvidenciaWeb("Criação da agenda");
 	}
 
@@ -108,5 +110,23 @@ public class AgendamentoFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Mensagens exibidas no Alert  " + texto);
         return texto;
 	}
-
+	
+	public void consultarPedido() {
+		this.agenda.getButtonConsultarPedido().click();
+		addEvidenciaWeb("Consultando pedido na agenda");
+	}
+	
+	public void IncluirPedido() {
+		this.agenda.getIncluirPedido().click();
+		addEvidenciaWeb("Botão incluir pedido ao agendamento acionado");
+	}
+	
+	public void finalizarAgendamento() {
+		this.agenda.getButtonFinalizar().click();
+		addEvidenciaWeb("Agendamento Finalizado");
+	}
+	
+	public void reenviarSNF() {
+		this.agenda.getReenvioSNF().click();
+	}
 }

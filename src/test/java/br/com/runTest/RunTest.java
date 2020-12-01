@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		"json:target/cucumber.json" }, features = {
 				".//src//test//resources//" }, glue = { "web.steps", "configuration", "commons"},
 
-		tags = { "@"})
+		tags = { "@Fluxo1"})
 
 public class RunTest extends BaseTest {
 	@After
