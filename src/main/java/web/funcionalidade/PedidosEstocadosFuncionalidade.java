@@ -353,7 +353,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.login.voltarHomePage();
 		this.login.acessarTela("GERPD");
 		this.preencherCampos(params);
-		this.preencherCampoValor("Data 1", GeracaoData.retornaDataFormatada(VariaveisEstaticas.getDATA_ENTRADA()));
+		this.preencherCampoValor("Data 1", GeracaoData.retornaDataFormatada(GeracaoData.retornaDataAtualMaisDias(1)));
 
 	}
 

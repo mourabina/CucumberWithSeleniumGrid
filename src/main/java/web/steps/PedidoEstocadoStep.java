@@ -58,6 +58,7 @@ public class PedidoEstocadoStep {
 	@Dado("^que tenha um item incluso$")
 	public void incluirItem(DataTable params) throws ParseException {
 		this.pedidos.preencherCampos(params);
+		String a = GeracaoData.retornaDataAtualMaisDias(1);
 		this.pedidos.preencherCampoValor("Data 1", GeracaoData.retornaDataAtualMaisDias(1));
 		this.pedidos.limparPedido(params);
 		this.pedidos.salvarInformacoesPedido();

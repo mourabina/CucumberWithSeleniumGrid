@@ -93,8 +93,8 @@ public class FluxoRecebimentoFuncionalidade extends BaseTest {
 		this.agendamento.consultarPedido();
 		this.agendamento.IncluirPedido();
 		this.agendamento.finalizarAgendamento();
-		Thread.sleep(15000);
-		this.agendamento.reenviarSNF();
+		//Thread.sleep(15000);
+		//this.agendamento.reenviarSNF();
 	}
 
 	public void consultarPedido(DataTable params) throws ParseException {
