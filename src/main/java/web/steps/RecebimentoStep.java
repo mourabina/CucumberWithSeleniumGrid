@@ -11,7 +11,7 @@ import web.funcionalidade.FluxoRecebimentoFuncionalidade;
 import web.funcionalidade.SNF.SNFLoginFuncionalidade;
 
 public class RecebimentoStep {
-
+	
 	private FluxoRecebimentoFuncionalidade fluxo;
 	private SNFApi api;
 	private SNFLoginFuncionalidade login;
@@ -47,4 +47,5 @@ public class RecebimentoStep {
 	@Então("^deve ser gerado a guia cega$")
 	public void validarGuia() {
 	}
+
 }
