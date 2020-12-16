@@ -23,9 +23,63 @@ public class VariaveisEstaticas {
 	private static String NUMERO_PEDIDO;
 	private static String NUMERO_AGENDA;
 	private static String NOTA_FISCAL;
+	private static String USER_SAD;
+	private static String FILIAL_SAD;
+	private static String DATA_EMISSAO;
+	private static String SERIE_NOTA;
+	private static String CNPJ_NOTA;
+	private static String AMBIENTE;
+
+	public static String getAMBIENTE() {
+		return AMBIENTE;
+	}
+
+	public static void setAMBIENTE(String aMBIENTE) {
+		AMBIENTE = aMBIENTE;
+	}
+
+	public static String getDATA_EMISSAO() {
+		return DATA_EMISSAO;
+	}
+
+	public static void setDATA_EMISSAO(String dATA_EMISSAO) {
+		DATA_EMISSAO = dATA_EMISSAO;
+	}
+
+	public static String getSERIE_NOTA() {
+		return SERIE_NOTA;
+	}
+
+	public static void setSERIE_NOTA(String sERIE_NOTA) {
+		SERIE_NOTA = sERIE_NOTA;
+	}
+
+	public static String getCNPJ_NOTA() {
+		return CNPJ_NOTA;
+	}
+
+	public static void setCNPJ_NOTA(String cNPJ_NOTA) {
+		CNPJ_NOTA = cNPJ_NOTA;
+	}
 
 	public static String getNOTA_FISCAL() {
 		return NOTA_FISCAL;
+	}
+
+	public static String getUSER_SAD() {
+		return USER_SAD;
+	}
+
+	public static void setUSER_SAD(String uSER_SAD) {
+		USER_SAD = uSER_SAD;
+	}
+
+	public static String getFILIAL_SAD() {
+		return FILIAL_SAD;
+	}
+
+	public static void setFILIAL_SAD(String fILIAL_SAD) {
+		FILIAL_SAD = fILIAL_SAD;
 	}
 
 	public static void setNOTA_FISCAL(String nOTA_FISCAL) {

@@ -127,8 +127,9 @@ public class SNFNaturezaOperacaoDadosComplementaresFuncionalidade extends BaseTe
         
 	}
 
-	public boolean pegarValirGridResultado(String campo, String valor) {
+	public boolean pegarValirGridResultado(String campo, String valor) throws InterruptedException {
 		this.load.loading();
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(this.nat.getInputCodigoNatureza()));
 		List<WebElement> Values = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tbody/tr/td"));
 		List<WebElement> Header = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tr/th"));

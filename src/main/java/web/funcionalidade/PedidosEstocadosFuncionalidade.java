@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -116,6 +117,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 
 	public void aguardaReload() {
 		waitForPageToLoad(webDriver);
+		webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 	}
 
 	public void verificarTodosResultadoGrid() {
@@ -358,7 +360,7 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1610)
+		if (GeracaoData.retornaHoraAtual() >= 1510)
 			this.selecionarValorComboBox("HR Edi", "S");
 	}
 
@@ -375,4 +377,6 @@ public class PedidosEstocadosFuncionalidade extends BaseTest {
 		this.clicarBotaoConsultarTabelaCompra();
 		this.incluirPrimeiroItemQtde(Integer.toString(quantidade));
 	}
+	
+	
 }

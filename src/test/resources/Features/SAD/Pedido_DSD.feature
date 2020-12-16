@@ -69,7 +69,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2819 @web
+  @BRITQEA2819 @web 
   Cenario: 2819 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'F'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -82,7 +82,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2818 @web
+  @BRITQEA2818 @web 
   Cenario: 2818 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'A'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -95,7 +95,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2817 @web
+  @BRITQEA2817 @web 
   Cenario: 2817 - Incluir e executar pedido CROSS - Campo 'Classifc Ped' - 'A'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -106,7 +106,7 @@ Funcionalidade: Pedido_Dsd
       | Comprador | Fornec  | Produto | Classif Ped |
       |       028 | 3512102 |    6814 | A           |
 
-  @BRITQEA2822 @web
+  @BRITQEA2822 @web 
   Cenario: 2822 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'M'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -119,7 +119,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2823 @web
+  @BRITQEA2823 @web 
   Cenario: 2823 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'N'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -132,7 +132,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2824 @web
+  @BRITQEA2824 @web 
   Cenario: 2824 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'O'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -145,7 +145,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2825 @web
+  @BRITQEA2825 @web 
   Cenario: 2825 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'P'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -158,7 +158,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2826 @web
+  @BRITQEA2826 @web 
   Cenario: 2826 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'S'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -171,7 +171,7 @@ Funcionalidade: Pedido_Dsd
     Quando acionar o botao Executar Pedido
     Entao deve apresentar a mensagem "Seu número de requisição !"
 
-  @BRITQEA2827 @web
+  @BRITQEA2827 @web 
   Cenario: 2827 - SAD -Incluir e executar pedido DSD - Campo 'ClassifcPed' - 'V'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste

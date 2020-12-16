@@ -18,7 +18,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao o campo "Agenda" deve ser preenchido com o valor da Agenda
 
-  @BRITQEA825 @web
+  @BRITQEA825 @web 
   Cenario: 825 - Consultar agendamento via tela 'CPT85'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -31,7 +31,7 @@ Funcionalidade: Agendamento SAD
     Quando pesquisar a agenda
     Entao deve retornar os dados da agenda
 
-  @BRITQEA826 @web
+  @BRITQEA826 @web 
   Cenario: 826 - Deletar agendamento via tela 'CPT85'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -44,7 +44,7 @@ Funcionalidade: Agendamento SAD
     Quando acionar o botão deletar
     Entao deve ser exibido a mensagem "*** ATENÇÃO! ESSA AGENDA ESTÁ CANCELADA ***" na CPT85
 
-  @BRITQEA827 @web
+  @BRITQEA827 @web 
   Cenario: 827 - Alterar agendamento via tela 'CPT85'
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste
@@ -566,7 +566,7 @@ Funcionalidade: Agendamento SAD
     Quando clico no botao incluir
     Entao deve ser exibido a mensagem "[1] H ** PERECIVEL DEVE SER "S" OU "N" **" na CPT85
 
-  @BRITQEA2844 @web 
+  @BRITQEA2844 @web  @TelaSAD
   Cenario: 2844 -    Consultar agendamento - Somente com o campo Data Agenda
     Dado que estou logado com usuario/filial "818181"/"7467"
     E estou executando o teste

@@ -78,7 +78,7 @@ public class SNFNaturezaOperacaoDadosComplementaresStep {
 	}
 
 	@Entao("^o campo \"([^\"]*)\" deve conter o valor \"([^\"]*)\" e o campo \"([^\"]*)\" o valor \"([^\"]*)\"$")
-	public void validarValoresGridResultado(String campo1, String valor1, String campo2, String valor2) {
+	public void validarValoresGridResultado(String campo1, String valor1, String campo2, String valor2) throws InterruptedException {
 		this.load.loading();
 		this.nat.pegarValorUnicoGridResultado(campo2);
 		Assert.assertTrue("Valor não está presente no Grid de Resultados",
@@ -94,7 +94,7 @@ public class SNFNaturezaOperacaoDadosComplementaresStep {
 
 	@Entao("^o campo \"([^\"]*)\" com \"([^\"]*)\" e \"([^\"]*)\" com \"([^\"]*)\" e \"([^\"]*)\" com \"([^\"]*)\"$")
 	public void resultadoPesquisaTresCampos(String campo1, String valor1, String campo2, String valor2, String campo3,
-			String valor3) {
+			String valor3) throws InterruptedException {
 		this.nat.pegarValorUnicoGridResultado(campo3);
 		Assert.assertTrue("Valor não está presente no Grid de Resultados",
 				this.nat.pegarValirGridResultado(campo1, valor1));
@@ -106,7 +106,7 @@ public class SNFNaturezaOperacaoDadosComplementaresStep {
 
 	@Entao("^o campo \"([^\"]*)\" com \"([^\"]*)\" e \"([^\"]*)\" com \"([^\"]*)\" e \"([^\"]*)\" com \"([^\"]*)\" e \"([^\"]*)\" com \"([^\"]*)\"$")
 	public void validarRetornoPesquisa(String campo1, String valor1, String campo2, String valor2, String campo3,
-			String valor3, String campo4, String valor4) {
+			String valor3, String campo4, String valor4) throws InterruptedException {
 		this.nat.pegarValorUnicoGridResultado(campo3);
 		Assert.assertTrue("Valor não está presente no Grid de Resultados",
 				this.nat.pegarValirGridResultado(campo1, valor1));
@@ -503,7 +503,7 @@ public class SNFNaturezaOperacaoDadosComplementaresStep {
 	}
 
 	@Entao("^deve ser apresentado os dados em nova pesquisa$")
-	public void verificarGridDeResultado() {
+	public void verificarGridDeResultado() throws InterruptedException {
 		this.load.loading();
 		this.adn.clicarButtonRetornar();
 		this.load.loading();

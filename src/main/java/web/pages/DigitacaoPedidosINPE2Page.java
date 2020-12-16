@@ -66,7 +66,7 @@ public class DigitacaoPedidosINPE2Page extends BaseTest {
 	@FindBy(id = "TL_HREDI")
 	private WebElement inputHREDI;
 
-	@FindBy(id = "EXEC_PED")
+	@FindBy(id = "EXEC_PED_FX")
 	private WebElement inputExecutarPedido;
 
 	@FindBy(id = "EXEC_REL")

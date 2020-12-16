@@ -224,6 +224,13 @@ public enum SNF_MensagemLegalEnum implements SNF_MenagemLegalInterface {
 			return mensagensLegais.getInputTipo();
 		}
 
+	},
+	ORDEM("Ordem") {
+		@Override
+		public WebElement getElement(SNFNaturezaOperacaoXMensagensLegaisPage mensagensLegais) {
+			return mensagensLegais.getOrdem();
+		}
+
 	};
 
 	SNF_MensagemLegalEnum(String s) {

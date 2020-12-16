@@ -30,6 +30,19 @@ public enum CredentialsUsers implements AccountCredentialsUsers {
 			return ",-RE6M|u1(8%gCp2_R;jwOH}yW|a0";
 		}
 		
+	},USER_WEB_SAD_SAMS {
+
+		@Override
+		public String user(String usuario) {
+			
+			return usuario;
+		}
+
+		@Override
+		public String password() {
+			return ",-RE6M|u1(8%gCp2_R;jwOH}yW|a0";
+		}
+		
 	},
 
 }

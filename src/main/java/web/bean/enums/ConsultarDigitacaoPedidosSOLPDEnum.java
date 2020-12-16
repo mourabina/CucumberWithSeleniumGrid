@@ -22,7 +22,7 @@ public enum ConsultarDigitacaoPedidosSOLPDEnum implements ConsultarDigitacaoPedi
 	FILIAL("Filial") {
 		@Override
 		public WebElement getElement(ConsultarDigitacaoPedidosSOLPDPage consultarDigitacaoPedidosSOLPD) {
-			return consultarDigitacaoPedidosSOLPD.getTextLoja();
+			return consultarDigitacaoPedidosSOLPD.getInputFilial();
 		}
 	},
 	COMPR("Compr") {

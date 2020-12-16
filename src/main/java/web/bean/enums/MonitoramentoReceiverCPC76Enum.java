@@ -36,6 +36,24 @@ public enum MonitoramentoReceiverCPC76Enum implements MonitoramentoReceiverCPC76
 		public WebElement getElement(MonitoramentoReceiverCPC76Page monitoramentoReceiverCPC76) {
 			return monitoramentoReceiverCPC76.getCodCesta();
 		}
+	},
+	AGENDA("Agenda") {
+		@Override
+		public WebElement getElement(MonitoramentoReceiverCPC76Page monitoramentoReceiverCPC76) {
+			return monitoramentoReceiverCPC76.getInputAgenda();
+		}
+	},
+	GUIA_CEGA_GRID_UM("Guia Cega UM") {
+		@Override
+		public WebElement getElement(MonitoramentoReceiverCPC76Page monitoramentoReceiverCPC76) {
+			return monitoramentoReceiverCPC76.getInputGuia1();
+		}
+	},
+	STATUS_GRID("Status Grid") {
+		@Override
+		public WebElement getElement(MonitoramentoReceiverCPC76Page monitoramentoReceiverCPC76) {
+			return monitoramentoReceiverCPC76.getInputStatus1();
+		}
 	};
 
 	MonitoramentoReceiverCPC76Enum(String s) {

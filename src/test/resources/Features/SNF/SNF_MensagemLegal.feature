@@ -5,7 +5,7 @@
 @MensagemLegal
 Funcionalidade: 17.2 - Mensagem Legal
 
-  @ISDSTBOF13285 @webSNF
+  @ISDSTBOF13285 @webSNF @TelaSNF
   Cenario: 13285 - Insersão de Data menor que Data Atual no campo 'Data Início da Vigência'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -21,7 +21,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito a data de "Fim da Vigencia" menor que a Data "Inicio da Vigencia"
     Entao deve ser exibido a seguinte mensagem "Intervalo de Datas da vigência inválidas."
 
-  @ISDSTBOF13286 @webSNF
+  @ISDSTBOF13286 @webSNF @TelaSNF
   Cenario: 13286 - Validar o Clicar no Botão 'Histórico' da Aba Nacional
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -36,7 +36,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Historico da aba "Aba Nacional"
     Entao deve ser exibida a tela Historico com o valor "SVCautqea" no campo Usuario
 
-  @ISDSTBOF13287 @webSNF @BugAberto
+  @ISDSTBOF13287 @webSNF @TelaSNF
   Cenario: 13287 - Validar o Clicar no Botão 'Histórico' da Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -50,7 +50,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Historico da aba "Aba Estadual"
     Entao deve ser exibida a tela Historico com o valor "SVCautqea" no campo Usuario
 
-  @ISDSTBOF13288 @webSNF @Restes
+  @ISDSTBOF13288 @webSNF @TelaSNF
   Cenario: 13288 - Validar o Clicar no Botão 'Histórico' da Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -64,7 +64,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Historico da aba "Aba Filial"
     Entao deve ser exibida a tela Historico com o valor "SVCautqea" no campo Usuario
 
-  @ISDSTBOF13289 @webSNF
+  @ISDSTBOF13289 @webSNF @TelaSNF
   Cenario: 13289 - Validar o Clicar no Botão 'Retornar'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -77,7 +77,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Retornar
     Entao deve ser exibida a tela Natureza de Operacao
 
-  @ISDSTBOF13290 @webSNF
+  @ISDSTBOF13290 @webSNF @TelaSNF
   Cenario: 13290 - Validar Calendário do campo ' Visualização por Local na data de referência'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -89,7 +89,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao o valor apresentado no campo Visualização por Local na data de referência deve ser igual a data atual
 
-  @ISDSTBOF13291 @webSNF
+  @ISDSTBOF13291 @webSNF @TelaSNF
   Cenario: 13291 - Validar exibição do campo 'Visualização por Local na data de referência'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -103,7 +103,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba Nacional
     Entao deve ser exibido no campo Visualização por Local na data de referência a mensagem selecionada da aba "Nacional"
 
-  @ISDSTBOF13293 @webSNF
+  @ISDSTBOF13293 @webSNF @TelaSNF
   Cenario: 13293 - Validar Campo 'Natureza de operação' não Editavel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -115,7 +115,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao deve ser exibido o campo Natureza de operacao nao Editavel
 
-  @ISDSTBOF13295 @webSNF
+  @ISDSTBOF13295 @webSNF @TelaSNF
   Cenario: 13295 - Validar se a Visualização está respeitando a Ordem selecionada no Grid de Resultados
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -130,7 +130,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma nova Mensagem Legal para a Aba Nacional
     Entao deve ser exibido as duas mensagens selecionada no campo Visualização por local na data de referência
 
-  @ISDSTBOF13296 @webSNF
+  @ISDSTBOF13296 @webSNF @TelaSNF
   Cenario: 13296 - Validar Ação de Clicar na LUPA
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -145,7 +145,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E preencho os campos "Adicionar Registro Local", "Adicionar Registro Tipo" com os valores "Dados adicionais", "Padrão" e clico em  pesquisar
     Entao deve ser apresentado os campos "Codigo" e "Descricao" vazios
 
-  @ISDSTBOF13305 @webSNF
+  @ISDSTBOF13305 @webSNF @TelaSNF
   Cenario: 13305 - Validar campo 'Usuário' da Aba Última Atualização' disponivel somente Leitura
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -157,7 +157,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal no final da pagina
     Entao deve ser apresentado o campo "Usuario" disponivel somente para leitura
 
-  @ISDSTBOF13325 @webSNF
+  @ISDSTBOF13325 @webSNF @TelaSNF
   Cenario: 13325 - Validar opções do campo 'Local da Mensagem' - Item
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -171,7 +171,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba Nacional
     Entao deve ser exibido na coluna "Mensagem Legal" do Grid a mensagem selecionada
 
-  @ISDSTBOF13327 @webSNF
+  @ISDSTBOF13327 @webSNF @TelaSNF
   Cenario: 13327 - Validar Botão 'Editar ' do Grid de Resultados da Tela de Natureza de Operação X Mensagem Legal'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -185,8 +185,8 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba Nacional
     E clico no botao Editar da aba Nacional
     Entao deve ser exibido a Tela "Editar Registro" com o campo "Mensagem Legal" preenchido
-
-  @ISDSTBOF13328 @webSNF
+ 
+  @ISDSTBOF13328 @webSNF @TelaSNF
   Cenario: 13328 - Campo 'Data' da Aba Dados da natureza de operação' disponivel somente Leitura
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -198,7 +198,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal no final da pagina
     Entao deve ser apresentado o campo "Data" disponivel somente para leitura
 
-  @ISDSTBOF13330 @webSNF
+  @ISDSTBOF13330 @webSNF @TelaSNF
   Cenario: 13330 - Validar Exibição de Lista do campo Estado - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -211,7 +211,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no campo "Estado" da aba "Aba Estadual"
     Entao deve ser exibido uma lista com o Estados Federativos do campo "Estado"
 
-  @ISDSTBOF13331 @webSNF
+  @ISDSTBOF13331 @webSNF @TelaSNF
   Cenario: 13331 - Validar Exibição de Lista do Campo Tipo de Negocio - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -224,7 +224,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no campo "Tipo de Negocio" da aba "Aba Estadual"
     Entao deve ser exibido as opcoes "Selecione...", "CD Virtual","Centro de Distribuição", "Clubes", "Escritório Central","Lojas", "Todos" no campo "Tipo de Negocio"
 
-  @ISDSTBOF13332 @webSNF
+  @ISDSTBOF13332 @webSNF @TelaSNF
   Cenario: 13332 - Validar a não Exibição de FN na lista do Campo Tipo de Negocio - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -237,7 +237,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no campo "Tipo de Negocio" da aba "Aba Estadual"
     Entao nao deve ser exibido o valor "FN" no campo "Tipo de Negocio"
 
-  @ISDSTBOF13335 @webSNF @BugAberto
+  @ISDSTBOF13335 @webSNF @TelaSNF
   Cenario: 13335 - Validar se a Visualização está respeitando a Ordem selecionada no Grid de Resultados aba Estadual - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -253,7 +253,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Estadual" com o valor "2"
     Entao deve ser exibido as duas mensagens selecionada no campo Visualização por local na data de referência
 
-  @ISDSTBOF13341 @webSNF
+  @ISDSTBOF13341 @webSNF @TelaSNF
   Cenario: 13341 - Validar Ação de Clicar na LUPA - Tela de Selecionar Mensagem Legal - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -266,7 +266,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico em pesquisar da tela Adicionar Resgistro da aba "Aba Estadual"
     Entao deve ser apresentado os campos "Codigo" e "Descricao" vazios
 
-  @ISDSTBOF13344 @webSNF
+  @ISDSTBOF13344 @webSNF @TelaSNF
   Cenario: 13344 -Inserir Data Invalida no campo 'Data Fim da Vigência' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -279,7 +279,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito o valor "35/15/XXXX" invalido no campo "Fim da Vigencia"
     Entao deve ser apresentado o valor "Invalid date" no campo "Fim da Vigencia"
 
-  @ISDSTBOF13345 @webSNF
+  @ISDSTBOF13345 @webSNF @TelaSNF
   Cenario: 13345 -Insersão de Data menor que Data Atual no campo 'Data Fim da Vigência' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -292,7 +292,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito no campo "Inicio da Vigencia" o valor menor que o campo "Fim da Vigencia"
     Entao deve ser exibido a seguinte mensagem "Intervalo de Datas da vigência inválidas."
 
-  @ISDSTBOF13348 @webSNF @BugAberto
+  @ISDSTBOF13348 @webSNF @TelaSNF
   Cenario: 13348 Clicar no Botão 'Histórico' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -305,7 +305,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no bota Historico da aba "Aba Estadual"
     Entao deve ser exibida a tela Historico com o valor "SVCautqea" no campo Usuario
 
-  @ISDSTBOF13349 @webSNF
+  @ISDSTBOF13349 @webSNF @TelaSNF
   Cenario: 13349 Clicar no Botão 'Retornar' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -319,7 +319,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Retornar
     Entao deve ser exibida a tela Natureza de Operacao
 
-  @ISDSTBOF13350 @webSNF
+  @ISDSTBOF13350 @webSNF @TelaSNF
   Cenario: 13350 Validar Calendário do campo ' Visualização por Local na data de referência' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -332,7 +332,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico na aba "Aba Estadual"
     Entao o valor apresentado no campo Visualização por Local na data de referência deve ser igual a data atual
 
-  @ISDSTBOF13351 @webSNF @BugAberto
+  @ISDSTBOF13351 @webSNF @TelaSNF
   Cenario: 13351  Exibição do campo Visualização por Local na data de referência - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -347,7 +347,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Estadual" com o valor "1"
     Entao o campo "Visualizar Por Local de Referencia" deve esta desabilitado para Edicao e deve exibir a mensagem legal selecionda
 
-  @ISDSTBOF13354 @webSNF
+  @ISDSTBOF13354 @webSNF @TelaSNF
   Cenario: 13354  Campo 'Usuário' da Aba Dados da natureza de operação' disponivel somente Leitura - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -359,7 +359,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao deve ser apresentado o campo "Usuario" disponivel somente para leitura
 
-  @ISDSTBOF13356 @webSNF
+  @ISDSTBOF13356 @webSNF @TelaSNF
   Cenario: 13356 - Campo 'Data' da Aba Dados da natureza de operação' disponivel somente Leitura - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -371,7 +371,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao deve ser apresentado o campo "Data" disponivel somente para leitura
 
-  @ISDSTBOF13359 @webSNF @BugAberto
+  @ISDSTBOF13359 @webSNF @TelaSNF
   Cenario: 13359 - Validar adicionar Mensagem legal com Tipo de Neg. Club
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -384,7 +384,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Estadual" com o valor "Clubes" para o campo "Adicionar Registro Tipo de Negocio"
     Entao deve ser exido na coluna "Tipo de Neg." o valor "CL" no Grid de Resultados
 
-  @ISDSTBOF13360 @webSNF @BugAberto
+  @ISDSTBOF13360 @webSNF @TelaSNF
   Cenario: 13360 - Validar adicionar Mensagem legal com Tipo de Neg. Lojas
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -397,7 +397,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Estadual" com o valor "Lojas" para o campo "Adicionar Registro Tipo de Negocio"
     Entao deve ser exido na coluna "Tipo de Neg." o valor "LJ" no Grid de Resultados
 
-  @ISDSTBOF13361 @webSNF @BugAberto
+  @ISDSTBOF13361 @webSNF @TelaSNF
   Cenario: 13361 - Validar adicionar Mensagem legal com Tipo de Neg. todos
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -410,7 +410,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Estadual" com o valor "Todos" para o campo "Adicionar Registro Tipo de Negocio"
     Entao deve ser exido na coluna "Tipo de Neg." o valor "Todos" no Grid de Resultados
 
-  @ISDSTBOF13362 @webSNF
+  @ISDSTBOF13362 @webSNF @TelaSNF
   Cenario: 13362 - Validar campo 'Código' não letras - aba Estadual - Tela Selecionar Mensagem legal - Tipo Dinãmica
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -423,7 +423,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito o valor "ABCD" no campo "Codigo" da pesquisa de Mensagem legal
     Entao o campo "Codigo" deve esta vazio
 
-  @ISDSTBOF13363 @webSNF @FaltaMassa
+  @ISDSTBOF13363 @webSNF @TelaSNF
   Cenario: 13363 - Validar pesquisa de Mensagem legal Dinamica por Titulo - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -436,7 +436,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito o valor "IPI DEVOLVIDO" no campo "Titulo" da pesquisa de Mensagem legal
     Entao deve conter na coluna "Descrição" o valor "Total de IPI Devolvido <TOT_IPI_RTN_AMT>" do Grid de Resultado da Tela Selecionar mensagem legal
 
-  @ISDSTBOF13364 @webSNF @FaltaMassa
+  @ISDSTBOF13364 @webSNF @TelaSNF
   Cenario: 13364 - Validar pesquisa de Mensagem legal Dinamica por Descrição - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -449,7 +449,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito o valor "Total de IPI Devolvido" no campo "Descricao" da pesquisa de Mensagem legal
     Entao deve conter na coluna "Descrição" o valor "Total de IPI Devolvido <TOT_IPI_RTN_AMT>" do Grid de Resultado da Tela Selecionar mensagem legal
 
-  @ISDSTBOF13365 @webSNF
+  @ISDSTBOF13365 @webSNF @TelaSNF
   Cenario: 13365 - Validar pesquisa de Mensagem legal Dinamica por Descrição - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -462,7 +462,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao "Botao Pesquisar" sem preencher nehum campo
     Entao deve ser preenchido o Grid de Resultados com Mensagens já cadastradas
 
-  @ISDSTBOF13366 @webSNF
+  @ISDSTBOF13366 @webSNF @TelaSNF
   Cenario: 13366 - Validar click no botão 'Cancelar' - Aba Estadual
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -475,7 +475,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao "Botao Cancelar" sem preencher nehum campo
     Entao deve ser apresentado a tela de Adicionar Registro com o campo "Mensagem Legal Dinamica" vazio e desabilitado para edicao
 
-  @ISDSTBOF13370 @webSNF
+  @ISDSTBOF13370 @webSNF @TelaSNF
   Cenario: 13370 - Validar a exibição das opções 'Item' e 'Dados Adicionais' no campo 'Local da Mensagem' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -488,7 +488,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico na aba "Aba Filial" e no campo "Local Mensagem Filial"
     Entao deve ser exibida uma lista com os itens "Dados Adicionais" e "Item" no campo "Local Mensagem Filial"
 
-  @ISDSTBOF13371 @webSNF
+  @ISDSTBOF13371 @webSNF @TelaSNF
   Cenario: 13371 - Opção Selecionada no campo Local da Mensagem reflete no campo Local do Grid de Resultados - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -502,7 +502,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Filial" com o valor "1"
     Entao deve ser exibida a mensagem "Cadastro efetuado com sucesso!" na aba Filial
 
-  @ISDSTBOF13372 @webSNF
+  @ISDSTBOF13372 @webSNF @TelaSNF
   Cenario: 13372 - Validar Botão Editar - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -516,7 +516,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Editar do Grid de Resultado Aba Filial
     Entao deve ser exibido a Tela "Editar Registro" com o campo "Mensagem Legal" preenchido
 
-  @ISDSTBOF13374 @webSNF
+  @ISDSTBOF13374 @webSNF @TelaSNF
   Cenario: 13374 - Validar Botão Editar - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -530,7 +530,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Filial" com o valor "1"
     Entao o campo "Visualizar Por Local de Referencia Filial" deve esta desabilitado para Edicao e deve exibir a mensagem legal selecionda
 
-  @ISDSTBOF13377 @webSNF
+  @ISDSTBOF13377 @webSNF @TelaSNF
   Cenario: 13377 - Validar Opções exibidas para o Campo Tipo Padrão e Dinâmica - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -544,7 +544,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico na aba "Aba Filial" e no campo "Adicionar Registro Tipo" da tela de Adicionar Mensagem
     Entao deve ser exibida uma lista com os itens "Selecione...", "Padrão" e "Dinâmica" no campo "Adicionar Registro Tipo"
 
-  @ISDSTBOF13378 @webSNF
+  @ISDSTBOF13378 @webSNF @TelaSNF
   Cenario: 13378 - Validar Ação de Clicar na LUPA - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -558,7 +558,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Pesquisar da tela de Adicionar Resgitro
     Entao deve ser apresentado os campos "Codigo" e "Descricao" vazios
 
-  @ISDSTBOF13379 @webSNF
+  @ISDSTBOF13379 @webSNF @TelaSNF
   Cenario: 13379 - Validar campo 'Fim da Vigência' com data inferior a do campo 'Inicio da Vigência' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -572,7 +572,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito no campo "Inicio da Vigencia" a data atual e no campo "Fim da Vigencia" uma data inferio a de Inicio da Vigencia
     Entao deve ser exibido a seguinte mensagem "Intervalo de Datas da vigência inválidas."
 
-  @ISDSTBOF13380 @webSNF
+  @ISDSTBOF13380 @webSNF @TelaSNF
   Cenario: 13380 - Insersão de Data menor que Data Atual no campo 'Data Inicio da Vigência' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -586,7 +586,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E digito no campo "Inicio da Vigencia" valor inferior a data atual e no campo "Fim da Vigencia" uma data Superior a de Data Atual
     Entao deve ser exibido a seguinte mensagem "Data de inicio da vigência é inferior a data corrente"
 
-  @ISDSTBOF13381 @webSNF
+  @ISDSTBOF13381 @webSNF @TelaSNF
   Cenario: 13381 - Clicar no Botão 'Gravar' para Novo Resgitro - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -600,7 +600,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E seleciono uma mensagem Legal para a aba "Filial" com o valor "1"
     Entao deve ser exibida a mensagem "Cadastro efetuado com sucesso!" na aba Filial
 
-  @ISDSTBOF13382 @webSNF
+  @ISDSTBOF13382 @webSNF @TelaSNF
   Cenario: 13382 - Clicar no Botão 'Gravar' para Alteração de Resgitro - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -614,7 +614,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E altero a data do campo "Fim da Vigencia" para uma data futura e clico em Salvar
     Entao deve ser exibida a mensagem "Alteração efetuada com sucesso!" na aba Filial
 
-  @ISDSTBOF13383 @webSNF
+  @ISDSTBOF13383 @webSNF @TelaSNF
   Cenario: 13383 - Clicar no Botão 'Histórico' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -628,7 +628,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao Historico da Aba "Aba Filial"
     Entao deve ser exibida a tela Historico com o valor "SVCautqea" no campo Usuario
 
-  @ISDSTBOF13385 @webSNF
+  @ISDSTBOF13385 @webSNF @TelaSNF
   Cenario: 13385 - Exibição do campo Visualização por Local na data de referência(Texto) - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -640,7 +640,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao o campo "Visualizar Por Local de Referencia Texto" deve está disponivel somente para leitura
 
-  @ISDSTBOF13386 @webSNF
+  @ISDSTBOF13386 @webSNF @TelaSNF
   Cenario: 13386 - Validar Calendário do campo ' Visualização por Local na data de referência' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -652,7 +652,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao o campo "Visualizar Por Local de Referencia Filial" deve ser igual a data atual e habilitado para edicao
 
-  @ISDSTBOF13388 @webSNF
+  @ISDSTBOF13388 @webSNF @TelaSNF
   Cenario: 13388 - Campo 'Usuário' da Aba Dados da natureza de operação' disponivel somente Leitura - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -664,7 +664,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao o campo "Usuario" deve ser exibido somente para leitura
 
-  @ISDSTBOF13390 @webSNF
+  @ISDSTBOF13390 @webSNF @TelaSNF
   Cenario: 13390 - Campo 'Data' da Aba Dados da natureza de operação' disponivel somente Leitura - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -676,7 +676,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     Quando clico no botao Mensagem Legal
     Entao o campo "Data" deve ser exibido somente para leitura
 
-  @ISDSTBOF13394 @webSNF
+  @ISDSTBOF13394 @webSNF @TelaSNF
   Cenario: 13394 - Validar click no botão 'Cancelar' - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -689,7 +689,7 @@ Funcionalidade: 17.2 - Mensagem Legal
     E clico no botao "Botao Cancelar" sem preencher nehum campo da aba Filial
     Entao deve ser apresentado a tela de Adicionar Registro com o campo "Mensagem Legal Dinamica" vazio e desabilitado para edicao
 
-  @ISDSTBOF13395 @webSNF
+  @ISDSTBOF13395 @webSNF @TelaSNF
   Cenario: 13395 - Validar o click no Botão pesquisar sem preencher nenhum campo - Aba Filial
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste

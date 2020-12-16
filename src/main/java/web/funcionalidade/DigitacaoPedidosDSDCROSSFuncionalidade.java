@@ -158,6 +158,28 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 		this.clicarBotaoIncluir();
 	}
 
+	public void incluirItensComQuantidades(int qtdeItens, String quant) {
+		addEvidenciaWeb("Verificar se item está sendo apresentado");
+
+		List<Map<String, String>> values = new ArrayList<Map<String, String>>();
+
+		for (int i = 0; i < qtdeItens; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			webDriver.findElement(By.id("panel_QTDADE1_" + i)).clear();
+			webDriver.findElement(By.id("panel_QTDADE1_" + i)).sendKeys(quant);
+			webDriver.findElement(By.id("panel_TL_OPC1_" + i + "_checkbox")).click();
+			map.put("Codigo", webDriver.findElement(By.id("TL_PROD")).getAttribute("value"));
+			map.put("Data Entrega", webDriver.findElement(By.id("TL_DTENT")).getAttribute("value").replace(":", ""));
+			VariaveisEstaticas.setCOD_PRODUTO(webDriver.findElement(By.id("TL_PROD")).getAttribute("value"));
+			map.put("Quantidade", quant);
+			values.add(map);
+			addEvidenciaWeb("Incluindo item: " + webDriver.findElement(By.id("TL_DESC")).getAttribute("value"));
+		}
+		VariaveisEstaticas.setMap(values);
+		this.salvarInformacao();
+		this.clicarBotaoIncluir();
+	}
+
 	public void excluirMultiplosItensIMPE2(int qtde) {
 		for (int i = 0; i < qtde; i++) {
 			webDriver.findElement(By.id("panel_OPCAO_" + i + "_checkbox")).click();
@@ -241,12 +263,11 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 			for (int i = 0; i < qtdeLinhas; i++) {
 				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).clear();
 				webDriver.findElement(By.id("panel_QTDADE" + y + "_" + i)).sendKeys(valor);
-				
 
 			}
 
 		}
-		addEvidenciaWeb("Campos Quantidade preenchidos com o valor :" +valor);
+		addEvidenciaWeb("Campos Quantidade preenchidos com o valor :" + valor);
 	}
 
 	public String retornaMensagem() {
@@ -256,8 +277,32 @@ public class DigitacaoPedidosDSDCROSSFuncionalidade extends BaseTest {
 	}
 
 	public void selecionarValorCampoClassificacao() {
-		if (GeracaoData.retornaHoraAtual() >= 1515)
+		if (GeracaoData.retornaHoraAtual() >= 1615)
 			this.selecionarValorComboBox("Hr Edi", "S");
+	}
+
+	public void clicarBotaoFinalziar() {
+		this.inpe2.getInputExecutarPedido().click();
+	}
+
+	public void gerarPedidoCross(DataTable params, int quantidade, String valor) {
+		this.limparPedidoINPE2(params);
+		this.preencherCampos(params);
+		this.selecionarValorCampoClassificacao();
+		this.preencherCampoValor("DT Entrega", GeracaoData.retornaDataAtualMaisDias(2));
+		this.ClicarBotaConsultarLojas();
+		this.incluirItensComQuantidades(quantidade, valor);
+		this.clicarBotaoFinalziar();
+
+	}
+	
+	public void salvarInformacao() {
+		VariaveisEstaticas.setFILIAL_SAD(this.inpe2.getLabelCodigoFilial().getAttribute("value"));
+		VariaveisEstaticas.setFORNEC(this.inpe2.getInputFornecedor().getAttribute("value"));
+		VariaveisEstaticas.setCOMPRADOR("0" +this.inpe2.getInputComprador().getAttribute("value"));
+		VariaveisEstaticas.setQUANT(this.inpe2.getGridQuantidade().getAttribute("value"));
+		VariaveisEstaticas.setCOD_PRODUTO(this.inpe2.getInputProduto().getAttribute("value"));
+		VariaveisEstaticas.setCLASSIF_PED(this.retornaValorCampo("Classif Ped"));
 	}
 
 }

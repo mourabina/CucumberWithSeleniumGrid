@@ -55,6 +55,13 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 	public void getPedido(DataTable params) {
 		this.preencherCampoValor("Forn", params.cell(1, 1));
 		this.preencherCampoValor("Produto", params.cell(1, 2));
+		this.preencherCampoValor("Filial", params.cell(1, 4));
+		this.pesquisar();
+	}
+	
+	public void getPedidoCross(DataTable params) {
+		this.preencherCampoValor("Forn", params.cell(1, 1));
+		this.preencherCampoValor("Produto", params.cell(1, 2));
 		this.pesquisar();
 	}
 
@@ -66,6 +73,7 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 		c.add(Calendar.DATE, 1);
 		data = c.getTime();
 		VariaveisEstaticas.setDATA_ENTRADA(format.format(data).toString());
+		
 	}
 
 	public void validarPedido() throws ParseException {
@@ -75,7 +83,17 @@ public class ConsultaDigitacaoDePedidosSOLPDFuncionalidade extends BaseTest {
 		Assert.assertEquals(this.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
 		Assert.assertEquals(this.retornaValorCampo("Data"), VariaveisEstaticas.getDATA_ENTRADA());
 	}
+	
+	public void validarPedidoIntensCross() throws ParseException {
+		Assert.assertEquals(this.retornaValorCampo("Loja"), VariaveisEstaticas.getFILIAL_SAD());
+		Assert.assertEquals(this.retornaValorCampo("Grid Local"), VariaveisEstaticas.getCOMPRADOR());
+		Assert.assertEquals(this.retornaValorCampo("Produto"), VariaveisEstaticas.getCOD_PRODUTO());
+		Assert.assertEquals(this.retornaValorCampo("Qtda"), VariaveisEstaticas.getQUANT());
+		Assert.assertEquals(this.retornaValorCampo("Data"), VariaveisEstaticas.getDATA_ENTRADA());
+	}
 
+	
+	
 	public String getNumeroPedido() {
 		return this.solpd.getSituacaoRegistro().getAttribute("value").split(": ")[1].trim();
 	}

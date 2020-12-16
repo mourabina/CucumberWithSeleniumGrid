@@ -88,7 +88,7 @@ Funcionalidade: 17.2 - Pesquisa Mensagem Legal
     Quando clico no botao Pesquisar
     Entao deve ser exibido todas as mensagens Legais cadastradas
 
-  @ISDSTBOF13319 @webSNF 
+  @ISDSTBOF13319 @webSNF @TelaSNF
   Cenario: 13319 - Inserção de Mensagem preenchendo somente campo Descrição
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste

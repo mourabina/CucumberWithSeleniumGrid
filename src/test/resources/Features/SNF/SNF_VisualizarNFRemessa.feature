@@ -5,7 +5,7 @@
 @VisualizarNFRemessa @Validado
 Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
 
-  @ISDSTBOF00001 @webSNF
+  @ISDSTBOF00001 @webSNF  @TelaSNF
   Cenario: 00001 - Validar comportamento do botão 'LIMPAR' com dados preechidos
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -17,7 +17,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando aciono o botao limpar
     Entao todos os campos devem estar vazios (Visualizar NF Remessa)
 
-  @ISDSTBOF00002 @webSNF
+  @ISDSTBOF00002 @webSNF @TelaSNF
   Cenario: 00002 - Validar campo 'SÉRIE' com valores válidos
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -28,7 +28,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Serie" com Numeros (Visualizar NF Remessa)
     Entao o campo "Serie" nao deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00003 @webSNF
+  @ISDSTBOF00003 @webSNF @TelaSNF
   Cenario: 00003 - Validar campo 'SÉRIE' com Caracteres Especiais
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -39,7 +39,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Serie" com Caracteres Especiais (Visualizar NF Remessa)
     Entao o campo "Serie" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00004 @webSNF
+  @ISDSTBOF00004 @webSNF @TelaSNF
   Cenario: 00004 - Validar campo 'SÉRIE' com Letras
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -50,7 +50,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Serie" com Letras (Visualizar NF Remessa)
     Entao o campo "Serie" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00008 @webSNF
+  @ISDSTBOF00008 @webSNF @TelaSNF
   Cenario: 00008 - Validar campo 'NOTA FISCAL' com valores válidos
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -61,7 +61,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Nota Fiscal" com Numeros (Visualizar NF Remessa)
     Entao o campo "Nota Fiscal" nao deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00009 @webSNF
+  @ISDSTBOF00009 @webSNF @TelaSNF
   Cenario: 00009 - Validar campo 'NOTA FISCAL' com Caracteres Especiais
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -72,7 +72,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Nota Fiscal" com Caracteres Especiais (Visualizar NF Remessa)
     Entao o campo "Nota Fiscal" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00010 @webSNF
+  @ISDSTBOF00010 @webSNF @TelaSNF
   Cenario: 00010 - Validar campo 'NOTA FISCAL' com Letras
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -83,7 +83,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Nota Fiscal" com Letras (Visualizar NF Remessa)
     Entao o campo "Nota Fiscal" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00014 @webSNF
+  @ISDSTBOF00014 @webSNF @TelaSNF
   Cenario: 00014 - Validar campo 'CNPJ' com valores válidos
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -94,7 +94,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "CNPJ" com Numeros (Visualizar NF Remessa)
     Entao o campo "CNPJ" nao deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00015 @webSNF
+  @ISDSTBOF00015 @webSNF @TelaSNF
   Cenario: 00015 - Validar campo 'CNPJ' com Caracteres Especiais
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -105,7 +105,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "CNPJ" com Caracteres Especiais (Visualizar NF Remessa)
     Entao o campo "CNPJ" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00016 @webSNF
+  @ISDSTBOF00016 @webSNF @TelaSNF
   Cenario: 00016 - Validar campo 'CNPJ' com Letras
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -116,7 +116,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "CNPJ" com Letras (Visualizar NF Remessa)
     Entao o campo "CNPJ" deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00023Loja @webSNF
+  @ISDSTBOF00023Loja @webSNF @TelaSNF
   Cenario: 00023Loja - Validar campo 'Data Inicio' com Valor Invalido
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -127,7 +127,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Data Inicio" Valor "36/19/2019" (Visualizar NF Remessa)
     Entao o campo "Data Inicio" devera apresentar o valor "Invalid date" (Visualizar NF Remessa)
 
-  @ISDSTBOF00024Loja @webSNF
+  @ISDSTBOF00024Loja @webSNF @TelaSNF
   Cenario: 00024Loja - Validar campo 'Data Fim' com Invalido
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -138,7 +138,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Data Fim" Valor "36/19/2019" (Visualizar NF Remessa)
     Entao o campo "Data Fim" devera apresentar o valor "Invalid date" (Visualizar NF Remessa)
 
-  @ISDSTBOF00027Loja @webSNF
+  @ISDSTBOF00027Loja @webSNF @TelaSNF
   Cenario: 00027Loja - Validar campo 'Data Inicio' com uma Data Valida
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -149,7 +149,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Data Inicio" com uma Data Valida (Visualizar NF Remessa)
     Entao o campo "Data Inicio" nao deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00028Loja @webSNF
+  @ISDSTBOF00028Loja @webSNF @TelaSNF
   Cenario: 00028Loja - Validar campo 'Data Fim' com uma Data Valida
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -160,7 +160,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando preencho o campo "Data Fim" com uma Data Valida (Visualizar NF Remessa)
     Entao o campo "Data Fim" nao deve estar vazio (Visualizar NF Remessa)
 
-  @ISDSTBOF00031 @webSNF
+  @ISDSTBOF00031Loja @webSNF @TelaSNF
   Cenario: 00031 - Validar Pesquisa atraves dos campos 'Unidade de Negocio' e 'Nota Fiscal'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -171,7 +171,7 @@ Funcionalidade: X.X - Visualizar Nota Fiscal Remessa
     Quando efetuo uma pesquisa atraves do campo Unidade de Negocio e "Nota Fiscal" com o valor "96" (Visualizar NF Remessa)
     Entao o campo "Nota Fiscal" deve conter o valor "96" no Grid de Resultado
 
-  @ISDSTBOF00032 @webSNF
+  @ISDSTBOF00032 @webSNF @TelaSNF
   Cenario: 00032 - Validar Pesquisa atraves dos campos 'Unidade de Negocio' e 'Nota Fiscal'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste

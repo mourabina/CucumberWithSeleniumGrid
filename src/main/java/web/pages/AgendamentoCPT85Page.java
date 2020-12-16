@@ -12,13 +12,13 @@ public class AgendamentoCPT85Page extends BaseTest {
 	@FindBy(id = "LABEL28")
 	private WebElement labelTituloPagina;
 
-	@FindBy(id = "BTINQUIRY_FX")
+	@FindBy(xpath = "//button[@id='BTINQUIRY_FX']")
 	private WebElement buttonConsultar;
 	
 	@FindBy(id = "Button1_FX")
 	private WebElement buttonConsultarPedido;	
 
-	@FindBy(id = "BTINCLUDE_FX")
+	@FindBy(id = "BTINCLUDE_FX") 
 	private WebElement buttonIncluir;
 
 	@FindBy(id = "BTMODIFY_FX")

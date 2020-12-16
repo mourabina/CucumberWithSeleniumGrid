@@ -10,32 +10,41 @@ public class ConsultaArquivosGeraisROT06Page {
 	@FindBy(id = "label6")
 	private WebElement tituloPagina;
 
-	@FindBy(id = "btnRenomear")
-	private WebElement bt_renomear;
+	@FindBy(id = "btnExcluir")
+	private WebElement btnExcluir;
 
 	@FindBy(id = "btnListar")
-	private WebElement br_listar;
+	private WebElement btnListar;
 
 	@FindBy(id = "inputFiltro")
-	private WebElement filtrarPorNome;
+	private WebElement inuputFiltroPorNome;
 
 	@FindBy(id = "selectTipo")
 	private WebElement selectTipo;
 
-	@FindBy(id = "collectionPanelFilesAttrs_inputControle_0")
-	private WebElement inputControle_0;
+	@FindBy(id = "inputSince")
+	private WebElement inputDataInicial;
 
-	@FindBy(id = "collectionPanelFilesAttrs_labelNome_0")
-	private WebElement labelNome_0;
+	@FindBy(id = "inputUntil")
+	private WebElement inputDataFinal;
+
+	@FindBy(id = "comboImpressora")
+	private WebElement selectImpressora;
+
+	@FindBy(id = "collectionPanelFilesAttrs_inputCheck_0_checkbox")
+	private WebElement checkboxNomee_0;
 
 	@FindBy(id = "collectionPanelFilesAttrs_labelSequencia_0")
-	private WebElement labelSequencia_0;
+	private WebElement labelSequenciaGrid_0;
+
+	@FindBy(id = "collectionPanelFilesAttrs_labelUltimaModificacao_0")
+	private WebElement labelUltimaModificacao_0;
 
 	@FindBy(id = "collectionPanelFilesAttrs_labelTamanho_0")
 	private WebElement labelTamanho_0;
 
-	@FindBy(id = "collectionPanelFilesAttrs_labelOperacao_0")
-	private WebElement labelOpercao_0;
+	@FindBy(id = "//label[@id = 'collectionPanelFilesAttrs_labelOperacao_0']/a")
+	private WebElement btnVer_0;
 
 	public ConsultaArquivosGeraisROT06Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
@@ -45,40 +54,52 @@ public class ConsultaArquivosGeraisROT06Page {
 		return tituloPagina;
 	}
 
-	public WebElement getBt_renomear() {
-		return bt_renomear;
+	public WebElement getBtnExcluir() {
+		return btnExcluir;
 	}
 
-	public WebElement getBr_listar() {
-		return br_listar;
+	public WebElement getBtnListar() {
+		return btnListar;
 	}
 
-	public WebElement getFiltrarPorNome() {
-		return filtrarPorNome;
+	public WebElement getInuputFiltroPorNome() {
+		return inuputFiltroPorNome;
 	}
 
 	public WebElement getSelectTipo() {
 		return selectTipo;
 	}
 
-	public WebElement getInputControle_0() {
-		return inputControle_0;
+	public WebElement getInputDataInicial() {
+		return inputDataInicial;
 	}
 
-	public WebElement getLabelNome_0() {
-		return labelNome_0;
+	public WebElement getInputDataFinal() {
+		return inputDataFinal;
 	}
 
-	public WebElement getLabelSequencia_0() {
-		return labelSequencia_0;
+	public WebElement getSelectImpressora() {
+		return selectImpressora;
+	}
+
+	public WebElement getCheckboxNomee_0() {
+		return checkboxNomee_0;
+	}
+
+	public WebElement getLabelSequenciaGrid_0() {
+		return labelSequenciaGrid_0;
+	}
+
+	public WebElement getLabelUltimaModificacao_0() {
+		return labelUltimaModificacao_0;
 	}
 
 	public WebElement getLabelTamanho_0() {
 		return labelTamanho_0;
 	}
 
-	public WebElement getLabelOpercao_0() {
-		return labelOpercao_0;
+	public WebElement getBtnVer_0() {
+		return btnVer_0;
 	}
 
 }

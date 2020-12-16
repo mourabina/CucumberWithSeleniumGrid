@@ -11,3 +11,11 @@ Funcionalidade: Fluxo de recebimento SAD/SNF
     E esteja vinculado com uma Nota Fiscal
     Quando envio para o SAD confirmando o recebimento
     Então deve ser gerado a guia cega
+
+  @Fluxo2 @web
+  Cenario: Fluxo de recebimento com pedido do tipo Cross
+    Dado que estou logado no ambiente "SADVAREJO" com usuario/filial "818181"/"7458"
+    E que tenho um pedido "CROSS" do modelo "00000616" com agendamento criado
+    E esteja vinculado com uma Nota Fiscal
+    Quando envio para o SAD confirmando o recebimento
+    Então deve ser gerado a guia cega

@@ -43,7 +43,6 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		return filial.getFirstSelectedOption().getAttribute("text").toString().equals("Selecione...");
 	}
 
-	
 	public void clicarBotaoLimpar() {
 		this.recebi.getButtonLipar().click();
 	}
@@ -53,7 +52,7 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		Select situacao = new Select(this.recebi.getInputSituacao());
 		return situacao.getFirstSelectedOption().getAttribute("text").equals("Selecione...");
 	}
-	
+
 	public Boolean NumeroAgendamento() {
 		addEvidenciaWeb("Campo Vazio");
 		return this.recebi.getInputNumeroAgendamento().getAttribute("value").isEmpty();
@@ -63,6 +62,7 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		addEvidenciaWeb("Campo Vazio");
 		return this.recebi.getInputDataAgenda().getAttribute("value").isEmpty();
 	}
+
 	public Boolean InpuNumeroPedido() {
 		addEvidenciaWeb("Campo Vazio");
 		return this.recebi.getInpuNumeroPedido().getAttribute("value").isEmpty();
@@ -91,7 +91,7 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		manu.getElement(this.recebi).sendKeys("ABCD");
 		addEvidenciaWeb("Digitando valores Invalidos");
 	}
-	
+
 	public void selecionarSituacao(String campo, String situacao) {
 		SNF_VisualizarRecebimento situ = web.bean.enums.SNF_VisualizarRecebimentoEnum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
@@ -121,15 +121,14 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 	public boolean verificarCampoVazio(String elem) {
 		SNF_VisualizarRecebimento manu = web.bean.enums.SNF_VisualizarRecebimentoEnum
 				.valueOf(elem.replace(" ", "_").toUpperCase());
-    	SeleniumRobot.MoveToElementWeb(manu.getElement(this.recebi));
+		SeleniumRobot.MoveToElementWeb(manu.getElement(this.recebi));
 		addEvidenciaWeb("Campo Está Vazio");
 		return manu.getElement(this.recebi).getAttribute("value").isEmpty();
 	}
-	
+
 	public boolean verificarCampoVazioNF(String elem) {
-		SNF_VisualizarNotaFiscal manu = SNF_VisualizarNotaFiscal
-				.valueOf(elem.replace(" ", "_").toUpperCase());
-    	SeleniumRobot.MoveToElementWeb(manu.getElement(this.nf));
+		SNF_VisualizarNotaFiscal manu = SNF_VisualizarNotaFiscal.valueOf(elem.replace(" ", "_").toUpperCase());
+		SeleniumRobot.MoveToElementWeb(manu.getElement(this.nf));
 		addEvidenciaWeb("Campo Está Vazio");
 		return manu.getElement(this.nf).getAttribute("value").isEmpty();
 	}
@@ -140,33 +139,51 @@ public class SNFObterAgendamentoFuncionalidade extends BaseTest {
 		this.recebi.getInpuNumeroPedido().click();
 	}
 
-
 	public String pegarValorDataAgenda() {
 		addEvidenciaWeb("Campo Data Agenda não aceita valor Invalido");
 		return this.recebi.getInputDataAgenda().getAttribute("value").toString();
 	}
 
-	public boolean botãoSalvarDesabilitado(){
+	public boolean botãoSalvarDesabilitado() {
 		return this.recebi.getButtonPesquisar().isEnabled();
 	}
-	
+
 	public void preencherCamposPesquisas(String elem, String valor) {
-		SNF_VisualizarRecebimento manu = web.bean.enums.SNF_VisualizarRecebimentoEnum.valueOf(elem.replace(" ", "_").toUpperCase());
+		SNF_VisualizarRecebimento manu = web.bean.enums.SNF_VisualizarRecebimentoEnum
+				.valueOf(elem.replace(" ", "_").toUpperCase());
 		SeleniumRobot.MoveToElementWeb(manu.getElement(this.recebi));
 		manu.getElement(this.recebi).sendKeys(valor);
 		this.recebi.getButtonPesquisar().click();
 		this.wl.loading();
 		addEvidenciaWeb("Preenchedo o campo  " + elem + " com o valor " + valor);
 	}
-	
+
 	public void editarAgenda() {
 		this.recebi.getButtonEditar().click();
 		this.wl.loading();
 	}
-	
+
 	public void inserirPlaca() {
 		this.editarRecebimento.getInputPlaca().sendKeys("ABC-1234");
 		this.editarRecebimento.getButtonAtualizar().click();
-		this.wl.loading();		
+		this.wl.loading();
+	}
+
+	public void clicarBtEditarGridResultado() {
+		this.recebi.getButtonEditar().click();
+	}
+
+	public void marcarCheckBox() {
+		if (!this.editarRecebimento.getCheckBox().isSelected()) {
+			this.editarRecebimento.getCheckBox().click();
+		}
+	}
+	
+	public void clicarBotaoPesquisar() {
+		this.recebi.getButtonPesquisar().click();
+	}
+	
+	public String retornaValorCampoSituacao() {
+		return this.editarRecebimento.getInputSituacao().getAttribute("value");
 	}
 }

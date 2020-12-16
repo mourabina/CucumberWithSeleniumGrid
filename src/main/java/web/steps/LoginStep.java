@@ -1,26 +1,26 @@
 package web.steps;
 
 import java.io.FileNotFoundException;
-import java.text.ParseException;
 
-import commons.SNFApi;
-import commons.funcionalidade.GeracaoData;
+import commons.funcionalidade.VariaveisEstaticas;
 import io.cucumber.java.pt.Dado;
 import web.funcionalidade.LoginFuncionalidade;
 
 public class LoginStep {
 
 	private LoginFuncionalidade login;
-	private SNFApi auth;
 
 	public LoginStep() {
 		this.login = new LoginFuncionalidade();
-		this.auth = new SNFApi();
+
 	}
 
 	@Dado("^que estou logado com usuario/filial \"([^\"]*)\"/\"([^\"]*)\"$")
 	public void loginSAD(String user, String filial) throws FileNotFoundException {
+		VariaveisEstaticas.setUSER_SAD(user);
+		VariaveisEstaticas.setFILIAL_SAD(filial);
 		this.login.loginSAD(user, filial);
+		
 	}
 
 	@Dado("^que estou na tela \"([^\"]*)\"$")
@@ -31,6 +31,15 @@ public class LoginStep {
 	@Dado("^acessar o RF com usuário \"([^\"]*)\"$")
 	public void acessarRF(String usuario) throws Throwable {
 		this.login.acessarRF(usuario);
+	}
+	
+	@Dado("que estou logado no ambiente {string} com usuario\\/filial {string}\\/{string}")
+	public void AcessarSADPorAmbiente(String ambiente, String usuario, String filial) {
+		VariaveisEstaticas.setAMBIENTE(ambiente);
+		VariaveisEstaticas.setUSER_SAD(usuario);
+		VariaveisEstaticas.setFILIAL_SAD(filial);
+		this.login.acessarAmbienteSAD(ambiente, usuario, filial);
+	    
 	}
 
 }

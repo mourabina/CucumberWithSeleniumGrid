@@ -159,6 +159,7 @@ public class SNF_MensagemLegalFuncionalidade extends BaseTest {
 			this.mensa.getButtonHistoricoNacional().click();
 		} else {
 			this.mensa.getButtonAdicionarNacional().click();
+			this.selecionarValorCampoSelecao("Ordem", "1");
 			this.selecionarValorCampoSelecao("Adicionar Registro Local", "Dados Adicionais");
 			this.selecionarValorCampoSelecao("Adicionar Registro Tipo", "Padão");
 			addEvidenciaWeb("Selecionado valores para os campos seleção");
@@ -195,6 +196,7 @@ public class SNF_MensagemLegalFuncionalidade extends BaseTest {
 			this.mensa.getButtonHistoricoEstadual().click();
 		} else {
 			this.mensa.getButtonAdicionarEstadual().click();
+			this.selecionarValorCampoSelecao("Ordem", "1");
 			this.selecionarValorCampoSelecao("Adicionar Registro Local", "Dados Adicionais");
 			this.selecionarValorCampoSelecao("Adicionar Registro Tipo", "Padão");
 			this.selecionarValorCampoSelecao("Adicionar Registro Tipo de Negocio", "Centro de distribuição");
@@ -212,8 +214,9 @@ public class SNF_MensagemLegalFuncionalidade extends BaseTest {
 			this.mensa.getInputInicioVigencia().click();
 			wait.until(ExpectedConditions.elementToBeClickable(this.comp.getBtnSalvar()));
 			this.comp.getBtnSalvar().click();
+			this.load.loading();
 			addEvidenciaWeb("Preenchido todos os dados para Adicionar Novo Registro");
-			this.mensa.getButtonHistoricoNacional().click();
+			this.mensa.getButtonHistoricoEstadual().click();
 			addEvidenciaWeb("Novo Registro Adicionado");
 		}
 	}

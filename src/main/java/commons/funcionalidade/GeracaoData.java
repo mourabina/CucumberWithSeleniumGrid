@@ -90,6 +90,18 @@ public class GeracaoData extends BaseTest {
 		String dataFormatada = new SimpleDateFormat("dd/MM/yy").format(sdf);
 		return dataFormatada.replace("/", "");
 	}
+	
+	public static String retornaDataFormatadaAnoQuatroDigitos(String data) throws ParseException {
+		Date sdf = new SimpleDateFormat("dd/MM/yyyy").parse(data);
+		String dataFormatada = new SimpleDateFormat("dd/MM/yyyy").format(sdf);
+		return dataFormatada.replace("/", "");
+	}
+	
+	public static String retornaDataFormatoInvertido(String data) throws ParseException {
+		Date sdf = new SimpleDateFormat("dd/MM/yyyy").parse(data);
+		String dataFormatada = new SimpleDateFormat("yyyy/MM/dd").format(sdf);
+		return dataFormatada.replace("/", "");
+	}
 
 	public static String retornaDataHoraAtual() {
 		Date data = new Date();

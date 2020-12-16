@@ -7,86 +7,134 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SNFEditarNotaFiscalPage {
 
-		@FindBy(xpath = "//*[@formcontrolname=\"poNbr\"]")
-		private WebElement  inputNumeroPedido;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"statusName\"]")
-		private WebElement  inputSituacaoPedido;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"shipDate\"]")
-		private WebElement  inputDataEmbarque;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"cancelDate\"]")
-		private WebElement  inputDataCancelamento;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"poDate\"]")
-		private WebElement  inputDataPedido;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"taxEffective\"]")
-		private WebElement  inputHoraImpostosPedido;
-		
-		@FindBy(xpath = "//*[@formcontrolname=\"poNbr\"]/parent::div//button")
-		private WebElement  btnPesquisarPedido;
-		
-		@FindBy(xpath = "//button[contains(text(),\"Vincular\")]")
-		private WebElement  btnVincularPedido;
-	
-		@FindBy(xpath = "//button[contains(text(),\"Desvincular\")]")
-		private WebElement  btnDesvincularPedido;
-		
-		@FindBy(xpath = "//*[contains(@class,\"fa-arrow-left\")]/parent::button")
-		private WebElement  btnRetornar;
-		
-		@FindBy(xpath = "//div[ancestor::div[contains(@class,\"alert\")] and parent::div[@class = \"row\"]]")
-		private WebElement alert;
-		
-		public SNFEditarNotaFiscalPage(WebDriver driver) {
-			PageFactory.initElements(driver, this);		
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"poNbr\"]")
+	private WebElement inputNumeroPedido;
 
-		public WebElement getBtnRetornar() {
-			return btnRetornar;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"statusName\"]")
+	private WebElement inputSituacaoPedido;
 
-		public WebElement getInputNumeroPedido() {
-			return inputNumeroPedido;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"shipDate\"]")
+	private WebElement inputDataEmbarque;
 
-		public WebElement getInputSituacaoPedido() {
-			return inputSituacaoPedido;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"cancelDate\"]")
+	private WebElement inputDataCancelamento;
 
-		public WebElement getAlert() {
-			return alert;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"poDate\"]")
+	private WebElement inputDataPedido;
 
-		public WebElement getInputDataEmbarque() {
-			return inputDataEmbarque;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"taxEffective\"]")
+	private WebElement inputHoraImpostosPedido;
 
-		public WebElement getInputDataCancelamento() {
-			return inputDataCancelamento;
-		}
+	@FindBy(xpath = "//*[@formcontrolname=\"poNbr\"]/parent::div//button")
+	private WebElement btnPesquisarPedido;
 
-		public WebElement getInputDataPedido() {
-			return inputDataPedido;
-		}
+	@FindBy(xpath = "//button[contains(text(),\"Vincular\")]")
+	private WebElement btnVincularPedido;
 
-		public WebElement getInputHoraImpostosPedido() {
-			return inputHoraImpostosPedido;
-		}
+	@FindBy(xpath = "//button[contains(text(),\"Desvincular\")]")
+	private WebElement btnDesvincularPedido;
 
-		public WebElement getBtnPesquisarPedido() {
-			return btnPesquisarPedido;
-		}
+	@FindBy(xpath = "//*[contains(@class,\"fa-arrow-left\")]/parent::button")
+	private WebElement btnRetornar;
 
-		public WebElement getBtnVincularPedido() {
-			return btnVincularPedido;
-		}
+	@FindBy(xpath = "//div[ancestor::div[contains(@class,\"alert\")] and parent::div[@class = \"row\"]]")
+	private WebElement alert;
 
-		public WebElement getBtnDesvincularPedido() {
-			return btnDesvincularPedido;
-		}
-		
-		
+	@FindBy(xpath = "//p[@class='alert alert-info sticky-top']")
+	private WebElement alertValidarNF;
+
+	@FindBy(xpath = "//button[contains(text(),\"Validar\")]")
+	private WebElement btnValidar;
+
+	@FindBy(xpath = "//tr[@class='text-left even']//input")
+	private WebElement inputCheckBox;
+
+	@FindBy(xpath = "//input[@formcontrolname='notaFiscalNbr']")
+	private WebElement inputNumeroNotaFiscal;
+
+	@FindBy(xpath = "//input[@formcontrolname='seriesFrmCd']")
+	private WebElement inputSerieNotaFiscal;
+
+	@FindBy(xpath = "//input[@formcontrolname='nfIssueDate']")
+	private WebElement inputDataEmissaoNotaFiscal;
+
+	@FindBy(xpath = "//input[@formcontrolname='issuTaxId']")
+	private WebElement inputCNPJNotaFiscal;
+
+	public SNFEditarNotaFiscalPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public WebElement getInputNumeroNotaFiscal() {
+		return inputNumeroNotaFiscal;
+	}
+
+	public WebElement getInputSerieNotaFiscal() {
+		return inputSerieNotaFiscal;
+	}
+
+	public WebElement getInputDataEmissaoNotaFiscal() {
+		return inputDataEmissaoNotaFiscal;
+	}
+
+	public WebElement getInputCNPJNotaFiscal() {
+		return inputCNPJNotaFiscal;
+	}
+
+	public WebElement getAlertValidarNF() {
+		return alertValidarNF;
+	}
+
+	public WebElement getInputCheckBox() {
+		return inputCheckBox;
+	}
+
+	public WebElement getBtnValidar() {
+		return btnValidar;
+	}
+
+	public WebElement getBtnRetornar() {
+		return btnRetornar;
+	}
+
+	public WebElement getInputNumeroPedido() {
+		return inputNumeroPedido;
+	}
+
+	public WebElement getInputSituacaoPedido() {
+		return inputSituacaoPedido;
+	}
+
+	public WebElement getAlert() {
+		return alert;
+	}
+
+	public WebElement getInputDataEmbarque() {
+		return inputDataEmbarque;
+	}
+
+	public WebElement getInputDataCancelamento() {
+		return inputDataCancelamento;
+	}
+
+	public WebElement getInputDataPedido() {
+		return inputDataPedido;
+	}
+
+	public WebElement getInputHoraImpostosPedido() {
+		return inputHoraImpostosPedido;
+	}
+
+	public WebElement getBtnPesquisarPedido() {
+		return btnPesquisarPedido;
+	}
+
+	public WebElement getBtnVincularPedido() {
+		return btnVincularPedido;
+	}
+
+	public WebElement getBtnDesvincularPedido() {
+		return btnDesvincularPedido;
+	}
+
 }

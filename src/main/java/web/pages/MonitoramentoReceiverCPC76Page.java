@@ -30,7 +30,7 @@ public class MonitoramentoReceiverCPC76Page extends BaseTest {
 	@FindBy(id = "XTL_CITENS1")
 	private WebElement inputItens1;
 
-	@FindBy(id = "XTL_GGUIA1")
+	@FindBy(id = "panel_TL_GGUIA_0")
 	private WebElement inputGuia1;
 
 	@FindBy(id = "XTL_RECEIVER1")
@@ -51,7 +51,7 @@ public class MonitoramentoReceiverCPC76Page extends BaseTest {
 	@FindBy(id = "XTL_QTD_VOL1")
 	private WebElement inputQuantVolu1;
 
-	@FindBy(id = "XTL_STATUS1")
+	@FindBy(id = "panel_TL_STATUS_0")
 	private WebElement inputStatus1;
 
 	@FindBy(id = "XTL_FRACAO1")
@@ -63,8 +63,22 @@ public class MonitoramentoReceiverCPC76Page extends BaseTest {
 	@FindBy(id = "XTL_FORNEC1")
 	private WebElement inputFornecedor1;
 
-	MonitoramentoReceiverCPC76Page(WebDriver webDriver) {
+	@FindBy(id = "TL_AGENDA_PESQ")
+	private WebElement inputAgenda;
+
+	@FindBy(id = "alerta_sad")
+	private WebElement msg;
+
+	public MonitoramentoReceiverCPC76Page(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
+	}
+
+	public WebElement getMsg() {
+		return msg;
+	}
+
+	public WebElement getInputAgenda() {
+		return inputAgenda;
 	}
 
 	public WebElement getCodCesta() {

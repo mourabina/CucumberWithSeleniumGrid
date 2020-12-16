@@ -18,7 +18,7 @@ public class ConsultarDigitacaoPedidosSOLPDPage extends BaseTest{
 	@FindBy(id = "COD_FORNEC")
 	private WebElement inputFornecedor;
 	
-	@FindBy(id = "panel_LOJA_WM_0")
+	@FindBy(id = "COD_LOJA_WM")
 	private WebElement inputFilial;
 	
 	@FindBy(id = "COD_COMPR")

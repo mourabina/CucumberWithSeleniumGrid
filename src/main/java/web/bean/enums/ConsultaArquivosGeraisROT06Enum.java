@@ -10,7 +10,7 @@ public enum ConsultaArquivosGeraisROT06Enum implements ConsultaArquivosGeraisROT
 	FILTRO_POR_NOME("Filtro por Nome") {
 		@Override
 		public WebElement getElement(ConsultaArquivosGeraisROT06Page consultaArquivosGeraisROT06Page) {
-			return consultaArquivosGeraisROT06Page.getFiltrarPorNome();
+			return consultaArquivosGeraisROT06Page.getInuputFiltroPorNome();
 		}
 	},
 	TIPO("Tipo") {

@@ -34,6 +34,34 @@ public class LoginFuncionalidade extends BaseTest {
 		this.login.getBtnLogin().click();
 		addEvidenciaWeb("Acesso ao SAD");
 	}
+	
+	public void loginSADSAMS(String usuario, String filial) {
+		webDriver.get(Urls.SAD_SAMS);
+		wait.until(ExpectedConditions.visibilityOf(this.login.getInputUser()));
+		VariaveisEstaticas.setUSUARIO(usuario);
+		this.login.getInputUser().sendKeys(usuario);
+		this.login.getInputPass().sendKeys(CredentialsUsers.USER_WEB_SAD_SAMS.password());
+		this.login.getInputEmpresa().sendKeys("01");
+		VariaveisEstaticas.setFILIAL(filial);
+		this.login.getInputFilial().sendKeys(filial);
+		this.login.getBtnLogin().click();
+		addEvidenciaWeb("Acesso ao SAD SAMS");
+		
+	}
+	
+	public void acessarAmbienteSAD(String ambiente,String usuario, String filial) {
+		switch (ambiente) {
+		case "SADVAREJO":
+			this.loginSAD(usuario, filial);
+			break;
+		case "SADSAMS":
+			this.loginSADSAMS(usuario, filial);
+			break;	
+
+		default:
+			break;
+		}
+	}
 
 	public void acessarTela(String tela) {
 		this.home.getInputProxiTela().sendKeys(tela);
