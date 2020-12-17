@@ -205,7 +205,7 @@ Funcionalidade: 17.3 - Inscrição Substituto
     Quando clico no botao Mais
     Entao o botao Salvar deve esta desabilitado
 
-  @ISDSTBOF14189 @webSNF @TelaSNF
+  @ISDSTBOF14189 @webSNF
   Cenario: 14189 - Verificar o botão 'Salvar' na tela de edição
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste

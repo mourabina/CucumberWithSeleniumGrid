@@ -334,6 +334,7 @@ public class SNF_InscricaoSubstitutoFuncionalidade extends BaseTest {
 	}
 
 	public String retornaMensagemAddInscricSubstituto() {
+	    this.load.loading();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='alert alert-success sticky-top']")));
 		addEvidenciaWeb("Mensagem Exibida");
 		return this.insc.getMsg().getText();

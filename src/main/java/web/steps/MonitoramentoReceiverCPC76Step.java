@@ -41,4 +41,9 @@ public class MonitoramentoReceiverCPC76Step {
 		
 	}
 
+	@Entao("^deve exibir a mensagem \"([^\"]*)\" ou \"([^\"]*)\" no final da pagina$")
+	public void valdiarExibicaoMensagemExibidaCPC76(String msg1, String msg2) {
+		Assert.assertTrue("A mensagem não condiz com o esperado", this.cpc76.retonaMensagem().contains(msg1)||this.cpc76.retonaMensagem().contains(msg2) );
+	}
+
 }

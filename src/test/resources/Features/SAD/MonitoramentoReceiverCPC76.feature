@@ -23,7 +23,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7602 | BRITQEA-CPC7602 | Validar o campo 'Data Prev.Agenda' nao aceita Letras | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "ABCDEF" no campo "Data Agenda" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7603 @web @TelaSAD
   Cenario: CPC7603 - Validar o campo 'Data Prev.Agenda' não aceita Caracteres Especiais
@@ -33,7 +33,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7603 | BRITQEA-CPC7603 | Validar o campo 'Data Prev.Agenda' nao aceita Caracteres Especiais | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "@#$%&!" no campo "Data Agenda" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7604 @web @TelaSAD
   Cenario: CPC7604 - Validar o campo 'AGENDA' não aceita Letras
@@ -43,7 +43,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7604 | BRITQEA-CPC7604 | Validar o campo 'AGENDA' nao aceita Letras | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "ABCDEF" no campo "Agenda" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7605 @web @TelaSAD
   Cenario: CPC7605 - Validar o campo 'AGENDA' não aceita Caracteres Especiais
@@ -53,7 +53,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7605 | BRITQEA-CPC7605 | Validar o campo 'AGENDA' nao aceita Caracteres Especiais | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "@#$%&!" no campo "Agenda" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7606 @web @TelaSAD
   Cenario: CPC7606 - Validar o campo 'PEDIDO' não aceita Letras
@@ -63,7 +63,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7606 | BRITQEA-CPC7606 | Validar o campo 'PEDIDO' nao aceita Letras | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "ABCDEF" no campo "Pedido" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7607 @web @TelaSAD
   Cenario: CPC7607 - Validar o campo 'PEDIDO' não aceita Caracteres Especiais
@@ -73,7 +73,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7607 | BRITQEA-CPC7607 | Validar o campo 'PEDIDO' nao aceita Caracteres Especiais | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "@#$%&!" no campo "Pedido" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7608 @web @TelaSAD
   Cenario: CPC7608 - Validar o campo 'CESTA' não aceita Letras
@@ -83,7 +83,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7608 | BRITQEA-CPC7608 | Validar o campo 'CESTA' nao aceita Letras | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "ABCDEF" no campo "Cod Cesta" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7609 @web @TelaSAD
   Cenario: CPC7609 - Validar o campo 'CESTA' não aceita Caracteres Especiais
@@ -93,7 +93,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7609 | BRITQEA-CPC7609 | Validar o campo 'CESTA' nao aceita Caracteres Especiais | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "@#$%&!" no campo "Cod Cesta" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7610 @web @TelaSAD
   Cenario: CPC7610 - Validar o campo 'DEP' não aceita Letras
@@ -103,7 +103,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7610 | BRITQEA-CPC7610 | Validar o campo 'DEP' nao aceita Letras | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "ABCDEF" no campo "Dep" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7611 @web @TelaSAD
   Cenario: CPC7611 - Validar o campo 'DEP' não aceita Caracteres Especiais
@@ -113,7 +113,7 @@ Funcionalidade: Monitoramento Receiver
       | CPC7611 | BRITQEA-CPC7611 | Validar o campo 'DEP' nao aceita Caracteres Especiais | Hilário Bina     | S1     |
     E que estou na tela "CPC76"
     Quando digito o valor "@#$%&!" no campo "Dep" na consulta do receiver
-    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." no final da pagina
+    Entao deve exibir a mensagem "Caracter inválido em campos numéricos." ou "Invalid character in numeric fields" no final da pagina
 
   @BRITQEACPC7612 @web @TelaSAD
   Cenario: CPC7612 - Validar não é possivel efetuar pesquisa com o Campo 'DEP' em branco
