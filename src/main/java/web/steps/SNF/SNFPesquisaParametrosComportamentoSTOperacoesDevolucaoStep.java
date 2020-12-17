@@ -29,6 +29,7 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoStep {
 
 	@Quando("^clico no campo de selecao \"([^\"]*)\"$")
 	public void acionarCampoSelecao(String campo) {
+		this.load.loading();
 		this.pesq.clicarCampoEstiloSelecao(campo);
 	}
 

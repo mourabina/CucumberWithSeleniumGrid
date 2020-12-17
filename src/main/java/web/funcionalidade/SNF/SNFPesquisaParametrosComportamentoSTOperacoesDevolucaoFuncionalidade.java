@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -35,6 +36,7 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 
 	public void clicarCampoEstiloSelecao(String campo) {
 		this.load.loading();
+		webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoInterface pesq = SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoEnum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		wait.until(ExpectedConditions.elementToBeClickable(pesq.getElement(this.devo)));
@@ -43,7 +45,6 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 	}
 	
 	public void clicarCampoEstiloSelecaoSemLoad(String campo) {
-		
 		SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoInterface pesq = SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoEnum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		pesq.getElement(this.devo).click();
@@ -104,6 +105,8 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 		}
 
 	public boolean validaValorCamposEstiloSelecao(List<String> lista, String campo) {
+		this.load.loading();
+		webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoInterface pesq = SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoEnum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		List<String> list = Arrays
@@ -118,6 +121,7 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 		SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoInterface pesq = SNF_PesquisaParametrosComportamentoSTOperacoesDevolucaoEnum
 				.valueOf(campo.replace(" ", "_").toUpperCase());
 		SeleniumRobot.MoveToElementWeb(pesq.getElement(this.devo));
+		webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		Select opcoes = new Select(pesq.getElement(this.devo));
 		opcoes.getOptions().forEach(opcao -> {
 			String op = opcao.getText().trim();
@@ -172,12 +176,13 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 	}
 
 	public boolean pegarValorGridResultadoPesquisaParametro(String campo, String valor) {
+		this.load.loading();
 		List<WebElement> Values = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tbody/tr/td"));
 		List<WebElement> Header = webDriver.findElements(By.xpath("//table[@class='table table-hover']//tr/th"));
 		List<Map<String, String>> grid = new ArrayList<Map<String, String>>();
 		int QtdeRegistro = Values.size() / Header.size();
 
-		if (QtdeRegistro >= 0) {
+		if (QtdeRegistro > 0) {
 
 			for (int x = 0; x < QtdeRegistro; x++) {
 				Map<String, String> map = new HashMap<String, String>();

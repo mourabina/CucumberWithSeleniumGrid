@@ -6,7 +6,7 @@
 @Validado
 Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoes de Devolucao
 
-  @ISDSTBOF14191 @webSNF
+  @ISDSTBOF14191 @webSNF @TelaSNF
   Cenario: 14191 - Validar campo 'Formato' na tela de consulta
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -17,7 +17,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     Quando clico no campo de selecao "Formato"
     Entao deve ser apresentado os valores "Selecione...", "Atacado", "Varejo" no campo "Formato"
 
-  @ISDSTBOF14193 @webSNF
+  @ISDSTBOF14193 @webSNF @TelaSNF
   Cenario: 14193 - Validar campo 'Estado de Origem'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -28,7 +28,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     Quando clico no campo de selecao "Estado de Origem"
     Entao deve ser apresentado no campo "Estado de Origem" uma Lista de Estados Federativos do Brasil
 
-  @ISDSTBOF14194 @webSNF
+  @ISDSTBOF14194 @webSNF @TelaSNF
   Cenario: 14194 - Consulta por Verificar campo 'Formato'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -40,7 +40,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar o campo "Tipo de Unidade" com valor "Atacado"
 
-  @ISDSTBOF141945 @webSNF
+  @ISDSTBOF141945 @webSNF @TelaSNF
   Cenario: 14195 - Consulta por Verificar campo 'Empresa'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -52,7 +52,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar o campo "Empresa" com valor "CLUBE DE MULTIFIDELIZACAO"
 
-  @ISDSTBOF141946 @webSNF
+  @ISDSTBOF141946 @webSNF @TelaSNF
   Cenario: 14196 - Consulta por Verificar campo 'Estado de Origem'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -64,7 +64,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar o campo "Estado de Origem" com valor "PE"
 
-  @ISDSTBOF141947 @webSNF
+  @ISDSTBOF141947 @webSNF @TelaSNF
   Cenario: 14197 - Consulta por Verificar campos 'Formato' + 'Empresa'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -76,7 +76,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar os campos "Tipo de Unidade", "Empresa" com os valores "Atacado", "CLUBE DE MULTIFIDELIZACAO"
 
-  @ISDSTBOF14198 @webSNF
+  @ISDSTBOF14198 @webSNF @TelaSNF
   Cenario: 14198 - Consulta por Verificar campos 'Formato' + 'Estado de Origem'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -88,7 +88,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar os campos "Tipo de Unidade", "Estado de Origem" com os valores "Atacado", "SP"
 
-  @ISDSTBOF14199 @webSNF
+  @ISDSTBOF14199 @webSNF @TelaSNF
   Cenario: 14199 - Consulta por Verificar campos 'Empresa' + 'Estado de Origem'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -100,7 +100,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao pesquisa
     Entao o grid deve apresentar os campos "Empresa", "Estado de Origem" com os valores "CLUBE DE MULTIFIDELIZACAO", "BA"
 
-  @ISDSTBOF14200 @webSNF
+  @ISDSTBOF14200 @webSNF @TelaSNF
   Cenario: 14200 - Consulta por Verificar campos 'Formato' + 'Empresa' + 'Estado de Origem'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -108,11 +108,11 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
       | 14200 | ISDSTBOF-14200 | Consulta por Verificar campos 'Formato' + 'Empresa' + 'Estado de Origem' | HIlario Bina     | T1     |
     E utilizando o tipo de unidade "Centro de Distribuição" com a unidade "7467 - CENTRO DIST MURIBECA"
     E Acesso a tela "Parametrizacoes Fiscais" > "Parametros Gerais" > "Parametros de Comportamento do ST em Operacoes de Devolucao"
-    Quando seleciono os valores "Atacado", "BOMC - CLUBE DE MULTIFIDELIZACAO", "Bahia" para os campos "Formato", "Empresa", "Estado de Origem"
+    Quando seleciono os valores "Atacado", "BOMC - CLUBE DE MULTIFIDELIZACAO", "Acre" para os campos "Formato", "Empresa", "Estado de Origem"
     E clico no botao pesquisa
-    Entao o grid deve apresentar os campos "Tipo de Unidade", "Empresa", "Estado de Origem" com os valores "Atacado", "CLUBE DE MULTIFIDELIZACAO", "BA"
+    Entao o grid deve apresentar os campos "Tipo de Unidade", "Empresa", "Estado de Origem" com os valores "Atacado", "CLUBE DE MULTIFIDELIZACAO", "AC"
 
-  @ISDSTBOF14201 @webSNF
+  @ISDSTBOF14201 @webSNF @TelaSNF
   Cenario: 14201 - Validar Botão 'LIMPAR'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -124,7 +124,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao Limpar
     Entao deve apresentar os campos "Formato", "Empresa", "Estado de Origem" com os valores "Selecione...", "Selecione...", "Selecione..."
 
-  @ISDSTBOF14203 @webSNF
+  @ISDSTBOF14203 @webSNF @TelaSNF
   Cenario: 14203 - Verificar a funcionalidade do botão 'Novo'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -135,7 +135,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     Quando clico no botao Mais
     Entao deve ser apresentado todos os campos obrigatorios habilitados para edicao
 
-  @ISDSTBOF14206 @webSNF
+  @ISDSTBOF14206 @webSNF @TelaSNF
   Cenario: 14206 - Verificar campo 'Formato'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -147,7 +147,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no campo de selecao "Cad Formato"
     Entao deve ser apresentado os valores "Selecione...", "Atacado", "Varejo" no campo "Cad Formato"
 
-  @ISDSTBOF14207 @webSNF
+  @ISDSTBOF14207 @webSNF  @TelaSNF
   Cenario: 14207 - Verificar campo 'Estado'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -159,7 +159,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no campo de selecao "Estado"
     Entao deve ser apresentado no campo "Estado" uma Lista de Estados Federativos do Brasil
 
-  @ISDSTBOF14208 @webSNF
+  @ISDSTBOF14208 @webSNF @TelaSNF
   Cenario: 14208 - Verificar campo 'NF Complementar'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -171,7 +171,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no campo de selecao "NF de Ressarcimento"
     Entao deve ser apresentado os valores "Selecione...", "Sim", "Não" no campo "NF de Ressarcimento"
 
-  @ISDSTBOF14209 @webSNF
+  @ISDSTBOF14209 @webSNF @TelaSNF
   Cenario: 14209 - Verificar campo 'Obtém de CFOP'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -183,7 +183,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Obtem do CFOP" deve estar somente para Leitura
 
-  @ISDSTBOF14210 @webSNF
+  @ISDSTBOF14210 @webSNF @TelaSNF
   Cenario: 14210 - Verificar campo 'Natureza de Operação' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -195,7 +195,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "Natureza de Operação" não deve estar presente na tela estilo Select
 
-  @ISDSTBOF14211 @webSNF
+  @ISDSTBOF14211 @webSNF @TelaSNF
   Cenario: 14211 - Verificar campo 'Natureza da Operação' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -207,7 +207,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Natureza de Operação" deve estar presente na tela estilo Select
 
-  @ISDSTBOF14213 @webSNF
+  @ISDSTBOF14213 @webSNF @TelaSNF
   Cenario: 14213 - Verificar campo 'Nat. Oper. Impressa na NF' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -219,7 +219,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "Natureza Operação Impressa na NF" nao deve estar presente na tela estilo Input
 
-  @ISDSTBOF14214 @webSNF
+  @ISDSTBOF14214 @webSNF @TelaSNF
   Cenario: 14214 - Verificar campo 'Nat. Oper. Impressa na NF' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -231,7 +231,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Natureza Operação Impressa na NF" deve estar presente na tela estilo Input
 
-  @ISDSTBOF14216 @webSNF
+  @ISDSTBOF14216 @webSNF @TelaSNF
   Cenario: 14216 - Verificar campo 'CFOP Operação Interna' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -243,7 +243,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "CFOP Operação Interna" nao deve estar presente na tela estilo Input
 
-  @ISDSTBOF14217 @webSNF
+  @ISDSTBOF14217 @webSNF @TelaSNF
   Cenario: 14217 - Verificar campo 'CFOP Operação Interna' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -255,7 +255,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "CFOP Operação Interna" deve estar presente na tela estilo Input
 
-  @ISDSTBOF14219 @webSNF
+  @ISDSTBOF14219 @webSNF @TelaSNF
   Cenario: 14219 - Verificar campo 'CFOP Operação Externa' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -267,7 +267,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "CFOP Operação Externa" nao deve estar presente na tela estilo Input
 
-  @ISDSTBOF14220 @webSNF
+  @ISDSTBOF14220 @webSNF @TelaSNF
   Cenario: 14220 - Verificar campo 'CFOP Operação Externa' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -279,7 +279,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "CFOP Operação Externa" deve estar presente na tela estilo Input
 
-  @ISDSTBOF14222 @webSNF
+  @ISDSTBOF14222 @webSNF @TelaSNF
   Cenario: 14222 - Verificar campo 'Código do Item' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -291,7 +291,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "Código do Item" nao deve estar presente na tela estilo Input
 
-  @ISDSTBOF14223 @webSNF
+  @ISDSTBOF14223 @webSNF @TelaSNF
   Cenario: 14223 - Verificar campo 'Código do Item' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -303,7 +303,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Código do Item" deve estar presente na tela estilo Input
 
-  @ISDSTBOF14225 @webSNF
+  @ISDSTBOF14225 @webSNF @TelaSNF
   Cenario: 14225 - Verificar campo 'Descrição do Item' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -315,7 +315,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "Descrição do Item" nao deve estar presente na tela estilo Input
 
-  @ISDSTBOF14226 @webSNF
+  @ISDSTBOF14226 @webSNF @TelaSNF
   Cenario: 14226 - Verificar campo 'Descrição do Item' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -327,7 +327,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Descrição do Item" deve estar presente na tela estilo Input
 
-  @ISDSTBOF14228 @webSNF
+  @ISDSTBOF14228 @webSNF @TelaSNF
   Cenario: 14228 - Verificar campo 'CST' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -339,7 +339,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "CST" não deve estar presente na tela estilo Select
 
-  @ISDSTBOF14229 @webSNF
+  @ISDSTBOF14229 @webSNF @TelaSNF
   Cenario: 14229 - Verificar campo 'CST' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -351,7 +351,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "CST" deve estar presente na tela estilo Select
 
-  @ISDSTBOF14231 @webSNF
+  @ISDSTBOF14231 @webSNF @TelaSNF
   Cenario: 14231 - Verificar campo 'Destaca ST e FCP ST' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -363,7 +363,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Sim" no campo "NF de Ressarcimento"
     Entao o campo "Destaca ST e FCP ST" não deve estar presente na tela estilo Select
 
-  @ISDSTBOF14232 @webSNF
+  @ISDSTBOF14232 @webSNF @TelaSNF
   Cenario: 14232 - Verificar campo 'Destaca ST e FCP ST' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -375,7 +375,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E seleciono o valor "Não" no campo "NF de Ressarcimento"
     Entao o campo "Destaca ST e FCP ST" deve estar presente na tela estilo Select
 
-  @ISDSTBOF14233 @webSNF
+  @ISDSTBOF14233 @webSNF @TelaSNF
   Cenario: 14233 - Verificar campo 'Destaca ST e FCP ST'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -388,7 +388,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco um click no campo de selecao "Destaca ST e FCP ST"
     Entao deve ser apresentado os valores "Selecione...", "Sim", "Não" no campo "Destaca ST e FCP ST"
 
-  @ISDSTBOF14234 @webSNF
+  @ISDSTBOF14234 @webSNF @TelaSNF
   Cenario: 14234 - Verificar campo 'Opção de Destaque' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -401,7 +401,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco nova selecao do valor "Sim" no campo "Destaca ST e FCP ST"
     Entao o campo "Opção de Destaque" não deve estar presente na tela estilo Select
 
-  @ISDSTBOF14235 @webSNF
+  @ISDSTBOF14235 @webSNF @TelaSNF
   Cenario: 14235 - Verificar campo 'Opção de Destaque' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -414,7 +414,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco nova selecao do valor "Não" no campo "Destaca ST e FCP ST"
     Entao o campo "Opção de Destaque" deve estar presente na tela estilo Select
 
-  @ISDSTBOF14236 @webSNF
+  @ISDSTBOF14236 @webSNF @TelaSNF
   Cenario: 14236 - Verificar campo 'Opção de Destaque'
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -428,7 +428,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco um click no campo de selecao "Opcao de Destaque"
     Entao deve apresentar os valores "Selecione...", "Outros Despesas", "Ressarcimento" no campo "Opcao de Destaque"
 
-  @ISDSTBOF14237 @webSNF
+  @ISDSTBOF14237 @webSNF @TelaSNF
   Cenario: 14237 - Verificar campo 'Parâmetros de Ressarcimento' não está presente
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -442,7 +442,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco nova selecao do valor "Outros Despesas" no campo "Opcao de Destaque"
     Entao o campo "Parâmetros de Ressarcimento" não deve estar presente na tela estilo Select
 
-  @ISDSTBOF14238 @webSNF
+  @ISDSTBOF14238 @webSNF @TelaSNF
   Cenario: 14238 - Verificar campo 'Parâmetros de Ressarcimento' se torna visivel
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -456,7 +456,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E faco nova selecao do valor "Ressarcimento" no campo "Opcao de Destaque"
     Entao o campo "Parâmetros de Ressarcimento" deve estar presente na tela estilo Select
 
-  @ISDSTBOF14245 @webSNF
+  @ISDSTBOF14245 @webSNF @TelaSNF
   Cenario: 14245 - Validar botão 'HISTORICO' em registro editado
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
@@ -470,7 +470,7 @@ Funcionalidade: 17.3 - Pesquisa de Parametros do Comportamento do ST em Operacoe
     E clico no botao Historico
     Entao deve ser exibido a tela de Historico com os dados do registro
 
-  @ISDSTBOF14246 @webSNF
+  @ISDSTBOF14246 @webSNF @TelaSNF
   Cenario: 14246 - Validar botão 'Retornar' na tela de cadastro
     Dado que estou logado no SNF com usuario "SVCautqea"
     E estou executando o teste
