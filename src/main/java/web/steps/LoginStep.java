@@ -17,6 +17,7 @@ public class LoginStep {
 
 	@Dado("^que estou logado com usuario/filial \"([^\"]*)\"/\"([^\"]*)\"$")
 	public void loginSAD(String user, String filial) throws FileNotFoundException {
+		Thread.currentThread().getId();
 		VariaveisEstaticas.setUSER_SAD(user);
 		VariaveisEstaticas.setFILIAL_SAD(filial);
 		this.login.loginSAD(user, filial);

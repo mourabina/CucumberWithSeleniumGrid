@@ -29,6 +29,15 @@ public class VariaveisEstaticas {
 	private static String SERIE_NOTA;
 	private static String CNPJ_NOTA;
 	private static String AMBIENTE;
+	private static String MENSAGEM;
+
+	public static String getMENSAGEM() {
+		return MENSAGEM;
+	}
+
+	public static void setMENSAGEM(String mENSAGEM) {
+		MENSAGEM = mENSAGEM;
+	}
 
 	public static String getAMBIENTE() {
 		return AMBIENTE;

@@ -27,7 +27,7 @@ public class RecebimentoStep {
 	public void geracaoMassaSad(String tipoPed, String modelo) throws Throwable {
 		VariaveisEstaticas.setNOTA_FISCAL(modelo);
 		VariaveisEstaticas.setMODELO(tipoPed);
-	//	this.fluxo.geracaoPedido(tipoPed, modelo);
+		this.fluxo.geracaoPedido(tipoPed, modelo);
 	}
 
 	@Dado("^esteja vinculado com uma Nota Fiscal$")

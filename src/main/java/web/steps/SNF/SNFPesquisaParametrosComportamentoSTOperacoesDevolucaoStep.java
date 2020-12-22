@@ -181,6 +181,7 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoStep {
 
 	@Quando("^deve ser exibida a seguinte mensagem \"([^\"]*)\"$")
 	public void validarMensagemExibida(String msg) {
+		String a = VariaveisEstaticas.getMENSAGEM();
 		Assert.assertEquals(msg, this.pesq.retornaMensagemExibida());
 	}
 

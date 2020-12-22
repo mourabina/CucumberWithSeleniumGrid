@@ -166,6 +166,7 @@ public class SNFPesquisaParametrosComportamentoSTOperacoesDevolucaoFuncionalidad
 	public void clicarBotaoSalvarPesquisaParametros() {
 		addEvidenciaWeb("Clicando no botão Salvar");
 		this.comp.getBtnSalvar().click();
+		VariaveisEstaticas.setMENSAGEM(this.devo.getMsg().getText());
 	}
 
 	public void clicarBotaoRetornarPesquisaParametros() {
