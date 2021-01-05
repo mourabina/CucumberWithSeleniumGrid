@@ -1,0 +1,2724 @@
+[
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.482Z",
+        "before": [
+          {
+            "result": {
+              "duration": 735000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "0009 - Validar criacao de Nova Conta com Sucesso",
+        "description": "",
+        "id": "criar-conta;0009---validar-criacao-de-nova-conta-com-sucesso",
+        "after": [
+          {
+            "result": {
+              "duration": 69065900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25028589500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 759200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "009",
+                  "SENHORBARRIGA - 009",
+                  "Validar criacao de Nova Conta com Sucesso",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d79.0.3945.117)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NBPITANG-207\u0027, ip: \u0027192.168.0.108\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.remote.RemoteWebDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.igEhRj}, goog:chromeOptions: {debuggerAddress: localhost:34755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: c10dbbfc884c2c4d073caa01b3d...}\nSession ID: c10dbbfc884c2c4d073caa01b3d2b802\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\r\n\tat web.funcionalidade.HomeFuncionalidade.acessarAdicionarConta(HomeFuncionalidade.java:31)\r\n\tat web.steps.CriarContaStep.acessoAPaginaAdicionarConta(CriarContaStep.java:25)\r\n\tat ✽.acesso a pagina Adicionar Conta(file:src/test/resources/Features/SNF/CriarConta.feature:14)\r\n",
+              "duration": 12361303000,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 5900,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "preencho o campo Nome com novo valor",
+            "match": {
+              "location": "CriarContaStep.preenchoCampoNomeComNovoValor()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3900,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "clico no Botao Salvar",
+            "match": {
+              "location": "CriarContaStep.clicoNoBotaoSalvar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 16100,
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "sistem exibi a mensagen \"Conta adicionada com sucesso!\"  na tela de Adicionar Conta",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Conta adicionada com sucesso!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarContaStep.sistemExibiAMensagenNaTelaDeAdicionarConta(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarConta"
+          },
+          {
+            "name": "@SENHORBARRIGA009"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:40.956Z",
+        "before": [
+          {
+            "result": {
+              "duration": 98300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "0010 - Validar criacao de Nova Conta com Nome já existente",
+        "description": "",
+        "id": "criar-conta;0010---validar-criacao-de-nova-conta-com-nome-já-existente",
+        "after": [
+          {
+            "result": {
+              "duration": 73201100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6376095700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 557700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "010",
+                  "SENHORBARRIGA - 010",
+                  "Validar criacao de Nova Conta com Nome já existente",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1214315500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3108105000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 544070700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "preencho o campo nome com valor já criado",
+            "match": {
+              "location": "CriarContaStep.preenchoCampoNomeComValorJaCriado()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 613810500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "clico no Botao Salvar",
+            "match": {
+              "location": "CriarContaStep.clicoNoBotaoSalvar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 413771900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "sistem exibi a mensagen \"Já existe uma conta com esse nome!\"  na tela de Adicionar Conta",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Já existe uma conta com esse nome!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarContaStep.sistemExibiAMensagenNaTelaDeAdicionarConta(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarConta"
+          },
+          {
+            "name": "@SENHORBARRIGA010"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:53.302Z",
+        "before": [
+          {
+            "result": {
+              "duration": 166200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "0011 - Validar criacao de Nova Conta sem preencher o Campo Nome",
+        "description": "",
+        "id": "criar-conta;0011---validar-criacao-de-nova-conta-sem-preencher-o-campo-nome",
+        "after": [
+          {
+            "result": {
+              "duration": 97756300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4765590600,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1922300,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "011",
+                  "SENHORBARRIGA - 011",
+                  "Validar criacao de Nova Conta sem preencher o Campo Nome",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 639938700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 365905000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "clico no Botao Salvar",
+            "match": {
+              "location": "CriarContaStep.clicoNoBotaoSalvar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 501440000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "sistem exibi a mensagen \"Informe o nome da conta\"  na tela de Adicionar Conta",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Informe o nome da conta\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarContaStep.sistemExibiAMensagenNaTelaDeAdicionarConta(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarConta"
+          },
+          {
+            "name": "@SENHORBARRIGA011"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:59.676Z",
+        "before": [
+          {
+            "result": {
+              "duration": 77800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "0012 - Validar acao de Deletar Contana tela de Adicionar Conta",
+        "description": "",
+        "id": "criar-conta;0012---validar-acao-de-deletar-contana-tela-de-adicionar-conta",
+        "after": [
+          {
+            "result": {
+              "duration": 118417300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4100012000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 568600,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "012",
+                  "SENHORBARRIGA - 012",
+                  "Validar acao de Deletar Contana tela de Adicionar Conta",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 732666400,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2195749600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1391295400,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "clico no Botao Deletar Conta",
+            "match": {
+              "location": "CriarContaStep.clicoNoBotaoDeletarConta()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 392876600,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "sistem exibi a mensagen \"Conta removida com sucesso!\"  na tela de Adicionar Conta",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Conta removida com sucesso!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarContaStep.sistemExibiAMensagenNaTelaDeAdicionarConta(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarConta"
+          },
+          {
+            "name": "@SENHORBARRIGA012"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Criar Conta",
+    "description": "",
+    "id": "criar-conta",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/CriarConta.feature",
+    "tags": [
+      {
+        "name": "@CriarConta",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.481Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1153100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "0013 - Criar Movimentacao com Sucesso",
+        "description": "",
+        "id": "criar-movimentacao;0013---criar-movimentacao-com-sucesso",
+        "after": [
+          {
+            "result": {
+              "duration": 63212900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16926657900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1912900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "013",
+                  "SENHORBARRIGA - 013",
+                  "Criar Movimentacao com Sucesso",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1077507200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2757712500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 4212191100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "crio uma Movimentacao",
+            "match": {
+              "location": "CriarMovimentacaoStep.crioUmaMovimentacao()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 352922200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "sistem exibi a mensagen \"Movimentação adicionada com sucesso!\"  na tela de Criar Movimentacao",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Movimentação adicionada com sucesso!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarMovimentacaoStep.sistemExibiAMensagenNaTelaDeCriarMovimentacao(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarMovimentacao"
+          },
+          {
+            "name": "@SENHORBARRIGA013"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:28.887Z",
+        "before": [
+          {
+            "result": {
+              "duration": 99100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "0014 - Obrigatoriedade do campo \u0027Data da Movimentação\u0027",
+        "description": "",
+        "id": "criar-movimentacao;0014---obrigatoriedade-do-campo--data-da-movimentação-",
+        "after": [
+          {
+            "result": {
+              "duration": 73658100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6164886200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 845700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "014",
+                  "SENHORBARRIGA - 014",
+                  "Obrigatoriedade do campo \u0027Data da Movimentação\u0027",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 958210100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3227569100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 5017785400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "crio uma Movimentacao sem o campo Data Movimentacao",
+            "match": {
+              "location": "CriarMovimentacaoStep.movimentacaoSemCampoDataMovimentacao()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 267006500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "sistem exibi a mensagen \"Data da Movimentação é obrigatório\"  na tela de Criar Movimentacao",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Data da Movimentação é obrigatório\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarMovimentacaoStep.sistemExibiAMensagenNaTelaDeCriarMovimentacao(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarMovimentacao"
+          },
+          {
+            "name": "@SENHORBARRIGA014"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:44.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 74000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "0015 - Obrigatoriedade do campo \u0027Data do Pagamento\u0027",
+        "description": "",
+        "id": "criar-movimentacao;0015---obrigatoriedade-do-campo--data-do-pagamento-",
+        "after": [
+          {
+            "result": {
+              "duration": 62740000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6279302100,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1045100,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "015",
+                  "SENHORBARRIGA - 015",
+                  "Obrigatoriedade do campo \u0027Data do Pagamento\u0027",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 895670900,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 10742468300,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2470095300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "crio uma Movimentacao sem o campo Data do Pagamento",
+            "match": {
+              "location": "CriarMovimentacaoStep.movimentacaoSemCampoDataDoPagamento()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 117475700,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "sistem exibi a mensagen \"Data do pagamento é obrigatório\"  na tela de Criar Movimentacao",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Data do pagamento é obrigatório\"",
+                  "offset": 24
+                }
+              ],
+              "location": "CriarMovimentacaoStep.sistemExibiAMensagenNaTelaDeCriarMovimentacao(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarMovimentacao"
+          },
+          {
+            "name": "@SENHORBARRIGA015"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:08:05.170Z",
+        "before": [
+          {
+            "result": {
+              "duration": 88700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "0016 - Obrigatoriedade do campo \u0027Valor\u0027",
+        "description": "",
+        "id": "criar-movimentacao;0016---obrigatoriedade-do-campo--valor-",
+        "after": [
+          {
+            "result": {
+              "duration": 62130400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4374690300,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 403500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "016",
+                  "SENHORBARRIGA - 016",
+                  "Obrigatoriedade do campo \u0027Valor\u0027",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 658413600,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1988439600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2491704600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "crio uma Movimentacao sem o campo Valor",
+            "match": {
+              "location": "CriarMovimentacaoStep.movimentacaoSemCampoValor()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 169390700,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "sistema exibi as mensagens \"Valor é obrigatório\" e \"Valor deve ser um número\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Valor é obrigatório\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Valor deve ser um número\"",
+                  "offset": 51
+                }
+              ],
+              "location": "CriarMovimentacaoStep.sistemaExibiAsMensagensE(String,String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarMovimentacao"
+          },
+          {
+            "name": "@SENHORBARRIGA016"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Criar Movimentacao",
+    "description": "",
+    "id": "criar-movimentacao",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/CriarMovimentacao.feature",
+    "tags": [
+      {
+        "name": "@CriarMovimentacao",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.481Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1402100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "0005 - Validar criacao de Novo Usuario preenchenco somente o campo Nome",
+        "description": "",
+        "id": "criar-novo-usuario;0005---validar-criacao-de-novo-usuario-preenchenco-somente-o-campo-nome",
+        "after": [
+          {
+            "result": {
+              "duration": 68302700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19073096100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 564300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "005",
+                  "SENHORBARRIGA - 005",
+                  "Validar criacao de Novo Usuario preenchenco somente o campo Nome",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 611975300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "acesso a pagina Novo Usuario",
+            "match": {
+              "location": "NovoUsuarioStep.acessoAPaginaNovoUsuario()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 485602900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "preencho somente o campo \"Nome\" com o valor \"Jose\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nome\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Jose\"",
+                  "offset": 44
+                }
+              ],
+              "location": "NovoUsuarioStep.preenchoSomenteCampoComValor(String,String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 773189800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "clico no Botao Cadastrar",
+            "match": {
+              "location": "NovoUsuarioStep.clicarBotaoCadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 565100300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "sistem exibi as mensagens \"Email é um campo obrigatório\" e \"Senha é um campo obrigatório\" na tela de Novo Usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email é um campo obrigatório\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Senha é um campo obrigatório\"",
+                  "offset": 59
+                }
+              ],
+              "location": "NovoUsuarioStep.sistemExibiAsMensagensENaTelaDeNovoUsuario(String,String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarNovoUsuario"
+          },
+          {
+            "name": "@SENHORBARRIGA005"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:25.076Z",
+        "before": [
+          {
+            "result": {
+              "duration": 87100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "0006 - Validar criacao de Novo Usuario preenchenco somente o campo Email",
+        "description": "",
+        "id": "criar-novo-usuario;0006---validar-criacao-de-novo-usuario-preenchenco-somente-o-campo-email",
+        "after": [
+          {
+            "result": {
+              "duration": 72945500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2333798500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 930200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "006",
+                  "SENHORBARRIGA - 006",
+                  "Validar criacao de Novo Usuario preenchenco somente o campo Email",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 612395600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "acesso a pagina Novo Usuario",
+            "match": {
+              "location": "NovoUsuarioStep.acessoAPaginaNovoUsuario()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 388593200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "preencho somente o campo \"Email\" com o valor \"Jose@Jose\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Jose@Jose\"",
+                  "offset": 45
+                }
+              ],
+              "location": "NovoUsuarioStep.preenchoSomenteCampoComValor(String,String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 848235400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "clico no Botao Cadastrar",
+            "match": {
+              "location": "NovoUsuarioStep.clicarBotaoCadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1069778800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "sistem exibi as mensagens \"Nome é um campo obrigatório\" e \"Senha é um campo obrigatório\" na tela de Novo Usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nome é um campo obrigatório\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Senha é um campo obrigatório\"",
+                  "offset": 58
+                }
+              ],
+              "location": "NovoUsuarioStep.sistemExibiAsMensagensENaTelaDeNovoUsuario(String,String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarNovoUsuario"
+          },
+          {
+            "name": "@SENHORBARRIGA006"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:30.405Z",
+        "before": [
+          {
+            "result": {
+              "duration": 97100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "0007 - Validar criacao de Novo Usuario preenchenco somente o campo Senha",
+        "description": "",
+        "id": "criar-novo-usuario;0007---validar-criacao-de-novo-usuario-preenchenco-somente-o-campo-senha",
+        "after": [
+          {
+            "result": {
+              "duration": 385250000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2601529900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 567500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "007",
+                  "SENHORBARRIGA - 007",
+                  "Validar criacao de Novo Usuario preenchenco somente o campo Senha",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 893235200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "acesso a pagina Novo Usuario",
+            "match": {
+              "location": "NovoUsuarioStep.acessoAPaginaNovoUsuario()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 387244600,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "preencho somente o campo \"Senha\" com o valor \"Jose\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Senha\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Jose\"",
+                  "offset": 45
+                }
+              ],
+              "location": "NovoUsuarioStep.preenchoSomenteCampoComValor(String,String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1141437400,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "clico no Botao Cadastrar",
+            "match": {
+              "location": "NovoUsuarioStep.clicarBotaoCadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 568186600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "sistem exibi as mensagens \"Nome é um campo obrigatório\" e \"Email é um campo obrigatório\" na tela de Novo Usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nome é um campo obrigatório\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Email é um campo obrigatório\"",
+                  "offset": 58
+                }
+              ],
+              "location": "NovoUsuarioStep.sistemExibiAsMensagensENaTelaDeNovoUsuario(String,String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarNovoUsuario"
+          },
+          {
+            "name": "@SENHORBARRIGA007"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:36.384Z",
+        "before": [
+          {
+            "result": {
+              "duration": 112500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "0008 - Validar criacao de Novo Usuario com Sucesso",
+        "description": "",
+        "id": "criar-novo-usuario;0008---validar-criacao-de-novo-usuario-com-sucesso",
+        "after": [
+          {
+            "result": {
+              "duration": 59978500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3135773100,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 449000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "008",
+                  "SENHORBARRIGA - 008",
+                  "Validar criacao de Novo Usuario com Sucesso",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1118939600,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "acesso a pagina Novo Usuario",
+            "match": {
+              "location": "NovoUsuarioStep.acessoAPaginaNovoUsuario()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 12356932600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "preencho os campos \"Nome\", \"Email\" e \"Senha\" com os valore \"Jose\", \"Jose@Jose\" e \"Jose\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nome\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"Email\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Senha\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Jose\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"Jose@Jose\"",
+                  "offset": 67
+                },
+                {
+                  "val": "\"Jose\"",
+                  "offset": 81
+                }
+              ],
+              "location": "NovoUsuarioStep.preenchoCamposComValore(String,String,String,String,String,String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1125580400,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "clico no Botao Cadastrar",
+            "match": {
+              "location": "NovoUsuarioStep.clicarBotaoCadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 585011700,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "sistem exibi a mensagen \"Usuário inserido com sucesso\"  na tela de Novo Usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Usuário inserido com sucesso\"",
+                  "offset": 24
+                }
+              ],
+              "location": "NovoUsuarioStep.validarExibicaoMensagem(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CriarNovoUsuario"
+          },
+          {
+            "name": "@SENHORBARRIGA008"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Criar Novo Usuario",
+    "description": "",
+    "id": "criar-novo-usuario",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/CriarNovoUsuario.feature",
+    "tags": [
+      {
+        "name": "@CriarNovoUsuario",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 5,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.478Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1174100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "0018 - Validar o valor do Saldo na tela Home da Aplicação",
+        "description": "",
+        "id": "home-site-do-senhor-barriga;0018---validar-o-valor-do-saldo-na-tela-home-da-aplicação",
+        "after": [
+          {
+            "result": {
+              "duration": 69816500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9149292700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 14559700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "018",
+                  "SENHORBARRIGA - 018",
+                  "Validar o valor do Saldo na tela Home da Aplicação",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1611939100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 4843247300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Sedrick\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NBPITANG-207\u0027, ip: \u0027192.168.0.108\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)\r\n\tat web.funcionalidade.CriarMovimentacaoFuncionalidade.selecionarConta(CriarMovimentacaoFuncionalidade.java:42)\r\n\tat web.funcionalidade.CriarMovimentacaoFuncionalidade.criarMovimentacao(CriarMovimentacaoFuncionalidade.java:54)\r\n\tat web.steps.CriarMovimentacaoStep.crioUmaMovimentacao(CriarMovimentacaoStep.java:19)\r\n\tat ✽.crio uma Movimentacao(file:src/test/resources/Features/SNF/Home.feature:15)\r\n",
+              "duration": 3880680800,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "crio uma Movimentacao",
+            "match": {
+              "location": "CriarMovimentacaoStep.crioUmaMovimentacao()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 11600,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "acesso a tela Home da Aplicacao",
+            "match": {
+              "location": "HomeStep.acessarTelaHome()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 5700,
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "sistema exibi o valor do Saldo igual ao utilizado na criacao da Movimentacao",
+            "match": {
+              "location": "HomeStep.validarValorSaldoTelaHome()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SENHORBARRIGA018"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Home Site do Senhor Barriga",
+    "description": "",
+    "id": "home-site-do-senhor-barriga",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/Home.feature",
+    "tags": []
+  },
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.481Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1659100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "0001 - Validar autenticacao com sucesso no Site",
+        "description": "",
+        "id": "pagina-de-login;0001---validar-autenticacao-com-sucesso-no-site",
+        "after": [
+          {
+            "result": {
+              "duration": 82958000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25096596900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 551000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "001",
+                  "SENHORBARRIGA - 001",
+                  "Validar autenticacao com sucesso no Site",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 767444700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "digito usuario \"h@h\" e Senha \"h\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"h@h\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"h\"",
+                  "offset": 29
+                }
+              ],
+              "location": "LoginStep.digitoUsuarioESenha(String,String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2074457400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "clico no Botao Entrar",
+            "match": {
+              "location": "LoginStep.clicoNoBotaoEntrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 12818843600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "sistem exibi a mensagem \"Bem vindo, Hilario!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bem vindo, Hilario!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.sistemExibiAMensagem(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SENHORBARRIGA001"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:44.337Z",
+        "before": [
+          {
+            "result": {
+              "duration": 94500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "0002 - Validar Obrigatóriedade do campo Email na tela de Login",
+        "description": "",
+        "id": "pagina-de-login;0002---validar-obrigatóriedade-do-campo-email-na-tela-de-login",
+        "after": [
+          {
+            "result": {
+              "duration": 76058200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3452113100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1342300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "002",
+                  "SENHORBARRIGA - 002",
+                  "Validar Obrigatóriedade do campo Email na tela de Login",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 414432800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "preencho somente o valor Senha \"h\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"h\"",
+                  "offset": 31
+                }
+              ],
+              "location": "LoginStep.preenchoSomenteOValorSenha(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1098546500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "clico no Botao Entrar",
+            "match": {
+              "location": "LoginStep.clicoNoBotaoEntrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 166059400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "sistem exibi a mensagem \"Email é um campo obrigatório\" na tela de Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email é um campo obrigatório\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.sistemExibiAMensagemNaTelaDeLogin(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SENHORBARRIGA002"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:49.548Z",
+        "before": [
+          {
+            "result": {
+              "duration": 81100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "0003 - Validar Obrigatóriedade do campo Senha na tela de Login",
+        "description": "",
+        "id": "pagina-de-login;0003---validar-obrigatóriedade-do-campo-senha-na-tela-de-login",
+        "after": [
+          {
+            "result": {
+              "duration": 63930800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2607888700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 660200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "003",
+                  "SENHORBARRIGA - 003",
+                  "Validar Obrigatóriedade do campo Senha na tela de Login",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 430478200,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "preencho somente o valor Email \"h@h\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"h@h\"",
+                  "offset": 31
+                }
+              ],
+              "location": "LoginStep.preenchoSomenteValorEmail(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 669433700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "clico no Botao Entrar",
+            "match": {
+              "location": "LoginStep.clicoNoBotaoEntrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 143470400,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "sistem exibi a mensagem \"Senha é um campo obrigatório\" na tela de Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Senha é um campo obrigatório\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.sistemExibiAMensagemNaTelaDeLogin(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SENHORBARRIGA003"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-05T12:07:53.467Z",
+        "before": [
+          {
+            "result": {
+              "duration": 736200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "0004 - Validar autenticacao sem preencher nenhum campo",
+        "description": "",
+        "id": "pagina-de-login;0004---validar-autenticacao-sem-preencher-nenhum-campo",
+        "after": [
+          {
+            "result": {
+              "duration": 62071100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3231781600,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "que estou na pagina de Login do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queEstouLogadoNoSNFComUsuario()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 387000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "004",
+                  "SENHORBARRIGA - 004",
+                  "Validar autenticacao sem preencher nenhum campo",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 891739900,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "clico no Botao Entrar",
+            "match": {
+              "location": "LoginStep.clicoNoBotaoEntrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 368616700,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "sistem exibi as mensagens \"Email é um campo obrigatório\" e \"Senha é um campo obrigatório\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email é um campo obrigatório\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Senha é um campo obrigatório\"",
+                  "offset": 59
+                }
+              ],
+              "location": "LoginStep.sistemExibiAsMensagensE(String,String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SENHORBARRIGA004"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Pagina de Login",
+    "description": "",
+    "id": "pagina-de-login",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-05T12:07:03.479Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1344400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "0017 - Deletar Movimentacao na tela Resumo Mensal",
+        "description": "",
+        "id": "resumo-mensal;0017---deletar-movimentacao-na-tela-resumo-mensal",
+        "after": [
+          {
+            "result": {
+              "duration": 58303200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 29587842300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que Logado na Pagina do Senhor Barriga",
+            "match": {
+              "location": "LoginStep.queLogadoNaPaginaDoSenhorBarriga()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 722000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "estou executando o teste",
+            "match": {
+              "location": "ParametrosEvidenciaSteps.estouExecutandoOTeste(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "Numero do CT",
+                  "Nome do CT",
+                  "Nome do executor",
+                  "Sprint"
+                ]
+              },
+              {
+                "cells": [
+                  "017",
+                  "SENHORBARRIGA - 017",
+                  "Deletar Movimentacao na tela Resumo Mensal",
+                  "Hilario Moura Bina",
+                  "S1"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1257969600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "acesso a pagina Adicionar Conta",
+            "match": {
+              "location": "CriarContaStep.acessoAPaginaAdicionarConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3983405300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "tenho uma conta já criada",
+            "match": {
+              "location": "CriarContaStep.tenhoUmaContaJaCriada()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 5551868100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "crio uma Movimentacao",
+            "match": {
+              "location": "CriarMovimentacaoStep.crioUmaMovimentacao()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3633247100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "deleto uma movimentacao",
+            "match": {
+              "location": "ResumoMensalStep.deletarUmaMovimentacao()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 198002600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "sistem exibi a mensagen \"Movimentação removida com sucesso!\"  na tela de Resumo Mensal",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Movimentação removida com sucesso!\"",
+                  "offset": 24
+                }
+              ],
+              "location": "ResumoMensalStep.validarMensagemTelaDeResumoMensal(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ResumoMensal"
+          },
+          {
+            "name": "@SENHORBARRIGA017"
+          },
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Resumo Mensal",
+    "description": "",
+    "id": "resumo-mensal",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/SNF/ResumoMensal.feature",
+    "tags": [
+      {
+        "name": "@ResumoMensal",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
