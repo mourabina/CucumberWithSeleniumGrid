@@ -2,9 +2,7 @@ package commons.funcionalidade;
 
 import java.util.Random;
 
-import commons.BaseTest;
-
-public class GeradorNumeroRandomico extends BaseTest {
+public class GeradorNumeroRandomico{
 
 	public static String retornaNumeroAleatorio() {
 

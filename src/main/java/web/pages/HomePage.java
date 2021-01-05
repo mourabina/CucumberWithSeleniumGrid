@@ -5,77 +5,59 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage{
-	
-	@FindBy(xpath = "//*[contains(@href,\"MENUG\")]")
-	private WebElement HomePageIcon;
-	
-	@FindBy(id = "auxProxTela")
-	private WebElement inputProxiTela;
-	
-	@FindBy(id = "nomeUsuario")
-	private WebElement labelMSGBemVindoUsuario;
-	
-	@FindBy(id = "btnTransmitir")
-	private WebElement Btntransmitir;
-	
-	@FindBy(id = "itemMenu1")
-	private WebElement compras;
-	
-	@FindBy(id = "itemMenu2")
-	private WebElement entrada;
-	
-	@FindBy(id = "itemMenu3")
-	private WebElement faturamento;
-	
-	@FindBy(id = "itemMenu4")
-	private WebElement fiscal;
-	
-	@FindBy(xpath = "'//a[@class='nav-link navbar-brand glyphicon glyphicon-off pull-left ']")
-	private WebElement buttonLogaout;
+public class HomePage {
+
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	private WebElement megSucesso;
+
+	@FindBy(xpath = "//a[@class='dropdown-toggle']")
+	private WebElement menuContas;
+
+	@FindBy(xpath = "//a[text()='Criar Movimentação']")
+	private WebElement menuCriarMovimentacao;
+
+	@FindBy(xpath = "//a[text()='Resumo Mensal']")
+	private WebElement menuResumoMensal;
+
+	@FindBy(xpath = "//a[text()='Home']")
+	private WebElement menuHome;
+
+	@FindBy(xpath = "//a[text()='Adicionar']")
+	private WebElement subMenuAdicionar;
+
+	@FindBy(xpath = "//a[text()='Listar']")
+	private WebElement subMenuListar;
 
 	public HomePage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
 
-	public WebElement getInputProxiTela() {
-		return inputProxiTela;
+	public WebElement getMenuHome() {
+		return menuHome;
 	}
 
-	public WebElement getLabelMSGBemVindoUsuario() {
-		return labelMSGBemVindoUsuario;
+	public WebElement getMenuContas() {
+		return menuContas;
 	}
 
-	public WebElement getButtonLogaout() {
-		return buttonLogaout;
+	public WebElement getMenuCriarMovimentacao() {
+		return menuCriarMovimentacao;
 	}
 
-	public WebElement getBtnTransmitir() {
-		return Btntransmitir;
+	public WebElement getMenuResumoMensal() {
+		return menuResumoMensal;
 	}
 
-	public WebElement getCompras() {
-		return compras;
+	public WebElement getMegSucesso() {
+		return megSucesso;
 	}
 
-	public WebElement getEntrada() {
-		return entrada;
+	public WebElement getSubMenuAdicionar() {
+		return subMenuAdicionar;
 	}
 
-	public WebElement getFaturamento() {
-		return faturamento;
-	}
-
-	public WebElement getFiscal() {
-		return fiscal;
-	}
-
-	public WebElement getHomePageIcon() {
-		return HomePageIcon;
-	}
-
-	public WebElement getBtntransmitir() {
-		return Btntransmitir;
+	public WebElement getSubMenuListar() {
+		return subMenuListar;
 	}
 
 }

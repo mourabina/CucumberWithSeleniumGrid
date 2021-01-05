@@ -9,10 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SeleniumRobot extends BaseTest {
+public class SeleniumRobot extends BaseTest{
 
-	public static void implicitlyWait(Long timeOut) {
-		webDriver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	public void implicitlyWait(Long timeOut) {
+		getwebDriver().manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+		
 	}
 
 	/**
@@ -43,9 +44,9 @@ public class SeleniumRobot extends BaseTest {
 	 * @param xpath
 	 * @return true or false
 	 */
-	public static boolean existElementWeb(String xpath) {
+	public boolean existElementWeb(String xpath) {
 
-		return webDriver.findElements(By.xpath(xpath)).size() != 0;
+		return getwebDriver().findElements(By.xpath(xpath)).size() != 0;
 
 	}
 
@@ -54,8 +55,8 @@ public class SeleniumRobot extends BaseTest {
 	 * 
 	 * @param element
 	 */
-	public static void DoubleClickWeb(WebElement element) {
-		Actions DoubleClick = new Actions(webDriver);
+	public void DoubleClickWeb(WebElement element) {
+		Actions DoubleClick = new Actions(getwebDriver());
 		DoubleClick.doubleClick(element).build().perform();
 	}
 
@@ -65,8 +66,8 @@ public class SeleniumRobot extends BaseTest {
 	 * @param element
 	 * @param texto
 	 */
-	public static void escrever(WebElement element, String texto) {
-		Actions actions = new Actions(webDriver);
+	public void escrever(WebElement element, String texto) {
+		Actions actions = new Actions(getwebDriver());
 		actions.moveToElement(element);
 		actions.click();
 		actions.sendKeys(texto).build().perform();
@@ -77,8 +78,8 @@ public class SeleniumRobot extends BaseTest {
 	 * 
 	 * @param element
 	 */
-	public static void MoveToElementWeb(WebElement element) {
-		Actions MoveToElement = new Actions(webDriver);
+	public void MoveToElementWeb(WebElement element) {
+		Actions MoveToElement = new Actions(getwebDriver());
 		MoveToElement.moveToElement(element).perform();
 	}
 
@@ -97,8 +98,8 @@ public class SeleniumRobot extends BaseTest {
 	 * @param element
 	 * @return quantidade
 	 */
-	public static int countElements(String element) {
-		return webDriver.findElements(By.xpath(element)).size();
+	public int countElements(String element) {
+		return getwebDriver().findElements(By.xpath(element)).size();
 	}
 
 	/**
@@ -127,8 +128,8 @@ public class SeleniumRobot extends BaseTest {
 	 * 
 	 * @param rolagem
 	 */
-	public static void scroll(int rolagem) {
-		JavascriptExecutor jse = (JavascriptExecutor) webDriver;
+	public void scroll(int rolagem) {
+		JavascriptExecutor jse = (JavascriptExecutor) getwebDriver() ;
 		jse.executeScript("window.scrollBy(0," + rolagem + ")", "");
 	}
 

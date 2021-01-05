@@ -7,43 +7,64 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	@FindBy(id = "TL_USUARIO")
-	private WebElement InputUser;
+	@FindBy(id = "senha")
+	private WebElement inputSenha;
 
-	@FindBy(id = "XTL_SENHA")
-	private WebElement inputPass;
+	@FindBy(id = "email")
+	private WebElement inputEmail;
 
-	@FindBy(id = "TL_EMP")
-	private WebElement inputEmpresa;
+	@FindBy(xpath = "//button[@class='btn btn-primary']")
+	private WebElement buttonLogin;
 
-	@FindBy(id = "TL_FILIAL_WM")
-	private WebElement inputFilial;
+	@FindBy(xpath = "//div[@class='alert alert-danger']")
+	private WebElement msgLogn;
 
-	@FindBy(id = "BTN_LOGIN_FX")
-	private WebElement btnLogin;
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	private WebElement msgSucesso;
 
-	
-	public LoginPage(WebDriver webDriver) {
-		PageFactory.initElements(webDriver, this);
+	@FindBy(xpath = "//div[@class='alert alert-danger']")
+	private java.util.List<WebElement> listaMensagens;
+
+	@FindBy(xpath = "//div[contains(@class, \"alert alert\")]")
+	private WebElement msgExibida;
+
+	@FindBy(xpath = "//a[text()='Novo usuário?']")
+	private WebElement itemMenuNovoUsuario;
+
+	public LoginPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
 
-	public WebElement getInputUser() {
-		return InputUser;
+	public WebElement getMsgExibida() {
+		return msgExibida;
 	}
 
-	public WebElement getInputPass() {
-		return inputPass;
+	public WebElement getInputSenha() {
+		return inputSenha;
 	}
 
-	public WebElement getInputEmpresa() {
-		return inputEmpresa;
+	public WebElement getInputEmail() {
+		return inputEmail;
 	}
 
-	public WebElement getInputFilial() {
-		return inputFilial;
+	public WebElement getButtonLogin() {
+		return buttonLogin;
 	}
 
-	public WebElement getBtnLogin() {
-		return btnLogin;
+	public WebElement getMsgLogn() {
+		return msgLogn;
 	}
+
+	public WebElement getMsgSucesso() {
+		return msgSucesso;
+	}
+
+	public java.util.List<WebElement> getListaMensagens() {
+		return listaMensagens;
+	}
+
+	public WebElement getItemMenuNovoUsuario() {
+		return itemMenuNovoUsuario;
+	}
+
 }

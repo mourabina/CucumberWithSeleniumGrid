@@ -6,7 +6,7 @@ import commons.BaseTest;
 import io.cucumber.datatable.DataTable;
 import web.funcionalidade.LoginFuncionalidade;
 
-public class ParametrosEvidenciaFuncionalidade extends BaseTest {
+public class ParametrosEvidenciaFuncionalidade extends BaseTest{
 
 	private LoginFuncionalidade login;
 

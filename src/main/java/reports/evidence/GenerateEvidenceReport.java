@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.Normalizer;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -15,6 +16,7 @@ import javax.imageio.ImageIO;
 import configuration.TestData;
 import io.cucumber.core.api.Scenario;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRStyle;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -40,9 +42,10 @@ public class GenerateEvidenceReport {
 	 *             occurs
 	 */
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void generareEvidenceReport(EvidenceReport evidenceReport, EvidenceType reportType, Scenario scenario)
 			throws IOException {
-
+		
 		List<SeleniumEvidence> data = evidenceReport.getEvidenceList();
 
 		Properties properties = SeleniumEvidenceUtils.loadProperties();
@@ -167,10 +170,11 @@ public class GenerateEvidenceReport {
 			parameters.put("SEL_LABEL_PAGE", properties.getProperty("label.page"));
 
 			JRBeanCollectionDataSource datasource = new JRBeanCollectionDataSource(data);
-
+			
+			
 			JasperPrint jasperPrint = JasperFillManager.fillReport(properties.getProperty("evidence.file"), parameters,
 					datasource);
-
+			
 			TestData testData = new TestData();
 			testData.setProject(project);
 			testData.setStepName(scenario.getName());
@@ -178,7 +182,7 @@ public class GenerateEvidenceReport {
 			
 			switch (reportType) {
 			case PDF:
-				JasperExportManager.exportReportToPdfFile(jasperPrint, evidenceDir + reportName + ".pdf");
+				JasperExportManager.exportReportToPdfFile(evidenceDir + reportName + ".pdf");
 				break;
 
 			case DOC:
@@ -199,7 +203,7 @@ public class GenerateEvidenceReport {
 				break;
 
 			case HTML:
-				JasperExportManager.exportReportToHtmlFile(jasperPrint, evidenceDir + reportName + ".html");
+				JasperExportManager.exportReportToHtmlFile(evidenceDir + reportName + ".html");
 				break;
 
 			default:

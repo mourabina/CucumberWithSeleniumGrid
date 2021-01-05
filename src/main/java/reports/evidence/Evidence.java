@@ -49,6 +49,7 @@ public class Evidence {
 		EvidenceReport report = new EvidenceReport(evidenceList, "CT-" + ctNumber + "_" + dateFormatter.date(),
 				tester, project, errors, environment, ctName, cycle);
 		GenerateEvidenceReport.generareEvidenceReport(report, EvidenceType.DOC, scenario);
+		
 	}
 
 	/**

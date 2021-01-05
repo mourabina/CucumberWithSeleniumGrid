@@ -6,9 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import commons.BaseTest;
-
-public class GeracaoData extends BaseTest {
+public class GeracaoData{
 
 	public static String retornaDataAtual() {
 		Date data = new Date();

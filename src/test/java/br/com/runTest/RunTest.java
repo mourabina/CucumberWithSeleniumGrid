@@ -13,11 +13,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		"json:target/cucumber.json" }, features = {
 				".//src//test//resources//" }, glue = { "web.steps", "configuration", "commons"},
 
-		tags = { "@Fluxo1"})
+		tags = { "@web"})
 
-public class RunTest extends BaseTest {
+public class RunTest extends BaseTest{
 	@After
 	public void closeDriver() {
-		closeDriver();
+		killwebDriver();
 	}
 }

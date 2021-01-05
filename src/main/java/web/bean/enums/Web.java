@@ -17,7 +17,7 @@ public enum Web implements WebApplication{
 
 		@Override
 		public WebDriver getDriver() {
-			WebDriverManager.chromedriver().version("83.0").setup();
+			WebDriverManager.chromedriver().version("87.0").setup();
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("profile.default_content_setting_values.notifications", 2);
 			ChromeOptions options = new ChromeOptions();
